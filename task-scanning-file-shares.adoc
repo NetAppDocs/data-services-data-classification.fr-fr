@@ -1,0 +1,146 @@
+---
+sidebar: sidebar 
+permalink: task-scanning-file-shares.html 
+keywords: cloud compliance, enable cloud compliance, privacy, compliance, file shares, nfs, cifs, smb, data sense, 7-mode 
+summary: Suivez quelques étapes pour commencer à analyser les partages de fichiers NFS ou CIFS non NetApp directement avec la classification des données.  Ces partages de fichiers peuvent résider sur site ou dans le cloud. 
+---
+= Analyser les partages de fichiers avec la classification des données NetApp
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Pour analyser les partages de fichiers, vous devez d’abord créer un groupe de partages de fichiers dans NetApp Data Classification.  Les groupes de partages de fichiers sont destinés aux partages NFS ou CIFS (SMB) hébergés sur site ou dans le cloud.
+
+
+NOTE: L'analyse des données provenant de partages de fichiers non NetApp n'est pas prise en charge dans la version principale de la classification des données.
+
+
+
+== Prérequis
+
+Passez en revue les conditions préalables suivantes pour vous assurer que vous disposez d’une configuration prise en charge avant d’activer la classification des données.
+
+* Les actions peuvent être hébergées n’importe où, y compris dans le cloud ou sur site.  Les partages CIFS des anciens systèmes de stockage NetApp 7-Mode peuvent être analysés en tant que partages de fichiers.
++
+** La classification des données ne peut pas extraire les autorisations ou la « dernière heure d'accès » des systèmes 7-Mode.
+** En raison d'un problème connu entre certaines versions Linux et les partages CIFS sur les systèmes 7-Mode, vous devez configurer le partage pour utiliser uniquement SMBv1 avec l'authentification NTLM activée.
+
+
+* Une connectivité réseau est nécessaire entre l’instance de classification des données et les partages.
+* Vous pouvez ajouter un partage DFS (Distributed File System) en tant que partage CIFS standard.  Étant donné que la classification des données ne sait pas que le partage est basé sur plusieurs serveurs/volumes combinés en un seul partage CIFS, vous risquez de recevoir des erreurs d'autorisation ou de connectivité concernant le partage lorsque le message s'applique réellement uniquement à l'un des dossiers/partages situés sur un serveur/volume différent.
+* Pour les partages CIFS (SMB), assurez-vous que vous disposez des informations d’identification Active Directory qui fournissent un accès en lecture aux partages.  Les informations d'identification d'administrateur sont préférables au cas où la classification des données doit analyser des données nécessitant des autorisations élevées.
++
+Si vous souhaitez vous assurer que les « dernières heures d'accès » de vos fichiers restent inchangées par les analyses de classification des données, il est recommandé que l'utilisateur dispose des autorisations d'écriture d'attributs dans CIFS ou des autorisations d'écriture dans NFS. Si possible, configurez l’utilisateur Active Directory en tant que membre d’un groupe parent de l’organisation disposant d’autorisations sur tous les fichiers.
+
+* Tous les partages de fichiers CIFS d’un groupe doivent utiliser les mêmes informations d’identification Active Directory.
+* Vous pouvez mélanger les partages NFS et CIFS (en utilisant Kerberos ou NTLM).  Vous devez ajouter les actions au groupe séparément.  Autrement dit, vous devez effectuer le processus deux fois, une fois par protocole.
++
+** Vous ne pouvez pas créer un groupe de partage de fichiers qui mélange les types d’authentification CIFS (Kerberos et NTLM).
+
+
+* Si vous utilisez CIFS avec l’authentification Kerberos, assurez-vous que l’adresse IP fournie est accessible à la classification des données.  Les partages de fichiers ne peuvent pas être ajoutés si l'adresse IP est inaccessible.
+
+
+
+
+== Créer un groupe de partage de fichiers
+
+Lorsque vous ajoutez des partages de fichiers au groupe, vous devez utiliser le format `<host_name>:/<share_path>` .
+
+Vous pouvez ajouter des partages de fichiers individuellement ou saisir une liste séparée par des lignes des partages de fichiers que vous souhaitez analyser.  Vous pouvez ajouter jusqu'à 100 actions à la fois.
+
+.Étapes
+. Dans le menu Classification des données, sélectionnez *Configuration*.
+. Depuis la page Configuration, sélectionnez *Ajouter un système* > *Ajouter un groupe de partages de fichiers*.
+. Dans la boîte de dialogue Ajouter un groupe de partages de fichiers, saisissez le nom du groupe de partages, puis sélectionnez *Continuer*.
+. Sélectionnez le protocole pour les partages de fichiers que vous ajoutez.
++
+image:screen-cl-config-shares-add.png["Une capture d'écran de la fenêtre modale pour ajouter des partages, montrant les options permettant de sélectionner des protocoles et des partages"]
+
++
+.. Si vous ajoutez des partages CIFS avec l’authentification NTLM, entrez les informations d’identification Active Directory pour accéder aux volumes CIFS.  Bien que les informations d'identification en lecture seule soient prises en charge, il est recommandé de fournir un accès complet avec les informations d'identification d'administrateur. Sélectionnez **Enregistrer**.
+
+
+. Ajoutez les partages de fichiers que vous souhaitez analyser (un partage de fichiers par ligne).  Sélectionnez ensuite **Continuer**.
+. Une boîte de dialogue de confirmation affiche le nombre de partages qui ont été ajoutés.
++
+Si la boîte de dialogue répertorie des partages qui n’ont pas pu être ajoutés, capturez ces informations afin de pouvoir résoudre le problème.  Si le problème concerne une convention de dénomination, vous pouvez rajouter le partage avec un nom corrigé.
+
+. Configurer l’analyse sur le volume :
++
+** Pour activer les analyses de mappage uniquement sur les partages de fichiers, sélectionnez *Map*.
+** Pour activer les analyses complètes sur les partages de fichiers, sélectionnez *Mappez et classez*.
+** Pour désactiver l’analyse sur les partages de fichiers, sélectionnez *Désactivé*.
++
+
+NOTE: Le commutateur en haut de la page pour *Analyser lorsque les autorisations « attributs d'écriture » sont manquantes* est désactivé par défaut.  Cela signifie que si Data Classification ne dispose pas d'autorisations d'attributs d'écriture dans CIFS ou d'autorisations d'écriture dans NFS, le système n'analysera pas les fichiers car Data Classification ne peut pas rétablir l'« heure du dernier accès » à l'horodatage d'origine.  + Si vous activez *Analyser en cas d'absence d'autorisations « attributs d'écriture »*, l'analyse réinitialise l'heure du dernier accès et analyse tous les fichiers, quelles que soient les autorisations.  + Pour en savoir plus sur l'horodatage du dernier accès, voirlink:link:reference-collected-metadata.html#last-access-time-timestamp["Métadonnées collectées à partir de sources de données dans la classification des données"] .
+
+
+
+
+
+.Résultat
+La classification des données commence à analyser les fichiers dans les partages de fichiers que vous avez ajoutés.  Tu peuxxref:#track-the-scanning-progress[Suivre la progression de la numérisation] et afficher les résultats de l'analyse dans le **Tableau de bord**.
+
+
+NOTE: Si l'analyse ne se termine pas correctement pour une configuration CIFS avec authentification Kerberos, vérifiez l'onglet **Configuration** pour détecter d'éventuelles erreurs.
+
+
+
+== Modifier un groupe de partage de fichiers
+
+Après avoir créé un groupe de partages de fichiers, vous pouvez modifier le protocole CIFS ou ajouter et supprimer des partages de fichiers.
+
+.Modifier la configuration du protocole CIFS
+. Dans le menu Classification des données, sélectionnez *Configuration*.
+. Depuis la page Configuration, sélectionnez le groupe de partages de fichiers que vous souhaitez modifier.
+. Sélectionnez **Modifier les informations d’identification CIFS**.
++
+image:screenshot-edit-cifs-credential.png["Capture d'écran du menu Modifier les informations d'identification CIFS."]
+
+. Choisissez la méthode d'authentification : **NTLM** ou **Kerberos**.
+. Saisissez le **Nom d'utilisateur** et le **Mot de passe** d'Active Directory.
+. Sélectionnez **Enregistrer** pour terminer le processus.
+
+
+.Ajouter des partages de fichiers aux analyses de conformité
+. Dans le menu Classification des données, sélectionnez *Configuration*.
+. Depuis la page Configuration, sélectionnez le groupe de partages de fichiers que vous souhaitez modifier.
+. Sélectionnez **+ Ajouter des partages**.
+. Sélectionnez le protocole pour les partages de fichiers que vous ajoutez.
++
+image:screen-cl-config-shares-add.png["Une capture d'écran de la fenêtre modale pour ajouter des partages, montrant les options permettant de sélectionner des protocoles et des partages"]
+
++
+Si vous ajoutez des partages de fichiers à un protocole que vous avez déjà configuré, aucune modification n'est requise.
+
++
+Si vous ajoutez des partages de fichiers avec un deuxième protocole, assurez-vous d'avoir correctement configuré l'authentification comme détaillé dans lelink:#prerequisites["prérequis"] .
+
+. Ajoutez les partages de fichiers que vous souhaitez analyser (un partage de fichiers par ligne) en utilisant le format `<host_name>:/<share_path>` .
+. Sélectionnez **Continuer** pour terminer l’ajout des partages de fichiers.
+
+
+.Supprimer un partage de fichiers des analyses de conformité
+. Dans le menu Classification des données, sélectionnez *Configuration*.
+. Sélectionnez le système dont vous souhaitez supprimer les partages de fichiers.
+. Sélectionnez *Configuration*.
+. Depuis la page Configuration, sélectionnez les Actionsimage:button-actions-horizontal.png["Icône Actions"] pour le partage de fichiers que vous souhaitez supprimer.
+. Dans le menu Actions, sélectionnez *Supprimer le partage*.
+
+
+
+
+== Suivre la progression de la numérisation
+
+Vous pouvez suivre la progression de l'analyse initiale.
+
+. Sélectionnez le menu **Configuration**.
+. Sélectionnez la **Configuration système**.
+. Pour le référentiel de stockage, vérifiez la colonne Progression de l'analyse pour afficher son état.
+

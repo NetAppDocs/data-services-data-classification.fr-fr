@@ -1,0 +1,30 @@
+= Version 1.47
+:allow-uri-read: 
+
+
+
+
+=== Version 1.47
+
+.La BlueXP classification est désormais la classification des données NetApp
+La BlueXP classification a été renommée Classification des données NetApp .  En plus du changement de nom, l'interface utilisateur a été améliorée.
+
+.BlueXP est désormais NetApp Console
+BlueXP a été renommé et repensé pour mieux refléter son rôle dans la gestion de votre infrastructure de données.
+
+La console NetApp offre une gestion centralisée des services de stockage et de données dans les environnements sur site et dans le cloud à l'échelle de l'entreprise, offrant des informations en temps réel, des flux de travail plus rapides et une administration simplifiée.
+
+Pour plus de détails sur ce qui a changé, consultez le https://docs.netapp.com/us-en/bluexp-relnotes/index.html["Notes de version de la console NetApp"] .
+
+.Actions (aperçu)
+La classification des données prend désormais en charge les actions dans la page Enquête.  Vous pouvez copier, déplacer et supprimer des fichiers à partir de la classification des données.
+
+.Prise en charge du marquage des fichiers (aperçu)
+La classification des données prend désormais en charge le balisage des fichiers individuels.  Avec les balises de fichiers, vous pouvez créer un identifiant personnalisé pour des fichiers spécifiques qui peut être utilisé pour identifier et filtrer les données.  Grâce à la balise, vous pouvez identifier des qualités spécifiques dans votre enquête sur les données ou créer des requêtes et des politiques enregistrées en fonction des résultats de la balise.
+
+Pour plus d'informations, consultez la section link:https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html#view-file-metada["Afficher les métadonnées du fichier"] .
+
+.Politiques pour les requêtes enregistrées (aperçu)
+Les recherches enregistrées ont été renommées requêtes enregistrées.  Vous pouvez également transformer les requêtes enregistrées en politiques exploitables : supprimer des données ou envoyer des notifications par e-mail en fonction des résultats des requêtes enregistrées.
+
+Pour plus d'informations, consultez la section link:https://docs.netapp.com/us-en/data-services-data-classification/task-using-policies.html["Créer des politiques"] .

@@ -1,0 +1,128 @@
+---
+sidebar: sidebar 
+permalink: task-using-policies.html 
+keywords: compliance, privacy, filter data, highlights, policies, notifications, saved query, tags, data sense, edit query 
+summary: Les requêtes enregistrées sont des filtres personnalisés qui fournissent des résultats de recherche dans la page Enquête pour les requêtes de conformité fréquemment demandées.  La classification des données fournit un ensemble de requêtes enregistrées par défaut basées sur des demandes courantes ou vous pouvez créer les vôtres. 
+---
+= Gérer les requêtes enregistrées avec la classification des données NetApp
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetaApp Data Classification prend en charge l'enregistrement de vos requêtes de recherche.  Avec une requête enregistrée, vous pouvez créer des filtres personnalisés pour trier les requêtes fréquentes de votre page d'enquête sur les données.  La classification des données comprend également des requêtes enregistrées prédéfinies basées sur des demandes courantes.
+
+L'onglet *Requêtes enregistrées* du tableau de bord Conformité répertorie toutes les requêtes enregistrées prédéfinies et personnalisées disponibles sur cette instance de classification des données.
+
+Les requêtes enregistrées peuvent également être enregistrées en tant que **politiques**.  Alors que les requêtes filtrent les données, les politiques vous permettent d’agir sur les données.  Avec une politique : vous pouvez supprimer les données découvertes ou envoyer des mises à jour par e-mail concernant les données découvertes.
+
+Les requêtes enregistrées apparaissent également dans la liste des filtres de la page Enquête.
+
+image:screenshot_compliance_highlights_tab.png["Une capture d’écran de l’onglet Requêtes enregistrées dans le tableau de bord de classification des données."]
+
+
+
+== Afficher les résultats des requêtes enregistrées dans la page Enquête
+
+Pour afficher les résultats d’une requête enregistrée dans la page Investigation, sélectionnez l’icôneimage:button-gallery-options.gif["Bouton Plus"] bouton pour une recherche spécifique puis sélectionnez *Enquêter sur les résultats*.
+
+image:screenshot_compliance_highlights_investigate.png["Capture d'écran de la sélection de l'option Enquêter sur les résultats pour une recherche spécifique à partir de l'onglet Requête enregistrée."]
+
+
+
+== Créer des requêtes et des politiques enregistrées
+
+Vous pouvez créer vos propres requêtes enregistrées personnalisées qui fournissent des résultats pour des requêtes spécifiques à votre organisation.  Les résultats sont renvoyés pour tous les fichiers et répertoires (partages et dossiers) qui correspondent aux critères de recherche.
+
+.Étapes
+. Dans l’onglet Enquête, définissez une recherche en sélectionnant les filtres que vous souhaitez utiliser. Voirlink:task-investigate-data.html["Filtrage des données dans la page Investigation"] pour plus de détails.
+. Une fois que vous avez défini toutes les caractéristiques du filtre à votre guise, sélectionnez *Enregistrer la requête*.
++
+image:../media/screenshot_compliance_save_as_highlight.png["Capture d’écran montrant comment enregistrer une requête filtrée en tant que requête enregistrée."]
+
+. Nommez la requête enregistrée et ajoutez une description.  Le nom doit être unique.
+. Vous pouvez éventuellement enregistrer la requête en tant que politique :
++
+.. Pour enregistrer la requête en tant que politique, activez le bouton *Exécuter en tant que politique*.
+.. Choisissez de *Supprimer définitivement* ou *Envoyer des mises à jour par e-mail*.  Si vous choisissez les mises à jour par e-mail, vous pouvez envoyer les résultats de la requête par e-mail à _tous_ les utilisateurs de la console quotidiennement, hebdomadairement ou mensuellement.  Alternativement, vous pouvez envoyer la notification à une adresse e-mail spécifique aux mêmes fréquences.
+
+
+. Sélectionnez *Enregistrer*.
++
+image:../media/screenshot_compliance_save_highlight2.png["Une capture d'écran qui montre comment configurer la requête enregistrée et l'enregistrer."]
+
+
+
+Une fois la recherche ou la politique créée, vous pouvez la visualiser dans l'onglet **Requêtes enregistrées**.
+
+
+
+== Modifier les requêtes ou les politiques enregistrées
+
+Vous pouvez modifier le nom et la description d'une requête enregistrée.  Vous pouvez également convertir une requête en politique et vice versa.
+
+Vous ne pouvez pas modifier les requêtes enregistrées par défaut.  Vous ne pouvez pas modifier les filtres d'une requête enregistrée.  Vous pouvez alternativement afficher les résultats de l'enquête d'une requête enregistrée, modifier les filtres, puis l'enregistrer en tant que nouvelle requête ou politique.
+
+.Étapes
+. Depuis la page Requêtes enregistrées, sélectionnez *Modifier la recherche* pour la recherche que vous souhaitez modifier.
++
+image:screenshot-edit-search.png["Une capture d'écran montrant la modification de la requête enregistrée."]
+
+. Apportez les modifications aux champs nom et description.  Pour modifier uniquement les champs nom et description.
++
+Vous pouvez éventuellement convertir la requête en politique ou convertir la politique en requête enregistrée.  Activez le bouton *Exécuter en tant que politique* selon vos besoins. ..  Si vous convertissez la requête en politique, choisissez *Supprimer définitivement* ou *Envoyer des mises à jour par e-mail*.  Si vous choisissez les mises à jour par e-mail, vous pouvez envoyer les résultats de la requête par e-mail à _tous_ les utilisateurs de la console quotidiennement, hebdomadairement ou mensuellement.  Alternativement, vous pouvez envoyer la notification à une adresse e-mail spécifique aux mêmes fréquences.
+
+. Sélectionnez *Enregistrer* pour terminer les modifications.
+
+
+
+
+== Supprimer les requêtes enregistrées
+
+Vous pouvez supprimer toute requête ou politique personnalisée enregistrée si vous n'en avez plus besoin.  Vous ne pouvez pas supprimer les requêtes enregistrées par défaut.
+
+Pour supprimer une requête enregistrée, sélectionnez l'icôneimage:button-gallery-options.gif["Bouton Plus"] bouton pour une recherche spécifique, sélectionnez *Supprimer la requête*, puis sélectionnez à nouveau *Supprimer la requête* dans la boîte de dialogue de confirmation.
+
+
+
+== Requêtes par défaut
+
+La classification des données fournit les requêtes de recherche définies par le système suivantes :
+
+* **Noms des personnes concernées - Risque élevé**
++
+Fichiers contenant plus de 50 noms de personnes concernées
+
+* **Adresses e-mail - Risque élevé**
++
+Fichiers contenant plus de 50 adresses e-mail ou colonnes de base de données dont plus de 50 % de leurs lignes contiennent des adresses e-mail
+
+* **Données personnelles - Risque élevé**
++
+Fichiers contenant plus de 20 identifiants de données personnelles ou colonnes de base de données dont plus de 50 % de leurs lignes contiennent des identifiants de données personnelles
+
+* **Données privées - Obsolètes depuis plus de 7 ans**
++
+Fichiers contenant des informations personnelles ou sensibles, modifiés pour la dernière fois il y a plus de 7 ans
+
+* **Protéger - Élevé**
++
+Fichiers ou colonnes de base de données contenant un mot de passe, des informations de carte de crédit, un numéro IBAN ou un numéro de sécurité sociale
+
+* **Protéger - Faible**
++
+Fichiers qui n'ont pas été consultés depuis plus de 3 ans
+
+* **Protéger - Moyen**
++
+Fichiers contenant des fichiers ou des colonnes de base de données avec des identifiants de données personnelles, notamment des numéros d'identification, des numéros d'identification fiscale, des numéros de permis de conduire, des identifiants médicaux ou des numéros de passeport.
+
+* **Données personnelles sensibles - Risque élevé**
++
+Fichiers contenant plus de 20 identifiants de données personnelles sensibles ou colonnes de base de données dont plus de 50 % de leurs lignes contiennent des données personnelles sensibles
+
+

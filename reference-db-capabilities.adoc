@@ -1,0 +1,126 @@
+---
+sidebar: sidebar 
+permalink: reference-db-capabilities.html 
+keywords: database actions, database filters, supported, unsupported 
+summary: Certaines fonctionnalités ne sont pas disponibles avec NetApp Data Classification lorsque vous analysez des schémas de base de données. 
+---
+= Fonctionnalités de base de données prises en charge et non prises en charge dans la classification des données NetApp
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Certaines fonctionnalités ne sont pas disponibles avec NetApp Data Classification lorsque vous analysez des schémas de base de données.  Voir la liste ci-dessous.
+
+Vous pouvez ajouter vos schémas de bases de données à la classification des données pour qu'ils soient analyséslink:task-scanning-databases.html["comme décrit ici"^] .
+
+[cols="12,25,9,9,9,9,9,9,9"]
+|===
+| Type | Description | MongoDB | Serveur SQL | MySQL | Oracle | PostgreSQL | SAP HANA | Amazon RDS 
+
+
+.9+| Actions | Créer une requête enregistrée | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
+
+
+| Étiqueter | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
+
+
+| Affecter à | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
+
+
+| Exporter des données | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
+
+
+| Réanalyser | x | x | x | x | x | x | x 
+
+
+| Supprimer |  | ✓ | ✓ | ✓ | ✓ | ✓ |  
+
+
+|  | Se déplacer | ✓ | ✓ | ✓ | ✓ | ✓ |  
+
+
+|  | Copie | ✓ | ✓ | ✓ | ✓ | ✓ |  
+
+
+|  | Étiquette | ✓ | ✓ | ✓ | ✓ | ✓ |  
+
+
+|  .25+| Filtres | Requêtes enregistrées | ✓ | ✓ | ✓ | ✓ | ✓ |  
+
+
+|  | État de l'analyse de numérisation | ✓ | ✓ | ✓ | ✓ | ✓ |  
+
+
+|  | Type de système | ✓ | ✓ | ✓ | ✓ | ✓ |  
+
+
+|  | Système | ✓ | ✓ | ✓ | ✓ | ✓ |  
+
+
+|  | Référentiel de stockage | ✓ | ✓ | ✓ | ✓ | ✓ |  
+
+
+|  | Niveau de sensibilité | ✓ | ✓ | ✓ | ✓ | ✓ |  
+
+
+|  | Données personnelles sensibles | ✓ | ✓ | ✓ | ✓ | ✓ |  
+
+
+|  | Catégories | ✓ | ✓ | ✓ | ✓ | ✓ |  
+
+
+|  | Données personnelles | ✓ | ✓ | ✓ | ✓ | ✓ |  
+
+
+|  | Personne concernée | ✓ | ✓ | ✓ | ✓ | ✓ |  
+
+
+|  | Type de fichier | ✓ | ✓ | ✓ | ✓ | ✓ |  
+
+
+|  | Taille du fichier | ✓ | ✓ | ✓ | ✓ | ✓ |  
+
+
+|  | Temps découvert | ✓ | ✓ | ✓ | ✓ | ✓ |  
+
+
+|  | Mots-clés | ✓ | ✓ | ✓ | ✓ | ✓ |  
+
+
+|  | Affecter à | ✓ | ✓ | ✓ | ✓ | ✓ |  
+
+
+|  | Événement d'analyse d'analyse | x | x | x | x | x | x 
+
+
+| x | Chemin du fichier/répertoire | x | x | x | x | x | x 
+
+
+| x | Filtres d'autorisations | x | x | x | x | x | x 
+
+
+| x | Étiquette | x | x | x | x | x | x 
+
+
+| x | Nombre d'identifiants | x | x | x | x | x | x 
+
+
+| x | Type de répertoire | x | x | x | x | x | x 
+
+
+| x | Temps de création | x | x | x | x | x | x 
+
+
+| x | Dernière modification | x | x | x | x | x | x 
+
+
+| x | Dernier accès | x | x | x | x | x | x 
+
+
+| x | Doublons | x | x | x | x | x | x 
+|===

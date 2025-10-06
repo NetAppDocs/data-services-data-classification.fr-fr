@@ -1,0 +1,110 @@
+---
+settings:
+  name: NetApp Data Classification
+  internal:
+    pdf_enabled: true
+    termcheck_enabled: true
+    lipi_enabled: true
+  prod:
+    pdf_enabled: true
+    harmony_enabled: false
+  rss_page: whats-new.html
+  langs: fr-fr,us-en,de-de,es-es,it-it,pt-br,ja-jp,ko-kr,zh-cn,zh-tw
+sidebar:
+  entries:
+  - title: Documentation sur la classification des données NetApp
+    url: "/index.html"
+  - title: Notes de version
+    entries:
+    - title: Quoi de neuf
+      url: "/whats-new.html"
+    - title: Limitations connues
+      url: "/reference-limitations.html"
+  - title: Commencer
+    entries:
+    - title: En savoir plus sur la classification des données
+      url: "/concept-classification.html"
+    - title: Classification des données d'accès
+      url: "/task-access.html"
+    - title: Déployer la classification des données
+      entries:
+      - title: Quel déploiement devez-vous utiliser
+        url: "/task-deploy-overview.html"
+      - title: Déployer dans le cloud
+        url: "/task-deploy-cloud-compliance.html"
+      - title: Installer sur un hôte Linux avec accès Internet
+        url: "/task-deploy-compliance-onprem.html"
+      - title: Installer sur un hôte Linux sur site sans accès Internet
+        url: "/task-deploy-compliance-dark-site.html"
+      - title: Vérifiez que votre hôte Linux est prêt à installer la classification
+          des données
+        url: "/task-test-linux-system.html"
+    - title: Activer l'analyse sur vos sources de données
+      entries:
+      - title: Aperçu de l'analyse de vos sources de données
+        url: "/task-scanning-overview.html"
+      - title: Azure NetApp Files
+        url: "/task-scanning-anf.html"
+      - title: Amazon FSx pour ONTAP
+        url: "/task-scanning-fsx.html"
+      - title: Cloud Volumes ONTAP et ONTAP sur site
+        url: "/task-getting-started-compliance.html"
+      - title: Schémas de bases de données
+        url: "/task-scanning-databases.html"
+      - title: Partages de fichiers
+        url: "/task-scanning-file-shares.html"
+      - title: StorageGRID
+        url: "/task-scanning-storagegrid.html"
+    - title: Intégrer Active Directory
+      url: "/task-active-directory.html"
+  - title: Classification des données d'utilisation
+    entries:
+    - title: Afficher les détails de gouvernance de vos données
+      url: "/task-controlling-governance-data.html"
+    - title: Afficher les détails de conformité concernant vos données
+      url: "/task-controlling-private-data.html"
+    - title: Catégories de données privées
+      url: "/reference-private-data-categories.html"
+    - title: Créer une analyse personnalisée
+      url: "/task-custom-classification.html"
+    - title: Enquêter sur les données
+      url: "/task-investigate-data.html"
+    - title: Gérer les requêtes enregistrées
+      url: "/task-using-policies.html"
+    - title: Modifier les paramètres de numérisation
+      url: "/task-managing-repo-scanning.html"
+    - title: Générer des rapports de conformité
+      url: "/task-generating-compliance-reports.html"
+  - title: Gérer la classification des données
+    entries:
+    - title: Exclure les répertoires de l'analyse
+      url: "/task-exclude-scan-paths.html"
+    - title: Définir les identifiants de groupe existants comme « ouverts à l'organisation »
+      url: "/task-add-group-id-as-open.html"
+    - title: Supprimer les sources de données de la classification des données
+      url: "/task-managing-compliance.html"
+    - title: Désinstaller la classification des données
+      url: "/task-uninstall.html"
+  - title: Référence
+    entries:
+    - title: Types d'instances de classification des données pris en charge
+      url: "/reference-instance-types.html"
+    - title: Métadonnées collectées à partir de sources de données
+      url: "/reference-collected-metadata.html"
+    - title: Connectez-vous à la classification des données
+      url: "/reference-log-in-to-instance.html"
+    - title: API de classification des données
+      url: "/api-classification.html"
+  - title: Connaissances et soutien
+    entries:
+    - title: Inscrivez-vous pour obtenir de l'aide
+      url: "/task-support-registration.html"
+    - title: Obtenir de l'aide
+      url: "/task-get-help.html"
+  - title: FAQ
+    url: "/faq-cloud-compliance.html"
+  - title: Mentions légales
+    url: "/legal-notices.html"
+product-family:
+  name: NetApp Data Services
+  repo: data-services-family

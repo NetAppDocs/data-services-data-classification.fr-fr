@@ -1,0 +1,132 @@
+---
+sidebar: sidebar 
+permalink: task-managing-repo-scanning.html 
+keywords: compliance, stop scan, start scan, map scan, classify scan, data sense, pause scan, resume scan, cloud data sense, bluexp classification 
+summary: 'Vous pouvez gérer la manière dont vos données sont analysées dans chacun de vos systèmes et sources de données dans NetApp Data Classification.  Vous pouvez effectuer les modifications sur la base d"un « référentiel » ; ce qui signifie que vous pouvez effectuer des modifications pour chaque volume, bucket, partage, schéma, utilisateur, etc. en fonction du type de source de données que vous analysez.' 
+---
+= Modifier les paramètres d'analyse de classification des données NetApp pour vos référentiels
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Vous pouvez gérer la manière dont vos données sont analysées dans chacun de vos systèmes et sources de données.  Vous pouvez effectuer les modifications sur une base de « référentiel » ; ce qui signifie que vous pouvez effectuer des modifications pour chaque volume, schéma, utilisateur, etc. en fonction du type de source de données que vous analysez.
+
+Certaines des choses que vous pouvez modifier sont si un référentiel est analysé ou non et si NetApp Data Classification effectue unelink:concept-classification.html["scan de cartographie ou scan de cartographie et de classification"] .  Vous pouvez également suspendre et reprendre l'analyse, par exemple, si vous devez arrêter l'analyse d'un volume pendant un certain temps.
+
+
+
+== Afficher l'état de l'analyse de vos référentiels
+
+Vous pouvez afficher les référentiels individuels que NetApp Data Classification analyse (volumes, buckets, etc.) pour chaque système et source de données.  Vous pouvez également voir combien ont été « cartographiés » et combien ont été « classés ».  La classification prend plus de temps car l’identification complète de l’IA est effectuée sur toutes les données.
+
+Vous pouvez afficher l’état de numérisation de chaque environnement de travail sur la page de configuration :
+
+* *Initialisation* (point bleu clair) : La configuration de la carte ou de la classification est activée.  Cela apparaît pendant quelques secondes avant de démarrer le statut « file d'attente en attente ».
+* *File d'attente en attente* (point orange) : la tâche d'analyse attend d'être répertoriée dans la file d'attente d'analyse.
+* *En file d'attente* (point orange) : la tâche a été ajoutée avec succès à la file d'attente d'analyse.  Le système commencera à cartographier ou à classer le volume lorsque son tour dans la file d'attente arrivera.
+* *En cours d'exécution* (point vert) : la tâche d'analyse, qui était dans la file d'attente, est en cours d'exécution sur le référentiel de stockage sélectionné.
+* *Terminé* (point vert) : L'analyse du référentiel de stockage est terminée.
+* *En pause* (point gris) : vous avez sélectionné l’option « Pause » pour interrompre la numérisation.  Bien que les modifications de volume ne soient pas affichées dans le système, les informations analysées sont toujours affichées.
+* *Erreur* (point rouge) : L'analyse ne peut pas se terminer car elle a rencontré des problèmes.  Si vous devez effectuer une action, l’erreur apparaît dans l’info-bulle sous la colonne « Action requise ».  Dans le cas contraire, le système affiche un statut « erreur » et tente de récupérer.  Une fois terminé, le statut change.
+* *Pas de numérisation* : la configuration du volume « Désactivé » a été sélectionnée et le système ne scanne pas le volume.
+
+
+.Étapes
+. Dans le menu Classification des données, sélectionnez *Configuration*.
++
+image:screenshot_compliance_config_button.png["Une capture d’écran montrant comment sélectionner le bouton Configuration pour un système."]
+
+. Dans l’onglet Configuration, sélectionnez le bouton *Configuration* pour le système.
+. Dans la page Configuration de l’analyse, affichez les paramètres d’analyse pour tous les référentiels.
++
+image:screenshot_compliance_repo_scan_settings.png["Une capture d'écran indiquant si vos buckets sont en cours d'analyse et l'état actuel de l'analyse."]
+
+. Passez votre curseur sur le graphique dans la colonne _Statut de mappage_ pour voir le nombre de fichiers qui restent à mapper ou à classer dans chaque référentiel (bucket dans cet exemple).
+
+
+
+
+== Modifier le type d'analyse d'un référentiel
+
+Vous pouvez démarrer ou arrêter les analyses de mappage uniquement ou les analyses de mappage et de classification dans un système à tout moment à partir de la page Configuration.  Vous pouvez également passer d'analyses de mappage uniquement à des analyses de mappage et de classification, et vice-versa.
+
+
+TIP: Les bases de données ne peuvent pas être configurées pour des analyses de mappage uniquement.  L'analyse de la base de données peut être désactivée ou activée ; où activé est équivalent à Map & Classify.
+
+.Étapes
+. Dans le menu Classification des données, sélectionnez *Configuration*.
+. Dans l’onglet Configuration, sélectionnez le bouton *Configuration* pour le système.
++
+image:screenshot_compliance_config_button.png["Une capture d’écran montrant comment sélectionner le bouton Configuration pour un système."]
+
+. Dans la page Configuration de l'analyse, modifiez l'un des référentiels (compartiments dans cet exemple) pour effectuer des analyses *Map* ou *Map & Classify*.
++
+image:screenshot_compliance_repo_scan_settings.png["Une capture d’écran montrant comment sélectionner le type d’analyse pour un bucket."]
+
++
+Certains types de systèmes vous permettent de modifier le type d'analyse globalement pour tous les référentiels à l'aide d'une barre de boutons en haut de la page.  Ceci est valable pour les systèmes Cloud Volumes ONTAP, ONTAP sur site, Azure NetApp Files et Amazon FSx pour ONTAP .
+
++
+L’exemple ci-dessous montre cette barre de boutons pour un système Azure NetApp Files .
+
++
+image:screenshot_compliance_repo_scan_all.png["Une capture d’écran montrant comment configurer le même paramètre d’analyse pour tous les volumes d’un système."]
+
+
+
+
+
+== Prioriser les analyses
+
+Vous pouvez prioriser les analyses de cartographie uniquement les plus importantes ou cartographier et classer les analyses pour garantir que les analyses hautement prioritaires sont effectuées en premier.
+
+Par défaut, les analyses sont mises en file d’attente en fonction de l’ordre dans lequel elles sont lancées.  Grâce à la possibilité de hiérarchiser les analyses, vous pouvez déplacer les analyses vers l'avant de la file d'attente.  Plusieurs analyses peuvent être priorisées.  La priorité est désignée selon un ordre premier entré, premier sorti, ce qui signifie que la première analyse que vous priorisez passe en tête de la file d'attente ; la deuxième analyse que vous priorisez devient la deuxième dans la file d'attente, et ainsi de suite.
+
+La priorité est accordée une seule fois.  Les réanalyses automatiques des données de cartographie se produisent dans l'ordre par défaut.
+
+.Étapes
+. Dans le menu Classification des données, sélectionnez *Configuration*.
+. Sélectionnez les ressources que vous souhaitez prioriser.
+. Des actions `...` option, sélectionnez *Prioriser l'analyse*.
+
+
+
+
+== Arrêter la recherche d'un référentiel
+
+Vous pouvez arrêter l'analyse d'un référentiel (par exemple, un volume) si vous n'avez plus besoin de surveiller sa conformité.  Vous pouvez le faire en désactivant la numérisation.  Lorsque l'analyse est désactivée, toute l'indexation et les informations sur ce volume sont supprimées du système et la facturation de l'analyse des données est arrêtée.
+
+.Étapes
+. Dans le menu Classification des données, sélectionnez *Configuration*.
+. Dans l’onglet Configuration, sélectionnez le bouton *Configuration* pour le système.
++
+image:screenshot_compliance_config_button.png["Une capture d’écran montrant comment sélectionner le bouton Configuration pour un système."]
+
+. Dans la page Configuration de l'analyse, sélectionnez *Désactivé* pour arrêter l'analyse d'un compartiment particulier.
++
+image:screenshot_compliance_repo_scan_settings.png["Une capture d’écran montrant comment sélectionner le type d’analyse pour un bucket."]
+
+
+
+
+
+== Mettre en pause et reprendre l'analyse d'un référentiel
+
+Vous pouvez « suspendre » l’analyse d’un référentiel si vous souhaitez arrêter temporairement l’analyse de certains contenus.  La suspension de l'analyse signifie que la classification des données n'effectuera aucune analyse future pour détecter les modifications ou les ajouts au référentiel, mais que tous les résultats actuels seront toujours affichés dans le système.  La suspension de la numérisation n'arrête pas la facturation des données numérisées, car les données existent toujours.
+
+Vous pouvez « reprendre » la numérisation à tout moment.
+
+.Étapes
+. Dans le menu Classification des données, sélectionnez *Configuration*.
+. Dans l’onglet Configuration, sélectionnez le bouton *Configuration* pour le système.
++
+image:screenshot_compliance_config_button.png["Une capture d’écran montrant comment sélectionner le bouton Configuration pour un système."]
+
+. Dans la page Configuration de l'analyse, sélectionnez les actionsimage:button-actions-horizontal.png["Icône Actions"] icône.
+. Sélectionnez *Pause* pour suspendre l’analyse d’un volume ou sélectionnez *Reprendre* pour reprendre l’analyse d’un volume qui avait été précédemment suspendu.
+

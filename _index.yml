@@ -1,0 +1,70 @@
+---
+indexpage:
+  title: Documentation sur la classification des données NetApp
+  summary: NetApp Data Classificaiton vous permet d'analyser et de classer les données
+    dans le multicloud hybride de votre organisation.  La classification des données
+    utilise le traitement du langage naturel (NLP) basé sur l'IA pour l'analyse et
+    la catégorisation des données contextuelles, vous offrant des informations exploitables
+    sur vos données pour répondre aux exigences de conformité, détecter les vulnérabilités
+    de sécurité, optimiser les coûts et accélérer la migration.
+  keywords: bluexp, data classification, cloud data sense, data sense, compliance,
+    security, netapp console, bluexp classification
+  lead: NetApp Data Classificaiton vous permet d'analyser et de classer les données
+    dans le multicloud hybride de votre organisation.  La classification des données
+    utilise le traitement du langage naturel (NLP) basé sur l'IA pour l'analyse et
+    la catégorisation des données contextuelles, vous offrant des informations exploitables
+    sur vos données pour répondre aux exigences de conformité, détecter les vulnérabilités
+    de sécurité, optimiser les coûts et accélérer la migration.
+  tiles:
+  - title: Commencer
+    links:
+    - title: En savoir plus sur la classification des données
+      url: concept-classification.html
+    - title: Nouveautés
+      url: whats-new.html
+    - title: Déployer la classification des données dans le cloud
+      url: task-deploy-cloud-compliance.html
+    - title: Installer la classification des données sur un hôte Linux avec Internet
+      url: task-deploy-compliance-onprem.html
+  - title: Analysez vos sources de données
+    links:
+    - title: Analyser Amazon FSx pour les volumes ONTAP
+      url: task-scanning-fsx.html
+    - title: Analyser les volumes Azure NetApp Files
+      url: task-scanning-anf.html
+    - title: Analyser les Cloud Volumes ONTAP
+      url: task-getting-started-compliance.html
+    - title: Analyser les schémas de base de données
+      url: task-scanning-databases.html
+    - title: Analyser les partages de fichiers (CIFS, NFS)
+      url: task-scanning-file-shares.html
+    - title: Analyser les volumes ONTAP sur site
+      url: task-getting-started-compliance.html
+    - title: Scan StorageGRID
+      url: task-scanning-storagegrid.html
+  - title: Afficher les détails de vos données
+    links:
+    - title: Afficher les fichiers contenant des informations privées
+      url: task-controlling-private-data.html
+    - title: Afficher les fichiers dupliqués dans votre stockage
+      url: task-investigate-data.html#check-for-duplicate-files-in-your-storage-systems
+    - title: Filtrez vos données pour afficher des fichiers spécifiques
+      url: task-investigate-data.html
+    - title: Créer une requête enregistrée
+      url: task-using-policies.html
+    - title: Générer des rapports de conformité
+      url: task-generating-compliance-reports.html
+    - title: Répondre à une demande d'accès aux données personnelles
+      url: task-generating-compliance-reports.html
+  - title: Blogs et communauté
+    links:
+    - title: Console NetApp
+      url: https://www.netapp.com/console
+    - title: Services de données NetApp
+      url: https://www.netapp.com/data-services/
+    - title: Communauté NetApp
+      url: https://community.netapp.com/
+    - title: Cas d'utilisation de la classification des données
+      url: https://bluexp.netapp.com/netapp-cloud-data-sense
+    - title: Vidéos sur la classification des données
+      url: https://youtube.com/playlist?list=PLdXI3bZJEw7m0dFDhu3w6Yqt71Zqyl2Pw

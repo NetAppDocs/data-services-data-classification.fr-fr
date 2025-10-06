@@ -1,0 +1,12 @@
+= Version 1.35
+:allow-uri-read: 
+
+
+
+
+=== Version 1.35
+
+.Analyser les données StorageGRID
+La BlueXP classification prend en charge l'analyse des données dans StorageGRID.
+
+Pour plus de détails, reportez-vous àlink:task-scanning-storagegrid.html["Analyser les données StorageGRID"] .

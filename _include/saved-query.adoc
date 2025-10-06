@@ -1,0 +1,24 @@
+= 
+:allow-uri-read: 
+
+
+.Étapes
+. Dans l’onglet Enquête, définissez une recherche en sélectionnant les filtres que vous souhaitez utiliser. Voirlink:task-investigate-data.html["Filtrage des données dans la page Investigation"] pour plus de détails.
+. Une fois que vous avez défini toutes les caractéristiques du filtre à votre guise, sélectionnez *Enregistrer la requête*.
++
+image:../media/screenshot_compliance_save_as_highlight.png["Capture d’écran montrant comment enregistrer une requête filtrée en tant que requête enregistrée."]
+
+. Nommez la requête enregistrée et ajoutez une description.  Le nom doit être unique.
+. Vous pouvez éventuellement enregistrer la requête en tant que politique :
++
+.. Pour enregistrer la requête en tant que politique, activez le bouton *Exécuter en tant que politique*.
+.. Choisissez de *Supprimer définitivement* ou *Envoyer des mises à jour par e-mail*.  Si vous choisissez les mises à jour par e-mail, vous pouvez envoyer les résultats de la requête par e-mail à _tous_ les utilisateurs de la console quotidiennement, hebdomadairement ou mensuellement.  Alternativement, vous pouvez envoyer la notification à une adresse e-mail spécifique aux mêmes fréquences.
+
+
+. Sélectionnez *Enregistrer*.
++
+image:../media/screenshot_compliance_save_highlight2.png["Une capture d'écran qui montre comment configurer la requête enregistrée et l'enregistrer."]
+
+
+
+Une fois la recherche ou la politique créée, vous pouvez la visualiser dans l'onglet **Requêtes enregistrées**.

@@ -1,0 +1,181 @@
+---
+sidebar: sidebar 
+permalink: task-scanning-fsx.html 
+keywords: cloud compliance, get started, enable cloud compliance, cloud compliance access, privacy, compliance, fsx, fsx for ontap, aws, data sense 
+summary: Suivez quelques étapes pour commencer à analyser le volume Amazon FSx pour ONTAP avec NetApp Data Classification. 
+---
+= Analyser Amazon FSx pour les volumes ONTAP avec la classification des données NetApp
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Suivez quelques étapes pour commencer à analyser le volume Amazon FSx pour ONTAP avec NetApp Data Classification.
+
+
+
+== Avant de commencer
+
+* Vous avez besoin d’un agent de console actif dans AWS pour déployer et gérer la classification des données.
+* Le groupe de sécurité que vous avez sélectionné lors de la création du système doit autoriser le trafic provenant de l'instance de classification des données.  Vous pouvez trouver le groupe de sécurité associé à l'aide de l'ENI connecté au système de fichiers FSx for ONTAP et le modifier à l'aide de la console de gestion AWS.
++
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-rules.html["Groupes de sécurité AWS pour les instances Linux"^]
+
++
+https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/security-group-rules.html["Groupes de sécurité AWS pour les instances Windows"^]
+
++
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html["Interfaces réseau élastiques AWS (ENI)"^]
+
+* Assurez-vous que les ports suivants sont ouverts sur l’instance de classification des données :
++
+** Pour NFS – ports 111 et 2049.
+** Pour CIFS – ports 139 et 445.
+
+
+
+
+
+
+== Déployer l'instance de classification des données
+
+link:task-deploy-cloud-compliance.html["Déployer la classification des données"^]s'il n'y a pas déjà une instance déployée.
+
+Vous devez déployer la classification des données sur le même réseau AWS que l'agent de console pour AWS et les volumes FSx que vous souhaitez analyser.
+
+*Remarque :* le déploiement de la classification des données dans un emplacement local n’est actuellement pas pris en charge lors de l’analyse des volumes FSx.
+
+Les mises à niveau du logiciel de classification des données sont automatisées tant que l'instance dispose d'une connexion Internet.
+
+
+
+== Activez la classification des données dans vos systèmes
+
+Vous pouvez activer la classification des données pour les volumes FSx for ONTAP .
+
+. Depuis la console NetApp , *Gouvernance > Classification*.
+. Dans le menu Classification des données, sélectionnez *Configuration*.
++
+image:screenshot_fsx_scanning_activate.png["Une capture d’écran de l’onglet Configuration immédiatement après le déploiement de l’instance de classification des données."]
+
+. Sélectionnez la manière dont vous souhaitez analyser les volumes de chaque système. link:concept-classification.html#whats-the-difference-between-mapping-and-classification-scans["En savoir plus sur les analyses de cartographie et de classification"]:
++
+** Pour mapper tous les volumes, sélectionnez *Mapper tous les volumes*.
+** Pour cartographier et classer tous les volumes, sélectionnez *Cartographier et classer tous les volumes*.
+** Pour personnaliser l'analyse de chaque volume, sélectionnez *Ou sélectionnez le type d'analyse pour chaque volume*, puis choisissez les volumes que vous souhaitez mapper et/ou classer.
+
+
+. Dans la boîte de dialogue de confirmation, sélectionnez *Approuver* pour que la classification des données commence à analyser vos volumes.
+
+
+.Résultat
+La classification des données commence à analyser les volumes que vous avez sélectionnés dans le système.  Les résultats seront disponibles dans le tableau de bord de conformité dès que la classification des données aura terminé les analyses initiales.  Le temps nécessaire dépend de la quantité de données : cela peut prendre quelques minutes ou quelques heures.  Vous pouvez suivre la progression de l'analyse initiale en accédant au menu **Configuration** puis en sélectionnant la **Configuration système**.  La progression de chaque analyse est affichée sous forme de barre de progression.  Vous pouvez également survoler la barre de progression pour voir le nombre de fichiers analysés par rapport au nombre total de fichiers dans le volume.
+
+[NOTE]
+====
+* Par défaut, si Data Classification ne dispose pas d'autorisations d'attributs d'écriture dans CIFS ou d'autorisations d'écriture dans NFS, le système n'analysera pas les fichiers de vos volumes car Data Classification ne peut pas rétablir l'« heure du dernier accès » à l'horodatage d'origine.  Si vous ne vous souciez pas de savoir si la dernière heure d'accès est réinitialisée, sélectionnez *Ou sélectionnez le type d'analyse pour chaque volume*.  La page résultante contient un paramètre que vous pouvez activer pour que la classification des données analyse les volumes quelles que soient les autorisations.
+* La classification des données analyse un seul partage de fichiers sous un volume.  Si vous avez plusieurs partages dans vos volumes, vous devrez analyser ces autres partages séparément en tant que groupe de partages. link:reference-limitations.html#data-classification-scans-only-one-share-under-a-volume["Voir plus de détails sur cette limitation de classification des données"^] .
+
+
+====
+
+
+== Vérifiez que la classification des données a accès aux volumes
+
+Assurez-vous que la classification des données peut accéder aux volumes en vérifiant votre réseau, vos groupes de sécurité et vos politiques d'exportation.
+
+Vous devrez fournir à Data Classification les informations d'identification CIFS afin qu'il puisse accéder aux volumes CIFS.
+
+.Étapes
+. Dans le menu Classification des données, sélectionnez *Configuration*.
+. Sur la page Configuration, sélectionnez *Afficher les détails* pour vérifier l’état et corriger les erreurs.
++
+Par exemple, l’image suivante montre un volume que Data Classification ne peut pas analyser en raison de problèmes de connectivité réseau entre l’instance Data Classification et le volume.
+
++
+image:screenshot_fsx_scanning_no_network_error.png["Capture d'écran de la page Afficher les détails dans la configuration d'analyse montrant que le volume n'est pas analysé en raison de la connectivité réseau entre la classification des données et le volume."]
+
+. Assurez-vous qu'il existe une connexion réseau entre l'instance de classification des données et chaque réseau qui inclut des volumes pour FSx pour ONTAP.
++
+
+NOTE: Pour FSx for ONTAP, la classification des données peut analyser les volumes uniquement dans la même région que la console.
+
+. Assurez-vous que les stratégies d’exportation de volume NFS incluent l’adresse IP de l’instance de classification des données afin qu’elle puisse accéder aux données sur chaque volume.
+. Si vous utilisez CIFS, fournissez à Data Classification les informations d’identification Active Directory afin qu’il puisse analyser les volumes CIFS.
++
+.. Dans le menu Classification des données, sélectionnez *Configuration*.
+.. Pour chaque système, sélectionnez *Modifier les informations d'identification CIFS* et saisissez le nom d'utilisateur et le mot de passe dont Data Classification a besoin pour accéder aux volumes CIFS sur le système.
++
+Les informations d'identification peuvent être en lecture seule, mais la fourniture d'informations d'identification d'administrateur garantit que la classification des données peut lire toutes les données nécessitant des autorisations élevées.  Les informations d’identification sont stockées sur l’instance de classification des données.
+
++
+Si vous souhaitez vous assurer que les « dernières heures d'accès » de vos fichiers restent inchangées par les analyses de classification des données, il est recommandé que l'utilisateur dispose des autorisations d'écriture d'attributs dans CIFS ou des autorisations d'écriture dans NFS. Si possible, configurez l’utilisateur Active Directory en tant que membre d’un groupe parent de l’organisation disposant d’autorisations sur tous les fichiers.
+
++
+Après avoir saisi les informations d’identification, vous devriez voir un message indiquant que tous les volumes CIFS ont été authentifiés avec succès.
+
+
+
+
+
+
+
+== Activer et désactiver les analyses de conformité sur les volumes
+
+Vous pouvez démarrer ou arrêter les analyses de mappage uniquement ou les analyses de mappage et de classification dans un système à tout moment à partir de la page Configuration.  Vous pouvez également passer d'analyses de mappage uniquement à des analyses de mappage et de classification, et vice-versa.  Nous vous recommandons d'analyser tous les volumes.
+
+Le commutateur en haut de la page pour *Analyser lorsque les autorisations « attributs d'écriture » sont manquantes* est désactivé par défaut.  Cela signifie que si Data Classification ne dispose pas d'autorisations d'attributs d'écriture dans CIFS ou d'autorisations d'écriture dans NFS, le système n'analysera pas les fichiers car Data Classification ne peut pas rétablir la « dernière heure d'accès » à l'horodatage d'origine.  Si vous ne vous souciez pas de savoir si la dernière heure d'accès est réinitialisée, activez l'interrupteur et tous les fichiers sont analysés quelles que soient les autorisations. link:reference-collected-metadata.html#last-access-time-timestamp["Apprendre encore plus"^] .
+
+image:screenshot_volume_compliance_selection.png["Une capture d’écran de la page de configuration où vous pouvez activer ou désactiver l’analyse des volumes individuels."]
+
+. Dans le menu Classification des données, sélectionnez *Configuration*.
+. Dans la page Configuration, recherchez le système avec les volumes que vous souhaitez analyser.
+. Effectuez l’une des opérations suivantes :
++
+** Pour activer les analyses de mappage uniquement sur un volume, dans la zone du volume, sélectionnez *Map*.  Ou, pour activer sur tous les volumes, dans la zone d'en-tête, sélectionnez *Carte*.  Pour activer l'analyse complète sur un volume, dans la zone du volume, sélectionnez *Mappez et classez*.  Ou, pour activer sur tous les volumes, dans la zone d'en-tête, sélectionnez *Carter et classer*.
+** Pour désactiver l'analyse sur un volume, dans la zone du volume, sélectionnez *Désactivé*.  Pour désactiver l'analyse sur tous les volumes, dans la zone d'en-tête, sélectionnez *Désactivé*.
+
+
+
+
+
+NOTE: Les nouveaux volumes ajoutés au système sont automatiquement analysés uniquement lorsque vous avez défini le paramètre *Carte* ou *Carte et classification* dans la zone d'en-tête.  Lorsque cette option est définie sur *Personnalisé* ou *Désactivé* dans la zone d'en-tête, vous devrez activer le mappage et/ou l'analyse complète sur chaque nouveau volume que vous ajoutez au système.
+
+
+
+== Analyser les volumes de protection des données
+
+Par défaut, les volumes de protection des données (DP) ne sont pas analysés car ils ne sont pas exposés en externe et Data Classification ne peut pas y accéder.  Il s'agit des volumes de destination pour les opérations SnapMirror à partir d'un système de fichiers FSx pour ONTAP .
+
+Initialement, la liste des volumes identifie ces volumes comme _Type_ *DP* avec le _Statut_ *Pas d'analyse* et l'_Action requise_ *Activer l'accès aux volumes DP*.
+
+image:screenshot_cloud_compliance_dp_volumes.png["Une capture d'écran montrant le bouton Activer l'accès aux volumes DP que vous pouvez sélectionner pour analyser les volumes de protection des données."]
+
+.Étapes
+Si vous souhaitez analyser ces volumes de protection des données :
+
+. Dans le menu Classification des données, sélectionnez *Configuration*.
+. Sélectionnez *Activer l’accès aux volumes DP* en haut de la page.
+. Vérifiez le message de confirmation et sélectionnez à nouveau *Activer l'accès aux volumes DP*.
++
+** Les volumes initialement créés en tant que volumes NFS dans le système de fichiers source FSx pour ONTAP sont activés.
+** Les volumes initialement créés en tant que volumes CIFS dans le système de fichiers source FSx for ONTAP nécessitent que vous saisissiez les informations d'identification CIFS pour analyser ces volumes DP.  Si vous avez déjà saisi les informations d’identification Active Directory pour que la classification des données puisse analyser les volumes CIFS, vous pouvez utiliser ces informations d’identification ou spécifier un autre ensemble d’informations d’identification d’administrateur.
++
+image:screenshot_compliance_dp_cifs_volumes.png["Une capture d'écran des deux options permettant d'activer les volumes de protection des données CIFS."]
+
+
+
+. Activez chaque volume DP que vous souhaitez analyser.
+
+
+.Résultat
+Une fois activée, la classification des données crée un partage NFS à partir de chaque volume DP activé pour l'analyse.  Les politiques d'exportation de partage autorisent uniquement l'accès à partir de l'instance de classification des données.
+
+Si vous n'aviez aucun volume de protection des données CIFS lorsque vous avez initialement activé l'accès aux volumes DP, et que vous en avez ajouté ultérieurement, le bouton *Activer l'accès à CIFS DP* apparaît en haut de la page de configuration.  Sélectionnez ce bouton et ajoutez les informations d’identification CIFS pour activer l’accès à ces volumes CIFS DP.
+
+
+NOTE: Les informations d'identification Active Directory sont enregistrées uniquement dans la machine virtuelle de stockage du premier volume DP CIFS. Par conséquent, tous les volumes DP sur cette SVM seront analysés.  Tous les volumes résidant sur d’autres SVM n’auront pas les informations d’identification Active Directory enregistrées, de sorte que ces volumes DP ne seront pas analysés.

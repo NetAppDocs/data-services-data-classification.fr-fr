@@ -1,0 +1,481 @@
+---
+sidebar: sidebar 
+permalink: reference-private-data-categories.html 
+keywords: personal files, personal data, sensitive personal files, sensitive personal data, categories, health data, ethnic origin, political opinions, gdpr, email address, credit card, ip address, iban, national ID, identifier, sex, criminal, compliance, privacy, 
+summary: Il existe de nombreux types de données privées que Data Classification peut identifier dans vos volumes. 
+---
+= Catégories de données privées dans la classification des données NetApp
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Il existe de nombreux types de données privées que NetApp Data Classification peut identifier dans vos volumes et bases de données.
+
+La classification des données identifie deux types de données personnelles :
+
+* *Informations personnelles identifiables (PII)*
+* *Informations personnelles sensibles (SPII)*
+
+
+
+TIP: Si vous avez besoin d'une classification des données pour identifier d'autres types de données privées, tels que des numéros d'identification nationaux supplémentaires ou des identifiants de soins de santé, contactez votre gestionnaire de compte.
+
+
+
+== Types de données personnelles
+
+Les données personnelles, ou _informations personnellement identifiables_ (PII), trouvées dans les fichiers peuvent être des données personnelles générales ou des identifiants nationaux.  La troisième colonne du tableau ci-dessous indique si la classification des données utiliselink:task-controlling-private-data.html#view-files-that-contain-personal-data["validation de proximité"^] pour valider ses conclusions pour l'identifiant.
+
+Les langues dans lesquelles ces éléments peuvent être reconnus sont identifiées dans le tableau.
+
+[cols="13,37,10,8,8,8,8,8"]
+|===
+| Type | Identifiant | Validation de proximité ? | English | Allemand | Espagnol | Français | japonais 
+
+
+.6+| Général | Numéro de Carte de Crédit | Oui | ✓ | ✓ | ✓ |  | ✓ 
+
+
+| Personnes concernées | Non | ✓ | ✓ | ✓ |  |  
+
+
+| Adresse email | Non | ✓ | ✓ | ✓ |  | ✓ 
+
+
+| Numéro IBAN (numéro de compte bancaire international) | Non | ✓ | ✓ | ✓ |  | ✓ 
+
+
+| Adresse IP | Non | ✓ | ✓ | ✓ |  | ✓ 
+
+
+| Mot de passe | Oui | ✓ | ✓ | ✓ |  | ✓ 
+
+
+.88+| Identifiants nationaux | Numéro de dossier fiscal australien (TFN) | Oui | ✓ | ✓ | ✓ |  |  
+
+
+| Permis de conduire australien | Oui | ✓ | ✓ | ✓ |  |  
+
+
+| Numéro d'assurance-maladie australien | Oui | ✓ | ✓ | ✓ |  |  
+
+
+| Numéro de passeport australien | Oui | ✓ | ✓ | ✓ |  |  
+
+
+| SSN autrichien | Oui | ✓ | ✓ | ✓ |  |  
+
+
+| Carte d'identité belge (Numéro National) | Oui | ✓ | ✓ | ✓ |  |  
+
+
+| Numéro de carte d'identité du Botswana (Omang) | Oui | ✓ | ✓ | ✓ |  |  
+
+
+| Numéro de passeport du Botswana | Oui | ✓ | ✓ | ✓ |  |  
+
+
+| Carte d'identité brésilienne (CPF) | Oui | ✓ | ✓ | ✓ |  |  
+
+
+| passeport britannique | Oui | ✓ | ✓ | ✓ |  |  
+
+
+| Carte d'identité bulgare (UCN) | Oui | ✓ | ✓ | ✓ |  |  
+
+
+| Numéros d'information bancaire canadiens - Numéro de compte | Oui | ✓ |  |  |  |  
+
+
+| Numéros d'information bancaire canadiens - Numéro de transit | Oui | ✓ |  |  |  |  
+
+
+| Numéro de citoyenneté canadienne/de résident permanent – Numéro de carte RP (UCI) | Oui | ✓ |  |  |  |  
+
+
+| Permis de conduire canadien – Alberta | Oui | ✓ |  |  |  |  
+
+
+| Permis de conduire canadien – Colombie-Britannique | Oui | ✓ |  |  |  |  
+
+
+| Permis de conduire canadien – Manitoba | Oui | ✓ |  |  |  |  
+
+
+| Permis de conduire canadien – Nouveau-Brunswick | Oui | ✓ |  |  |  |  
+
+
+| Permis de conduire canadien – Terre-Neuve-et-Labrador | Oui | ✓ |  |  |  |  
+
+
+| Permis de conduire canadien – Territoires du Nord-Ouest | Oui | ✓ |  |  |  |  
+
+
+| Permis de conduire canadien – Nouvelle-Écosse | Oui | ✓ |  |  |  |  
+
+
+| Permis de conduire canadien – Nunavut | Oui | ✓ |  |  |  |  
+
+
+| Permis de conduire canadien - Ontario | Oui | ✓ |  |  |  |  
+
+
+| Permis de conduire canadien – Île-du-Prince-Édouard | Oui | ✓ |  |  |  |  
+
+
+| Permis de conduire canadien - Québec | Oui | ✓ |  |  |  |  
+
+
+| Permis de conduire canadien – Saskatchewan | Oui | ✓ |  |  |  |  
+
+
+| Permis de conduire canadien - Yukon | Oui | ✓ |  |  |  |  
+
+
+| Numéro de carte d'assurance-maladie canadienne – Alberta PHIN | Oui | ✓ |  |  |  |  
+
+
+| Numéro de carte d'assurance-maladie canadienne – NIP de la Colombie-Britannique | Oui | ✓ |  |  |  |  
+
+
+| Numéro de carte d'assurance-maladie canadienne – Manitoba PHIN | Oui | ✓ |  |  |  |  
+
+
+| Numéro de carte d'assurance-maladie canadienne - PHIN | Oui | ✓ |  |  |  |  
+
+
+| Numéro de carte d'assurance-maladie canadienne - PHIN de Terre-Neuve-et-Labrador | Oui | ✓ |  |  |  |  
+
+
+| Numéro de carte d'assurance-maladie canadienne – Territoires du Nord-Ouest | Oui | ✓ |  |  |  |  
+
+
+| Numéro de carte d'assurance-maladie canadienne – NIP de la Nouvelle-Écosse | Oui | ✓ |  |  |  |  
+
+
+| Numéro de carte d'assurance-maladie canadienne - Nunavut PHIN | Oui | ✓ |  |  |  |  
+
+
+| Numéro de carte d'assurance-maladie canadienne – Ontario PHIN | Oui | ✓ |  |  |  |  
+
+
+| Numéro de carte d'assurance-maladie canadienne - Île-du-Prince-Édouard | Oui | ✓ |  |  |  |  
+
+
+| Numéro de carte d'assurance-maladie du Canada - NIP du Québec | Oui | ✓ |  |  |  |  
+
+
+| Numéro de carte d'assurance-maladie canadienne – Saskatchewan PHIN | Oui | ✓ |  |  |  |  
+
+
+| Numéro de carte d'assurance-maladie canadienne - Yukon PHIN | Oui | ✓ |  |  |  |  
+
+
+| Numéro de passeport canadien | Oui | ✓ |  |  |  |  
+
+
+| Numéro d'assurance sociale canadien (NAS) | Oui | ✓ |  |  |  |  
+
+
+| Carte d'identité croate (OIB) | Oui | ✓ | ✓ | ✓ |  |  
+
+
+| Numéro d'identification fiscale chypriote (TIC) | Oui | ✓ | ✓ | ✓ |  |  
+
+
+| Carte d'identité tchèque/slovaque | Oui | ✓ | ✓ | ✓ |  |  
+
+
+| Carte d'identité danoise (CPR) | Oui | ✓ | ✓ | ✓ |  |  
+
+
+| Carte d'identité néerlandaise (BSN) | Oui | ✓ | ✓ | ✓ |  |  
+
+
+| carte d'identité estonienne | Oui | ✓ | ✓ | ✓ |  |  
+
+
+| Carte d'identité finlandaise (HETU) | Oui | ✓ | ✓ | ✓ |  |  
+
+
+| Permis de conduire français | Oui | ✓ | ✓ | ✓ | ✓ |  
+
+
+| carte d'identité française | Oui | ✓ | ✓ | ✓ | ✓ |  
+
+
+| INSEE français | Oui | ✓ | ✓ | ✓ | ✓ |  
+
+
+| Numéro de sécurité sociale français | Oui | ✓ | ✓ | ✓ | ✓ |  
+
+
+| Numéro d'identification fiscale français (SPI) | Oui | ✓ | ✓ | ✓ | ✓ |  
+
+
+| Carte d'identité allemande (Personalausweisnummer) | Oui | ✓ | ✓ | ✓ |  |  
+
+
+| ID interne allemand pour les virements bancaires | Oui | ✓ | ✓ | ✓ |  |  
+
+
+| Numéro de sécurité sociale allemand (Sozialversicherungsnummer) | Oui | ✓ | ✓ | ✓ |  |  
+
+
+| Numéro d'identification fiscale allemand (Steuerliche Identifikationsnummer) | Oui | ✓ | ✓ | ✓ |  |  
+
+
+| carte d'identité grecque | Oui | ✓ | ✓ | ✓ |  |  
+
+
+| Numéro d'identification fiscale hongrois | Oui | ✓ | ✓ | ✓ |  |  
+
+
+| Carte d'identité irlandaise (PPS) | Oui | ✓ | ✓ | ✓ |  |  
+
+
+| carte d'identité israélienne | Oui | ✓ | ✓ | ✓ |  |  
+
+
+| Numéro d'identification fiscale italien | Oui | ✓ | ✓ | ✓ |  |  
+
+
+| Numéro d'identification personnel japonais (personnel et d'entreprise) | Oui | ✓ | ✓ | ✓ |  | ✓ 
+
+
+| carte d'identité lettone | Oui | ✓ | ✓ | ✓ |  |  
+
+
+| carte d'identité lituanienne | Oui | ✓ | ✓ | ✓ |  |  
+
+
+| Carte d'identité luxembourgeoise | Oui | ✓ | ✓ | ✓ |  |  
+
+
+| Carte d'identité maltaise | Oui | ✓ | ✓ | ✓ |  |  
+
+
+| Numéro du Service national de santé (NHS) | Oui | ✓ | ✓ | ✓ |  |  
+
+
+| Compte bancaire néo-zélandais | Oui | ✓ | ✓ | ✓ |  |  
+
+
+| Permis de conduire néo-zélandais | Oui | ✓ | ✓ | ✓ |  |  
+
+
+| Numéro IRD de Nouvelle-Zélande (IDF) | Oui | ✓ | ✓ | ✓ |  |  
+
+
+| Numéro NHI (Indice national de santé) de Nouvelle-Zélande | Oui | ✓ | ✓ | ✓ |  |  
+
+
+| Numéro de passeport néo-zélandais | Oui | ✓ | ✓ | ✓ |  |  
+
+
+| Carte d'identité polonaise (PESEL) | Oui | ✓ | ✓ | ✓ |  |  
+
+
+| Numéro d'identification fiscale portugais (NIF) | Oui | ✓ | ✓ | ✓ |  |  
+
+
+| Carte d'identité roumaine (CNP) | Oui | ✓ | ✓ | ✓ |  |  
+
+
+| Carte d'identité nationale d'enregistrement de Singapour (NRIC) | Oui | ✓ | ✓ | ✓ |  |  
+
+
+| Carte d'identité slovène (EMSO) | Oui | ✓ | ✓ | ✓ |  |  
+
+
+| Carte d'identité sud-africaine | Oui | ✓ | ✓ | ✓ |  |  
+
+
+| Numéro d'identification fiscale espagnol | Oui | ✓ | ✓ | ✓ |  |  
+
+
+| carte d'identité suédoise | Oui | ✓ | ✓ | ✓ |  |  
+
+
+| Carte d'identité britannique (NINO) | Oui | ✓ | ✓ | ✓ |  |  
+
+
+| Permis de conduire des États-Unis en Californie | Oui | ✓ | ✓ | ✓ |  |  
+
+
+| Permis de conduire de l'Indiana aux États-Unis | Oui | ✓ | ✓ | ✓ |  |  
+
+
+| Permis de conduire de l'État de New York aux États-Unis | Oui | ✓ | ✓ | ✓ |  |  
+
+
+| Permis de conduire des États-Unis au Texas | Oui | ✓ | ✓ | ✓ |  |  
+
+
+| Numéro de sécurité sociale aux États-Unis (SSN) | Oui | ✓ | ✓ | ✓ |  |  
+|===
+
+
+== Types de données personnelles sensibles
+
+La classification des données peut trouver les informations personnelles sensibles (SPII) suivantes dans les fichiers.
+
+Les SPII suivants ne peuvent actuellement être reconnus qu'en anglais :
+
+* *Référence aux procédures pénales* : Données concernant les condamnations pénales et les infractions d'une personne physique.
+* *Référence ethnique* : Données concernant l'origine raciale ou ethnique d'une personne physique.
+* *Référence Santé* : Données concernant la santé d'une personne physique.
+* *Codes médicaux ICD-9-CM* : Codes utilisés dans le secteur médical et de la santé.
+* *Codes médicaux ICD-10-CM* : Codes utilisés dans le secteur médical et de la santé.
+* *Référence aux croyances philosophiques* : Données concernant les croyances philosophiques d'une personne physique.
+* *Référence aux opinions politiques* : Données concernant les opinions politiques d'une personne physique.
+* *Référence aux croyances religieuses* : Données concernant les croyances religieuses d'une personne physique.
+* *Référence relative à la vie sexuelle ou à l'orientation sexuelle* : Données concernant la vie sexuelle ou l'orientation sexuelle d'une personne physique.
+
+
+
+
+== Types de catégories
+
+La classification des données catégorise vos données comme suit.
+
+La plupart de ces catégories peuvent être reconnues en anglais, en allemand et en espagnol.
+
+[cols="25,25,15,15,15"]
+|===
+| Catégorie | Type | English | Allemand | Espagnol 
+
+
+.4+| Finance | Bilans | ✓ | ✓ | ✓ 
+
+
+| Bons de commande | ✓ | ✓ | ✓ 
+
+
+| Factures | ✓ | ✓ | ✓ 
+
+
+| Rapports trimestriels | ✓ | ✓ | ✓ 
+
+
+.6+| HEURE | Vérifications des antécédents | ✓ |  | ✓ 
+
+
+| Plans de rémunération | ✓ | ✓ | ✓ 
+
+
+| Contrats de travail | ✓ |  | ✓ 
+
+
+| Avis des employés | ✓ |  | ✓ 
+
+
+| Santé | ✓ |  | ✓ 
+
+
+| CV | ✓ | ✓ | ✓ 
+
+
+.2+| Légal | Accords de confidentialité | ✓ | ✓ | ✓ 
+
+
+| Contrats fournisseur-client | ✓ | ✓ | ✓ 
+
+
+.2+| Commercialisation | Campagnes | ✓ | ✓ | ✓ 
+
+
+| Conférences | ✓ | ✓ | ✓ 
+
+
+| Opérations | Rapports d'audit | ✓ | ✓ | ✓ 
+
+
+| Ventes | Commandes de vente | ✓ | ✓ |  
+
+
+.4+| Services | RFI | ✓ |  | ✓ 
+
+
+| Demande de propositions | ✓ |  | ✓ 
+
+
+| TRUIE | ✓ | ✓ | ✓ 
+
+
+| Formation | ✓ | ✓ | ✓ 
+
+
+| Support | Plaintes et contraventions | ✓ | ✓ | ✓ 
+|===
+Les métadonnées suivantes sont également catégorisées et identifiées dans les mêmes langues prises en charge :
+
+* Données d'application
+* Fichiers d'archives
+* Audio
+* Fil d'Ariane des données d'application métier de classification des données
+* Fichiers CAO
+* Code
+* Corrompu
+* Base de données et fichiers d'index
+* Fichiers de conception
+* Données de candidature par courrier électronique
+* Crypté (fichiers avec un score d'entropie élevé)
+* Exécutables
+* Données d'application financière
+* Données d'application de santé
+* Images
+* Journaux
+* Documents divers
+* Présentations diverses
+* Feuilles de calcul diverses
+* Divers « Inconnu »
+* Fichiers protégés par mot de passe
+* Données structurées
+* Vidéos
+* Fichiers de zéro octet
+
+
+
+
+== Types de fichiers
+
+La classification des données analyse tous les fichiers pour obtenir des informations sur les catégories et les métadonnées et affiche tous les types de fichiers dans la section types de fichiers du tableau de bord.  Lorsque la classification des données détecte des informations personnelles identifiables (PII) ou lorsqu'elle effectue une recherche DSAR, seuls les formats de fichiers suivants sont pris en charge :
+
+`+.CSV, .DCM, .DOC, .DOCX, .JSON, .PDF, .PPTX, .RTF, .TXT, .XLS, .XLSX, Docs, Sheets, and Slides+`
+
+
+
+== Exactitude des informations trouvées
+
+NetApp ne peut pas garantir l'exactitude à 100 % des données personnelles et des données personnelles sensibles identifiées par Data Classification.  Vous devez toujours valider les informations en examinant les données.
+
+Sur la base de nos tests, le tableau ci-dessous montre l'exactitude des informations trouvées par Data Classification.  Nous le décomposons par _précision_ et _rappel_ :
+
+Précision:: La probabilité que ce que la classification des données trouve ait été correctement identifié.  Par exemple, un taux de précision de 90 % pour les données personnelles signifie que 9 fichiers sur 10 identifiés comme contenant des informations personnelles contiennent réellement des informations personnelles.  1 fichier sur 10 serait un faux positif.
+Rappel:: La probabilité que la classification des données trouve ce qu'elle devrait.  Par exemple, un taux de rappel de 70 % pour les données personnelles signifie que la classification des données peut identifier 7 fichiers sur 10 qui contiennent réellement des informations personnelles dans votre organisation.  La classification des données manquerait de 30 % des données et elles n'apparaîtraient pas dans le tableau de bord.
+
+
+Nous améliorons constamment la précision de nos résultats.  Ces améliorations seront automatiquement disponibles dans les futures versions de la classification des données.
+
+[cols="25,20,20"]
+|===
+| Type | Précision | Rappel 
+
+
+| Données personnelles - Généralités | 90%-95% | 60%-80% 
+
+
+| Données personnelles - Identifiants de pays | 30%-60% | 40%-60% 
+
+
+| Données personnelles sensibles | 80%-95% | 20%-30% 
+
+
+| Catégories | 90%-97% | 60%-80% 
+|===

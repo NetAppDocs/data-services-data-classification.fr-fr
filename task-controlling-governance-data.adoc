@@ -1,0 +1,196 @@
+---
+sidebar: sidebar 
+permalink: task-controlling-governance-data.html 
+keywords: savings, stale data, duplicate data, highlights, data discovery assessment report, data mapping overview report, data repositories, sensitive data, wide permissions, open permissions, age of data, size of data, classification, costs of data 
+summary: 'Maîtrisez les coûts liés aux données sur les ressources de stockage de votre organisation.  La classification des données NetApp identifie la quantité de données obsolètes, de fichiers en double et de fichiers très volumineux dans vos systèmes afin que vous puissiez décider si vous souhaitez supprimer ou hiérarchiser certains fichiers vers un stockage d"objets moins coûteux.' 
+---
+= Affichez les détails de gouvernance sur les données stockées dans votre organisation avec NetApp Data Classification
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Maîtrisez les coûts liés aux données sur les ressources de stockage de votre organisation.  La classification des données NetApp identifie la quantité de données obsolètes, de fichiers en double et de fichiers très volumineux dans vos systèmes afin que vous puissiez décider si vous souhaitez supprimer ou hiérarchiser certains fichiers vers un stockage d'objets moins coûteux.
+
+C'est ici que vous devriez commencer vos recherches.  Depuis le tableau de bord de gouvernance, vous pouvez sélectionner un domaine pour une enquête plus approfondie.
+
+De plus, si vous envisagez de migrer des données depuis des emplacements locaux vers le cloud, vous pouvez afficher la taille des données et si certaines d'entre elles contiennent des informations sensibles avant de les déplacer.
+
+
+
+== Consultez le tableau de bord de gouvernance
+
+Le tableau de bord de gouvernance fournit des informations pour vous permettre d'augmenter l'efficacité et de contrôler les coûts liés aux données stockées sur vos ressources de stockage.
+
+image:screenshot_compliance_governance_dashboard.png["Une capture d’écran du tableau de bord de gouvernance de la classification des données."]
+
+.Étapes
+. Dans le menu de la console NetApp , sélectionnez *Gouvernance > Classification*.
+. Sélectionnez *Gouvernance*.
++
+Le tableau de bord de gouvernance apparaît.
+
+
+
+
+
+=== Examiner les possibilités d'économies
+
+Le composant _Opportunités d'économie_ affiche les données que vous pouvez supprimer ou hiérarchiser vers un stockage d'objets moins coûteux.  Les données de _Saving Opportunities_ sont mises à jour toutes les 2 heures.  Vous pouvez également mettre à jour les données manuellement.
+
+.Étapes
+. Dans le menu Classification des données, sélectionnez *Gouvernance*.
+. Dans chaque mosaïque Opportunités d'économies du tableau de bord de gouvernance, sélectionnez *Optimiser le stockage* pour afficher les résultats filtrés dans la page Enquête.  Pour découvrir les données que vous devriez supprimer ou transférer vers un stockage moins coûteux, étudiez les _Opportunités d'économie_.
++
+** *Données obsolètes* - Données qui ont été modifiées pour la dernière fois il y a plus de 3 ans.
+** *Fichiers en double* - Fichiers dupliqués à d'autres emplacements dans les sources de données que vous analysez. link:task-investigate-data.html["Voir quels types de fichiers en double sont affichés"] .
+
+
+
+
+
+NOTE: Si l'une de vos sources de données implémente la hiérarchisation des données, les anciennes données qui résident déjà dans le stockage d'objets peuvent être identifiées dans la catégorie _Données obsolètes_.
+
+
+
+== Créer le rapport d'évaluation de la découverte de données
+
+Le rapport d’évaluation de la découverte de données fournit une analyse de haut niveau de l’environnement analysé pour montrer les zones de préoccupation et les étapes de correction potentielles.  Les résultats sont basés à la fois sur la cartographie et la classification de vos données.  L’objectif de ce rapport est de sensibiliser à trois aspects importants de votre ensemble de données :
+
+[cols="25,65"]
+|===
+| Fonctionnalité | Description 
+
+
+| Préoccupations liées à la gouvernance des données | Une image détaillée de toutes les données que vous possédez et des domaines dans lesquels vous pouvez réduire la quantité de données pour économiser des coûts. 
+
+
+| Expositions à la sécurité des données | Zones dans lesquelles vos données sont accessibles aux attaques internes ou externes en raison d'autorisations d'accès étendues. 
+
+
+| Lacunes en matière de conformité des données | Où se trouvent vos informations personnelles ou sensibles, à des fins de sécurité et pour les DSAR (demandes d'accès aux données des personnes concernées). 
+|===
+Avec le rapport, vous pouvez effectuer les actions suivantes :
+
+* Réduisez les coûts de stockage en modifiant votre politique de conservation, ou en déplaçant ou en supprimant certaines données (données obsolètes ou en double).
+* Protégez vos données disposant d’autorisations étendues en révisant les politiques de gestion des groupes globaux.
+* Protégez vos données contenant des informations personnelles ou sensibles en déplaçant les PII vers des magasins de données plus sécurisés.
+
+
+.Étapes
+. Dans Classification des données, sélectionnez *Gouvernance*.
+. Dans la mosaïque des rapports, sélectionnez *Rapport d’évaluation de la découverte de données*.
++
+image:screenshot-compliance-report-buttons.png["Une capture d’écran du tableau de bord de gouvernance qui montre comment lancer le rapport d’évaluation de la découverte des données."]
+
+
+
+.Résultat
+La classification des données génère un rapport PDF que vous pouvez consulter et partager.
+
+
+
+== Créer le rapport de synthèse du mappage des données
+
+Le rapport d'aperçu du mappage des données fournit un aperçu des données stockées dans vos sources de données d'entreprise pour vous aider à prendre des décisions concernant les processus de migration, de sauvegarde, de sécurité et de conformité.  Le rapport résume tous les systèmes et sources de données.  Il fournit également une analyse pour chaque système.
+
+Le rapport comprend les informations suivantes :
+
+[cols="25,65"]
+|===
+| Catégorie | Description 
+
+
+| Capacité d'utilisation | Pour tous les systèmes : répertorie le nombre de fichiers et la capacité utilisée pour chaque système.  Pour les systèmes uniques : répertorie les fichiers qui utilisent le plus de capacité. 
+
+
+| L'ère des données | Fournit trois tableaux et graphiques indiquant quand les fichiers ont été créés, modifiés pour la dernière fois ou consultés pour la dernière fois.  Répertorie le nombre de fichiers et leur capacité utilisée, en fonction de certaines plages de dates. 
+
+
+| Taille des données | Répertorie le nombre de fichiers qui existent dans certaines plages de taille dans vos systèmes. 
+|===
+.Étapes
+. Dans Classification des données, sélectionnez *Gouvernance*.
+. Dans la mosaïque des rapports, sélectionnez *Rapport d’aperçu complet du mappage des données*.
++
+image:screenshot-compliance-report-buttons.png["Une capture d’écran du tableau de bord de gouvernance qui montre comment lancer le rapport de mappage des données."]
+
+
+
+.Résultat
+La classification des données génère un rapport PDF que vous pouvez consulter et envoyer à d’autres groupes selon vos besoins.
+
+Si le rapport est supérieur à 1 Mo, le fichier PDF est conservé sur l'instance de classification des données et vous verrez un message contextuel indiquant l'emplacement exact.  Lorsque Data Classification est installé sur une machine Linux dans vos locaux ou sur une machine Linux que vous avez déployée dans le cloud, vous pouvez accéder directement au fichier PDF.  Lorsque la classification des données est déployée dans le cloud, vous devez autoriser avec SSH l'instance de classification des données pour télécharger le fichier PDF.
+
+
+
+=== Consultez les principaux référentiels de données classés par sensibilité des données
+
+La zone _Principaux référentiels de données par niveau de sensibilité_ du rapport Présentation du mappage des données répertorie les quatre principaux référentiels de données (systèmes et sources de données) qui contiennent les éléments les plus sensibles.  Le graphique à barres de chaque système est divisé en :
+
+* Données non sensibles
+* Données personnelles
+* Données personnelles sensibles
+
+
+Ces données sont actualisées toutes les deux heures et peuvent être actualisées manuellement.
+
+.Étapes
+. Pour voir le nombre total d’éléments dans chaque catégorie, positionnez votre curseur sur chaque section de la barre.
+. Pour filtrer les résultats qui apparaîtront sur la page Enquête, sélectionnez chaque zone dans la barre et approfondissez vos recherches.
+
+
+
+
+=== Examiner les données sensibles et les autorisations étendues
+
+La zone _Données sensibles et autorisations étendues_ du tableau de bord de gouvernance affiche le nombre de fichiers contenant des données sensibles et disposant d'autorisations étendues.  Le tableau présente les types d’autorisations suivants :
+
+* Des autorisations les plus restrictives aux restrictions les plus permissives sur l'axe horizontal.
+* Des données les moins sensibles aux données les plus sensibles sur l'axe vertical.
+
+
+.Étapes
+. Pour voir le nombre total de fichiers dans chaque catégorie, positionnez votre curseur sur chaque case.
+. Pour filtrer les résultats qui apparaîtront sur la page Enquête, sélectionnez une case et poursuivez vos recherches.
+
+
+
+
+=== Examiner les données répertoriées par types d'autorisations ouvertes
+
+La zone _Autorisations d'ouverture_ du rapport Présentation du mappage des données affiche le pourcentage pour chaque type d'autorisations existant pour tous les fichiers en cours d'analyse.  Le graphique montre les types d’autorisations suivants :
+
+* Aucune autorisation d'ouverture
+* Ouvert à l'organisation
+* Ouvert au public
+* Accès inconnu
+
+
+.Étapes
+. Pour voir le nombre total de fichiers dans chaque catégorie, positionnez votre curseur sur chaque case.
+. Pour filtrer les résultats qui apparaîtront sur la page Enquête, sélectionnez une case et poursuivez vos recherches.
+
+
+
+
+=== Vérifiez l'âge et la taille des données
+
+Vous pouvez examiner les éléments des graphiques _Âge_ et _Taille_ du rapport Présentation du mappage des données pour voir s'il existe des données que vous devez supprimer ou transférer vers un stockage d'objets moins coûteux.
+
+.Étapes
+. Dans le graphique Âge des données, pour voir les détails sur l'âge des données, placez votre curseur sur un point du graphique.
+. Pour filtrer par tranche d'âge ou de taille, sélectionnez cet âge ou cette taille.
++
+** *Graphique de l'âge des données* - Catégorise les données en fonction de l'heure à laquelle elles ont été créées, de la dernière fois où elles ont été consultées ou de la dernière fois où elles ont été modifiées.
+** *Taille du graphique de données* - Catégorise les données en fonction de leur taille.
+
+
+
+
+
+NOTE: Si l'une de vos sources de données implémente la hiérarchisation des données, les anciennes données qui résident déjà dans le stockage d'objets peuvent être identifiées dans le graphique _Age of Data_.

@@ -1,0 +1,134 @@
+---
+sidebar: sidebar 
+permalink: task-scanning-anf.html 
+keywords: cloud compliance, get started, enable cloud compliance, cloud compliance access, privacy, compliance, ANF, azure netApp files, data sense 
+summary: Suivez quelques étapes pour démarrer avec la classification des données pour Azure NetApp Files. 
+---
+= Analyser les volumes Azure NetApp Files avec la classification des données NetApp
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Suivez quelques étapes pour démarrer avec NetApp Data Classification pour Azure NetApp Files.
+
+
+
+== Découvrez le système Azure NetApp Files que vous souhaitez analyser
+
+Si le système Azure NetApp Files que vous souhaitez analyser n’est pas déjà dans la console NetApp en tant que système,link:https://docs.netapp.com/us-en/bluexp-azure-netapp-files/task-quick-start.html["ajoutez-le dans la page Systèmes"^] .
+
+
+
+== Déployer l'instance de classification des données
+
+link:task-deploy-cloud-compliance.html["Déployer la cassification des données"^]s'il n'y a pas déjà une instance déployée.
+
+La classification des données doit être déployée dans le cloud lors de l’analyse des volumes Azure NetApp Files et doit être déployée dans la même région que les volumes que vous souhaitez analyser.
+
+*Remarque :* le déploiement de la classification des données dans un emplacement local n’est actuellement pas pris en charge lors de l’analyse des volumes Azure NetApp Files .
+
+
+
+== Activez la classification des données dans vos systèmes
+
+Vous pouvez activer la classification des données sur vos volumes Azure NetApp Files .
+
+. Dans le menu Classification des données, sélectionnez *Configuration*.
++
+image:screenshot_cloud_compliance_anf_scan_config.png["Une capture d’écran de l’onglet Configuration immédiatement après le déploiement de l’instance de classification des données."]
+
+. Sélectionnez la manière dont vous souhaitez analyser les volumes de chaque système. link:concept-classification.html#whats-the-difference-between-mapping-and-classification-scans["En savoir plus sur les analyses de cartographie et de classification"]:
++
+** Pour mapper tous les volumes, sélectionnez *Mapper tous les volumes*.
+** Pour cartographier et classer tous les volumes, sélectionnez *Cartographier et classer tous les volumes*.
+** Pour personnaliser l'analyse de chaque volume, sélectionnez *Ou sélectionnez le type d'analyse pour chaque volume*, puis choisissez les volumes que vous souhaitez mapper et/ou classer.
++
+Voir<<Activer et désactiver les analyses de conformité sur les volumes,Activer et désactiver les analyses de conformité sur les volumes>> pour plus de détails.
+
+
+
+. Dans la boîte de dialogue de confirmation, sélectionnez *Approuver*.
+
+
+.Résultat
+La classification des données commence à analyser les volumes que vous avez sélectionnés dans le système.  Les résultats sont disponibles dans le tableau de bord Conformité dès que la classification des données termine les analyses initiales.  Le temps nécessaire dépend de la quantité de données : cela peut prendre quelques minutes ou quelques heures.  Vous pouvez suivre la progression de l'analyse initiale en accédant au menu **Configuration** puis en sélectionnant la **Configuration système**.  La progression de chaque analyse est affichée sous forme de barre de progression.  Vous pouvez également survoler la barre de progression pour voir le nombre de fichiers analysés par rapport au nombre total de fichiers dans le volume.
+
+* Par défaut, si Data Classification ne dispose pas d'autorisations d'attributs d'écriture dans CIFS ou d'autorisations d'écriture dans NFS, le système n'analysera pas les fichiers de vos volumes car Data Classification ne peut pas rétablir l'« heure du dernier accès » à l'horodatage d'origine.  Si vous ne vous souciez pas de savoir si la dernière heure d'accès est réinitialisée, sélectionnez *Ou sélectionnez le type d'analyse pour chaque volume*.  La page résultante contient un paramètre que vous pouvez activer pour que la classification des données analyse les volumes quelles que soient les autorisations.
+* La classification des données analyse un seul partage de fichiers sous un volume.  Si vous avez plusieurs partages dans vos volumes, vous devrez analyser ces autres partages séparément en tant que groupe de partages. link:reference-limitations.html#data-classification-scans-only-one-share-under-a-volume["En savoir plus sur cette limitation de classification des données"^] .
+
+
+
+
+== Vérifiez que la classification des données a accès aux volumes
+
+Assurez-vous que la classification des données peut accéder aux volumes en vérifiant votre réseau, vos groupes de sécurité et vos politiques d'exportation.  Vous devez fournir à Data Classification les informations d'identification CIFS afin qu'elle puisse accéder aux volumes CIFS.
+
+
+NOTE: Pour Azure NetApp Files, la classification des données ne peut analyser que les volumes dans la même région que la console.
+
+.Liste de contrôle
+* Assurez-vous qu’il existe une connexion réseau entre l’instance de classification des données et chaque réseau qui inclut des volumes pour Azure NetApp Files.
+* Assurez-vous que les ports suivants sont ouverts sur l’instance de classification des données :
++
+** Pour NFS – ports 111 et 2049.
+** Pour CIFS – ports 139 et 445.
+
+
+* Assurez-vous que les stratégies d’exportation de volume NFS incluent l’adresse IP de l’instance de classification des données afin qu’elle puisse accéder aux données sur chaque volume.
+
+
+.Étapes
+. Dans le menu Classification des données, sélectionnez *Configuration*.
++
+.. Si vous utilisez CIFS (SMB), assurez-vous que les informations d’identification Active Directory sont correctes.  Pour chaque système, sélectionnez *Modifier les informations d'identification CIFS*, puis saisissez le nom d'utilisateur et le mot de passe dont Data Classification a besoin pour accéder aux volumes CIFS sur le système.
++
+Les informations d'identification peuvent être en lecture seule, mais la fourniture d'informations d'identification d'administrateur garantit que la classification des données peut lire toutes les données nécessitant des autorisations élevées.  Les informations d’identification sont stockées sur l’instance de classification des données.
+
++
+Si vous souhaitez vous assurer que les « dernières heures d'accès » de vos fichiers restent inchangées par les analyses de classification des données, il est recommandé que l'utilisateur dispose des autorisations d'écriture d'attributs dans CIFS ou des autorisations d'écriture dans NFS. Si possible, configurez l’utilisateur Active Directory en tant que membre d’un groupe parent de l’organisation disposant d’autorisations sur tous les fichiers.
+
++
+Après avoir saisi les informations d’identification, vous devriez voir un message indiquant que tous les volumes CIFS ont été authentifiés avec succès.
+
++
+image:screenshot_cifs_status.gif["Une capture d’écran qui montre la page de configuration et un système Cloud Volumes ONTAP pour lequel les informations d’identification CIFS ont été fournies avec succès."]
+
+
+
+. Sur la page Configuration, sélectionnez *Afficher les détails* pour vérifier l’état de chaque volume CIFS et NFS et corriger les erreurs éventuelles.
++
+Par exemple, l'image suivante montre quatre volumes ; l'un d'entre eux ne peut pas être analysé par Data Classification en raison de problèmes de connectivité réseau entre l'instance Data Classification et le volume.
+
++
+image:screenshot_compliance_volume_details.gif["Une capture d'écran de la page Afficher les détails dans la configuration d'analyse qui affiche quatre volumes ; dont l'un n'est pas analysé en raison de la connectivité réseau entre la classification des données et le volume."]
+
+
+
+
+
+== Activer et désactiver les analyses de conformité sur les volumes
+
+Vous pouvez démarrer ou arrêter les analyses de mappage uniquement ou les analyses de mappage et de classification dans un système à tout moment à partir de la page Configuration.  Vous pouvez également passer d'analyses de mappage uniquement à des analyses de mappage et de classification, et vice-versa.  Nous vous recommandons d'analyser tous les volumes.
+
+
+TIP: Les nouveaux volumes ajoutés au système sont automatiquement analysés uniquement lorsque vous avez défini le paramètre *Carte* ou *Carte et classification* dans la zone d'en-tête.  Lorsque cette option est définie sur *Personnalisé* ou *Désactivé* dans la zone d'en-tête, vous devrez activer le mappage et/ou l'analyse complète sur chaque nouveau volume que vous ajoutez au système.
+
+Le commutateur en haut de la page pour *Analyser lorsque les autorisations « attributs d'écriture » sont manquantes* est désactivé par défaut.  Cela signifie que si Data Classification ne dispose pas d'autorisations d'attributs d'écriture dans CIFS ou d'autorisations d'écriture dans NFS, le système n'analysera pas les fichiers car Data Classification ne peut pas rétablir la « dernière heure d'accès » à l'horodatage d'origine.  Si vous ne vous souciez pas de savoir si la dernière heure d'accès est réinitialisée, activez l'interrupteur et tous les fichiers sont analysés quelles que soient les autorisations. link:reference-collected-metadata.html#last-access-time-timestamp["Apprendre encore plus"^] .
+
+image:screenshot_volume_compliance_selection.png["Une capture d’écran de la page de configuration où vous pouvez activer ou désactiver l’analyse des volumes individuels."]
+
+.Étapes
+. Dans le menu Classification des données, sélectionnez *Configuration*.
+. Effectuez l’une des opérations suivantes :
++
+** Pour activer les analyses de mappage uniquement sur un volume, dans la zone du volume, sélectionnez *Map*.  Pour activer sur tous les volumes, dans la zone d'en-tête, sélectionnez *Carte*.
+** Pour activer l'analyse complète sur un volume, dans la zone du volume, sélectionnez *Mappez et classez*.  Pour activer sur tous les volumes, dans la zone d'en-tête, sélectionnez *Map & Classify*.
+** Pour désactiver l'analyse sur un volume, dans la zone du volume, sélectionnez *Désactivé*.  Pour désactiver l'analyse sur tous les volumes, dans la zone d'en-tête, sélectionnez *Désactivé*.
+
+
+

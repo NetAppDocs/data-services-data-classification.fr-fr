@@ -1,0 +1,52 @@
+= Version 1.40
+:allow-uri-read: 
+
+
+
+
+=== Version 1.40
+
+Cette version de BlueXP classification inclut les mises à jour suivantes.
+
+.Prise en charge de RHEL 9.5
+Cette version prend en charge Red Hat Enterprise Linux v9.5 en plus des versions précédemment prises en charge.  Ceci s’applique à toute installation manuelle sur site de la BlueXP classification, y compris les déploiements de sites sombres.
+
+Les systèmes d'exploitation suivants nécessitent l'utilisation du moteur de conteneur Podman et nécessitent la version de BlueXP classification 1.30 ou supérieure : Red Hat Enterprise Linux versions 8.8, 8.10, 9.0, 9.1, 9.2, 9.3, 9.4 et 9.5.
+
+.Prioriser les analyses
+Lors de la configuration de l'analyse, vous pouvez hiérarchiser les analyses les plus importantes afin qu'elles soient effectuées avant les autres analyses.  Cette fonctionnalité est utile lorsque vous disposez de nombreux environnements de travail et que vous souhaitez vous assurer que les analyses hautement prioritaires sont effectuées avec succès dès le début.
+
+Il existe deux types de scans :
+
+* Les *analyses de cartographie uniquement* ne fournissent qu'un aperçu de haut niveau de vos données.  La cartographie peut être effectuée sur vos sources de données très rapidement car elle n'accède pas aux fichiers pour voir les données à l'intérieur.
+* Les analyses *Cartographier et classer* fournissent une analyse approfondie de vos données.
+
+
+Vous pouvez bénéficier de l'utilisation d'analyses de mappage uniquement pour analyser rapidement vos données afin d'identifier les sources de données qui nécessitent des recherches plus approfondies, puis activer ultérieurement les analyses de mappage et de classification uniquement sur les sources de données ou volumes requis.
+
+La priorité est attribuée uniquement aux analyses de cartographie uniquement, et non aux analyses de cartographie et de classification.
+
+La priorité est définie sur 1 par défaut et vous pouvez la modifier sur n'importe quel nombre compris entre 1 et 10.  Plus le nombre est bas, plus la priorité est élevée.  Si vous ne définissez pas de priorité, une priorité de 5 est attribuée à l'analyse.
+
+Pour modifier la priorité, procédez comme suit :
+
+. Dans le menu de BlueXP classification , sélectionnez *Configuration*.
+. Sélectionnez les ressources que vous souhaitez prioriser.
+. Dans l'option Actions..., sélectionnez *Prioriser l'analyse*.
+
+
+.Réessayer les analyses
+Avec cette version, vous pouvez réessayer les analyses qui ont échoué.  Cette fonctionnalité est utile lorsque vous avez une analyse qui a échoué en raison d'un problème temporaire, comme une panne de réseau.  Vous pouvez réessayer l'analyse sans avoir à la reconfigurer.
+
+Pour réessayer une analyse, procédez comme suit :
+
+. Dans le menu de BlueXP classification , sélectionnez *Configuration*.
+. Effectuez l’une des opérations suivantes :
++
+** Pour réessayer toutes les analyses ayant échoué, sélectionnez *Réessayer toutes les analyses*.
+** Pour réessayer une analyse spécifique, sélectionnez la ressource et sélectionnez *Réessayer l'analyse* dans l'option Actions...
+
+
+
+
+L'analyse est relancée avec la même configuration que l'analyse d'origine.  Si l’analyse échoue à nouveau, vous pouvez la réessayer autant de fois que nécessaire.

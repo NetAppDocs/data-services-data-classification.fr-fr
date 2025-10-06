@@ -1,0 +1,119 @@
+---
+sidebar: sidebar 
+permalink: task-active-directory.html 
+keywords: active directory, ad, data sense, cloud data sense 
+summary: Vous pouvez intégrer un Active Directory global à NetApp Data Classification pour améliorer les résultats rapportés par Data Classification sur les propriétaires de fichiers et sur les utilisateurs et groupes ayant accès à vos fichiers. 
+---
+= Intégrez votre Active Directory à la classification des données NetApp
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Vous pouvez intégrer un Active Directory global à NetApp Data Classification pour améliorer les résultats rapportés par Data Classification sur les propriétaires de fichiers et sur les utilisateurs et groupes ayant accès à vos fichiers.
+
+Lorsque vous configurez certaines sources de données (répertoriées ci-dessous), vous devez saisir les informations d'identification Active Directory pour que la classification des données analyse les volumes CIFS.  Cette intégration fournit une classification des données avec les détails du propriétaire du fichier et des autorisations pour les données qui résident dans ces sources de données.  L'Active Directory saisi pour ces sources de données peut différer des informations d'identification Active Directory globales que vous saisissez ici.  La classification des données recherchera dans tous les annuaires Active Directory intégrés les détails des utilisateurs et des autorisations.
+
+Cette intégration fournit des informations supplémentaires aux emplacements suivants dans la classification des données :
+
+* Vous pouvez utiliser le « Propriétaire du fichier »link:task-investigate-data.html["filtre"] et voir les résultats dans les métadonnées du fichier dans le volet Investigation.  Au lieu du propriétaire du fichier contenant le SID (Security IDentifier), il est renseigné avec le nom d'utilisateur réel.
++
+Vous pouvez également afficher plus de détails sur le propriétaire du fichier : nom du compte, adresse e-mail et nom du compte SAM, ou afficher les éléments appartenant à cet utilisateur.
+
+* Tu peux voirlink:task-investigate-data.html["autorisations complètes du fichier"] pour chaque fichier et répertoire lorsque vous cliquez sur le bouton « Afficher toutes les autorisations ».
+* Dans lelink:task-controlling-governance-data.html["Tableau de bord de gouvernance"] , le panneau Autorisations d'ouverture affichera un niveau de détail plus élevé sur vos données.
+
+
+
+NOTE: Les SID des utilisateurs locaux et les SID des domaines inconnus ne sont pas traduits en nom d'utilisateur réel.
+
+
+
+== Sources de données prises en charge
+
+Une intégration Active Directory avec la classification des données peut identifier les données à partir des sources de données suivantes :
+
+* Systèmes ONTAP sur site
+* Cloud Volumes ONTAP
+* Azure NetApp Files
+* FSx pour ONTAP
+
+
+
+
+== Connectez-vous à votre serveur Active Directory
+
+Après avoir déployé la classification des données et activé l’analyse sur vos sources de données, vous pouvez intégrer la classification des données à votre Active Directory.  Active Directory est accessible à l'aide d'une adresse IP de serveur DNS ou d'une adresse IP de serveur LDAP.
+
+Les informations d’identification Active Directory peuvent être en lecture seule, mais la fourniture d’informations d’identification d’administrateur garantit que la classification des données peut lire toutes les données nécessitant des autorisations élevées.  Les informations d’identification sont stockées sur l’instance de classification des données.
+
+Pour les volumes/partages de fichiers CIFS, si vous souhaitez vous assurer que les « heures de dernier accès » de vos fichiers ne sont pas modifiées par les analyses de classification des données, l'utilisateur doit disposer de l'autorisation d'écriture des attributs.  Si possible, nous vous recommandons de faire en sorte que l'utilisateur configuré par Active Directory fasse partie d'un groupe parent de l'organisation disposant d'autorisations sur tous les fichiers.
+
+.Exigences
+* Vous devez déjà avoir un Active Directory configuré pour les utilisateurs de votre entreprise.
+* Vous devez disposer des informations pour Active Directory :
++
+** Adresse IP du serveur DNS ou plusieurs adresses IP
++
+ou
+
++
+Adresse IP du serveur LDAP ou plusieurs adresses IP
+
+** Nom d'utilisateur et mot de passe pour accéder au serveur
+** Nom de domaine (nom Active Directory)
+** Que vous utilisiez ou non un LDAP sécurisé (LDAPS)
+** Port du serveur LDAP (généralement 389 pour LDAP et 636 pour LDAP sécurisé)
+
+
+* Les ports suivants doivent être ouverts pour la communication sortante par l'instance de classification des données :
++
+[cols="20,20,30,30"]
+|===
+| Protocole | Port | Destination | But 
+
+
+| TCP et UDP | 389 | Active Directory | LDAP 
+
+
+| TCP | 636 | Active Directory | LDAP sur SSL 
+
+
+| TCP | 3268 | Active Directory | Catalogue mondial 
+
+
+| TCP | 3269 | Active Directory | Catalogue global via SSL 
+|===
+
+
+.Étapes
+. Depuis la page Configuration de la classification des données, cliquez sur *Ajouter Active Directory*.
++
+image:screenshot_compliance_integrate_active_directory.png["Une capture d'écran qui montre comment cliquer sur le bouton pour ajouter un serveur Active Directory dans la classification des données."]
+
+. Dans la boîte de dialogue Se connecter à Active Directory, entrez les détails d'Active Directory et cliquez sur *Connecter*.
++
+Vous pouvez ajouter plusieurs adresses IP, si nécessaire, en sélectionnant *Ajouter une IP*.
+
++
+image:screenshot_compliance_active_directory_dialog.png["Une capture d’écran de la boîte de dialogue dans laquelle vous définissez l’annuaire Active Directory que vous souhaitez intégrer à la classification des données."]
+
++
+La classification des données s'intègre à Active Directory et une nouvelle section est ajoutée à la page de configuration.
+
++
+image:screenshot_compliance_active_directory_added.png["Une capture d'écran montrant le nouvel Active Directory intégré dans la classification des données."]
+
+
+
+
+
+== Gérez votre intégration Active Directory
+
+Si vous devez modifier des valeurs dans votre intégration Active Directory, cliquez sur le bouton *Modifier* et effectuez les modifications.
+
+Vous pouvez également supprimer l'intégration en sélectionnant l'optionimage:button-gallery-options.gif["Bouton Plus"] bouton puis *Supprimer Active Directory*.

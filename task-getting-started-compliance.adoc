@@ -1,0 +1,120 @@
+---
+sidebar: sidebar 
+permalink: task-getting-started-compliance.html 
+keywords: cloud compliance, get started, enable cloud compliance, cifs credentials, smb credentials, cloud compliance access, privacy, compliance, dp volumes, data protection volumes, CVO, Cloud Volumes ONTAP, data sense 
+summary: Suivez quelques étapes pour commencer à analyser vos Cloud Volumes ONTAP et vos volumes ONTAP sur site à l’aide de NetApp Data Classification. 
+---
+= Analysez les Cloud Volumes ONTAP et les volumes ONTAP sur site avec la classification des données NetApp
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Suivez quelques étapes pour commencer à analyser vos Cloud Volumes ONTAP et vos volumes ONTAP sur site à l’aide de NetApp Data Classification.
+
+
+
+== Prérequis
+
+Avant d’activer la classification des données, assurez-vous que vous disposez d’une configuration prise en charge.
+
+* Si vous numérisez des Cloud Volumes ONTAP et des systèmes ONTAP sur site accessibles via Internet, vous pouvezlink:task-deploy-cloud-compliance.html["déployer la classification des données dans le cloud"] oulink:task-deploy-compliance-onprem.html["dans un local équipé d'un accès Internet"] .
+* Si vous analysez des systèmes ONTAP sur site qui ont été installés sur un site sombre sans accès Internet, vous devezlink:task-deploy-compliance-dark-site.html["déployer la classification des données dans le même emplacement sur site qui n'a pas d'accès Internet"] .  Cela nécessite que l’agent de console soit déployé dans le même emplacement sur site.
+
+
+
+
+== Activez l'analyse de classification des données dans vos systèmes
+
+Vous pouvez activer l'analyse de classification des données sur les systèmes Cloud Volumes ONTAP de n'importe quel fournisseur de cloud pris en charge et sur les clusters ONTAP locaux.
+
+.Étapes
+. Dans le menu Classification des données, sélectionnez *Configuration*.
++
+La page de configuration affiche plusieurs systèmes.
+
++
+image:screen-cl-config-cvo.png["Une capture d’écran de l’onglet Configuration montrant un système Cloud Volumes ONTAP ."]
+
+. Choisissez un système puis sélectionnez *Configuration*.
++
+image:screen-cl-config-cvo-map-options.png["Une capture d’écran de l’onglet Configuration montrant les options de mappage et de classification des référentiels."]
+
+. Si vous ne vous souciez pas de savoir si la dernière heure d'accès est réinitialisée, activez l'option *Analyser en cas d'absence d'autorisations « attributs d'écriture »* et tous les fichiers sont analysés quelles que soient les autorisations.
++
+Le commutateur en haut de la page pour *Analyser lorsque les autorisations « attributs d'écriture » sont manquantes* est désactivé par défaut.  Cela signifie que si la classification des données ne dispose pas d'autorisations d'attributs d'écriture dans CIFS ou d'autorisations d'écriture dans NFS, le système ne classera pas les fichiers car la classification des données ne peut pas rétablir l'« heure du dernier accès » à l'horodatage d'origine. link:reference-collected-metadata.html["Apprendre encore plus"^] .
+
+. Sélectionnez la manière dont vous souhaitez analyser les volumes de chaque système. link:concept-classification.html#whats-the-difference-between-mapping-and-classification-scans["En savoir plus sur les analyses de cartographie et de classification"]:
++
+** Pour mapper tous les volumes, sélectionnez *Map*.
+** Pour cartographier et classer tous les volumes, sélectionnez *Cartographier et classer*.
+** Pour personnaliser l'analyse de chaque volume, sélectionnez *Personnalisé*, puis choisissez les volumes que vous souhaitez mapper et/ou classer.
+
+
+. Dans la boîte de dialogue de confirmation, sélectionnez *Approuver* pour que la classification des données commence à analyser vos volumes.
+
+
+.Résultat
+La classification des données commence à analyser les volumes que vous avez sélectionnés dans le système.  Les résultats commencent à apparaître dans le tableau de bord Conformité dès que la classification des données démarre l'analyse.  Le temps nécessaire pour terminer l'opération dépend de la quantité de données : cela peut prendre quelques minutes ou quelques heures.
+
+
+NOTE: La classification des données analyse un seul partage de fichiers sous un volume.  Si vous avez plusieurs partages dans vos volumes, vous devrez analyser ces autres partages séparément en tant que groupe de partages. link:reference-limitations.html#data-classification-scans-only-one-share-under-a-volume["Voir plus de détails sur cette limitation de classification des données"^] .
+
+
+
+== Vérifiez que la classification des données a accès aux volumes
+
+Assurez-vous que la classification des données peut accéder aux volumes en vérifiant votre réseau, vos groupes de sécurité et vos politiques d'exportation.  Vous devrez fournir à Data Classification les informations d'identification CIFS afin qu'il puisse accéder aux volumes CIFS.
+
+.Liste de contrôle
+* Assurez-vous qu'il existe une connexion réseau entre l'instance de classification des données et chaque réseau qui inclut des volumes pour les clusters Cloud Volumes ONTAP ou ONTAP sur site.
+* Assurez-vous que le groupe de sécurité pour Cloud Volumes ONTAP autorise le trafic entrant depuis l’instance de classification des données.
++
+Vous pouvez soit ouvrir le groupe de sécurité pour le trafic provenant de l'adresse IP de l'instance de classification des données, soit ouvrir le groupe de sécurité pour tout le trafic provenant de l'intérieur du réseau virtuel.
+
+* Assurez-vous que les stratégies d’exportation de volume NFS incluent l’adresse IP de l’instance de classification des données afin qu’elle puisse accéder aux données sur chaque volume.
+
+
+.Étapes
+. Dans le menu Classification des données, sélectionnez *Configuration*.
++
+image:screen-cl-config-cvo-map-options.png["Une capture d’écran de l’onglet Configuration montrant les options de mappage et de classification des référentiels."]..  Si vous utilisez CIFS, fournissez à Data Classification les informations d’identification Active Directory afin qu’il puisse analyser les volumes CIFS.  Pour chaque système, sélectionnez *Modifier les informations d'identification CIFS* et saisissez le nom d'utilisateur et le mot de passe dont Data Classification a besoin pour accéder aux volumes CIFS sur le système.
+
++
++ Les informations d'identification peuvent être en lecture seule, mais la fourniture d'informations d'identification d'administrateur garantit que la classification des données peut lire toutes les données nécessitant des autorisations élevées.  Les informations d’identification sont stockées sur l’instance de classification des données.
+
++
++ Si vous souhaitez vous assurer que les « dernières heures d'accès » de vos fichiers ne sont pas modifiées par les analyses de classification des données, il est recommandé que l'utilisateur dispose des autorisations d'écriture d'attributs dans CIFS ou des autorisations d'écriture dans NFS. Si possible, configurez l’utilisateur Active Directory en tant que membre d’un groupe parent de l’organisation disposant d’autorisations sur tous les fichiers.
+
++
++ Après avoir saisi les informations d’identification, vous devriez voir un message indiquant que tous les volumes CIFS ont été authentifiés avec succès.
+
+. Sur la page Configuration, sélectionnez *Configuration* pour vérifier l’état de chaque volume CIFS et NFS et corriger les erreurs éventuelles.
+
+
+
+
+== Désactiver les analyses de conformité sur les volumes
+
+Vous pouvez démarrer ou arrêter les analyses de mappage uniquement ou les analyses de mappage et de classification dans un système à tout moment à partir de la page Configuration.  Vous pouvez également passer d'analyses de mappage uniquement à des analyses de mappage et de classification, et vice-versa.  Nous vous recommandons d'analyser tous les volumes.
+
+
+NOTE: Les nouveaux volumes ajoutés au système sont automatiquement analysés uniquement lorsque vous avez défini le paramètre *Map* ou *Map & Classify* dans la zone d'en-tête.  Lorsque l'option est définie sur *Personnalisé* ou *Désactivé* dans la zone d'en-tête, vous devrez activer le mappage et/ou l'analyse complète sur chaque nouveau volume que vous ajoutez au système.
+
+.Étapes
+. Dans le menu Classification des données, sélectionnez *Configuration*.
+. Sélectionnez le bouton *Configuration* correspondant au système que vous souhaitez modifier.
++
+image:screen-cl-config-cvo-map-options.png["Une capture d’écran de l’onglet Configuration montrant les options de mappage et de classification des référentiels."]
+
+. Effectuez l’une des opérations suivantes :
++
+** Pour désactiver l'analyse sur un volume, dans la zone du volume, sélectionnez *Désactivé*.
+** Pour désactiver l'analyse sur tous les volumes, dans la zone d'en-tête, sélectionnez *Désactivé*.
+
+
+

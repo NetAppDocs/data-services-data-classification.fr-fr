@@ -1,0 +1,160 @@
+---
+sidebar: sidebar 
+permalink: task-exclude-scan-paths.html 
+keywords: exclude scans, folders, directories 
+summary: 'Si vous souhaitez que NetApp Data Classification exclue les données d"analyse qui résident dans certains répertoires de sources de données, vous pouvez ajouter ces noms de répertoire à un fichier de configuration.  Après avoir appliqué cette modification, le moteur de classification des données exclura les données d’analyse dans ces répertoires.' 
+---
+= Exclure des répertoires spécifiques des analyses de classification des données NetApp
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Si vous souhaitez que NetApp Data Classification exclue des répertoires spécifiques des analyses, vous pouvez ajouter ces noms de répertoire à un fichier de configuration.  Après avoir appliqué cette modification, le moteur de classification des données exclut ces répertoires des analyses.
+
+
+NOTE: Par défaut, les analyses de classification des données excluent les données d'instantané de volume, qui sont identiques à leur source dans le volume.
+
+
+
+== Sources de données prises en charge
+
+L'exclusion de répertoires spécifiques des analyses de classification des données est prise en charge pour les partages NFS et CIFS dans les sources de données suivantes :
+
+* ONTAP sur site
+* Cloud Volumes ONTAP
+* Amazon FSx for NetApp ONTAP
+* Azure NetApp Files
+* Partages de fichiers généraux
+
+
+
+
+== Définir les répertoires à exclure de l'analyse
+
+Avant de pouvoir exclure des répertoires de l'analyse de classification, vous devez vous connecter au système de classification des données afin de pouvoir modifier un fichier de configuration et exécuter un script.  Découvrez commentlink:reference-log-in-to-instance.html["connectez-vous au système de classification des données"] selon que vous avez installé manuellement le logiciel sur une machine Linux ou si vous avez déployé l'instance dans le cloud.
+
+.Considérations
+* Vous pouvez exclure un maximum de 50 chemins de répertoire par système de classification des données.
+* L'exclusion des chemins de répertoire peut affecter les temps d'analyse.
+
+
+.Étapes
+. Sur le système de classification des données, accédez à « /opt/netapp/config/custom_configuration » puis ouvrez le fichier `data_provider.yaml` .
+. Dans la section « data_providers » sous la ligne « exclude : », entrez les chemins de répertoire à exclure. Par exemple:
++
+....
+exclude:
+- "folder1"
+- "folder2"
+....
++
+Ne modifiez rien d'autre dans ce fichier.
+
+. Enregistrez les modifications dans le fichier.
+. Accédez à « /opt/netapp/Datasense/tools/customer_configuration/data_providers » et exécutez le script suivant :
+
+
+`update_data_providers_from_config_file.sh`
+
++ Cette commande valide les répertoires à exclure de l'analyse dans le moteur de classification.
+
+.Résultat
+Toutes les analyses ultérieures de vos données excluront l'analyse des répertoires spécifiés.
+
+Vous pouvez ajouter, modifier ou supprimer des éléments de la liste d’exclusion en suivant ces mêmes étapes.  La liste d’exclusion révisée sera mise à jour après l’exécution du script pour valider vos modifications.
+
+
+
+== Exemples
+
+.Configuration 1 :
+Chaque dossier contenant « folder1 » n’importe où dans le nom sera exclu de toutes les sources de données.
+
+....
+data_providers:
+   exclude:
+   - "folder1"
+....
+.Résultats attendus pour les chemins qui seront exclus :
+* /CVO1/dossier1
+* /CVO1/nomdossier1
+* /CVO1/dossier10
+* /CVO1/*dossier1
+* /CVO1/+nomdossier1
+* /CVO1/notfolder10
+* /CVO22/dossier1
+* /CVO22/nomdossier1
+* /CVO22/dossier10
+
+
+.Exemples de chemins qui ne seront pas exclus :
+* /CVO1/*dossier
+* /CVO1/nom du dossier
+* /CVO22/*dossier20
+
+
+.Configuration 2 :
+Tout dossier contenant uniquement « *folder1 » au début du nom sera exclu.
+
+....
+data_providers:
+   exclude:
+   - "\\*folder1"
+....
+.Résultats attendus pour les chemins qui seront exclus :
+* /CVO/*dossier1
+* /CVO/*nomdossier1
+* /CVO/*dossier10
+
+
+.Exemples de chemins qui ne seront pas exclus :
+* /CVO/dossier1
+* /CVO/nomdossier1
+* /CVO/pas*dossier10
+
+
+.Configuration 3 :
+Chaque dossier dans la source de données « CVO22 » qui contient « folder1 » n'importe où dans le nom sera exclu.
+
+....
+data_providers:
+   exclude:
+   - "CVO22/folder1"
+....
+.Résultats attendus pour les chemins qui seront exclus :
+* /CVO22/dossier1
+* /CVO22/nomdossier1
+* /CVO22/dossier10
+
+
+.Exemples de chemins qui ne seront pas exclus :
+* /CVO1/dossier1
+* /CVO1/nomdossier1
+* /CVO1/dossier10
+
+
+
+
+== Échapper les caractères spéciaux dans les noms de dossiers
+
+Si vous avez un nom de dossier qui contient l'un des caractères spéciaux suivants et que vous souhaitez exclure les données de ce dossier de l'analyse, vous devrez utiliser la séquence d'échappement \\ avant le nom du dossier.
+
+ ., +, *, ?, ^, $, (, ), [, ], {, }, |
+Par exemple:
+
+Chemin dans la source : `/project/*not_to_scan`
+
+Syntaxe dans le fichier d'exclusion : `"\\*not_to_scan"`
+
+
+
+== Afficher la liste d'exclusion actuelle
+
+Il est possible que le contenu du `data_provider.yaml` fichier de configuration soit différent de ce qui a été réellement validé après l'exécution du `update_data_providers_from_config_file.sh` scénario.  Pour afficher la liste actuelle des répertoires que vous avez exclus de l'analyse de classification des données, exécutez la commande suivante à partir de « /opt/netapp/Datasense/tools/customer_configuration/data_providers » :
+
+ get_data_providers_configuration.sh

@@ -1,0 +1,117 @@
+---
+sidebar: sidebar 
+permalink: task-scanning-databases.html 
+keywords: cloud compliance, enable cloud compliance, outbound internet, endpoints, cloud compliance internet, web browser connectivity, cloud compliance access, privacy, compliance, databases, database schemas, Oracle, SAP HANA, SQL Server, MongoDB, PostgreSQL, data sense 
+summary: Suivez quelques étapes pour commencer à analyser vos schémas de base de données avec NetApp Data Classification. 
+---
+= Analyser les schémas de base de données avec la classification des données NetApp
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Suivez quelques étapes pour commencer à analyser vos schémas de base de données avec NetApp Data Classification.
+
+
+
+== Réviser les prérequis
+
+Passez en revue les conditions préalables suivantes pour vous assurer que vous disposez d’une configuration prise en charge avant d’activer la classification des données.
+
+
+
+=== Bases de données prises en charge
+
+La classification des données peut analyser les schémas des bases de données suivantes :
+
+* Service de base de données relationnelle Amazon (Amazon RDS)
+* MongoDB
+* MySQL
+* Oracle
+* PostgreSQL
+* SAP HANA
+* Serveur SQL (MSSQL)
+
+
+
+CAUTION: La fonctionnalité de collecte de statistiques *doit être activée* dans la base de données.
+
+
+
+=== Exigences relatives à la base de données
+
+Toute base de données connectée à l’instance de classification des données peut être analysée, quel que soit l’endroit où elle est hébergée.  Vous avez juste besoin des informations suivantes pour vous connecter à la base de données :
+
+* Adresse IP ou nom d'hôte
+* Port
+* Nom du service (uniquement pour l'accès aux bases de données Oracle)
+* Informations d'identification permettant l'accès en lecture aux schémas
++
+Lors du choix d'un nom d'utilisateur et d'un mot de passe, il est important d'en choisir un qui dispose de toutes les autorisations de lecture sur tous les schémas et tables que vous souhaitez analyser.  Nous vous recommandons de créer un utilisateur dédié au système de classification des données avec toutes les autorisations requises.
+
+
+
+
+NOTE: Pour MongoDB, un rôle d'administrateur en lecture seule est requis.
+
+
+
+== Déployer l'instance de classification des données
+
+Déployez la classification des données s’il n’existe pas déjà d’instance déployée.
+
+Si vous numérisez des schémas de bases de données accessibles sur Internet, vous pouvezlink:task-deploy-cloud-compliance.html["déployer la classification des données dans le cloud"^] oulink:task-deploy-compliance-onprem.html["déployer la classification des données dans un emplacement sur site disposant d'un accès Internet"^] .
+
+Si vous numérisez des schémas de base de données qui ont été installés sur un site sombre qui n'a pas d'accès Internet, vous devezlink:task-deploy-compliance-dark-site.html["déployer la classification des données dans le même emplacement sur site qui n'a pas d'accès Internet"^] .  Cela nécessite également que l’agent de console soit déployé dans le même emplacement sur site.
+
+
+
+== Ajouter le serveur de base de données
+
+Ajoutez le serveur de base de données sur lequel résident les schémas.
+
+. Dans le menu Classification des données, sélectionnez *Configuration*.
+. Depuis la page Configuration, sélectionnez *Ajouter un système* > *Ajouter un serveur de base de données*.
+. Saisissez les informations requises pour identifier le serveur de base de données.
++
+.. Sélectionnez le type de base de données.
+.. Entrez le port et le nom d'hôte ou l'adresse IP pour vous connecter à la base de données.
+.. Pour les bases de données Oracle, entrez le nom du service.
+.. Saisissez les informations d'identification pour que Data Classification puisse accéder au serveur.
+.. Sélectionnez *Ajouter un serveur de base de données*.
++
+image:screenshot_compliance_add_db_server_dialog.png["Une capture d’écran de la page Ajouter un serveur de base de données afin que vous puissiez identifier la base de données."]
+
+
+
+
+
+La base de données est ajoutée à la liste des systèmes.
+
+
+
+== Activer et désactiver les analyses de conformité sur les schémas de base de données
+
+Vous pouvez arrêter ou démarrer l'analyse complète de vos schémas à tout moment.
+
+
+TIP: Il n'existe aucune option permettant de sélectionner des analyses de mappage uniquement pour les schémas de base de données.
+
+. Depuis la page Configuration, sélectionnez le bouton *Configuration* correspondant à la base de données que vous souhaitez configurer.
++
+image:screenshot_compliance_db_server_config.png["Une capture d’écran de la page Configuration de l’analyse où vous pouvez sélectionner le bouton Configuration."]
+
+. Sélectionnez les schémas que vous souhaitez analyser en déplaçant le curseur vers la droite.
++
+image:screenshot_compliance_select_schemas.png["Une capture d'écran de la page Configuration de l'analyse où vous pouvez choisir les schémas à analyser."]
+
+
+
+.Résultat
+La classification des données commence à analyser les schémas de base de données que vous avez activés.  Vous pouvez suivre la progression de l'analyse initiale en accédant au menu **Configuration** puis en sélectionnant la **Configuration système**.  La progression de chaque analyse est affichée sous forme de barre de progression.  Vous pouvez également survoler la barre de progression pour voir le nombre de fichiers analysés par rapport au nombre total de fichiers dans le volume.  S'il y a des erreurs, elles apparaîtront dans la colonne Statut, à côté de l'action requise pour corriger l'erreur.
+
+Data Classification analyse vos bases de données une fois par jour ; les bases de données ne sont pas analysées en continu comme les autres sources de données.

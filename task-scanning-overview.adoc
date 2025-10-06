@@ -1,0 +1,260 @@
+---
+sidebar: sidebar 
+permalink: task-scanning-overview.html 
+keywords: cloud compliance, get started, enable cloud compliance, cifs credentials, smb credentials, cloud compliance access, privacy, compliance, dp volumes, data protection volumes, CVO, Cloud Volumes ONTAP, data sense, cloud data sense, mapping-only scans, map and classify, map & classify 
+summary: Analysez vos sources de données avec NetApp Data Classification. 
+---
+= Analyser les sources de données avec la classification des données NetApp
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Data Classification analyse les données dans les référentiels (volumes, schémas de base de données ou autres données utilisateur) que vous sélectionnez pour identifier les données personnelles et sensibles.  La classification des données cartographie ensuite vos données organisationnelles, catégorise chaque fichier et identifie des modèles prédéfinis dans les données.  Le résultat de l’analyse est un index des informations personnelles, des informations personnelles sensibles, des catégories de données et des types de fichiers.
+
+Après l'analyse initiale, Data Classification analyse en continu vos données de manière circulaire pour détecter les modifications incrémentielles.  C'est pourquoi il est important de maintenir l'instance en cours d'exécution.
+
+Vous pouvez activer et désactiver les analyses au niveau du volume ou au niveau du schéma de base de données.
+
+
+
+== Quelle est la différence entre les analyses de cartographie et de classification
+
+Vous pouvez effectuer deux types d’analyses dans la classification des données :
+
+* **Les analyses de cartographie uniquement** fournissent uniquement un aperçu de haut niveau de vos données et sont effectuées sur des sources de données sélectionnées.  Les analyses de cartographie uniquement prennent moins de temps que les analyses de cartographie et de classification, car elles n'accèdent pas aux fichiers pour voir les données qu'ils contiennent.  Vous souhaiterez peut-être procéder ainsi dans un premier temps pour identifier les domaines de recherche, puis effectuer une analyse de cartographie et de classification sur ces domaines.
+* **Les analyses de cartographie et de classification** fournissent une analyse approfondie de vos données.
+
+
+Le tableau ci-dessous montre certaines des différences :
+
+[cols="47,18,18"]
+|===
+| Fonctionnalité | Cartographier et classer les scans | Analyses de cartographie uniquement 
+
+
+| Vitesse de numérisation | Lent | Rapide 
+
+
+| Tarifs | Gratuit | Gratuit 
+
+
+| Capacité | Limité à 500 Tio* | Limité à 500 Tio* 
+
+
+| Liste des types de fichiers et de la capacité utilisée | Oui | Oui 
+
+
+| Nombre de fichiers et capacité utilisée | Oui | Oui 
+
+
+| Âge et taille des fichiers | Oui | Oui 
+
+
+| Capacité à exécuter unlink:task-controlling-governance-data.html["Rapport de mappage des données"] | Oui | Oui 
+
+
+| Page d'enquête sur les données pour afficher les détails du fichier | Oui | Non 
+
+
+| Rechercher des noms dans les fichiers | Oui | Non 
+
+
+| Créerlink:task-using-policies.html["requêtes enregistrées"] qui fournissent des résultats de recherche personnalisés | Oui | Non 
+
+
+| Possibilité d'exécuter d'autres rapports | Oui | Non 
+
+
+| Possibilité de voir les métadonnées des fichiers** | Non | Oui 
+|===
+{asterisk} La classification des données n'impose pas de limite à la quantité de données qu'elle peut analyser.  Chaque agent de console prend en charge l'analyse et l'affichage de 500 Tio de données. Pour scanner plus de 500 Tio de données,link:https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html#connector-installation["installer un autre agent de console"^] alorslink:https://docs.netapp.com/us-en/bluexp-classification/task-deploy-overview.html["déployer une autre instance de classification des données"] .  + L'interface utilisateur de la console affiche les données d'un seul connecteur.  Pour obtenir des conseils sur l'affichage des données de plusieurs agents de console, consultezlink:https://docs.netapp.com/us-en/bluexp-setup-admin/task-manage-multiple-connectors.html#switch-between-connectors["Travailler avec plusieurs agents de console"^] .
+
+{asterisk}{asterisk} Les métadonnées suivantes sont extraites des fichiers lors des analyses de mappage :
+
+* Système
+* Type de système
+* Référentiel de stockage
+* Type de fichier
+* Capacité utilisée
+* Nombre de fichiers
+* Taille du fichier
+* Création de fichier
+* Dernier accès au fichier
+* Fichier modifié pour la dernière fois
+* Heure de découverte du fichier
+* Extraction des autorisations
+
+
+.Différences entre les tableaux de bord de gouvernance :
+[%collapsible]
+====
+[cols="40,25,25"]
+|===
+| Fonctionnalité | Cartographier et classer | Carte 
+
+
+| Données obsolètes | Oui | Oui 
+
+
+| Données non commerciales | Oui | Oui 
+
+
+| Fichiers dupliqués | Oui | Oui 
+
+
+| Requêtes enregistrées prédéfinies | Oui | Non 
+
+
+| Requêtes enregistrées par défaut | Oui | Oui 
+
+
+| Rapport DDA | Oui | Oui 
+
+
+| Rapport de cartographie | Oui | Oui 
+
+
+| Détection du niveau de sensibilité | Oui | Non 
+
+
+| Données sensibles avec des autorisations étendues | Oui | Non 
+
+
+| Autorisations ouvertes | Oui | Oui 
+
+
+| L'âge des données | Oui | Oui 
+
+
+| Taille des données | Oui | Oui 
+
+
+| Catégories | Oui | Non 
+
+
+| Types de fichiers | Oui | Oui 
+|===
+====
+.Différences entre les tableaux de bord de conformité :
+[%collapsible]
+====
+[cols="40,25,25"]
+|===
+| Fonctionnalité | Cartographier et classer | Carte 
+
+
+| Informations personnelles | Oui | Non 
+
+
+| Informations personnelles sensibles | Oui | Non 
+
+
+| Rapport d'évaluation des risques liés à la vie privée | Oui | Non 
+
+
+| Rapport HIPAA | Oui | Non 
+
+
+| Rapport PCI DSS | Oui | Non 
+|===
+====
+.Différences entre les filtres d'investigation :
+[%collapsible]
+====
+[cols="40,25,25"]
+|===
+| Fonctionnalité | Cartographier et classer | Carte 
+
+
+| Requêtes enregistrées | Oui | Oui 
+
+
+| Type de système | Oui | Oui 
+
+
+| Système | Oui | Oui 
+
+
+| Référentiel de stockage | Oui | Oui 
+
+
+| Type de fichier | Oui | Oui 
+
+
+| Taille du fichier | Oui | Oui 
+
+
+| Temps de création | Oui | Oui 
+
+
+| Temps découvert | Oui | Oui 
+
+
+| Dernière modification | Oui | Oui 
+
+
+| Dernier accès | Oui | Oui 
+
+
+| Autorisations ouvertes | Oui | Oui 
+
+
+| Chemin du répertoire de fichiers | Oui | Oui 
+
+
+| Catégorie | Oui | Non 
+
+
+| Niveau de sensibilité | Oui | Non 
+
+
+| Nombre d'identifiants | Oui | Non 
+
+
+| Données personnelles | Oui | Non 
+
+
+| Données personnelles sensibles | Oui | Non 
+
+
+| Personne concernée | Oui | Non 
+
+
+| Doublons | Oui | Oui 
+
+
+| Statut de classification | Oui | Le statut est toujours « Informations limitées » 
+
+
+| Événement d'analyse d'analyse | Oui | Oui 
+
+
+| Hachage de fichier | Oui | Oui 
+
+
+| Nombre d'utilisateurs avec accès | Oui | Oui 
+
+
+| Autorisations utilisateur/groupe | Oui | Oui 
+
+
+| Propriétaire du fichier | Oui | Oui 
+
+
+| Type de répertoire | Oui | Oui 
+|===
+====
+
+
+== À quelle vitesse Data Classification analyse-t-il les données ?
+
+La vitesse d'analyse est affectée par la latence du réseau, la latence du disque, la bande passante du réseau, la taille de l'environnement et les tailles de distribution des fichiers.
+
+* Lors de l'exécution d'analyses de cartographie uniquement, la classification des données peut analyser entre 100 et 150 Tio de données par jour.
+* Lors de l'exécution d'analyses de cartographie et de classification, Data Classification peut analyser entre 15 et 40 Tio de données par jour.
+

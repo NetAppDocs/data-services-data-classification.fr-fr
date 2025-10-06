@@ -1,0 +1,75 @@
+---
+sidebar: sidebar 
+permalink: reference-limitations.html 
+keywords: limitations, data sense, classification, scan shares 
+summary: 'Les limitations connues identifient les fonctions qui ne sont pas prises en charge par cette version du produit ou qui n"interagissent pas correctement avec elle. Examinez attentivement ces limitations.' 
+---
+= Limitations connues dans la classification des données NetApp
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Les limitations connues identifient les fonctions qui ne sont pas prises en charge ou qui n’interagissent pas correctement dans cette version. Examinez attentivement ces limitations.
+
+
+
+== Options désactivées de la classification des données NetApp
+
+La version de décembre 2023 (version 1.26.6) a supprimé les options suivantes :
+
+* L'option permettant d'activer la collecte des journaux d'audit a été désactivée.
+* Lors de l'enquête sur les annuaires, l'option permettant de calculer le nombre de données d'informations personnelles identifiables (PII) par annuaires n'est pas disponible.
+* L’option permettant d’intégrer des données à l’aide des étiquettes Azure Information Protection (AIP) a été désactivée.
+
+
+
+
+== Analyse de la classification des données
+
+Les limitations suivantes se produisent avec les analyses de classification des données.
+
+
+
+=== La classification des données analyse un seul partage sous un volume
+
+Si vous disposez de plusieurs partages de fichiers sous un seul volume, la classification des données analyse le partage avec la hiérarchie la plus élevée.  Par exemple, si vous avez des actions comme les suivantes :
+
+* /UN
+* /A/B
+* /C
+* /D/E
+
+
+Dans cette configuration, seules les données dans /A sont analysées.  Les données dans /C et /D ne sont pas analysées.
+
+.Solution de contournement
+Il existe une solution de contournement pour vous assurer que vous analysez les données de tous les partages de votre volume. Suivez ces étapes :
+
+. Dans le système, ajoutez le volume à analyser.
+. Une fois que la classification des données a terminé l'analyse du volume, accédez à la page _Investigation des données_ et créez un filtre pour voir quel partage est analysé :
++
+Filtrez les données par « Nom du système » et « Type de répertoire = Partage » pour voir quel partage est analysé.
+
+. Obtenez la liste complète des partages qui existent dans le volume afin de pouvoir voir quels partages ne sont pas analysés.
+. link:task-scanning-file-shares.html["Ajouter les actions restantes à un groupe de partage"] .
++
+Ajoutez toutes les actions individuellement, par exemple :
+
++
+....
+/C
+/D
+....
+. Effectuez ces étapes pour chaque volume du système qui possède plusieurs partages.
+
+
+
+
+=== Horodatage du dernier accès
+
+Lorsque Data Classification effectue une analyse d'un répertoire, l'analyse affecte le champ **Dernier accès** du répertoire.  Lorsque vous affichez le champ **Dernier accès**, ces métadonnées reflètent soit la date et l'heure de l'analyse, soit la dernière fois qu'un utilisateur a accédé au répertoire.

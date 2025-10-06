@@ -1,0 +1,299 @@
+---
+sidebar: sidebar 
+permalink: faq-cloud-compliance.html 
+keywords: faq, frequently asked questions, questions, cloud compliance, data sense 
+summary: Cette FAQ peut vous aider si vous cherchez simplement une réponse rapide à une question. 
+---
+= Questions fréquemment posées sur la classification des données NetApp
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cette FAQ peut vous aider si vous cherchez simplement une réponse rapide à une question.
+
+
+
+== Classification des données NetApp
+
+Les questions suivantes fournissent une compréhension générale de la classification des données.
+
+
+
+=== Comment fonctionne la classification des données ?
+
+La classification des données déploie une autre couche d’IA aux côtés de votre système de console NetApp et de vos systèmes de stockage.  Il analyse ensuite les données sur les volumes, les buckets, les bases de données et d’autres comptes de stockage et indexe les informations de données trouvées.  La classification des données exploite à la fois l’intelligence artificielle et le traitement du langage naturel, contrairement aux solutions alternatives généralement construites autour d’expressions régulières et de correspondances de modèles.
+
+La classification des données utilise l'IA pour fournir une compréhension contextuelle des données pour une détection et une classification précises.  Il est piloté par l’IA car il est conçu pour les types de données et l’échelle modernes.  Il comprend également le contexte des données afin de fournir une découverte et une classification solides et précises.
+
+link:concept-classification.html["En savoir plus sur le fonctionnement de la classification des données"] .
+
+
+
+=== Data Classification dispose-t-il d'une API REST et fonctionne-t-il avec des outils tiers ?
+
+Oui, Data Classification dispose d'une API REST pour les fonctionnalités prises en charge dans la version Data Classification qui fait partie de la plate-forme principale de la console. Voir link:api-classification.html["Documentation API"] .
+
+
+
+=== La classification des données est-elle disponible via les places de marché cloud ?
+
+La classification des données fait partie des fonctionnalités principales de la console NetApp . Vous n'avez donc pas besoin d'utiliser les places de marché pour ce service.
+
+
+
+== Classification des données, numérisation et analyse
+
+Les questions suivantes concernent les performances d’analyse de la classification des données et les analyses.
+
+
+
+=== À quelle fréquence Data Classification analyse-t-il mes données ?
+
+Bien que l'analyse initiale de vos données puisse prendre un peu de temps, les analyses suivantes inspectent uniquement les modifications incrémentielles, ce qui réduit les temps d'analyse du système.  La classification des données analyse vos données en continu de manière circulaire, six référentiels à la fois, de sorte que toutes les données modifiées sont classées très rapidement.
+
+link:task-scanning-overview.html["Découvrez comment fonctionnent les analyses"] .
+
+La classification des données analyse les bases de données une seule fois par jour ; les bases de données ne sont pas analysées en continu comme les autres sources de données.
+
+Les analyses de données ont un impact négligeable sur vos systèmes de stockage et sur vos données.
+
+
+
+=== Les performances de numérisation varient-elles ?
+
+Les performances d’analyse peuvent varier en fonction de la bande passante du réseau et de la taille moyenne des fichiers dans votre environnement.  Cela peut également dépendre des caractéristiques de taille du système hôte (dans le cloud ou sur site). Voir link:concept-classification.html["L'instance de classification des données"] et link:task-deploy-overview.html["Déploiement de la classification des données"] pour plus d'informations.
+
+Lors de l'ajout initial de nouvelles sources de données, vous pouvez également choisir d'effectuer uniquement une analyse de « mappage » (Mapping uniquement) au lieu d'une analyse de « classification » complète (Map & Classify).  La cartographie peut être effectuée sur vos sources de données très rapidement car elle n'accède pas aux fichiers pour voir les données à l'intérieur. link:task-scanning-overview.html["Découvrez la différence entre une analyse de cartographie et une analyse de classification"] .
+
+
+
+=== Puis-je rechercher mes données à l’aide de la classification des données ?
+
+La classification des données offre des capacités de recherche étendues qui facilitent la recherche d'un fichier ou d'un élément de données spécifique dans toutes les sources connectées.  La classification des données permet aux utilisateurs de rechercher plus en profondeur que ce que reflètent les métadonnées.  Il s’agit d’un service indépendant de la langue qui peut également lire les fichiers et analyser une multitude de types de données sensibles, tels que les noms et les identifiants.  Par exemple, les utilisateurs peuvent effectuer des recherches dans les magasins de données structurés et non structurés pour trouver des données qui peuvent avoir fui des bases de données vers les fichiers utilisateur, en violation de la politique de l'entreprise.  Les recherches peuvent être enregistrées pour plus tard et des politiques peuvent être créées pour rechercher et agir sur les résultats à une fréquence définie.
+
+Une fois les fichiers d'intérêt trouvés, les caractéristiques peuvent être répertoriées, notamment les balises, le compte système, le bucket, le chemin du fichier, la catégorie (à partir de la classification), la taille du fichier, la dernière modification, l'état de l'autorisation, les doublons, le niveau de sensibilité, les données personnelles, les types de données sensibles dans le fichier, le propriétaire, le type de fichier, la taille du fichier, l'heure de création, le hachage du fichier, si les données ont été attribuées à une personne recherchant son attention, et plus encore.  Des filtres peuvent être appliqués pour éliminer les caractéristiques qui ne sont pas pertinentes.
+
+Data Classification dispose également d'un contrôle d'accès basé sur les rôles (RBAC) pour permettre le déplacement ou la suppression des fichiers, si les autorisations appropriées sont présentes.  Si les autorisations appropriées ne sont pas présentes, les tâches peuvent être attribuées à une personne de l’organisation qui dispose des autorisations appropriées.
+
+
+
+== Gestion de la classification des données et confidentialité
+
+Les questions suivantes fournissent des informations sur la gestion des paramètres de classification des données et de confidentialité.
+
+
+
+=== Comment activer ou désactiver la classification des données ?
+
+Vous devez d’abord déployer une instance de classification des données dans la console ou sur un système local.  Une fois l'instance en cours d'exécution, vous pouvez activer le service sur les systèmes, bases de données et autres sources de données existants à partir de l'onglet *Configuration* ou en sélectionnant un système spécifique. link:task-getting-started-compliance.html["Apprenez comment démarrer"] .
+
+
+NOTE: L'activation de la classification des données sur une source de données entraîne une analyse initiale immédiate.  Les résultats de l'analyse s'affichent peu de temps après.
+
+Vous pouvez désactiver la classification des données pour qu'elle analyse un système individuel, une base de données ou un groupe de partage de fichiers à partir de la page Configuration de la classification des données. Voir link:task-managing-compliance.html["Supprimer les sources de données de la classification des données"] .
+
+Pour supprimer complètement l'instance de classification des données, supprimez manuellement l'instance de classification des données du portail de votre fournisseur de cloud ou de l'emplacement sur site.
+
+
+
+=== Le service peut-il exclure l’analyse des données dans certains répertoires ?
+
+Oui. Si vous souhaitez que la classification des données exclue les données d'analyse qui résident dans certains répertoires de sources de données, vous pouvez fournir cette liste au moteur de classification.  Une fois cette modification appliquée, la classification des données exclura les données d’analyse dans les répertoires spécifiés. link:task-exclude-scan-paths.html["Apprendre encore plus"] .
+
+
+
+=== Les instantanés résidant sur les volumes ONTAP sont-ils analysés ?
+
+Non. La classification des données n’analyse pas les instantanés car le contenu est identique au contenu du volume.
+
+
+
+=== Que se passe-t-il si la hiérarchisation des données est activée sur vos volumes ONTAP ?
+
+Lorsque la classification des données analyse les volumes contenant des données froides hiérarchisées vers le stockage d'objets à l'aide des analyses de mappage uniquement, elle analyse toutes les données : les données qui se trouvent sur les disques locaux et les données froides hiérarchisées vers le stockage d'objets.  Ceci est également vrai pour les produits non NetApp qui implémentent la hiérarchisation.
+
+L'analyse de cartographie uniquement ne réchauffe pas les données froides : elles restent froides et restent dans le stockage d'objets.  En revanche, si vous effectuez l'analyse Map & Classify, certaines configurations risquent de réchauffer les données froides.
+
+
+
+== Types de systèmes sources et types de données
+
+Les questions suivantes concernent les types de stockage qui peuvent être analysés et les types de données analysées.
+
+
+
+=== Existe-t-il des restrictions lors d’un déploiement dans une région gouvernementale ?
+
+La classification des données est prise en charge lorsque l'agent de console est déployé dans une région gouvernementale (AWS GovCloud, Azure Gov ou Azure DoD) - également appelée « mode restreint ».
+
+
+
+=== Quelles sources de données puis-je analyser si j'installe Data Classification sur un site sans accès Internet ?
+
+
+IMPORTANT: Le mode privé BlueXP (interface BlueXP héritée) est généralement utilisé avec des environnements locaux qui n’ont pas de connexion Internet et avec des régions cloud sécurisées, notamment AWS Secret Cloud, AWS Top Secret Cloud et Azure IL6. NetApp continue de prendre en charge ces environnements avec l’interface BlueXP héritée. Pour la documentation du mode privé dans l'ancienne interface BlueXP , voirlink:https://docs.netapp.com/us-en/console-setup-admin/media/BlueXP-Private-Mode-legacy-interface.pdf["Documentation PDF pour le mode privé BlueXP"^] .
+
+La classification des données ne peut analyser que les données provenant de sources de données locales sur le site local.  À l'heure actuelle, la classification des données peut analyser les sources de données locales suivantes en « mode privé » – également appelé site « dark » :
+
+* Systèmes ONTAP sur site
+* Schémas de bases de données
+* Stockage d'objets utilisant le protocole Simple Storage Service (S3)
+
+
+
+
+=== Quels types de fichiers sont pris en charge ?
+
+La classification des données analyse tous les fichiers pour obtenir des informations sur les catégories et les métadonnées et affiche tous les types de fichiers dans la section types de fichiers du tableau de bord.
+
+Lorsque la classification des données détecte des informations personnelles identifiables (PII) ou lorsqu'elle effectue une recherche DSAR, seuls les formats de fichiers suivants sont pris en charge :
+
+`+.CSV, .DCM, .DOC, .DOCX, .JSON, .PDF, .PPTX, .RTF, .TXT, .XLS, .XLSX, Docs, Sheets, and Slides+`
+
+
+
+=== Quels types de données et de métadonnées la classification des données capture-t-elle ?
+
+La classification des données vous permet d'exécuter une analyse de « mappage » générale ou une analyse de « classification » complète sur vos sources de données.  La cartographie fournit uniquement un aperçu de haut niveau de vos données, tandis que la classification fournit une analyse approfondie de vos données.  La cartographie peut être effectuée sur vos sources de données très rapidement car elle n'accède pas aux fichiers pour voir les données à l'intérieur.
+
+* *Analyse de mappage de données (Analyse de mappage uniquement)* : la classification des données analyse uniquement les métadonnées.  Ceci est utile pour la gestion et la gouvernance globales des données, la définition rapide de la portée des projets, les très grands domaines et la priorisation.  Le mappage des données est basé sur les métadonnées et est considéré comme une analyse *rapide*.
++
+Après une analyse rapide, vous pouvez générer un rapport de mappage de données.  Ce rapport est un aperçu des données stockées dans vos sources de données d'entreprise pour vous aider à prendre des décisions concernant l'utilisation des ressources, la migration, la sauvegarde, la sécurité et les processus de conformité.
+
+* *Analyse approfondie de la classification des données (analyse Map & Classify)* : la classification des données analyse les données à l'aide de protocoles standard et d'une autorisation en lecture seule dans tous vos environnements.  Certains fichiers sont ouverts et analysés à la recherche de données sensibles liées à l'entreprise, d'informations privées et de problèmes liés aux ransomwares.
++
+Après une analyse complète, vous pouvez appliquer de nombreuses fonctionnalités supplémentaires de classification des données à vos données, telles que l'affichage et l'affinage des données dans la page Enquête sur les données, la recherche de noms dans les fichiers, la copie, le déplacement et la suppression des fichiers sources, et bien plus encore.
+
+
+
+La classification des données capture des métadonnées telles que : le nom du fichier, les autorisations, l'heure de création, le dernier accès et la dernière modification.  Cela inclut toutes les métadonnées qui apparaissent dans la page Détails de l’enquête sur les données et dans les rapports d’enquête sur les données.
+
+La classification des données peut identifier de nombreux types de données privées telles que les informations personnelles (PII) et les informations personnelles sensibles (SPII).  Pour plus de détails sur les données privées, reportez-vous à https://docs.netapp.com/us-en/bluexp-classification/reference-private-data-categories.html["Catégories de données privées analysées par la classification des données"] .
+
+
+
+=== Puis-je limiter les informations de classification des données à des utilisateurs spécifiques ?
+
+Oui, la classification des données est entièrement intégrée à la console NetApp .  Les utilisateurs de la console NetApp ne peuvent voir que les informations des systèmes qu'ils sont autorisés à consulter en fonction de leurs autorisations.
+
+De plus, si vous souhaitez autoriser certains utilisateurs à afficher uniquement les résultats de l'analyse de classification des données sans avoir la possibilité de gérer les paramètres de classification des données, vous pouvez attribuer à ces utilisateurs le rôle *Visionneuse de classification* (lors de l'utilisation de la console NetApp en mode standard) ou le rôle *Visionneuse de conformité* (lors de l'utilisation de la console NetApp en mode restreint). link:concept-classification.html["Apprendre encore plus"] .
+
+
+
+=== Quelqu'un peut-il accéder aux données privées envoyées entre mon navigateur et Data Classification ?
+
+Non. Les données privées envoyées entre votre navigateur et l'instance de classification des données sont sécurisées par un cryptage de bout en bout à l'aide de TLS 1.2, ce qui signifie que NetApp et les parties non NetApp ne peuvent pas les lire.  La classification des données ne partagera aucune donnée ni aucun résultat avec NetApp, sauf si vous demandez et approuvez l'accès.
+
+Les données analysées restent dans votre environnement.
+
+
+
+=== Comment les données sensibles sont-elles traitées ?
+
+NetApp n'a pas accès aux données sensibles et ne les affiche pas dans l'interface utilisateur.  Les données sensibles sont masquées, par exemple, les quatre derniers chiffres sont affichés pour les informations de carte de crédit.
+
+
+
+=== Où sont stockées les données ?
+
+Les résultats de l'analyse sont stockés dans Elasticsearch au sein de votre instance de classification des données.
+
+
+
+=== Comment accède-t-on aux données ?
+
+La classification des données accède aux données stockées dans Elasticsearch via des appels API, qui nécessitent une authentification et sont cryptés à l'aide d'AES-128.  L'accès direct à Elasticsearch nécessite un accès root.
+
+
+
+== Licences et coûts
+
+La question suivante concerne les licences et les coûts d’utilisation de la classification des données.
+
+
+
+=== Combien coûte la classification des données ?
+
+La classification des données est une fonctionnalité principale de la console NetApp .  Ce n'est pas facturé.
+
+
+
+== Déploiement de l'agent de console
+
+Les questions suivantes concernent l’agent de console.
+
+
+
+=== Qu'est-ce que l'agent Console ?
+
+L'agent de console est un logiciel exécuté sur une instance de calcul au sein de votre compte cloud ou sur site, qui permet à la console NetApp de gérer en toute sécurité les ressources cloud. Vous devez déployer un agent de console pour utiliser la classification des données.
+
+
+
+=== Où l’agent de console doit-il être installé ?
+
+Lors de l'analyse des données, l'agent NetApp Console Console doit être installé aux emplacements suivants :
+
+* Pour Cloud Volumes ONTAP dans AWS ou Amazon FSx pour ONTAP: l'agent de console se trouve dans AWS.
+* Pour Cloud Volumes ONTAP dans Azure ou dans Azure NetApp Files: l’agent de console est dans Azure.
+* Pour Cloud Volumes ONTAP dans GCP : l’agent de console est dans GCP.
+* Pour les systèmes ONTAP sur site : l’agent de console est sur site.
+
+
+Si vous avez des données à ces emplacements, vous devrez peut-être utiliser https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html#when-to-use-multiple-connectors["plusieurs agents de console"^] .
+
+
+
+=== La classification des données nécessite-t-elle l’accès à des informations d’identification ?
+
+La classification des données elle-même ne récupère pas les informations d'identification de stockage.  Au lieu de cela, ils sont stockés dans l’agent de la console.
+
+La classification des données utilise les informations d’identification du plan de données, par exemple les informations d’identification CIFS pour monter les partages avant l’analyse.
+
+
+
+=== La communication entre le service et l’agent de la console utilise-t-elle HTTP ?
+
+Oui, Data Classification communique avec l'agent de la console via HTTP.
+
+
+
+== Déploiement de la classification des données
+
+Les questions suivantes concernent l’instance distincte de classification des données.
+
+
+
+=== Quels modèles de déploiement la classification des données prend-elle en charge ?
+
+La console NetApp permet à l'utilisateur d'analyser et de générer des rapports sur les systèmes pratiquement n'importe où, y compris sur site, dans le cloud et dans les environnements hybrides.  La classification des données est normalement déployée à l'aide d'un modèle SaaS, dans lequel le service est activé via l'interface de la console et ne nécessite aucune installation matérielle ou logicielle.  Même dans ce mode de déploiement « click-and-run », la gestion des données peut être effectuée indépendamment du fait que les magasins de données se trouvent sur site ou dans le cloud public.
+
+
+
+=== Quel type d’instance ou de machine virtuelle est requis pour la classification des données ?
+
+Quandlink:task-deploy-cloud-compliance.html["déployé dans le cloud"] :
+
+* Dans AWS, la classification des données s'exécute sur une instance m6i.4xlarge avec un disque GP2 de 500 Gio.  Vous pouvez sélectionner un type d’instance plus petit lors du déploiement.
+* Dans Azure, la classification des données s’exécute sur une machine virtuelle Standard_D16s_v3 avec un disque de 500 Gio.
+* Dans GCP, la classification des données s'exécute sur une machine virtuelle n2-standard-16 avec un disque persistant standard de 500 Gio.
+
+
+link:concept-classification.html["En savoir plus sur le fonctionnement de la classification des données"] .
+
+
+
+=== Puis-je déployer la classification des données sur mon propre hôte ?
+
+Oui. Vous pouvez installer le logiciel de classification des données sur un hôte Linux disposant d'un accès Internet sur votre réseau ou dans le cloud.  Tout fonctionne de la même manière et vous continuez à gérer votre configuration d’analyse et vos résultats via la console.  Voirlink:task-deploy-compliance-onprem.html["Déploiement de la classification des données sur site"] pour la configuration système requise et les détails d'installation.
+
+
+
+=== Qu'en est-il des sites sécurisés sans accès Internet ?
+
+Oui, c'est également pris en charge.  Tu peuxlink:task-deploy-compliance-dark-site.html["déployer la classification des données sur un site local qui n'a pas d'accès Internet"] pour des sites entièrement sécurisés.

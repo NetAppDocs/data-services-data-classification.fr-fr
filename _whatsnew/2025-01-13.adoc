@@ -1,0 +1,29 @@
+= Version 1.39
+:allow-uri-read: 
+
+
+
+
+=== Version 1.39
+
+Cette version de BlueXP classification met à jour le processus d'exportation du rapport d'enquête sur les données.  Cette mise à jour d'exportation est utile pour effectuer des analyses supplémentaires sur vos données, créer des visualisations supplémentaires sur les données ou partager les résultats de votre enquête sur les données avec d'autres.
+
+Auparavant, l’exportation du rapport d’enquête sur les données était limitée à 10 000 lignes.  Avec cette version, la limite a été supprimée afin que vous puissiez exporter toutes vos données.  Cette modification vous permet d'exporter davantage de données à partir de vos rapports d'investigation de données, vous offrant ainsi plus de flexibilité dans votre analyse de données.
+
+Vous pouvez choisir l'environnement de travail, les volumes, le dossier de destination et le format JSON ou CSV.  Le nom du fichier exporté inclut un horodatage pour vous aider à identifier quand les données ont été exportées.
+
+Les environnements de travail pris en charge incluent :
+
+* Cloud Volumes ONTAP
+* FSx pour ONTAP
+* ONTAP
+* Groupe de partage
+
+
+L'exportation des données du rapport d'enquête sur les données présente les limitations suivantes :
+
+* Le nombre maximal d'enregistrements à télécharger est de 500 millions. par type (fichiers, répertoires et tables)
+* Il est prévu qu'un million d'enregistrements soient exportés en environ 35 minutes.
+
+
+Pour plus de détails sur l'enquête sur les données et le rapport, voir https://docs.netapp.com/us-en/bluexp-classification/task-investigate-data.html["Enquêter sur les données stockées dans votre organisation"] .

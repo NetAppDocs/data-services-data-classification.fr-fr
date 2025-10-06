@@ -1,0 +1,38 @@
+---
+sidebar: sidebar 
+permalink: task-custom-classification.html 
+keywords: custom classification, customize, regular expression, keyword, regex 
+summary: 'NetApp Data Classification vous permet de personnaliser une recherche d"informations sensibles, en adaptant le service aux modèles individuels et aux mots-clés pertinents pour votre organisation.' 
+---
+= Créer une classification personnalisée dans NetApp Data Classification
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Avec NetApp Data Classification, vous pouvez créer une recherche personnalisée pour les informations sensibles.  La recherche peut être limitée à une expression régulière (regex).
+
+
+
+== Créer une classification personnalisée
+
+La classification personnalisée n'est disponible que pour les analyses Map & Classify, et non pour les analyses de cartographie uniquement.  Cette fonctionnalité est actuellement en version préliminaire.
+
+.Étapes
+. Sélectionnez l'onglet **Classification personnalisée**.
+. Sélectionnez le bouton **Ajouter un nouveau classificateur**.
+. Ajoutez un nom de classificateur et une description pour le nouveau classificateur.
+. Choisissez d'ajouter le classificateur en tant qu'*identifiant personnel* ou *catégorie*.
++
+image:screenshot-custom-classifier-name.png["Capture d'écran de l'ajout d'un classificateur"]
+
+. Sélectionnez *Suivant*.
+. Pour ajouter la personnalisation sous forme d’expression régulière, sélectionnez **Expression régulière personnalisée** puis **Suivant**.
+. Ajoutez un modèle pour détecter les informations spécifiques de vos données.  Sélectionnez **Valider** pour confirmer la syntaxe de votre entrée.image:screenshot-create-logic-regex.png["Une capture d'écran de la boîte de dialogue pour créer une expression régulière."]
+. Sélectionnez **Terminé** pour créer la classification personnalisée.
+
+
+La nouvelle personnalisation est capturée lors de la prochaine analyse planifiée.  Pour voir les résultats, voirxref:task-generating-compliance-reports.html[Générer des rapports de conformité] .

@@ -1,0 +1,52 @@
+---
+sidebar: sidebar 
+permalink: task-managing-compliance.html 
+keywords: remove, stop, stop scans, stop scanning, cloud compliance, stop cloud compliance, deactivate, deactivating cloud compliance, data sense 
+summary: Si nécessaire, vous pouvez empêcher la classification des données d’analyser un ou plusieurs systèmes, bases de données, groupes de partage de fichiers, comptes OneDrive, comptes Google Drive ou comptes SharePoint. 
+---
+= Supprimer les sources de données de la classification des données NetApp
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Si nécessaire, vous pouvez empêcher NetApp Data Classification d'analyser un ou plusieurs systèmes, bases de données ou groupes de partage de fichiers.
+
+
+
+== Désactiver les analyses de conformité pour un système
+
+Lorsque vous désactivez les analyses, Data Classification n'analyse plus les données du système et supprime les informations de conformité indexées de l'instance Data Classification (les données du système lui-même ne sont pas supprimées).
+
+. Depuis la page _Configuration_, sélectionnez l'optionimage:button-gallery-options.gif["Bouton Plus"] bouton dans la ligne du système puis *Désactiver la classification des données*.
+
+
+
+TIP: Vous pouvez également désactiver les analyses de conformité pour un système à partir du panneau Services lorsque vous sélectionnez le système.
+
+
+
+== Supprimer une base de données de la classification des données
+
+Si vous ne souhaitez plus analyser une certaine base de données, vous pouvez la supprimer de l'interface de classification des données et arrêter toutes les analyses.
+
+. Depuis la page _Configuration_, sélectionnez l'optionimage:button-gallery-options.gif["Bouton Plus"] bouton dans la ligne de la base de données puis *Supprimer le serveur de base de données*.
+
+
+
+
+== Supprimer un groupe de partages de fichiers de la classification des données
+
+Si vous ne souhaitez plus analyser les fichiers utilisateur d'un groupe de partages de fichiers, vous pouvez supprimer le groupe de partages de fichiers de l'interface de classification des données et arrêter toutes les analyses.
+
+.Étapes
+. Depuis la page _Configuration_, sélectionnez l'optionimage:button-gallery-options.gif["Bouton Plus"] bouton dans la ligne du groupe de partages de fichiers puis *Supprimer le groupe de partages de fichiers*.
++
+image:screenshot_compliance_remove_db.png["Capture d'écran du bouton Supprimer le serveur de base de données de la page Configuration de l'analyse."]
+
+. Sélectionnez *Supprimer le groupe de partages* dans la boîte de dialogue de confirmation.
+

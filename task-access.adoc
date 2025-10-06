@@ -1,0 +1,40 @@
+---
+sidebar: sidebar 
+permalink: task-access.html 
+keywords: log in, sign in 
+summary: Commencez à utiliser NetApp Data Classification en accédant au service dans la console NetApp . 
+---
+= Accéder à la classification des données NetApp
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Vous pouvez accéder à la classification des données NetApp via la console NetApp .
+
+Pour vous connecter à la console, vous pouvez utiliser vos informations d'identification du site de support NetApp ou vous inscrire pour une connexion à la console NetApp à l'aide de votre e-mail et d'un mot de passe. link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-logging-in.html["En savoir plus sur la connexion à la console"^] .
+
+Des tâches spécifiques nécessitent des rôles d’utilisateur de console spécifiques. link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["En savoir plus sur les rôles d'accès à la console pour tous les services"^] .
+
+.Avant de commencer
+* link:https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["Vous devez ajouter un agent de console."^]
+* link:task-deploy-cloud-compliance.html["Comprendre quel style de déploiement de classification des données convient à votre charge de travail."]
+
+
+.Étapes
+. Dans un navigateur Web, accédez à l'link:https://console.netapp.com/["Console"^] .
+. Connectez-vous à la console.
+. Depuis la page principale de la console NetApp , sélectionnez *Gouvernance* > *Classification des données*.
+. Si c'est la première fois que vous accédez à la classification des données, la page de destination s'affiche.
++
+Sélectionnez *Déployer la classification sur site ou dans le cloud* pour commencer à déployer votre instance de classification.  Pour plus d'informations, voirlink:task-deploy-cloud-compliance.html["Quel déploiement de classification des données devez-vous utiliser ?"]
+
++
+image:screenshot-deploy-classification.png["Une capture d'écran de la sélection du bouton pour activer la classification des données."]
+
++
+Sinon, le tableau de bord de classification des données s’affiche.
+
+

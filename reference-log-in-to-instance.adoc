@@ -1,0 +1,41 @@
+---
+sidebar: sidebar 
+permalink: reference-log-in-to-instance.html 
+keywords: log in, data sense, classification 
+summary: Parfois, vous devrez peut-être vous connecter au système de classification des données NetApp pour pouvoir accéder aux fichiers journaux ou modifier les fichiers de configuration. 
+---
+= Connectez-vous au système de classification des données NetApp
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Vous devez vous connecter au système de classification des données NetApp pour pouvoir accéder aux fichiers journaux ou modifier les fichiers de configuration.
+
+Lorsque Data Classification est installé sur une machine Linux dans vos locaux ou sur une machine Linux que vous avez déployée dans le cloud, vous pouvez accéder directement au fichier de configuration et au script.
+
+Lorsque la classification des données est déployée dans le cloud, vous devez vous connecter en SSH à l'instance de classification des données.  Vous vous connectez au système via SSH en saisissant le nom d'utilisateur et le mot de passe, ou en utilisant la clé SSH que vous avez fournie lors de l'installation de l'agent de console.  La commande SSH est :
+
+`ssh -i <path_to_the_ssh_key> <machine_user>@<datasense_ip>`
+
+* `<path_to_the_ssh_key>`= emplacement des clés d'authentification ssh
+* `<machine_user>:`
++
+** Pour AWS : utilisez <ec2-user>
+** Pour Azure : utilisez l’utilisateur créé pour l’instance de la console
+** Pour GCP : utilisez l’utilisateur créé pour l’instance de la console
+
+
+* `<datasense_ip>`= Adresse IP de l'instance de la machine virtuelle
+
+
+Vous devez modifier les règles entrantes du groupe de sécurité pour accéder au système dans le cloud.  Pour plus de détails, voir :
+
+* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-ports-aws.html["Règles de groupe de sécurité dans AWS"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-ports-azure.html["Règles de groupe de sécurité dans Azure"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-ports-gcp.html["Règles de pare-feu dans Google Cloud"^]
+

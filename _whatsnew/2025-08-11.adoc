@@ -1,0 +1,19 @@
+= Version 1.46
+:allow-uri-read: 
+
+
+
+
+=== Version 1.46
+
+Cette version de classification des données inclut des corrections de bogues et les mises à jour suivantes :
+
+.Informations améliorées sur les événements d'analyse dans la page d'audit
+La page Audit prend désormais en charge des informations améliorées sur les événements d'analyse pour la BlueXP classification.  La page Audit affiche désormais le moment où l'analyse d'un système commence, les statuts des systèmes et les problèmes éventuels.  Les statuts des partages et des systèmes ne sont disponibles que pour les analyses de mappage.
+
+Pour plus d'informations sur la page Audit, voirlink:https://docs.netapp.com/us-en/bluexp-setup-admin/task-monitor-cm-operations.html["Surveiller les opérations de la console NetApp"^] .
+
+.Prise en charge de RHEL 9.6
+Cette version ajoute la prise en charge de Red Hat Enterprise Linux v9.6 pour l'installation manuelle sur site de la BlueXP classification, y compris les déploiements de sites sombres.
+
+Les systèmes d'exploitation suivants nécessitent l'utilisation du moteur de conteneur Podman et nécessitent la version de BlueXP classification 1.30 ou supérieure : Red Hat Enterprise Linux versions 8.8, 8.10, 9.0, 9.1, 9.2, 9.3, 9.4 et 9.5.

@@ -1,0 +1,246 @@
+---
+sidebar: sidebar 
+permalink: task-generating-compliance-reports.html 
+keywords: report, privacy, risk, privacy risk assessment, compliance status, severity, compliance, privacy risk, data subjects, privacy, credit cards, pci dss, hipaa, csv file, json file, dsar 
+summary: 'NetApp Data Classification fournit des rapports que vous pouvez utiliser pour mieux comprendre l"état du programme de confidentialité des données de votre organisation.' 
+---
+= Afficher les rapports de conformité de la classification des données NetApp
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Data Classification fournit des rapports que vous pouvez utiliser pour mieux comprendre l'état du programme de confidentialité des données de votre organisation.
+
+Par défaut, les tableaux de bord de classification des données affichent les données de conformité et de gouvernance pour tous les systèmes, bases de données et sources de données.  Si vous souhaitez afficher des rapports contenant des données pour certains systèmes uniquement, vous pouvez filtrer pour les voir uniquement.
+
+[NOTE]
+====
+* Les rapports de conformité ne sont disponibles que si vous effectuez une analyse de classification complète sur vos sources de données.  Les sources de données ayant fait l'objet d'une analyse de mappage uniquement peuvent uniquement générer le rapport de mappage de données.
+* NetApp ne peut pas garantir l'exactitude à 100 % des données personnelles et des données personnelles sensibles identifiées par Data Classification.  Vous devez toujours valider les informations en examinant les données.
+
+
+====
+Les rapports suivants sont disponibles pour la classification des données :
+
+* *Rapport d'évaluation de la découverte de données* : fournit une analyse de haut niveau de l'environnement analysé pour mettre en évidence les résultats du système et montrer les zones de préoccupation et les étapes de correction potentielles.
+* *Rapport de mappage de données* : fournit des informations sur la taille et le nombre de fichiers dans vos systèmes.  Cela inclut la capacité d’utilisation, l’âge des données, la taille des données et les types de fichiers.
+* *Rapport de demande d'accès aux données personnelles* : vous permet d'extraire un rapport de tous les fichiers contenant des informations concernant le nom spécifique ou l'identifiant personnel d'une personne concernée.
+* *Rapport HIPAA* : vous aide à identifier la répartition des informations de santé dans vos fichiers.
+* *Rapport PCI DSS* : vous aide à identifier la répartition des informations de carte de crédit dans vos fichiers.
+* *Rapport d'évaluation des risques liés à la confidentialité* : fournit des informations sur la confidentialité de vos données et un score de risque lié à la confidentialité.
+* *Rapports sur un type d'informations spécifique* : Des rapports sont disponibles qui incluent des détails sur les fichiers identifiés contenant des données personnelles et des données personnelles sensibles.  Vous pouvez également voir les fichiers classés par catégorie et par type de fichier.
+
+
+
+
+== Sélectionnez les systèmes pour les rapports
+
+Vous pouvez filtrer le contenu du tableau de bord de conformité de la classification des données pour afficher les données de conformité pour tous les systèmes et bases de données, ou uniquement pour des systèmes spécifiques.
+
+Lorsque vous filtrez le tableau de bord, la classification des données limite les données de conformité et les rapports uniquement aux systèmes que vous avez sélectionnés.
+
+.Étapes
+. Dans le menu Classification des données, sélectionnez *Conformité*.
+. Sélectionnez la liste déroulante du filtre des systèmes, puis sélectionnez les systèmes.
+. Sélectionnez **Accepter** pour confirmer votre sélection.
++
+image:screenshot-report-filter.png["Capture d'écran montrant le filtrage des systèmes."]
+
+
+
+
+
+== Rapport de demande d'accès aux données personnelles
+
+Les réglementations en matière de confidentialité telles que le RGPD européen accordent aux personnes concernées (telles que les clients ou les employés) le droit d'accéder à leurs données personnelles.  Lorsqu'une personne concernée demande ces informations, on parle alors de demande d'accès aux données (DSAR).  Les organisations sont tenues de répondre à ces demandes « sans retard injustifié », et au plus tard dans un délai d’un mois à compter de leur réception.
+
+Vous pouvez répondre à un DSAR en recherchant le nom complet d'un sujet ou un identifiant connu (comme une adresse e-mail), puis en téléchargeant un rapport.  Le rapport est conçu pour aider votre organisation à se conformer au RGPD ou à des lois similaires sur la confidentialité des données.
+
+*Comment la classification des données peut-elle vous aider à répondre à une DSAR ?*
+
+Lorsque vous effectuez une recherche sur une personne concernée, la classification des données recherche tous les fichiers contenant le nom ou l'identifiant de cette personne.  La classification des données vérifie les dernières données pré-indexées pour le nom ou l'identifiant.  Il ne lance pas de nouvelle analyse.
+
+Une fois la recherche terminée, vous pouvez télécharger la liste des fichiers pour un rapport de demande d’accès aux données personnelles.  Le rapport rassemble les informations issues des données et les traduit en termes juridiques que vous pouvez renvoyer à la personne.
+
+
+NOTE: La recherche de personnes concernées n'est actuellement pas prise en charge dans les bases de données.
+
+*Rechercher des personnes concernées et télécharger des rapports*
+
+Recherchez le nom complet ou l'identifiant connu de la personne concernée, puis téléchargez un rapport de liste de fichiers ou un rapport DSAR.  Vous pouvez rechercher parlink:reference-private-data-categories.html#types-of-personal-data["tout type d'informations personnelles"] .
+
+
+NOTE: L'anglais, l'allemand, le japonais et l'espagnol sont pris en charge lors de la recherche des noms des personnes concernées.  La prise en charge de davantage de langues sera ajoutée ultérieurement.
+
+.Étapes
+. Dans le menu Classification des données, sélectionnez *Conformité*.
+
+
+. Depuis la page Conformité, sélectionnez *Personnes concernées*.
+. Recherchez le nom complet ou l’identifiant connu de la personne concernée.
++
+Voici un exemple qui montre une recherche pour le nom _john doe_ :
+
++
+image:screenshot_dsar_search.gif["Capture d'écran de la recherche de la personne concernée."]
+
+. Choisissez l'une des options disponibles :
++
+** *Télécharger le rapport DSAR* : Une réponse formelle à la demande d'accès que vous pouvez envoyer à la personne concernée.  Ce rapport contient des informations générées automatiquement à partir des données trouvées par Data Classification sur la personne concernée et est conçu pour être utilisé comme modèle.  Vous devez remplir le formulaire et le réviser en interne avant de l’envoyer à la personne concernée.
+** *Résultats de l'enquête* : une page qui vous permet d'enquêter sur les données en recherchant, en triant, en développant les détails d'un fichier spécifique et en téléchargeant la liste des fichiers.
++
+
+NOTE: S'il y a plus de 10 000 résultats, seuls les 10 000 premiers apparaissent dans la liste des fichiers.
+
+
+
+
+
+
+
+== Rapport sur la loi sur la portabilité et la responsabilité en matière d'assurance maladie (HIPAA)
+
+Le rapport sur la loi sur la portabilité et la responsabilité en matière d’assurance maladie (HIPAA) peut vous aider à identifier les fichiers contenant des informations sur la santé.  Il est conçu pour aider votre organisation à se conformer aux lois sur la confidentialité des données HIPAA.  Les informations recherchées par la classification des données comprennent :
+
+* Modèle de référence de santé
+* Code médical CIM-10-CM
+* Code médical CIM-9-CM
+* RH - Catégorie Santé
+* Catégorie de données d'application de santé
+
+
+Le rapport comprend les informations suivantes :
+
+* Aperçu : Combien de fichiers contiennent des informations sur la santé et dans quels systèmes.
+* Cryptage : pourcentage de fichiers contenant des informations sur la santé qui se trouvent sur des systèmes cryptés ou non cryptés.  Ces informations sont spécifiques à Cloud Volumes ONTAP.
+* Protection contre les ransomwares : pourcentage de fichiers contenant des informations sur la santé qui se trouvent sur des systèmes sur lesquels la protection contre les ransomwares est activée ou non.  Ces informations sont spécifiques à Cloud Volumes ONTAP.
+* Conservation : la période pendant laquelle les fichiers ont été modifiés pour la dernière fois.  Cela est utile car vous ne devez pas conserver les informations de santé plus longtemps que nécessaire pour les traiter.
+* Distribution des informations sur la santé : les systèmes dans lesquels les informations sur la santé ont été trouvées et si le cryptage et la protection contre les ransomwares sont activés.
+
+
+*Générer le rapport HIPAA*
+
+Accédez à l’onglet Conformité pour générer le rapport.
+
+.Étapes
+. Dans le menu Classification des données, sélectionnez *Conformité*.
+. Localisez le **volet Rapports**.  Sélectionnez l'icône de téléchargement à côté de *Rapport HIPAA*.
++
+image:screenshot-report-options.png["Capture d’écran des options de rapport dans la page Conformité."]
+
+
+
+.Résultat
+La classification des données génère un rapport PDF que vous pouvez consulter et envoyer à d’autres groupes selon vos besoins.
+
+
+
+== Rapport sur la norme de sécurité des données de l'industrie des cartes de paiement (PCI DSS)
+
+Le rapport sur la norme de sécurité des données de l'industrie des cartes de paiement (PCI DSS) peut vous aider à identifier la répartition des informations de carte de crédit dans vos fichiers.
+
+Le rapport comprend les informations suivantes :
+
+* Aperçu : Combien de fichiers contiennent des informations de carte de crédit et dans quels systèmes.
+* Cryptage : pourcentage de fichiers contenant des informations de carte de crédit qui se trouvent sur des systèmes cryptés ou non cryptés.  Ces informations sont spécifiques à Cloud Volumes ONTAP.
+* Protection contre les ransomwares : pourcentage de fichiers contenant des informations de carte de crédit qui se trouvent sur des systèmes sur lesquels la protection contre les ransomwares est activée ou non.  Ces informations sont spécifiques à Cloud Volumes ONTAP.
+* Conservation : la période pendant laquelle les fichiers ont été modifiés pour la dernière fois.  Cela est utile car vous ne devez pas conserver les informations de carte de crédit plus longtemps que nécessaire pour les traiter.
+* Distribution des informations de carte de crédit : les systèmes sur lesquels les informations de carte de crédit ont été trouvées et si le cryptage et la protection contre les ransomwares sont activés.
+
+
+*Générer le rapport PCI DSS*
+
+Accédez à l’onglet Conformité pour générer le rapport.
+
+.Étapes
+. Dans le menu Classification des données, sélectionnez *Conformité*.
+. Localisez le **volet Rapports**.  Sélectionnez l'icône de téléchargement à côté de *Rapport PCI DSS*.
++
+image:screenshot-report-options.png["Capture d’écran des options de rapport dans la page Conformité."]
+
+
+
+.Résultat
+La classification des données génère un rapport PDF que vous pouvez consulter et envoyer à d’autres groupes selon vos besoins.
+
+
+
+== Rapport d'évaluation des risques liés à la vie privée
+
+Le rapport d'évaluation des risques liés à la confidentialité fournit un aperçu de l'état des risques liés à la confidentialité de votre organisation, comme l'exigent les réglementations sur la confidentialité telles que le RGPD et le CCPA.
+
+Le rapport comprend les informations suivantes :
+
+* État de conformité : un score de gravité et la distribution des données, qu'elles soient non sensibles, personnelles ou personnelles sensibles.
+* Aperçu de l’évaluation : une répartition des types de données personnelles trouvées, ainsi que des catégories de données.
+* Personnes concernées par cette évaluation : nombre de personnes, par lieu, pour lesquelles des identifiants nationaux ont été trouvés.
+
+
+*Générer le rapport d'évaluation des risques liés à la confidentialité*
+
+Accédez à l’onglet Conformité pour générer le rapport.
+
+.Étapes
+. Dans le menu Classification des données, sélectionnez *Conformité*.
+. Localisez le **volet Rapports**.  Sélectionnez l’icône de téléchargement à côté de *Rapport d’évaluation des risques liés à la confidentialité*.
++
+image:screenshot-report-options.png["Capture d’écran des options de rapport dans la page Conformité."]
+
+
+
+.Résultat
+La classification des données génère un rapport PDF que vous pouvez consulter et envoyer à d’autres groupes selon vos besoins.
+
+*Score de gravité*
+
+La classification des données calcule le score de gravité du rapport d'évaluation des risques liés à la confidentialité sur la base de trois variables :
+
+* Le pourcentage de données personnelles sur l'ensemble des données.
+* Le pourcentage de données personnelles sensibles sur l'ensemble des données.
+* Le pourcentage de fichiers qui incluent des personnes concernées, déterminé par des identifiants nationaux tels que les cartes d'identité nationales, les numéros de sécurité sociale et les numéros d'identification fiscale.
+
+
+La logique utilisée pour déterminer le score est la suivante :
+
+[cols="27,73"]
+|===
+| Score de gravité | Logique 
+
+
+| 0 | Les trois variables sont exactement 0 % 
+
+
+| 1 | L'une des variables est supérieure à 0 % 
+
+
+| 2 | L'une des variables est supérieure à 3 % 
+
+
+| 3 | Deux des variables sont supérieures à 3 % 
+
+
+| 4 | Trois des variables sont supérieures à 3 % 
+
+
+| 5 | L'une des variables est supérieure à 6 % 
+
+
+| 6 | Deux des variables sont supérieures à 6 % 
+
+
+| 7 | Trois des variables sont supérieures à 6 % 
+
+
+| 8 | L'une des variables est supérieure à 15 % 
+
+
+| 9 | Deux des variables sont supérieures à 15 % 
+
+
+| 10 | Trois des variables sont supérieures à 15 % 
+|===

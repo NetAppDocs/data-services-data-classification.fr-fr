@@ -1,0 +1,82 @@
+---
+sidebar: sidebar 
+permalink: task-scanning-storagegrid.html 
+keywords: cloud compliance, enable cloud compliance, privacy, compliance, object storage, data sense 
+summary: Suivez quelques étapes pour commencer à analyser les données dans StorageGRID directement avec NetApp Data Classification. 
+---
+= Analyser les données StorageGRID avec la classification des données NetApp
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Suivez quelques étapes pour commencer à analyser les données dans StorageGRID directement avec NetApp Data Classification.
+
+
+
+== Examiner les exigences de StorageGRID
+
+Passez en revue les conditions préalables suivantes pour vous assurer que vous disposez d’une configuration prise en charge avant d’activer la classification des données.
+
+* Vous devez disposer de l’URL du point de terminaison pour vous connecter au service de stockage d’objets.
+* Vous devez disposer de la clé d'accès et de la clé secrète de StorageGRID afin que la classification des données puisse accéder aux buckets.
+
+
+
+
+== Déployer l'instance de classification des données
+
+Déployez la classification des données s’il n’existe pas déjà d’instance déployée.
+
+Si vous numérisez des données de StorageGRID accessibles sur Internet, vous pouvezlink:task-deploy-cloud-compliance.html["déployer la classification des données dans le cloud"^] oulink:task-deploy-compliance-onprem.html["déployer la classification des données dans un emplacement sur site disposant d'un accès Internet"^] .
+
+Si vous numérisez des données à partir de StorageGRID qui a été installé sur un site sombre qui n'a pas d'accès Internet, vous devezlink:task-deploy-compliance-dark-site.html["déployer la classification des données dans le même emplacement sur site qui n'a pas d'accès Internet"^] .  Cela nécessite également que l’agent de console soit déployé dans le même emplacement sur site.
+
+
+
+== Ajoutez le service StorageGRID à la classification des données
+
+Ajoutez le service StorageGRID .
+
+.Étapes
+. Dans le menu Classification des données, sélectionnez l’option *Configuration*.
+. Depuis la page Configuration, sélectionnez *Ajouter un système* > *Ajouter StorageGRID*.
+. Dans la boîte de dialogue Ajouter un service StorageGRID , saisissez les détails du service StorageGRID et sélectionnez *Continuer*.
++
+.. Entrez le nom que vous souhaitez utiliser pour le système.  Ce nom doit refléter le nom du service StorageGRID auquel vous vous connectez.
+.. Saisissez l’URL du point de terminaison pour accéder au service de stockage d’objets.
+.. Saisissez la clé d'accès et la clé secrète afin que la classification des données puisse accéder aux buckets dans StorageGRID.
++
+image:screenshot-scanning-storagegrid-add.png["Une capture d'écran de la boîte de dialogue dans laquelle vous entrez les valeurs pour accéder au service StorageGRID ."]
+
+
+
+
+
+.Résultat
+StorageGRID est ajouté à la liste des systèmes.
+
+
+
+== Activer et désactiver les analyses de conformité sur les buckets StorageGRID
+
+Après avoir activé la classification des données sur StorageGRID, l’étape suivante consiste à configurer les buckets que vous souhaitez analyser.  La classification des données découvre ces compartiments et les affiche dans le système que vous avez créé.
+
+.Étapes
+. Dans la page Configuration, recherchez le système StorageGRID .
+. Sur la mosaïque système StorageGRID , sélectionnez *Configuration*.
+. Effectuez l’une des étapes suivantes pour activer ou désactiver l’analyse :
++
+** Pour activer les analyses de mappage uniquement sur un bucket, sélectionnez *Carte*.
+** Pour activer les analyses complètes sur un bucket, sélectionnez *Cartographier et classer*.
+** Pour désactiver l'analyse sur un bucket, sélectionnez *Désactivé*.
+
+
+
+
+.Résultat
+La classification des données commence à analyser les compartiments que vous avez activés.  Vous pouvez suivre la progression de l'analyse initiale en accédant au menu **Configuration** puis en sélectionnant la **Configuration système**.  La progression de chaque analyse est affichée sous forme de barre de progression.  Vous pouvez également survoler la barre de progression pour voir le nombre de fichiers analysés par rapport au nombre total de fichiers dans le volume.  S'il y a des erreurs, elles apparaîtront dans la colonne Statut, à côté de l'action requise pour corriger l'erreur.

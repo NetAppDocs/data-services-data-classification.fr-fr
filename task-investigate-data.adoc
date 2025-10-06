@@ -1,0 +1,390 @@
+---
+sidebar: sidebar 
+permalink: task-investigate-data.html 
+keywords: personal files, personal data, sensitive personal files, sensitive personal data, health data, ethnic origin, political opinions, gdpr, email address, credit card, ip address, iban, national ID, identifier, password, sex, criminal, compliance, privacy, filter data, permissions, csv file, json file, highlights, policies,json, csv, data investigation, data investigation report, download report, file metadata, file permissions, duplicate files, saved search 
+summary: 'Vous pouvez examiner les données de votre organisation en consultant les détails sur la page Enquête sur les données.  C"est ici que vous pouvez poursuivre vos recherches après avoir consulté le tableau de bord de gouvernance.' 
+---
+= Examinez les données stockées dans votre organisation avec la classification des données NetApp
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Le tableau de bord d'investigation des données affiche des informations au niveau des fichiers et des répertoires sur vos données, vous permettant de trier et de filtrer les résultats.  La page Enquête sur les données présente des informations sur les métadonnées et les autorisations des fichiers et des répertoires, ainsi que sur l'identification des fichiers en double.  Grâce aux informations au niveau des fichiers, des répertoires et des bases de données, vous pouvez prendre des mesures pour améliorer la conformité de votre organisation et économiser de l'espace de stockage.  La page Enquête sur les données prend également en charge le déplacement, la copie et la suppression de fichiers.
+
+
+NOTE: Pour obtenir des informations à partir de la page Enquête, vous devez effectuer une analyse de classification complète sur vos sources de données.  Les sources de données ayant fait l'objet d'une analyse de mappage uniquement n'affichent pas les détails au niveau du fichier.
+
+
+
+== Structure d'enquête sur les données
+
+La page Enquête sur les données trie les données en trois onglets :
+
+* **Données non structurées** : données de fichier
+* **Répertoires** : dossiers et partages de fichiers
+* **Structuré** : base de données
+
+
+
+
+== Filtres de données
+
+La page Enquête sur les données fournit de nombreux filtres pour trier vos données afin que vous puissiez obtenir ce dont vous avez besoin.  Vous pouvez utiliser plusieurs filtres de concert.
+
+Pour ajouter un filtre, sélectionnez le bouton **Ajouter un filtre**.
+
+image:screenshot_compliance_investigation_filtered.png["Une capture d'écran des filtres disponibles lors de l'affinement des résultats dans la page d'enquête."]
+
+*Sensibilité et contenu du filtre*
+
+Utilisez les filtres suivants pour afficher la quantité d’informations sensibles contenues dans vos données.
+
+[cols="30,60"]
+|===
+| Filtre | Détails 
+
+
+| Catégorie | Sélectionnez lelink:reference-private-data-categories.html["types de catégories"] . 
+
+
+| Niveau de sensibilité | Sélectionnez le niveau de sensibilité : Personnel, Personnel sensible ou Non sensible. 
+
+
+| Nombre d'identifiants | Sélectionnez la plage d’identifiants sensibles détectés par fichier.  Comprend les données personnelles et les données personnelles sensibles.  Lors du filtrage dans les répertoires, la classification des données totalise les correspondances de tous les fichiers de chaque dossier (et sous-dossiers).  REMARQUE : la version de décembre 2023 (version 1.26.6) a supprimé l'option permettant de calculer le nombre de données d'informations personnelles identifiables (PII) par répertoires. 
+
+
+| Données personnelles | Sélectionnez lelink:reference-private-data-categories.html["types de données personnelles"] . 
+
+
+| Données personnelles sensibles | Sélectionnez lelink:reference-private-data-categories.html["types de données personnelles sensibles"] . 
+
+
+| Personne concernée | Saisissez le nom complet ou l’identifiant connu de la personne concernée. link:task-generating-compliance-reports.html["En savoir plus sur les personnes concernées ici"] . 
+|===
+*Filtrer le propriétaire de l'utilisateur et les autorisations de l'utilisateur*
+
+Utilisez les filtres suivants pour afficher les propriétaires de fichiers et les autorisations d’accès à vos données.
+
+[cols="30,60"]
+|===
+| Filtre | Détails 
+
+
+| Autorisations d'ouverture | Sélectionnez le type d’autorisations dans les données et dans les dossiers/partages. 
+
+
+| Autorisations utilisateur/groupe | Sélectionnez un ou plusieurs noms d’utilisateur et/ou noms de groupe, ou saisissez un nom partiel. 
+
+
+| Propriétaire du fichier | Entrez le nom du propriétaire du fichier. 
+
+
+| Nombre d'utilisateurs avec accès | Sélectionnez une ou plusieurs plages de catégories pour afficher les fichiers et dossiers ouverts à un certain nombre d'utilisateurs. 
+|===
+*Filtrer chronologiquement*
+
+Utilisez les filtres suivants pour afficher les données en fonction de critères temporels.
+
+[cols="30,60"]
+|===
+| Filtre | Détails 
+
+
+| Temps créé | Sélectionnez une plage horaire pendant laquelle le fichier a été créé.  Vous pouvez également spécifier une plage horaire personnalisée pour affiner davantage les résultats de la recherche. 
+
+
+| Temps découvert | Sélectionnez une plage horaire pendant laquelle la classification des données a découvert le fichier.  Vous pouvez également spécifier une plage horaire personnalisée pour affiner davantage les résultats de la recherche. 
+
+
+| Dernière modification | Sélectionnez une plage horaire pendant laquelle le fichier a été modifié pour la dernière fois.  Vous pouvez également spécifier une plage horaire personnalisée pour affiner davantage les résultats de la recherche. 
+
+
+| Dernier accès  a| 
+Sélectionnez une plage horaire pendant laquelle le fichier ou le répertoire* a été consulté pour la dernière fois.  Vous pouvez également spécifier une plage horaire personnalisée pour affiner davantage les résultats de la recherche.  Pour les types de fichiers analysés par Data Classification, il s'agit de la dernière fois que Data Classification a analysé le fichier.
+
+|===
+{asterisk} L'heure du dernier accès à un répertoire n'est disponible que pour les partages NFS ou CIFS.
+
+*Filtrer les métadonnées*
+
+Utilisez les filtres suivants pour afficher les données en fonction de l’emplacement, de la taille et du type de répertoire ou de fichier.
+
+[cols="30,60"]
+|===
+| Filtre | Détails 
+
+
+| Chemin du fichier | Saisissez jusqu'à 20 chemins partiels ou complets que vous souhaitez inclure ou exclure de la requête.  Si vous entrez à la fois des chemins d'inclusion et des chemins d'exclusion, Data Classification recherche d'abord tous les fichiers dans les chemins inclus, puis supprime les fichiers des chemins exclus, puis affiche les résultats.  Notez que l'utilisation de « * » dans ce filtre n'a aucun effet et que vous ne pouvez pas exclure des dossiers spécifiques de l'analyse : tous les répertoires et fichiers sous un partage configuré seront analysés. 
+
+
+| Type de répertoire | Sélectionnez le type de répertoire ; « Partager » ou « Dossier ». 
+
+
+| Type de fichier | Sélectionnez lelink:reference-private-data-categories.html["types de fichiers"] . 
+
+
+| Taille du fichier | Sélectionnez la plage de taille du fichier. 
+
+
+| Hachage de fichier | Saisissez le hachage du fichier pour rechercher un fichier spécifique, même si le nom est différent. 
+|===
+*Type de stockage du filtre*
+
+Utilisez les filtres suivants pour afficher les données par type de stockage.
+
+[cols="30,60"]
+|===
+| Filtre | Détails 
+
+
+| Type de système | Sélectionnez le type de système. 
+
+
+| Nom de l'environnement système | Sélectionnez des systèmes spécifiques. 
+
+
+| Référentiel de stockage | Sélectionnez le référentiel de stockage, par exemple un volume ou un schéma. 
+|===
+*Requête de filtrage*
+
+Utilisez le filtre suivant pour afficher les données par requêtes enregistrées.
+
+[cols="30,60"]
+|===
+| Filtre | Détails 
+
+
+| Requête enregistrée | Sélectionnez une requête enregistrée ou plusieurs.  Aller à lalink:task-using-policies.html["onglet requêtes enregistrées"] pour afficher la liste des requêtes enregistrées existantes et en créer de nouvelles. 
+
+
+| Mots-clés | Sélectionnerlink:task-org-private-data.html["la balise ou les balises"] qui sont attribués à vos fichiers. 
+|===
+*Statut de l'analyse du filtre*
+
+Utilisez le filtre suivant pour afficher les données en fonction de l'état d'analyse de la classification des données.
+
+[cols="30,60"]
+|===
+| Filtre | Détails 
+
+
+| État de l'analyse | Sélectionnez une option pour afficher la liste des fichiers en attente de première analyse, en cours d'analyse, en attente de nouvelle analyse ou dont l'analyse a échoué. 
+
+
+| Événement d'analyse d'analyse | Sélectionnez si vous souhaitez afficher les fichiers qui n'ont pas été classés parce que la classification des données n'a pas pu revenir à l'heure du dernier accès, ou les fichiers qui ont été classés même si la classification des données n'a pas pu revenir à l'heure du dernier accès. 
+|===
+link:reference-collected-metadata.html["Voir les détails sur l'horodatage « dernier accès »"]pour plus d'informations sur les éléments qui apparaissent dans la page Investigation lors du filtrage à l'aide de l'événement d'analyse d'analyse.
+
+*Filtrer les données par doublons*
+
+Utilisez le filtre suivant pour afficher les fichiers dupliqués dans votre stockage.
+
+[cols="30,60"]
+|===
+| Filtre | Détails 
+
+
+| Doublons | Sélectionnez si le fichier est dupliqué dans les référentiels. 
+|===
+
+
+== Afficher les métadonnées du fichier
+
+En plus de vous montrer le système et le volume où réside le fichier, les métadonnées affichent beaucoup plus d'informations, notamment les autorisations du fichier, le propriétaire du fichier et s'il existe des doublons de ce fichier.  Ces informations sont utiles si vous envisagez delink:task-using-policies.html["créer des requêtes enregistrées"] car vous pouvez voir toutes les informations que vous pouvez utiliser pour filtrer vos données.
+
+La disponibilité des informations dépend de la source des données.  Par exemple, le nom du volume et les autorisations ne sont pas partagés pour les fichiers de base de données.
+
+.Étapes
+. Dans le menu Classification des données, sélectionnez *Enquête*.
+. Dans la liste Enquête sur les données à droite, sélectionnez le curseur vers le basimage:button_down_caret.png["curseur vers le bas"] à droite pour n'importe quel fichier unique pour afficher les métadonnées du fichier.
++
+image:screenshot_compliance_file_details.png["Une capture d’écran montrant les détails des métadonnées d’un fichier dans la page Enquête sur les données."]
+
+. En option, vous pouvez créer ou ajouter une balise au fichier avec le bouton *Créer une balise*.  Sélectionnez une balise existante dans le menu déroulant ou ajoutez une nouvelle balise avec le bouton *+ Ajouter*.  Les balises peuvent être utilisées pour filtrer les données.
+
+
+
+
+== Afficher les autorisations utilisateur pour les fichiers et les répertoires
+
+Pour afficher une liste de tous les utilisateurs ou groupes ayant accès à un fichier ou à un répertoire et les types d'autorisations dont ils disposent, sélectionnez *Afficher toutes les autorisations*.  Cette option est disponible uniquement pour les données dans les partages CIFS.
+
+Si vous utilisez des identifiants de sécurité (SID) au lieu de noms d'utilisateur et de groupe, vous devez intégrer votre Active Directory dans la classification des données. Pour plus d'informations, consultez la section link:task-active-directory.html["ajouter Active Directory à la classification des données"] .
+
+.Étapes
+. Dans le menu Classification des données, sélectionnez *Enquête*.
+. Dans la liste Enquête sur les données à droite, sélectionnez le curseur vers le basimage:button_down_caret.png["curseur vers le bas"] à droite pour n'importe quel fichier unique pour afficher les métadonnées du fichier.
+. Pour afficher la liste de tous les utilisateurs ou groupes ayant accès à un fichier ou à un répertoire et les types d'autorisations dont ils disposent, dans le champ Autorisations d'ouverture, sélectionnez *Afficher toutes les autorisations*.
++
+
+NOTE: La classification des données affiche jusqu'à 100 utilisateurs dans la liste.
+
+. Sélectionnez le curseur vers le basimage:button_down_caret.png["curseur vers le bas"] bouton pour n'importe quel groupe pour voir la liste des utilisateurs qui font partie du groupe.
++
+
+TIP: Vous pouvez développer un niveau du groupe pour voir les utilisateurs qui font partie du groupe.
+
+. Sélectionnez le nom d’un utilisateur ou d’un groupe pour actualiser la page Enquête afin de voir tous les fichiers et répertoires auxquels l’utilisateur ou le groupe a accès.
+
+
+
+
+== Vérifiez les fichiers en double dans vos systèmes de stockage
+
+Vous pouvez vérifier si des fichiers en double sont stockés dans vos systèmes de stockage.  Ceci est utile si vous souhaitez identifier les zones dans lesquelles vous pouvez économiser de l'espace de stockage.  Il est également bon de s’assurer que certains fichiers disposant d’autorisations spécifiques ou d’informations sensibles ne sont pas inutilement dupliqués dans vos systèmes de stockage.
+
+Tous vos fichiers (à l'exception des bases de données) de 1 Mo ou plus, ou contenant des informations personnelles ou sensibles, sont comparés pour voir s'il existe des doublons.
+
+La classification des données utilise la technologie de hachage pour déterminer les fichiers en double.  Si un fichier possède le même code de hachage qu’un autre fichier, vous pouvez être sûr à 100 % que les fichiers sont des doublons exacts, même si les noms de fichiers sont différents.
+
+.Étapes
+. Dans le menu Classification des données, sélectionnez *Enquête*.
+. Dans le volet Filtre, sélectionnez « Taille du fichier » ainsi que « Doublons » (« Contient des doublons ») pour voir quels fichiers d'une certaine plage de taille sont dupliqués dans votre environnement.
+. Vous pouvez également télécharger la liste des fichiers en double et l'envoyer à votre administrateur de stockage afin qu'il puisse décider quels fichiers, le cas échéant, peuvent être supprimés.
+. En option, vous pouvez supprimer, étiqueter ou déplacer les fichiers en double.  Sélectionnez les fichiers sur lesquels vous souhaitez effectuer une action, puis sélectionnez l’action appropriée.
+
+
+*Voir si un fichier spécifique est dupliqué*
+
+Vous pouvez voir si un seul fichier contient des doublons.
+
+.Étapes
+. Dans le menu Classification des données, sélectionnez *Enquête*.
+. Dans la liste Enquête sur les données, sélectionnezimage:button_down_caret.png["curseur vers le bas"] à droite pour n'importe quel fichier unique pour afficher les métadonnées du fichier.
++
+Si des doublons existent pour un fichier, cette information apparaît à côté du champ _Doublons_.
+
+. Pour afficher la liste des fichiers en double et leur emplacement, sélectionnez *Afficher les détails*.
+. Sur la page suivante, sélectionnez *Afficher les doublons* pour afficher les fichiers dans la page Enquête.
+. En option, vous pouvez supprimer, étiqueter ou déplacer les fichiers en double.  Sélectionnez les fichiers sur lesquels vous souhaitez effectuer une action, puis sélectionnez l’action appropriée.
+
+
+
+TIP: Vous pouvez utiliser la valeur « hachage de fichier » fournie sur cette page et la saisir directement dans la page Investigation pour rechercher un fichier en double spécifique à tout moment - ou vous pouvez l'utiliser dans une requête enregistrée.
+
+
+
+== Téléchargez votre rapport
+
+Vous pouvez télécharger vos résultats filtrés au format CSV ou JSON.
+
+Il peut y avoir jusqu'à trois fichiers de rapport téléchargés si la classification des données analyse des fichiers (données non structurées), des répertoires (dossiers et partages de fichiers) et des bases de données (données structurées).
+
+Les fichiers sont divisés en fichiers avec un nombre fixe de lignes ou d'enregistrements :
+
+* JSON : 100 000 enregistrements par rapport dont la génération prend environ 5 minutes
+* CSV : 200 000 enregistrements par rapport dont la génération prend environ 4 minutes
+
+
+
+NOTE: Vous pouvez télécharger une version du fichier CSV à visualiser dans ce navigateur.  Cette version est limitée à 10 000 enregistrements.
+
+
+
+=== Ce qui est inclus dans le rapport téléchargeable
+
+Le *Rapport de données sur les fichiers non structurés* inclut les informations suivantes sur vos fichiers :
+
+* Nom des fichiers
+* Type d'emplacement
+* Nom du système
+* Référentiel de stockage (par exemple, un volume, un bucket, des partages)
+* Type de référentiel
+* Chemin du fichier
+* Type de fichier
+* Taille du fichier (en Mo)
+* Temps de création
+* Dernière modification
+* Dernier accès
+* Propriétaire du fichier
++
+** Les données du propriétaire du fichier englobent le nom du compte, le nom du compte SAM et l’adresse e-mail lorsque Active Directory est configuré.
+
+
+* Catégorie
+* Informations personnelles
+* Informations personnelles sensibles
+* Autorisations ouvertes
+* Erreur d'analyse de numérisation
+* Date de détection de suppression
++
+La date de détection de suppression identifie la date à laquelle le fichier a été supprimé ou déplacé.  Cela vous permet d'identifier quand des fichiers sensibles ont été déplacés.  Les fichiers supprimés ne contribuent pas au nombre de fichiers qui apparaît dans le tableau de bord ou sur la page Enquête.  Les fichiers n'apparaissent que dans les rapports CSV.
+
+
+
+Le *Rapport de données sur les répertoires non structurés* inclut les informations suivantes sur vos dossiers et partages de fichiers :
+
+* Type de système
+* Nom du système
+* Nom du répertoire
+* Référentiel de stockage (par exemple, un dossier ou des partages de fichiers)
+* Propriétaire du répertoire
+* Temps de création
+* Temps découvert
+* Dernière modification
+* Dernier accès
+* Autorisations ouvertes
+* Type de répertoire
+
+
+Le *rapport de données structurées* inclut les informations suivantes sur vos tables de base de données :
+
+* Nom de la table de base de données
+* Type d'emplacement
+* Nom du système
+* Référentiel de stockage (par exemple, un schéma)
+* Nombre de colonnes
+* Nombre de lignes
+* Informations personnelles
+* Informations personnelles sensibles
+
+
+.Étapes pour générer le rapport
+. À partir de la page Enquête sur les données, sélectionnez l'optionimage:button_download.png["bouton de téléchargement"] bouton en haut à droite de la page.
+. Choisissez le type de rapport : CSV ou JSON.
+. Saisissez un **Nom de rapport**.
+. Pour télécharger le rapport complet, sélectionnez **Système** puis choisissez **Système** et **Volume** dans les menus déroulants respectifs.  Fournissez un **chemin d'accès au dossier de destination**.
++
+Pour télécharger le rapport dans le navigateur, sélectionnez **Local** .  Notez que cette option limite le rapport aux 10 000 premières lignes et est limitée au format **CSV**.  Vous n'avez pas besoin de remplir d'autres champs si vous sélectionnez **Local**.
+
+. Sélectionnez **Télécharger le rapport**.
++
+image:screenshot_compliance_investigation_report2.png["Une capture d’écran de la page Télécharger le rapport d’enquête avec plusieurs options."]
+
+
+
+.Résultat
+Une boîte de dialogue affiche un message indiquant que les rapports sont en cours de téléchargement.
+
+
+
+== Créer une requête enregistrée en fonction des filtres sélectionnés
+
+.Étapes
+. Dans l’onglet Enquête, définissez une recherche en sélectionnant les filtres que vous souhaitez utiliser. Voirlink:task-investigate-data.html["Filtrage des données dans la page Investigation"] pour plus de détails.
+. Une fois que vous avez défini toutes les caractéristiques du filtre à votre guise, sélectionnez *Enregistrer la requête*.
++
+image:../media/screenshot_compliance_save_as_highlight.png["Capture d’écran montrant comment enregistrer une requête filtrée en tant que requête enregistrée."]
+
+. Nommez la requête enregistrée et ajoutez une description.  Le nom doit être unique.
+. Vous pouvez éventuellement enregistrer la requête en tant que politique :
++
+.. Pour enregistrer la requête en tant que politique, activez le bouton *Exécuter en tant que politique*.
+.. Choisissez de *Supprimer définitivement* ou *Envoyer des mises à jour par e-mail*.  Si vous choisissez les mises à jour par e-mail, vous pouvez envoyer les résultats de la requête par e-mail à _tous_ les utilisateurs de la console quotidiennement, hebdomadairement ou mensuellement.  Alternativement, vous pouvez envoyer la notification à une adresse e-mail spécifique aux mêmes fréquences.
+
+
+. Sélectionnez *Enregistrer*.
++
+image:../media/screenshot_compliance_save_highlight2.png["Une capture d'écran qui montre comment configurer la requête enregistrée et l'enregistrer."]
+
+
+
+Une fois la recherche ou la politique créée, vous pouvez la visualiser dans l'onglet **Requêtes enregistrées**.
+
+
+TIP: L'affichage des résultats sur la page Requêtes enregistrées peut prendre jusqu'à 15 minutes.

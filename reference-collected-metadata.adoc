@@ -1,0 +1,67 @@
+---
+sidebar: sidebar 
+permalink: reference-collected-metadata.html 
+keywords: compliance, metadata, permissions, time stamps, privacy, last access time 
+summary: 'La classification des données collecte certaines métadonnées lors de l"exécution d"analyses de classification sur les données de vos sources de données et systèmes.  La classification des données peut accéder à la plupart des métadonnées dont nous avons besoin pour classer vos données, mais il existe certaines sources pour lesquelles nous ne pouvons pas accéder aux données dont nous avons besoin.' 
+---
+= Métadonnées collectées à partir de sources de données dans la classification des données NetApp
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Data Classification collecte certaines métadonnées lors de l'exécution d'analyses de classification sur les données de vos sources de données et systèmes.  La classification des données peut accéder à la plupart des métadonnées dont nous avons besoin pour classer vos données, mais il existe certaines sources pour lesquelles nous ne pouvons pas accéder aux données dont nous avons besoin.
+
+[cols="15,25,25,25"]
+|===
+|  | *Métadonnées* | *CIFS* | *NFS* 
+
+
+.3+| *Horodatages* | _Heure de création_ | disponible | Non disponible (non pris en charge sous Linux) 
+
+
+| _Heure du dernier accès_ | disponible | disponible 
+
+
+| _Heure de la dernière modification_ | disponible | disponible 
+
+
+.2+| *Autorisations* | _Ouvrir les autorisations_ | Si le groupe « TOUT LE MONDE » a accès au fichier, il est considéré comme « Ouvert à l'organisation » | Si « Autres » a accès au fichier, il est considéré comme « Ouvert à l'organisation » 
+
+
+| _Accès utilisateurs/groupes_ | Les informations sur les utilisateurs et les groupes sont extraites de LDAP | Non disponible (les utilisateurs NFS sont généralement gérés localement sur le serveur, par conséquent, le même individu peut avoir un UID différent sur chaque serveur) 
+|===
+[NOTE]
+====
+* La classification des données n'extrait pas la « dernière heure d'accès » des sources de données de la base de données.
+* Les anciennes versions du système d’exploitation Windows (par exemple, Windows 7 et Windows 8) désactivent par défaut la collecte de l’attribut « heure du dernier accès » car cela peut avoir un impact sur les performances du système.  Lorsque cet attribut n'est pas collecté, les analyses de classification des données basées sur « l'heure du dernier accès » seront affectées.  Vous pouvez activer la collecte de l'heure du dernier accès sur ces anciens systèmes Windows si nécessaire.
+
+
+====
+
+
+== Horodatage du dernier accès
+
+Lorsque Data Classification extrait des données à partir de partages de fichiers, le système d'exploitation considère qu'il accède aux données et modifie l'« heure du dernier accès » en conséquence.  Après l'analyse, la classification des données tente de rétablir l'heure du dernier accès à l'horodatage d'origine.  Si la classification des données ne dispose pas d'autorisations d'attributs d'écriture dans CIFS ou d'autorisations d'écriture dans NFS, le système ne peut pas rétablir l'heure du dernier accès à l'horodatage d'origine.  Les volumes ONTAP configurés avec SnapLock disposent d'autorisations en lecture seule et ne peuvent pas non plus rétablir l'heure du dernier accès à l'horodatage d'origine.
+
+Par défaut, si Data Classification ne dispose pas de ces autorisations, le système n'analysera pas ces fichiers dans vos volumes car Data Classification ne peut pas rétablir l'« heure du dernier accès » à l'horodatage d'origine.  Cependant, si vous ne vous souciez pas de savoir si l'heure du dernier accès est réinitialisée à l'heure d'origine dans vos fichiers, vous pouvez sélectionner le commutateur *Analyser en cas d'absence d'autorisations « attributs d'écriture »* en bas de la page de configuration afin que la classification des données analyse les volumes quelles que soient les autorisations.
+
+image:screenshot_scan_missing_permissions.png["Une capture d'écran montrant le commutateur que vous pouvez utiliser pour que Data Classification analyse vos fichiers même s'il ne dispose pas des autorisations appropriées pour rétablir l'heure du dernier accès à l'horodatage d'origine."]
+
+Cette fonctionnalité s’applique aux systèmes ONTAP sur site, à Cloud Volumes ONTAP, à Azure NetApp Files, à Amazon FSx for NetApp ONTAP et aux partages de fichiers tiers.
+
+Il existe un filtre dans la page Investigation appelé _Événement d'analyse d'analyse_ qui vous permet d'afficher soit les fichiers qui n'ont pas été classés parce que la classification des données n'a pas pu revenir à l'heure du dernier accès, soit les fichiers qui ont été classés même si la classification des données n'a pas pu revenir à l'heure du dernier accès.
+
+image:screenshot_scan_analysis_event_filter.png["Une capture d'écran du filtre pour voir quels fichiers ont été analysés et non analysés, en fonction de la présence ou non d'autorisations d'écriture."]
+
+Les sélections de filtres sont :
+
+* « Non classé – Impossible de revenir à l'heure du dernier accès » – Ceci affiche les fichiers qui n'ont pas été classés en raison d'autorisations d'écriture manquantes.
+* « Heure du dernier accès classé et mis à jour » : cela affiche les fichiers qui ont été classés et la classification des données n'a pas pu réinitialiser l'heure du dernier accès à la date d'origine.  Ce filtre n'est pertinent que pour les environnements dans lesquels vous avez activé *Analyser en cas d'absence d'autorisations « attributs d'écriture »*.
+
+
+Si nécessaire, vous pouvez exporter ces résultats vers un rapport afin de voir quels fichiers sont ou ne sont pas analysés en raison des autorisations. https://docs.netapp.com/us-en/bluexp-classification/task-investigate-data.html#data-investigation-report["En savoir plus sur le rapport d'enquête sur les données"^] .
