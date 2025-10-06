@@ -36,10 +36,10 @@ Commencez rapidement en suivant ces étapes ou faites défiler les sections rest
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Un"]Créer un agent de console
 [role="quick-margin-para"]
-Si vous n'avez pas encore d'agent de console, https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-on-prem.html["déployer l'agent de console sur site"^] sur un hôte Linux de votre réseau ou sur un hôte Linux dans le cloud.
+Si vous n'avez pas encore d'agent de console, https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-on-prem.html["déployer l'agent de console sur site"^] sur un hôte Linux de votre réseau ou sur un hôte Linux dans le cloud.
 
 [role="quick-margin-para"]
-Vous pouvez également créer un agent de console avec votre fournisseur de cloud.  Voir https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-aws.html["création d'un agent de console dans AWS"^] , https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-azure.html["création d'un agent de console dans Azure"^] , ou https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-google.html["création d'un agent de console dans GCP"^] .
+Vous pouvez également créer un agent de console avec votre fournisseur de cloud. Voir https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-aws.html["création d'un agent de console dans AWS"^] , https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html["création d'un agent de console dans Azure"^] , ou https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-google.html["création d'un agent de console dans GCP"^] .
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Deux"]Réviser les prérequis
 [role="quick-margin-para"]
@@ -56,9 +56,9 @@ Téléchargez le logiciel Cloud Data Classification à partir du site de support
 
 == Créer un agent de console
 
-Un agent de console est requis avant de pouvoir installer et utiliser la classification des données.  Dans la plupart des cas, vous aurez probablement configuré un agent de console avant de tenter d'activer la classification des données, car la plupart https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["Les fonctionnalités de la console nécessitent un agent de console"] , mais il y a des cas où vous devrez en créer un maintenant.
+Un agent de console est requis avant de pouvoir installer et utiliser la classification des données. Dans la plupart des cas, vous aurez probablement configuré un agent de console avant de tenter d'activer la classification des données, car la plupart https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["Les fonctionnalités de la console nécessitent un agent de console"] , mais il y a des cas où vous devrez en créer un maintenant.
 
-Pour en créer un dans votre environnement de fournisseur de cloud, consultez https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-aws.html["création d'un agent de console dans AWS"^] , https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-azure.html["création d'un agent de console dans Azure"^] , ou https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-google.html["création d'un agent de console dans GCP"^] .
+Pour en créer un dans votre environnement de fournisseur de cloud, consultez https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-aws.html["création d'un agent de console dans AWS"^] , https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html["création d'un agent de console dans Azure"^] , ou https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-google.html["création d'un agent de console dans GCP"^] .
 
 Il existe certains scénarios dans lesquels vous devez utiliser un agent de console déployé chez un fournisseur de cloud spécifique :
 
@@ -72,7 +72,7 @@ Pour Azure NetApp Files, il doit être déployé dans la même région que les v
 
 Les systèmes ONTAP sur site, les partages de fichiers NetApp et les comptes de base de données peuvent être analysés à l’aide de l’un de ces agents de console cloud.
 
-Notez que vous pouvez également https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-on-prem.html["déployer l'agent de console sur site"^] sur un hôte Linux de votre réseau ou sur un hôte Linux dans le cloud.  Certains utilisateurs prévoyant d’installer la classification des données sur site peuvent également choisir d’installer l’agent de console sur site.
+Notez que vous pouvez également https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-on-prem.html["déployer l'agent de console sur site"^] sur un hôte Linux de votre réseau ou sur un hôte Linux dans le cloud. Certains utilisateurs prévoyant d’installer la classification des données sur site peuvent également choisir d’installer l’agent de console sur site.
 
 Vous aurez besoin de l'adresse IP ou du nom d'hôte du système d'agent de la console lors de l'installation de la classification des données.  Vous disposerez de ces informations si vous avez installé l'agent Console dans vos locaux.  Si l'agent de console est déployé dans le cloud, vous pouvez trouver ces informations depuis la console : sélectionnez l'icône Aide puis *Support* puis **Agent de console**.
 
@@ -210,16 +210,16 @@ La classification des données nécessite un accès Internet sortant.  Si votre 
 | Points de terminaison | But 
 
 
-| \ https://api.bluexp.netapp.com | Communication avec la console, qui inclut les comptes NetApp . 
+| \ https://api.console.netapp.com | Communication avec la console, qui inclut les comptes NetApp . 
 
 
 | \ https://netapp-cloud-account.auth0.com \ https://auth0.com | Communication avec le site Web de la console pour l'authentification centralisée des utilisateurs. 
 
 
-| \ https://support.compliance.api.bluexp.netapp.com/ \ https://hub.docker.com \ https://auth.docker.io \ https://registry-1.docker.io \ https://index.docker.io/ \ https://dseasb33srnrn.cloudfront.net/ \ https://production.cloudflare.docker.com/ | Fournit un accès aux images logicielles, aux manifestes, aux modèles et permet d'envoyer des journaux et des métriques. 
+| \ https://support.compliance.api.console.netapp.com/ \ https://hub.docker.com \ https://auth.docker.io \ https://registry-1.docker.io \ https://index.docker.io/ \ https://dseasb33srnrn.cloudfront.net/ \ https://production.cloudflare.docker.com/ | Fournit un accès aux images logicielles, aux manifestes, aux modèles et permet d'envoyer des journaux et des métriques. 
 
 
-| \ https://support.compliance.api.bluexp.netapp.com/ | Permet à NetApp de diffuser des données à partir des enregistrements d'audit. 
+| \ https://support.compliance.api.console.netapp.com/ | Permet à NetApp de diffuser des données à partir des enregistrements d'audit. 
 
 
 | \ https://github.com/docker \ https://download.docker.com | Fournit des packages prérequis pour l'installation de Docker. 
@@ -293,7 +293,7 @@ Voir<<Préparer le système hôte Linux,Préparation du système hôte Linux>> e
 Les mises à niveau du logiciel de classification des données sont automatisées tant que l'instance dispose d'une connexion Internet.
 
 
-NOTE: La classification des données ne peut actuellement pas analyser les compartiments S3, Azure NetApp Files ou FSx pour ONTAP lorsque le logiciel est installé sur site.  Dans ces cas, vous devrez déployer un agent de console distinct et une instance de classification des données dans le cloud et https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["basculer entre les connecteurs"^] pour vos différentes sources de données.
+NOTE: La classification des données ne peut actuellement pas analyser les compartiments S3, Azure NetApp Files ou FSx pour ONTAP lorsque le logiciel est installé sur site. Dans ces cas, vous devrez déployer un agent de console distinct et une instance de classification des données dans le cloud et https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["basculer entre les connecteurs"^] pour vos différentes sources de données.
 
 
 

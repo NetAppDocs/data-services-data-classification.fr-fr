@@ -37,7 +37,7 @@ Les temps de mise à jour des composants individuels du tableau de bord de gouve
 | Autorisations d'ouverture | 24 heures 
 
 
-| Requêtes enregistrées | 2 heures 
+| Recherches enregistrées | 2 heures 
 
 
 | Données sensibles et autorisations étendues | 24 heures 
@@ -51,7 +51,7 @@ Les temps de mise à jour des composants individuels du tableau de bord de gouve
 
 | Principaux référentiels de données par niveau de sensibilité | 2 heures 
 |===
-Vous pouvez afficher l'heure de la dernière mise à jour et mettre à jour manuellement les composants Fichiers en double, Données non commerciales, Requêtes enregistrées, Données obsolètes et Principaux référentiels de données par niveau de sensibilité.  Pour plus d'informations sur le tableau de bord de gouvernance, voirlink:https://docs.netapp.com/us-en/bluexp-classification/task-controlling-governance-data.html["Afficher les détails de gouvernance sur les données stockées dans votre organisation"] .
+Vous pouvez afficher l'heure de la dernière mise à jour et mettre à jour manuellement les composants Fichiers en double, Données non commerciales, Recherches enregistrées, Données obsolètes et Principaux référentiels de données par niveau de sensibilité. Pour plus d'informations sur le tableau de bord de gouvernance, voirlink:https://docs.netapp.com/us-en/data-services-data-classification/task-controlling-governance-data.html["Afficher les détails de gouvernance sur les données stockées dans votre organisation"] .
 
 .Améliorations des performances et de la sécurité
 Des améliorations ont été apportées pour améliorer les performances, la consommation de mémoire et la sécurité de la classification BlueXP .

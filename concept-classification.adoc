@@ -29,7 +29,7 @@ La console NetApp fournit une gestion centralisée des services de stockage et d
 
 Vous n'avez pas besoin de licence ni d'abonnement pour commencer à utiliser NetApp Console et vous n'encourez des frais que lorsque vous devez déployer des agents de console dans votre cloud pour garantir la connectivité à vos systèmes de stockage ou à vos services de données NetApp . Cependant, certains services de données NetApp accessibles depuis la console sont sous licence ou basés sur un abonnement.
 
-En savoir plus sur lelink:https://docs.netapp.com/us-en/bluexp-setup-admin/concept-overview.html["Console NetApp"^] .
+En savoir plus sur lelink:https://docs.netapp.com/us-en/console-setup-admin/concept-overview.html["Console NetApp"^] .
 
 
 
@@ -37,7 +37,7 @@ En savoir plus sur lelink:https://docs.netapp.com/us-en/bluexp-setup-admin/conce
 
 La classification des données utilise l'intelligence artificielle (IA), le traitement du langage naturel (NLP) et l'apprentissage automatique (ML) pour comprendre le contenu qu'elle analyse afin d'extraire des entités et de catégoriser le contenu en conséquence.  Cela permet à la classification des données de fournir les domaines de fonctionnalités suivants.
 
-https://bluexp.netapp.com/netapp-cloud-data-sense["En savoir plus sur les cas d'utilisation de la classification des données"^] .
+link:https://www.netapp.com/data-services/classification/["En savoir plus sur les cas d'utilisation de la classification des données"^] .
 
 .Maintenir la conformité
 La classification des données fournit plusieurs outils qui peuvent vous aider dans vos efforts de conformité.  Vous pouvez utiliser la classification des données pour :
@@ -60,7 +60,7 @@ La classification des données permet d’identifier les données potentiellemen
 La classification des données fournit des outils qui peuvent vous aider à déterminer le coût total de possession (TCO) de votre stockage.  Vous pouvez utiliser la classification des données pour :
 
 * Augmentez l’efficacité du stockage en identifiant les données en double ou non liées à l’entreprise.
-* Réduisez les coûts de stockage en identifiant les données inactives que vous pouvez hiérarchiser vers un stockage d'objets moins coûteux. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["En savoir plus sur la hiérarchisation des systèmes Cloud Volumes ONTAP"^] . https://docs.netapp.com/us-en/bluexp-tiering/concept-cloud-tiering.html["En savoir plus sur la hiérarchisation des systèmes ONTAP sur site"^] .
+* Réduisez les coûts de stockage en identifiant les données inactives que vous pouvez hiérarchiser vers un stockage d'objets moins coûteux. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["En savoir plus sur la hiérarchisation des systèmes Cloud Volumes ONTAP"^] . https://docs.netapp.com/us-en/data-services-tiering/concept-cloud-tiering.html["En savoir plus sur la hiérarchisation des systèmes ONTAP sur site"^] .
 
 
 
@@ -76,6 +76,7 @@ La classification des données peut scanner et analyser des données structurée
 * Cloud Volumes ONTAP (déployé dans AWS, Azure ou GCP)
 * Clusters ONTAP sur site
 * StorageGRID
+* Google Cloud NetApp Volumes
 
 
 *Sources de données*
@@ -107,7 +108,7 @@ La classification des données est gratuite.  Aucune licence de classification n
 === Coûts d'infrastructure
 
 * L'installation de Data Classification dans le cloud nécessite le déploiement d'une instance cloud, ce qui entraîne des frais de la part du fournisseur cloud où elle est déployée. Voir <<L'instance de classification des données,le type d'instance déployé pour chaque fournisseur de cloud>> .  L’installation de Data Classification sur un système local est gratuite.
-* La classification des données nécessite que vous ayez déployé un agent de console.  Dans de nombreux cas, vous disposez déjà d’un agent de console en raison d’autres stockages et services que vous utilisez dans la console.  L'instance de l'agent de console entraîne des frais auprès du fournisseur de cloud où elle est déployée. Voir le https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-on-prem.html["type d'instance déployée pour chaque fournisseur de cloud"^] .  L’installation de l’agent de console sur un système local est gratuite.
+* La classification des données nécessite que vous ayez déployé un agent de console. Dans de nombreux cas, vous disposez déjà d’un agent de console en raison d’autres stockages et services que vous utilisez dans la console. L'instance de l'agent de console entraîne des frais auprès du fournisseur de cloud où elle est déployée. Voir le https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-on-prem.html["type d'instance déployée pour chaque fournisseur de cloud"^] . L’installation de l’agent de console sur un système local est gratuite.
 
 
 
@@ -125,7 +126,7 @@ Les coûts de transfert de données dépendent de votre configuration.  Si l'ins
 
 == L'instance de classification des données
 
-Lorsque vous déployez la classification des données dans le cloud, la console déploie l’instance dans le même sous-réseau que l’agent de la console. https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["En savoir plus sur l’agent de console."^]
+Lorsque vous déployez la classification des données dans le cloud, la console déploie l’instance dans le même sous-réseau que l’agent de la console. https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["En savoir plus sur l’agent de console."^]
 
 image:diagram_cloud_compliance_instance.png["Un diagramme qui montre une instance de console et une instance de classification des données exécutées chez votre fournisseur de cloud."]
 
@@ -183,7 +184,7 @@ Après l'analyse initiale, Data Classification analyse en continu vos données d
 Vous pouvez activer et désactiver les analyses au niveau du volume ou au niveau du schéma de base de données.
 
 
-NOTE: La classification des données n’impose pas de limite à la quantité de données qu’elle peut analyser.  Chaque agent de console prend en charge l'analyse et l'affichage de 500 Tio de données. Pour scanner plus de 500 Tio de données,link:https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html#connector-installation["installer un autre agent de console"^] alorslink:https://docs.netapp.com/us-en/bluexp-classification/task-deploy-overview.html["déployer une autre instance de classification des données"] .  + L'interface utilisateur de la console affiche les données d'un seul connecteur.  Pour obtenir des conseils sur l'affichage des données de plusieurs agents de console, consultezlink:https://docs.netapp.com/us-en/bluexp-setup-admin/task-manage-multiple-connectors.html#switch-between-connectors["Travailler avec plusieurs agents de console"^] .
+NOTE: La classification des données n’impose pas de limite à la quantité de données qu’elle peut analyser. Chaque agent de console prend en charge l'analyse et l'affichage de 500 Tio de données. Pour scanner plus de 500 Tio de données,link:https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html#connector-installation["installer un autre agent de console"^] alorslink:https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-overview.html["déployer une autre instance de classification des données"] . + L'interface utilisateur de la console affiche les données d'un seul connecteur. Pour obtenir des conseils sur l'affichage des données de plusieurs agents de console, consultezlink:https://docs.netapp.com/us-en/console-setup-admin/task-manage-multiple-connectors.html#switch-between-connectors["Travailler avec plusieurs agents de console"^] .
 
 
 

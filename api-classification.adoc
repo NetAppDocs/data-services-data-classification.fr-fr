@@ -24,7 +24,7 @@ Il existe quatre catégories définies dans la classification des données qui c
 * Configuration
 
 
-Les API de la documentation Swagger vous permettent de rechercher, d'agréger des données, de suivre vos analyses et d'effectuer des actions telles que copier, déplacer, etc.
+Les API de la documentation Swagger vous permettent de rechercher, d'agréger des données, de suivre vos analyses et d'effectuer des actions telles que copier, déplacer et supprimer.
 
 
 

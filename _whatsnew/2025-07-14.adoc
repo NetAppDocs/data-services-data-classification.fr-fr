@@ -11,9 +11,9 @@ Cette version de BlueXP classification inclut des modifications de code qui opti
 .Flux de travail amélioré pour ajouter des partages de fichiers pour la numérisation
 Le flux de travail permettant d’ajouter des partages de fichiers à un groupe de partage de fichiers a été simplifié.  Le processus différencie désormais également la prise en charge du protocole CIFS en fonction du type d’authentification (Kerberos ou NTLM).
 
-Pour plus d'informations, consultez la section link:https://docs.netapp.com/us-en/bluexp-classification/task-scanning-file-shares.html["Analyser les partages de fichiers"] .
+Pour plus d'informations, consultez la section link:https://docs.netapp.com/us-en/data-services-data-classification/task-scanning-file-shares.html["Analyser les partages de fichiers"] .
 
 .Informations améliorées sur le propriétaire du fichier
 Vous pouvez désormais afficher plus d’informations sur les propriétaires de fichiers capturés dans l’onglet Enquête.  Lorsque vous affichez les métadonnées d'un fichier dans l'onglet Enquête, recherchez le propriétaire du fichier, puis sélectionnez **Afficher les détails** pour voir le nom d'utilisateur, l'e-mail et le nom du compte SAM.  Vous pouvez également afficher d’autres éléments appartenant à cet utilisateur.  Cette fonctionnalité est uniquement disponible pour les environnements de travail avec Active Directory.
 
-Pour plus d'informations, consultez la section link:https://docs.netapp.com/us-en/bluexp-classification/task-investigate-data.html["Examinez les données stockées dans votre organisation"] .
+Pour plus d'informations, consultez la section link:https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html["Examinez les données stockées dans votre organisation"] .

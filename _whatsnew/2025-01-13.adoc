@@ -26,4 +26,4 @@ L'exportation des données du rapport d'enquête sur les données présente les 
 * Il est prévu qu'un million d'enregistrements soient exportés en environ 35 minutes.
 
 
-Pour plus de détails sur l'enquête sur les données et le rapport, voir https://docs.netapp.com/us-en/bluexp-classification/task-investigate-data.html["Enquêter sur les données stockées dans votre organisation"] .
+Pour plus de détails sur l'enquête sur les données et le rapport, voir https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html["Enquêter sur les données stockées dans votre organisation"] .

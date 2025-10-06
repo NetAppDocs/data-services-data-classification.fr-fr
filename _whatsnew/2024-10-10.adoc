@@ -11,7 +11,7 @@ Cette version prend en charge Red Hat Enterprise Linux v9.4 en plus des versions
 
 Les systèmes d'exploitation suivants nécessitent l'utilisation du moteur de conteneur Podman et nécessitent la version de BlueXP classification 1.30 ou supérieure : Red Hat Enterprise Linux versions 8.8, 9.0, 9.1, 9.2, 9.3 et 9.4.
 
-En savoir plus sur https://docs.netapp.com/us-en/bluexp-classification/task-deploy-overview.html["Présentation des déploiements de BlueXP classification"] .
+En savoir plus sur https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-overview.html["Présentation des déploiements de BlueXP classification"] .
 
 .Amélioration des performances d'analyse
 Cette version offre des performances d'analyse améliorées.

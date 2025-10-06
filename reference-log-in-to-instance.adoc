@@ -35,7 +35,7 @@ Lorsque la classification des données est déployée dans le cloud, vous devez 
 
 Vous devez modifier les règles entrantes du groupe de sécurité pour accéder au système dans le cloud.  Pour plus de détails, voir :
 
-* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-ports-aws.html["Règles de groupe de sécurité dans AWS"^]
-* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-ports-azure.html["Règles de groupe de sécurité dans Azure"^]
-* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-ports-gcp.html["Règles de pare-feu dans Google Cloud"^]
+* https://docs.netapp.com/us-en/console-setup-admin/reference-ports-aws.html["Règles de groupe de sécurité dans AWS"^]
+* https://docs.netapp.com/us-en/console-setup-admin/reference-ports-azure.html["Règles de groupe de sécurité dans Azure"^]
+* https://docs.netapp.com/us-en/console-setup-admin/reference-ports-gcp.html["Règles de pare-feu dans Google Cloud"^]
 

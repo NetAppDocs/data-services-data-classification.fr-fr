@@ -20,9 +20,9 @@ Par défaut, les analyses sont mises en file d’attente en fonction de l’ordr
 
 La priorité est accordée une seule fois.  Les réanalyses automatiques des données de cartographie se produisent dans l'ordre par défaut.
 
-La priorisation est limitée àlink:https://docs.netapp.com/us-en/bluexp-classification/concept-classification.html["analyses de cartographie uniquement"^] ; il n'est pas disponible pour les analyses de cartographie et de classification.
+La priorisation est limitée àlink:https://docs.netapp.com/us-en/data-services-data-classification/concept-classification.html["analyses de cartographie uniquement"^] ; il n'est pas disponible pour les analyses de cartographie et de classification.
 
-Pour plus d'informations, consultez la section link:https://docs.netapp.com/us-en/bluexp-classification/task-managing-repo-scanning.html#prioritize-scans["Prioriser les analyses"^] .
+Pour plus d'informations, consultez la section link:https://docs.netapp.com/us-en/data-services-data-classification/task-managing-repo-scanning.html#prioritize-scans["Prioriser les analyses"^] .
 
 .Réessayer toutes les analyses
 La BlueXP classification prend en charge la possibilité de réessayer par lots toutes les analyses ayant échoué.
@@ -36,4 +36,4 @@ Pour réessayer toutes les analyses :
 
 
 .Amélioration de la précision du modèle de catégorisation
-La précision du modèle d'apprentissage automatique pourlink:https://docs.netapp.com/us-en/bluexp-classification/reference-private-data-categories.html#types-of-sensitive-personal-datapredefined-categories["catégories prédéfinies"] s'est améliorée de 11%.
+La précision du modèle d'apprentissage automatique pourlink:https://docs.netapp.com/us-en/data-services-data-classification/reference-private-data-categories.html#types-of-sensitive-personal-datapredefined-categories["catégories prédéfinies"] s'est améliorée de 11%.

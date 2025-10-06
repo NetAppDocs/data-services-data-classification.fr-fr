@@ -173,7 +173,7 @@ Après une analyse complète, vous pouvez appliquer de nombreuses fonctionnalit�
 
 La classification des données capture des métadonnées telles que : le nom du fichier, les autorisations, l'heure de création, le dernier accès et la dernière modification.  Cela inclut toutes les métadonnées qui apparaissent dans la page Détails de l’enquête sur les données et dans les rapports d’enquête sur les données.
 
-La classification des données peut identifier de nombreux types de données privées telles que les informations personnelles (PII) et les informations personnelles sensibles (SPII).  Pour plus de détails sur les données privées, reportez-vous à https://docs.netapp.com/us-en/bluexp-classification/reference-private-data-categories.html["Catégories de données privées analysées par la classification des données"] .
+La classification des données peut identifier de nombreux types de données privées telles que les informations personnelles (PII) et les informations personnelles sensibles (SPII). Pour plus de détails sur les données privées, reportez-vous àxref:reference-private-data-categories.html[Catégories de données privées analysées par la classification des données] .
 
 
 
@@ -245,7 +245,7 @@ Lors de l'analyse des données, l'agent NetApp Console Console doit être instal
 * Pour les systèmes ONTAP sur site : l’agent de console est sur site.
 
 
-Si vous avez des données à ces emplacements, vous devrez peut-être utiliser https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html#when-to-use-multiple-connectors["plusieurs agents de console"^] .
+Si vous avez des données à ces emplacements, vous devrez peut-être utiliser https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html#when-to-use-multiple-connectors["plusieurs agents de console"^] .
 
 
 
