@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-scanning-fsx.html 
 keywords: cloud compliance, get started, enable cloud compliance, cloud compliance access, privacy, compliance, fsx, fsx for ontap, aws, data sense 
-summary: Suivez quelques étapes pour commencer à analyser le volume Amazon FSx pour ONTAP avec NetApp Data Classification. 
+summary: Suivez quelques étapes pour commencer à analyser le volume Amazon FSx for ONTAP avec NetApp Data Classification. 
 ---
-= Analyser Amazon FSx pour les volumes ONTAP avec la classification des données NetApp
+= Analyser Amazon FSx pour les volumes ONTAP avec la NetApp Data Classification
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: Suivez quelques étapes pour commencer à analyser le volume Amazon FSx
 
 
 [role="lead"]
-Suivez quelques étapes pour commencer à analyser le volume Amazon FSx pour ONTAP avec NetApp Data Classification.
+Suivez quelques étapes pour commencer à analyser le volume Amazon FSx for ONTAP avec NetApp Data Classification.
 
 
 
@@ -57,7 +57,7 @@ Les mises à niveau du logiciel de classification des données sont automatisée
 
 Vous pouvez activer la classification des données pour les volumes FSx for ONTAP .
 
-. Depuis la console NetApp , *Gouvernance > Classification*.
+. Depuis la NetApp Console, *Gouvernance > Classification*.
 . Dans le menu Classification des données, sélectionnez *Configuration*.
 +
 image:screenshot_fsx_scanning_activate.png["Une capture d’écran de l’onglet Configuration immédiatement après le déploiement de l’instance de classification des données."]
@@ -94,7 +94,7 @@ Vous devrez fournir à Data Classification les informations d'identification CIF
 . Dans le menu Classification des données, sélectionnez *Configuration*.
 . Sur la page Configuration, sélectionnez *Afficher les détails* pour vérifier l’état et corriger les erreurs.
 +
-Par exemple, l’image suivante montre un volume que Data Classification ne peut pas analyser en raison de problèmes de connectivité réseau entre l’instance Data Classification et le volume.
+Par exemple, l'image suivante montre un volume que Data Classification ne peut pas analyser en raison de problèmes de connectivité réseau entre l'instance Data Classification et le volume.
 
 +
 image:screenshot_fsx_scanning_no_network_error.png["Capture d'écran de la page Afficher les détails dans la configuration d'analyse montrant que le volume n'est pas analysé en raison de la connectivité réseau entre la classification des données et le volume."]
@@ -113,7 +113,7 @@ NOTE: Pour FSx for ONTAP, la classification des données peut analyser les volum
 Les informations d'identification peuvent être en lecture seule, mais la fourniture d'informations d'identification d'administrateur garantit que la classification des données peut lire toutes les données nécessitant des autorisations élevées.  Les informations d’identification sont stockées sur l’instance de classification des données.
 
 +
-Si vous souhaitez vous assurer que les « dernières heures d'accès » de vos fichiers restent inchangées par les analyses de classification des données, il est recommandé que l'utilisateur dispose des autorisations d'écriture d'attributs dans CIFS ou des autorisations d'écriture dans NFS. Si possible, configurez l’utilisateur Active Directory en tant que membre d’un groupe parent de l’organisation disposant d’autorisations sur tous les fichiers.
+Si vous souhaitez vous assurer que les « dernières heures d'accès » de vos fichiers ne sont pas modifiées par les analyses de classification des données, il est recommandé que l'utilisateur dispose des autorisations d'écriture d'attributs dans CIFS ou des autorisations d'écriture dans NFS. Si possible, configurez l’utilisateur Active Directory en tant que membre d’un groupe parent de l’organisation disposant d’autorisations sur tous les fichiers.
 
 +
 Après avoir saisi les informations d’identification, vous devriez voir un message indiquant que tous les volumes CIFS ont été authentifiés avec succès.

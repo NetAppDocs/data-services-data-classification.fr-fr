@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: api-classification.html 
 keywords: api, rest, authorization, data classification, data sense, swagger 
-summary: Les fonctionnalités de classification des données NetApp disponibles via l’interface utilisateur Web sont également disponibles via l’API. 
+summary: Les fonctionnalités de NetApp Data Classification disponibles via l’interface utilisateur Web sont également disponibles via l’API. 
 ---
-= API de classification des données NetApp
+= API de NetApp Data Classification
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: Les fonctionnalités de classification des données NetApp disponibles 
 
 
 [role="lead"]
-Les fonctionnalités de classification des données NetApp disponibles via l’interface utilisateur Web sont également disponibles via l’API REST.
+Les fonctionnalités de NetApp Data Classification disponibles via l’interface utilisateur Web sont également disponibles via l’API REST.
 
 Il existe quatre catégories définies dans la classification des données qui correspondent aux onglets de l'interface utilisateur :
 
@@ -64,7 +64,7 @@ Pour accéder à Swagger, vous aurez besoin de l'adresse IP de votre instance de
 
 
 
-== Exemple d'utilisation des API
+== Exemple utilisant les API
 
 L'exemple suivant montre un appel d'API pour copier des fichiers.
 
@@ -435,7 +435,7 @@ Nous utiliserons cette réponse dans nos paramètres de requête pour filtrer le
 
 Vous pouvez appliquer une action sur plusieurs éléments.  Les types d’actions pris en charge incluent : déplacer, supprimer et copier.
 
-Nous allons créer l'action de copie :
+Nous allons créer l’action de copie :
 
 .Demande d'API
 Cette API suivante est cette API d’action et elle vous permet de créer plusieurs actions.

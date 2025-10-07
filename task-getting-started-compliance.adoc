@@ -4,7 +4,7 @@ permalink: task-getting-started-compliance.html
 keywords: cloud compliance, get started, enable cloud compliance, cifs credentials, smb credentials, cloud compliance access, privacy, compliance, dp volumes, data protection volumes, CVO, Cloud Volumes ONTAP, data sense 
 summary: Suivez quelques étapes pour commencer à analyser vos Cloud Volumes ONTAP et vos volumes ONTAP sur site à l’aide de NetApp Data Classification. 
 ---
-= Analysez les Cloud Volumes ONTAP et les volumes ONTAP sur site avec la classification des données NetApp
+= Analysez les Cloud Volumes ONTAP et les volumes ONTAP sur site avec la NetApp Data Classification
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -103,7 +103,7 @@ image:screen-cl-config-cvo-map-options.png["Une capture d’écran de l’onglet
 Vous pouvez démarrer ou arrêter les analyses de mappage uniquement ou les analyses de mappage et de classification dans un système à tout moment à partir de la page Configuration.  Vous pouvez également passer d'analyses de mappage uniquement à des analyses de mappage et de classification, et vice-versa.  Nous vous recommandons d'analyser tous les volumes.
 
 
-NOTE: Les nouveaux volumes ajoutés au système sont automatiquement analysés uniquement lorsque vous avez défini le paramètre *Map* ou *Map & Classify* dans la zone d'en-tête.  Lorsque l'option est définie sur *Personnalisé* ou *Désactivé* dans la zone d'en-tête, vous devrez activer le mappage et/ou l'analyse complète sur chaque nouveau volume que vous ajoutez au système.
+NOTE: Les nouveaux volumes ajoutés au système sont automatiquement analysés uniquement lorsque vous avez défini le paramètre *Carte* ou *Carte et classification* dans la zone d'en-tête.  Lorsque l'option est définie sur *Personnalisé* ou *Désactivé* dans la zone d'en-tête, vous devrez activer le mappage et/ou l'analyse complète sur chaque nouveau volume que vous ajoutez au système.
 
 .Étapes
 . Dans le menu Classification des données, sélectionnez *Configuration*.

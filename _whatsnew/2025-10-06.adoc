@@ -6,15 +6,15 @@
 
 === Version 1.47
 
-.La BlueXP classification est désormais la classification des données NetApp
-La BlueXP classification a été renommée Classification des données NetApp .  En plus du changement de nom, l'interface utilisateur a été améliorée.
+.La BlueXP classification est désormais la NetApp Data Classification
+La BlueXP classification a été renommée NetApp Data Classification. En plus du changement de nom, l'interface utilisateur a été améliorée.
 
 .BlueXP est désormais NetApp Console
 BlueXP a été renommé et repensé pour mieux refléter son rôle dans la gestion de votre infrastructure de données.
 
-La console NetApp offre une gestion centralisée des services de stockage et de données dans les environnements sur site et dans le cloud à l'échelle de l'entreprise, offrant des informations en temps réel, des flux de travail plus rapides et une administration simplifiée.
+La NetApp Console offre une gestion centralisée des services de stockage et de données dans les environnements sur site et dans le cloud à l'échelle de l'entreprise, offrant des informations en temps réel, des flux de travail plus rapides et une administration simplifiée.
 
-Pour plus de détails sur ce qui a changé, consultez le https://docs.netapp.com/us-en/console-relnotes/index.html["Notes de version de la console NetApp"] .
+Pour plus de détails sur ce qui a changé, consultez le https://docs.netapp.com/us-en/console-relnotes/index.html["Notes de version de la NetApp Console"] .
 
 .Expérience d'enquête améliorée
 Recherchez et comprenez vos données plus rapidement grâce à de nouveaux filtres consultables, des décomptes de résultats par valeur, des informations en temps réel résumant les principales conclusions et un tableau de résultats actualisé avec des colonnes personnalisables et un volet de détails coulissant.
@@ -22,10 +22,10 @@ Recherchez et comprenez vos données plus rapidement grâce à de nouveaux filtr
 Pour plus d'informations, consultez la section link:https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html#view-file-metada["Enquêter sur les données"] .
 
 .Nouveaux tableaux de bord de gouvernance et de conformité
-Obtenez des informations essentielles plus rapidement grâce à des widgets intuitifs, des visuels plus clairs et des performances de chargement améliorées.  Pour plus d'informations, voirlink:https://docs.netapp.com/us-en/data-services-data-classification//task-controlling-governance-data.html["Consultez les informations de gouvernance sur vos données"] etlink:https://docs.netapp.com/us-en/data-services-data-classification/task-controlling-private-data.html["Afficher les informations de conformité concernant vos données"] .
+Obtenez des informations essentielles plus rapidement grâce à des widgets intuitifs, des visuels plus clairs et des performances de chargement améliorées. Pour plus d'informations, voirlink:https://docs.netapp.com/us-en/data-services-data-classification//task-controlling-governance-data.html["Consultez les informations de gouvernance sur vos données"] etlink:https://docs.netapp.com/us-en/data-services-data-classification/task-controlling-private-data.html["Afficher les informations de conformité concernant vos données"] .
 
 .Politiques pour les requêtes enregistrées (aperçu)
-La classification des données vous permet désormais d'automatiser la gouvernance avec des actions conditionnelles.  Vous pouvez créer des règles de conservation avec suppression automatique, configurer des notifications par e-mail périodiques, le tout géré à partir d'une page de requêtes enregistrées mise à jour.
+La classification des données vous permet désormais d'automatiser la gouvernance avec des actions conditionnelles. Vous pouvez créer des règles de conservation avec suppression automatique, configurer des notifications par e-mail périodiques, le tout géré à partir d'une page de requêtes enregistrées mise à jour.
 
 Pour plus d'informations, consultez la section link:https://docs.netapp.com/us-en/data-services-data-classification/task-using-policies.html["Créer des politiques"] .
 
@@ -35,4 +35,4 @@ Prenez le contrôle direct depuis la page Investigation : supprimez, déplacez, 
 Pour plus d'informations, consultez la section link:https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html#view-file-metada["Enquêter sur les données"] .
 
 .Prise en charge des Google Cloud NetApp Volumes
-La classification des données prend désormais en charge l'analyse sur les Google Cloud NetApp Volumes.  Ajoutez facilement des Google Cloud NetApp Volumes à partir de la console NetApp pour une analyse et une classification transparentes des données.
+La classification des données prend désormais en charge l'analyse sur les Google Cloud NetApp Volumes. Ajoutez facilement des Google Cloud NetApp Volumes à partir de la NetApp Console pour une analyse et une classification transparentes des données.

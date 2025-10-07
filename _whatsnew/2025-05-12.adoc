@@ -9,17 +9,17 @@
 Cette version de classification des données comprend :
 
 .Prioriser les analyses de classification
-La classification des données prend en charge la possibilité de hiérarchiser les analyses de cartographie et de classification en plus des analyses de cartographie uniquement, vous permettant de sélectionner les analyses à effectuer en premier.  La priorisation des analyses Map & Classify est prise en charge pendant et avant le début des analyses.  Si vous choisissez de donner la priorité à une analyse pendant qu'elle est en cours, les analyses de mappage et de classification sont toutes deux prioritaires.
+La classification des données prend en charge la possibilité de hiérarchiser les analyses de cartographie et de classification en plus des analyses de cartographie uniquement, vous permettant de sélectionner les analyses à effectuer en premier. La priorisation des analyses Map & Classify est prise en charge pendant et avant le début des analyses. Si vous choisissez de donner la priorité à une analyse pendant qu'elle est en cours, les analyses de mappage et de classification sont toutes deux prioritaires.
 
 Pour plus d'informations, consultez la section link:https://docs.netapp.com/us-en/data-services-data-classification/task-managing-repo-scanning.html#prioritize-scans["Prioriser les analyses"] .
 
 .Prise en charge des catégories de données d'informations personnelles identifiables (PII) canadiennes
-Les analyses de classification des données identifient les catégories de données PII canadiennes.  Ces catégories comprennent les renseignements bancaires, les numéros de passeport, les numéros d’assurance sociale, les numéros de permis de conduire et les numéros de carte d’assurance-maladie pour toutes les provinces et tous les territoires canadiens.
+Les analyses de classification des données identifient les catégories de données PII canadiennes. Ces catégories comprennent les renseignements bancaires, les numéros de passeport, les numéros d’assurance sociale, les numéros de permis de conduire et les numéros de carte d’assurance-maladie pour toutes les provinces et tous les territoires canadiens.
 
 Pour plus d'informations, consultez la section link:https://docs.netapp.com/us-en/data-services-data-classification/reference-private-data-categories.html#types-of-personal-data["Catégories de données personnelles"] .
 
 .Classification personnalisée (aperçu)
-La classification des données prend en charge les classifications personnalisées pour les analyses Map & Classify.  Grâce aux classifications personnalisées, vous pouvez personnaliser les analyses de classification des données pour capturer des données spécifiques à votre organisation à l'aide d'expressions régulières.  Cette fonctionnalité est actuellement en version préliminaire.
+La classification des données prend en charge les classifications personnalisées pour les analyses Map & Classify. Grâce aux classifications personnalisées, vous pouvez personnaliser les analyses de classification des données pour capturer des données spécifiques à votre organisation à l'aide d'expressions régulières. Cette fonctionnalité est actuellement en version préliminaire.
 
 Pour plus d'informations, consultez la section link:https://docs.netapp.com/us-en/data-services-data-classification/task-custom-classification.html["Ajouter des classifications personnalisées"] .
 
@@ -31,7 +31,7 @@ La classification des données prend en charge l'envoi d'événements de classif
 
 .Mises à jour de sécurité
 * Le package Keras a été mis à jour, atténuant les vulnérabilités (BDSA-2025-0107 et BDSA-2025-1984).
-* La configuration des conteneurs Docker a été mise à jour.  Le conteneur n'a plus accès aux interfaces réseau de l'hôte pour créer des paquets réseau bruts.  En réduisant les accès inutiles, la mise à jour atténue les risques potentiels de sécurité.
+* La configuration des conteneurs Docker a été mise à jour. Le conteneur n'a plus accès aux interfaces réseau de l'hôte pour créer des paquets réseau bruts. En réduisant les accès inutiles, la mise à jour atténue les risques potentiels de sécurité.
 
 
 .Améliorations des performances

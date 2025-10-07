@@ -1,6 +1,6 @@
 ---
 indexpage:
-  title: Documentation sur la classification des données NetApp
+  title: Documentation sur la NetApp Data Classification
   summary: NetApp Data Classificaiton vous permet d'analyser et de classer les données
     dans le multicloud hybride de votre organisation.  La classification des données
     utilise le traitement du langage naturel (NLP) basé sur l'IA pour l'analyse et
@@ -58,9 +58,9 @@ indexpage:
       url: task-generating-compliance-reports.html
   - title: Blogs et communauté
     links:
-    - title: Console NetApp
+    - title: NetApp Console
       url: https://www.netapp.com/console
-    - title: Services de données NetApp
+    - title: NetApp Data Services
       url: https://www.netapp.com/data-services/
     - title: Communauté NetApp
       url: https://community.netapp.com/

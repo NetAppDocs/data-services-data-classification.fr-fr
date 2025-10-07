@@ -4,7 +4,7 @@ permalink: task-scanning-databases.html
 keywords: cloud compliance, enable cloud compliance, outbound internet, endpoints, cloud compliance internet, web browser connectivity, cloud compliance access, privacy, compliance, databases, database schemas, Oracle, SAP HANA, SQL Server, MongoDB, PostgreSQL, data sense 
 summary: Suivez quelques étapes pour commencer à analyser vos schémas de base de données avec NetApp Data Classification. 
 ---
-= Analyser les schémas de base de données avec la classification des données NetApp
+= Analyser les schémas de base de données avec la NetApp Data Classification
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

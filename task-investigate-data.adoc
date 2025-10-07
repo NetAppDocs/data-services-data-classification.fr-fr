@@ -4,7 +4,7 @@ permalink: task-investigate-data.html
 keywords: personal files, personal data, sensitive personal files, sensitive personal data, health data, ethnic origin, political opinions, gdpr, email address, credit card, ip address, iban, national ID, identifier, password, sex, criminal, compliance, privacy, filter data, permissions, csv file, json file, highlights, policies,json, csv, data investigation, data investigation report, download report, file metadata, file permissions, duplicate files, saved search 
 summary: 'Vous pouvez examiner les données de votre organisation en consultant les détails sur la page Enquête sur les données.  C"est ici que vous pouvez poursuivre vos recherches après avoir consulté le tableau de bord de gouvernance.' 
 ---
-= Examinez les données stockées dans votre organisation avec la classification des données NetApp
+= Examinez les données stockées dans votre organisation avec la NetApp Data Classification
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -162,7 +162,7 @@ Utilisez le filtre suivant pour afficher les données par requêtes enregistrée
 | Requête enregistrée | Sélectionnez une requête enregistrée ou plusieurs.  Aller à lalink:task-using-policies.html["onglet requêtes enregistrées"] pour afficher la liste des requêtes enregistrées existantes et en créer de nouvelles. 
 
 
-| Mots-clés | Sélectionnerlink:task-org-private-data.html["la balise ou les balises"] qui sont attribués à vos fichiers. 
+| Mots-clés | Sélectionnerlink:task-org-private-data.html["le tag ou les tags"] qui sont attribués à vos fichiers. 
 |===
 *Statut de l'analyse du filtre*
 
@@ -219,7 +219,7 @@ Si vous utilisez des identifiants de sécurité (SID) au lieu de noms d'utilisat
 .Étapes
 . Dans le menu Classification des données, sélectionnez *Enquête*.
 . Dans la liste Enquête sur les données à droite, sélectionnez le curseur vers le basimage:button_down_caret.png["curseur vers le bas"] à droite pour n'importe quel fichier unique pour afficher les métadonnées du fichier.
-. Pour afficher la liste de tous les utilisateurs ou groupes ayant accès à un fichier ou à un répertoire et les types d'autorisations dont ils disposent, dans le champ Autorisations d'ouverture, sélectionnez *Afficher toutes les autorisations*.
+. Pour afficher une liste de tous les utilisateurs ou groupes ayant accès à un fichier ou à un répertoire et les types d'autorisations dont ils disposent, dans le champ Autorisations d'ouverture, sélectionnez *Afficher toutes les autorisations*.
 +
 
 NOTE: La classification des données affiche jusqu'à 100 utilisateurs dans la liste.
@@ -265,7 +265,7 @@ Si des doublons existent pour un fichier, cette information apparaît à côté 
 
 
 
-TIP: Vous pouvez utiliser la valeur « hachage de fichier » fournie sur cette page et la saisir directement dans la page Investigation pour rechercher un fichier en double spécifique à tout moment - ou vous pouvez l'utiliser dans une requête enregistrée.
+TIP: Vous pouvez utiliser la valeur « hachage de fichier » fournie dans cette page et la saisir directement dans la page Enquête pour rechercher un fichier en double spécifique à tout moment - ou vous pouvez l'utiliser dans une requête enregistrée.
 
 
 
@@ -277,7 +277,7 @@ Il peut y avoir jusqu'à trois fichiers de rapport téléchargés si la classifi
 
 Les fichiers sont divisés en fichiers avec un nombre fixe de lignes ou d'enregistrements :
 
-* JSON : 100 000 enregistrements par rapport dont la génération prend environ 5 minutes
+* JSON : 100 000 enregistrements par rapport dont la génération prend environ 5 minutes
 * CSV : 200 000 enregistrements par rapport dont la génération prend environ 4 minutes
 
 

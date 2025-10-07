@@ -4,7 +4,7 @@ permalink: reference-instance-types.html
 keywords: BlueXP classification, installation, deployment, instance, virtual machine, cpu, ram, memory, disk, capacity 
 summary: 'Le logiciel de classification des données doit s"exécuter sur un hôte qui répond aux exigences spécifiques du système d"exploitation, aux exigences de RAM, aux exigences logicielles, etc.  Lors du déploiement de la classification des données dans le cloud, il est recommandé d"utiliser un système doté de caractéristiques « larges » pour une fonctionnalité complète.' 
 ---
-= Types d'instances de classification des données NetApp pris en charge
+= Types d'instances de NetApp Data Classification pris en charge
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 'Le logiciel de classification des données doit s"exécuter sur un hô
 
 
 [role="lead"]
-Le logiciel de classification des données NetApp doit s'exécuter sur un hôte qui répond aux exigences spécifiques du système d'exploitation, de la RAM, des logiciels, etc.  Lors du déploiement de la classification des données dans le cloud, nous vous recommandons d'utiliser un système doté de caractéristiques « larges » pour bénéficier de toutes les fonctionnalités.
+Le logiciel de NetApp Data Classification doit s'exécuter sur un hôte qui répond aux exigences spécifiques du système d'exploitation, de la RAM, des logiciels, etc.  Lors du déploiement de la classification des données dans le cloud, nous vous recommandons d'utiliser un système doté de caractéristiques « larges » pour bénéficier de toutes les fonctionnalités.
 
 Vous pouvez déployer la classification des données sur un système avec moins de processeurs et moins de RAM, mais il existe certaines limitations lors de l'utilisation de ces systèmes moins puissants. link:concept-classification.html["En savoir plus sur ces limitations"^] .
 
@@ -49,7 +49,7 @@ Dans les tableaux suivants, si le système marqué comme « par défaut » n'est
 | Taille du système | Spécifications | Type d'instance 
 
 
-| Très grand | 32 processeurs, 128 Go de RAM, disque système d'exploitation (2 048 Gio, débit minimal de 250 Mo/s) et disque de données (SSD 1 Tio, débit minimal de 750 Mo/s) | https://learn.microsoft.com/en-us/azure/virtual-machines/dv3-dsv3-series#dv3-series["Standard_D32_v3"^](défaut) 
+| Très grand | 32 processeurs, 128 Go de RAM, disque système (2 048 Gio, débit minimal de 250 Mo/s) et disque de données (SSD 1 Tio, débit minimal de 750 Mo/s) | https://learn.microsoft.com/en-us/azure/virtual-machines/dv3-dsv3-series#dv3-series["Standard_D32_v3"^](défaut) 
 
 
 | Grand | 16 processeurs, 64 Go de RAM, 500 Go de SSD | https://learn.microsoft.com/en-us/azure/virtual-machines/dv3-dsv3-series#dsv3-series["Standard_D16s_v3"^](défaut) 

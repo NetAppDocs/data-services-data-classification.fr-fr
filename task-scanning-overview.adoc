@@ -4,7 +4,7 @@ permalink: task-scanning-overview.html
 keywords: cloud compliance, get started, enable cloud compliance, cifs credentials, smb credentials, cloud compliance access, privacy, compliance, dp volumes, data protection volumes, CVO, Cloud Volumes ONTAP, data sense, cloud data sense, mapping-only scans, map and classify, map & classify 
 summary: Analysez vos sources de données avec NetApp Data Classification. 
 ---
-= Analyser les sources de données avec la classification des données NetApp
+= Analyser les sources de données avec la NetApp Data Classification
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -72,7 +72,7 @@ Le tableau ci-dessous montre certaines des différences :
 
 | Possibilité de voir les métadonnées des fichiers** | Non | Oui 
 |===
-{asterisk} La classification des données n'impose pas de limite à la quantité de données qu'elle peut analyser. Chaque agent de console prend en charge l'analyse et l'affichage de 500 Tio de données. Pour scanner plus de 500 Tio de données,link:https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html#connector-installation["installer un autre agent de console"^] alorslink:task-deploy-overview.html["déployer une autre instance de classification des données"] . + L'interface utilisateur de la console affiche les données d'un seul connecteur. Pour obtenir des conseils sur l'affichage des données de plusieurs agents de console, consultezlink:https://docs.netapp.com/us-en/console-setup-admin/task-manage-multiple-connectors.html#switch-between-connectors["Travailler avec plusieurs agents de console"^] .
+{asterisk} La classification des données n'impose pas de limite à la quantité de données qu'elle peut analyser.  Chaque agent de console prend en charge l'analyse et l'affichage de 500 Tio de données. Pour scanner plus de 500 Tio de données,link:https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html#connector-installation["installer un autre agent de console"^] alorslink:task-deploy-overview.html["déployer une autre instance de classification des données"] .  + L'interface utilisateur de la console affiche les données d'un seul connecteur.  Pour obtenir des conseils sur l'affichage des données de plusieurs agents de console, consultezlink:https://docs.netapp.com/us-en/console-setup-admin/task-manage-multiple-connectors.html#switch-between-connectors["Travailler avec plusieurs agents de console"^] .
 
 {asterisk}{asterisk} Les métadonnées suivantes sont extraites des fichiers lors des analyses de mappage :
 

@@ -9,7 +9,7 @@
 Cette version de BlueXP classification inclut les mises à jour suivantes.
 
 .Prise en charge de RHEL 9.5
-Cette version prend en charge Red Hat Enterprise Linux v9.5 en plus des versions précédemment prises en charge.  Ceci s’applique à toute installation manuelle sur site de la BlueXP classification, y compris les déploiements de sites sombres.
+Cette version prend en charge Red Hat Enterprise Linux v9.5 en plus des versions précédemment prises en charge. Ceci s’applique à toute installation manuelle sur site de la BlueXP classification, y compris les déploiements de sites sombres.
 
 Les systèmes d'exploitation suivants nécessitent l'utilisation du moteur de conteneur Podman et nécessitent la version de BlueXP classification 1.30 ou supérieure : Red Hat Enterprise Linux versions 8.8, 8.10, 9.0, 9.1, 9.2, 9.3, 9.4 et 9.5.
 
@@ -22,7 +22,7 @@ Il existe deux types de scans :
 * Les analyses *Cartographier et classer* fournissent une analyse approfondie de vos données.
 
 
-Vous pouvez bénéficier de l'utilisation d'analyses de mappage uniquement pour analyser rapidement vos données afin d'identifier les sources de données qui nécessitent des recherches plus approfondies, puis activer ultérieurement les analyses de mappage et de classification uniquement sur les sources de données ou volumes requis.
+Vous pourriez bénéficier de l'utilisation d'analyses de mappage uniquement pour analyser rapidement vos données afin d'identifier les sources de données qui nécessitent des recherches plus approfondies, puis activer ultérieurement les analyses de mappage et de classification uniquement sur les sources de données ou volumes requis.
 
 La priorité est attribuée uniquement aux analyses de cartographie uniquement, et non aux analyses de cartographie et de classification.
 

@@ -4,7 +4,7 @@ permalink: reference-db-capabilities.html
 keywords: database actions, database filters, supported, unsupported 
 summary: Certaines fonctionnalités ne sont pas disponibles avec NetApp Data Classification lorsque vous analysez des schémas de base de données. 
 ---
-= Fonctionnalités de base de données prises en charge et non prises en charge dans la classification des données NetApp
+= Fonctionnalités de base de données prises en charge et non prises en charge dans la NetApp Data Classification
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

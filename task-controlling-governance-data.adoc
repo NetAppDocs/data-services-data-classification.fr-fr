@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-controlling-governance-data.html 
 keywords: savings, stale data, duplicate data, highlights, data discovery assessment report, data mapping overview report, data repositories, sensitive data, wide permissions, open permissions, age of data, size of data, classification, costs of data 
-summary: 'Maîtrisez les coûts liés aux données sur les ressources de stockage de votre organisation.  La classification des données NetApp identifie la quantité de données obsolètes, de fichiers en double et de fichiers très volumineux dans vos systèmes afin que vous puissiez décider si vous souhaitez supprimer ou hiérarchiser certains fichiers vers un stockage d"objets moins coûteux.' 
+summary: 'Maîtrisez les coûts liés aux données sur les ressources de stockage de votre organisation.  La NetApp Data Classification identifie la quantité de données obsolètes, de fichiers en double et de fichiers très volumineux dans vos systèmes afin que vous puissiez décider si vous souhaitez supprimer ou hiérarchiser certains fichiers vers un stockage d"objets moins coûteux.' 
 ---
 = Affichez les détails de gouvernance sur les données stockées dans votre organisation avec NetApp Data Classification
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 'Maîtrisez les coûts liés aux données sur les ressources de stockag
 
 
 [role="lead"]
-Maîtrisez les coûts liés aux données sur les ressources de stockage de votre organisation.  La classification des données NetApp identifie la quantité de données obsolètes, de fichiers en double et de fichiers très volumineux dans vos systèmes afin que vous puissiez décider si vous souhaitez supprimer ou hiérarchiser certains fichiers vers un stockage d'objets moins coûteux.
+Maîtrisez les coûts liés aux données sur les ressources de stockage de votre organisation.  La NetApp Data Classification identifie la quantité de données obsolètes, de fichiers en double et de fichiers très volumineux dans vos systèmes afin que vous puissiez décider si vous souhaitez supprimer ou hiérarchiser certains fichiers vers un stockage d'objets moins coûteux.
 
 C'est ici que vous devriez commencer vos recherches.  Depuis le tableau de bord de gouvernance, vous pouvez sélectionner un domaine pour une enquête plus approfondie.
 
@@ -29,7 +29,7 @@ Le tableau de bord de gouvernance fournit des informations pour vous permettre d
 image:screenshot_compliance_governance_dashboard.png["Une capture d’écran du tableau de bord de gouvernance de la classification des données."]
 
 .Étapes
-. Dans le menu de la console NetApp , sélectionnez *Gouvernance > Classification*.
+. Dans le menu de la NetApp Console , sélectionnez *Gouvernance > Classification*.
 . Sélectionnez *Gouvernance*.
 +
 Le tableau de bord de gouvernance apparaît.
@@ -44,7 +44,7 @@ Le composant _Opportunités d'économie_ affiche les données que vous pouvez su
 
 .Étapes
 . Dans le menu Classification des données, sélectionnez *Gouvernance*.
-. Dans chaque mosaïque Opportunités d'économies du tableau de bord de gouvernance, sélectionnez *Optimiser le stockage* pour afficher les résultats filtrés dans la page Enquête.  Pour découvrir les données que vous devriez supprimer ou transférer vers un stockage moins coûteux, étudiez les _Opportunités d'économie_.
+. Dans chaque mosaïque Opportunités d'économies du tableau de bord Gouvernance, sélectionnez *Optimiser le stockage* pour afficher les résultats filtrés dans la page Enquête.  Pour découvrir les données que vous devriez supprimer ou transférer vers un stockage moins coûteux, étudiez les _Opportunités d'économie_.
 +
 ** *Données obsolètes* - Données qui ont été modifiées pour la dernière fois il y a plus de 3 ans.
 ** *Fichiers en double* - Fichiers dupliqués à d'autres emplacements dans les sources de données que vous analysez. link:task-investigate-data.html["Voir quels types de fichiers en double sont affichés"] .
@@ -163,7 +163,7 @@ La zone _Données sensibles et autorisations étendues_ du tableau de bord de go
 
 === Examiner les données répertoriées par types d'autorisations ouvertes
 
-La zone _Autorisations d'ouverture_ du rapport Présentation du mappage des données affiche le pourcentage pour chaque type d'autorisations existant pour tous les fichiers en cours d'analyse.  Le graphique montre les types d’autorisations suivants :
+La zone _Autorisations d'ouverture_ du rapport Présentation du mappage des données affiche le pourcentage pour chaque type d'autorisations qui existent pour tous les fichiers en cours d'analyse.  Le graphique montre les types d’autorisations suivants :
 
 * Aucune autorisation d'ouverture
 * Ouvert à l'organisation

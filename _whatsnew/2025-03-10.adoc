@@ -6,9 +6,9 @@
 
 === Version 1.41
 
-Cette version de BlueXP classification inclut des améliorations générales et des corrections de bugs.  Il comprend également :
+Cette version de BlueXP classification inclut des améliorations générales et des corrections de bugs. Il comprend également :
 
 .État de l'analyse
-La BlueXP classification suit la progression en temps réel des analyses de mappage et de classification _initiales_ sur un volume.  Des barres progressives distinctes suivent les analyses de cartographie et de classification, présentant un pourcentage du total des fichiers analysés.  Vous pouvez également survoler une barre de progression pour afficher le nombre de fichiers analysés et le nombre total de fichiers.  Le suivi de l'état de vos analyses crée des informations plus approfondies sur la progression de l'analyse, vous permettant de mieux planifier vos analyses et de comprendre l'allocation des ressources.
+La BlueXP classification suit la progression en temps réel des analyses de mappage et de classification _initiales_ sur un volume. Des barres progressives distinctes suivent les analyses de cartographie et de classification, présentant un pourcentage du total des fichiers analysés. Vous pouvez également survoler une barre de progression pour afficher le nombre de fichiers analysés et le nombre total de fichiers. Le suivi de l'état de vos analyses crée des informations plus approfondies sur la progression de l'analyse, vous permettant de mieux planifier vos analyses et de comprendre l'allocation des ressources.
 
-Pour afficher l'état de vos analyses, accédez à **Configuration** dans la BlueXP classification puis sélectionnez la **Configuration de l'environnement de travail**.  La progression est affichée en ligne pour chaque volume.
+Pour afficher l'état de vos analyses, accédez à **Configuration** dans la BlueXP classification puis sélectionnez la **Configuration de l'environnement de travail**. La progression est affichée en ligne pour chaque volume.

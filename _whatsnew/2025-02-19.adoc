@@ -9,16 +9,16 @@
 Cette version de BlueXP classification inclut les mises à jour suivantes.
 
 .Prise en charge de RHEL 9.5
-Cette version prend en charge Red Hat Enterprise Linux v9.5 en plus des versions précédemment prises en charge.  Ceci s’applique à toute installation manuelle sur site de la BlueXP classification, y compris les déploiements de sites sombres.
+Cette version prend en charge Red Hat Enterprise Linux v9.5 en plus des versions précédemment prises en charge. Ceci s’applique à toute installation manuelle sur site de la BlueXP classification, y compris les déploiements de sites sombres.
 
 Les systèmes d'exploitation suivants nécessitent l'utilisation du moteur de conteneur Podman et nécessitent la version de BlueXP classification 1.30 ou supérieure : Red Hat Enterprise Linux versions 8.8, 8.10, 9.0, 9.1, 9.2, 9.3, 9.4 et 9.5.
 
 .Donner la priorité aux analyses de cartographie uniquement
-Lorsque vous effectuez des analyses de cartographie uniquement, vous pouvez prioriser les analyses les plus importantes.  Cette fonctionnalité est utile lorsque vous disposez de nombreux environnements de travail et que vous souhaitez vous assurer que les analyses hautement prioritaires sont effectuées en premier.
+Lorsque vous effectuez des analyses de cartographie uniquement, vous pouvez prioriser les analyses les plus importantes. Cette fonctionnalité est utile lorsque vous disposez de nombreux environnements de travail et que vous souhaitez vous assurer que les analyses hautement prioritaires sont effectuées en premier.
 
-Par défaut, les analyses sont mises en file d’attente en fonction de l’ordre dans lequel elles sont lancées.  Grâce à la possibilité de hiérarchiser les analyses, vous pouvez déplacer les analyses vers l'avant de la file d'attente.  Plusieurs analyses peuvent être priorisées.  La priorité est désignée selon un ordre premier entré, premier sorti, ce qui signifie que la première analyse que vous priorisez passe en tête de la file d'attente ; la deuxième analyse que vous priorisez devient la deuxième dans la file d'attente, et ainsi de suite.
+Par défaut, les analyses sont mises en file d’attente en fonction de l’ordre dans lequel elles sont lancées. Grâce à la possibilité de hiérarchiser les analyses, vous pouvez déplacer les analyses vers l'avant de la file d'attente. Plusieurs analyses peuvent être priorisées. La priorité est désignée selon un ordre premier entré, premier sorti, ce qui signifie que la première analyse que vous priorisez passe en tête de la file d'attente ; la deuxième analyse que vous priorisez devient la deuxième dans la file d'attente, et ainsi de suite.
 
-La priorité est accordée une seule fois.  Les réanalyses automatiques des données de cartographie se produisent dans l'ordre par défaut.
+La priorité est accordée une seule fois. Les réanalyses automatiques des données de cartographie se produisent dans l'ordre par défaut.
 
 La priorisation est limitée àlink:https://docs.netapp.com/us-en/data-services-data-classification/concept-classification.html["analyses de cartographie uniquement"^] ; il n'est pas disponible pour les analyses de cartographie et de classification.
 
@@ -27,7 +27,7 @@ Pour plus d'informations, consultez la section link:https://docs.netapp.com/us-e
 .Réessayer toutes les analyses
 La BlueXP classification prend en charge la possibilité de réessayer par lots toutes les analyses ayant échoué.
 
-Vous pouvez réessayer les analyses dans une opération par lots avec la fonction **Réessayer tout**.  Si les analyses de classification échouent en raison d'un problème temporaire tel qu'une panne de réseau, vous pouvez réessayer toutes les analyses en même temps avec un seul bouton au lieu de les réessayer individuellement.  Les analyses peuvent être relancées autant de fois que nécessaire.
+Vous pouvez réessayer les analyses dans une opération par lots avec la fonction **Réessayer tout**. Si les analyses de classification échouent en raison d'un problème temporaire tel qu'une panne de réseau, vous pouvez réessayer toutes les analyses en même temps avec un seul bouton au lieu de les réessayer individuellement. Les analyses peuvent être relancées autant de fois que nécessaire.
 
 Pour réessayer toutes les analyses :
 

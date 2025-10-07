@@ -4,7 +4,7 @@ permalink: reference-collected-metadata.html
 keywords: compliance, metadata, permissions, time stamps, privacy, last access time 
 summary: 'La classification des données collecte certaines métadonnées lors de l"exécution d"analyses de classification sur les données de vos sources de données et systèmes.  La classification des données peut accéder à la plupart des métadonnées dont nous avons besoin pour classer vos données, mais il existe certaines sources pour lesquelles nous ne pouvons pas accéder aux données dont nous avons besoin.' 
 ---
-= Métadonnées collectées à partir de sources de données dans la classification des données NetApp
+= Métadonnées collectées à partir de sources de données dans la NetApp Data Classification
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

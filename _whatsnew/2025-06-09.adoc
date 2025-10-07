@@ -9,7 +9,7 @@
 Cette version de BlueXP classification comprend :
 
 .Amélioration des temps de mise à jour du tableau de bord de gouvernance
-Les temps de mise à jour des composants individuels du tableau de bord de gouvernance ont été améliorés.  Le tableau suivant affiche la fréquence des mises à jour pour chaque composant.
+Les temps de mise à jour des composants individuels du tableau de bord de gouvernance ont été améliorés. Le tableau suivant affiche la fréquence des mises à jour pour chaque composant.
 
 [cols="1,1"]
 |===
@@ -57,4 +57,4 @@ Vous pouvez afficher l'heure de la dernière mise à jour et mettre à jour manu
 Des améliorations ont été apportées pour améliorer les performances, la consommation de mémoire et la sécurité de la classification BlueXP .
 
 .Corrections de bugs
-Redis a été mis à niveau pour améliorer la fiabilité de la BlueXP classification.  La BlueXP classification utilise désormais Elasticsearch pour améliorer la précision des rapports sur le nombre de fichiers lors des analyses.
+Redis a été mis à niveau pour améliorer la fiabilité de la BlueXP classification. La BlueXP classification utilise désormais Elasticsearch pour améliorer la précision des rapports sur le nombre de fichiers lors des analyses.

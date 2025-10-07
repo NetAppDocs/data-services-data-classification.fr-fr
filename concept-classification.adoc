@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: concept-classification.html 
 keywords: artificial intelligence, ai, compliance, cloud compliance, dsar, personal data, personal information, sensitive, personal sensitive data, gdpr, hipaa, scans, scanning,  governance, cloud data sense, data sense, privacy control, classification, optimization, bluexp, bluexp classification, netapp console 
-summary: 'Data Classification est un service de gouvernance des données pour la console NetApp qui analyse vos sources de données d"entreprise sur site et dans le cloud pour mapper et classer les données et pour identifier les informations privées. Cela peut vous aider à réduire vos risques de sécurité et de conformité, à diminuer vos coûts de stockage et à vous aider dans vos projets de migration de données.' 
+summary: 'Data Classification est un service de gouvernance des données pour la NetApp Console qui analyse vos sources de données d"entreprise sur site et dans le cloud pour mapper et classer les données et pour identifier les informations privées. Cela peut vous aider à réduire vos risques de sécurité et de conformité, à diminuer vos coûts de stockage et à vous aider dans vos projets de migration de données.' 
 ---
-= En savoir plus sur la classification des données NetApp
+= En savoir plus sur la NetApp Data Classification
 :allow-uri-read: 
 :no-hardbreaks: 
 :nofooter: 
@@ -14,22 +14,22 @@ summary: 'Data Classification est un service de gouvernance des données pour la
 
 
 [role="lead"]
-NetApp Data Classification est un service de gouvernance des données pour la console NetApp qui analyse vos sources de données d'entreprise sur site et dans le cloud pour mapper et classer les données et identifier les informations privées. Cela peut vous aider à réduire vos risques de sécurité et de conformité, à diminuer vos coûts de stockage et à vous aider dans vos projets de migration de données.
+NetApp Data Classification est un service de gouvernance des données pour la NetApp Console qui analyse vos sources de données d'entreprise sur site et dans le cloud pour mapper et classer les données et identifier les informations privées. Cela peut vous aider à réduire vos risques de sécurité et de conformité, à diminuer vos coûts de stockage et à vous aider dans vos projets de migration de données.
 
 
-IMPORTANT: À partir de la version 1.31, la classification des données est disponible en tant que fonctionnalité principale dans la console NetApp .  Il n'y a pas de frais supplémentaires.  Aucune licence de classification ni abonnement n'est requis.  + Si vous avez utilisé la version héritée 1.30 ou une version antérieure, cette version est disponible jusqu'à l'expiration de votre abonnement.
+IMPORTANT: À partir de la version 1.31, la classification des données est disponible en tant que fonctionnalité principale dans la NetApp Console.  Il n'y a pas de frais supplémentaires.  Aucune licence de classification ni abonnement n'est requis.  + Si vous avez utilisé la version héritée 1.30 ou une version antérieure, cette version est disponible jusqu'à l'expiration de votre abonnement.
 
 
 
-== Console NetApp
+== NetApp Console
 
-La classification des données est accessible via la console NetApp .
+La classification des données est accessible via la NetApp Console.
 
-La console NetApp fournit une gestion centralisée des services de stockage et de données NetApp dans les environnements sur site et cloud à l'échelle de l'entreprise. La console est requise pour accéder aux services de données NetApp et les utiliser. En tant qu'interface de gestion, il vous permet de gérer de nombreuses ressources de stockage à partir d'une seule interface. Les administrateurs de console peuvent contrôler l’accès au stockage et aux services pour tous les systèmes de l’entreprise.
+La NetApp Console fournit une gestion centralisée des services de stockage et de données NetApp dans les environnements sur site et cloud à l'échelle de l'entreprise. La console est requise pour accéder aux services de données NetApp et les utiliser. En tant qu'interface de gestion, il vous permet de gérer de nombreuses ressources de stockage à partir d'une seule interface. Les administrateurs de console peuvent contrôler l’accès au stockage et aux services pour tous les systèmes de l’entreprise.
 
 Vous n'avez pas besoin de licence ni d'abonnement pour commencer à utiliser NetApp Console et vous n'encourez des frais que lorsque vous devez déployer des agents de console dans votre cloud pour garantir la connectivité à vos systèmes de stockage ou à vos services de données NetApp . Cependant, certains services de données NetApp accessibles depuis la console sont sous licence ou basés sur un abonnement.
 
-En savoir plus sur lelink:https://docs.netapp.com/us-en/console-setup-admin/concept-overview.html["Console NetApp"^] .
+En savoir plus sur lelink:https://docs.netapp.com/us-en/console-setup-admin/concept-overview.html["NetApp Console"^] .
 
 
 
@@ -108,7 +108,7 @@ La classification des données est gratuite.  Aucune licence de classification n
 === Coûts d'infrastructure
 
 * L'installation de Data Classification dans le cloud nécessite le déploiement d'une instance cloud, ce qui entraîne des frais de la part du fournisseur cloud où elle est déployée. Voir <<L'instance de classification des données,le type d'instance déployé pour chaque fournisseur de cloud>> .  L’installation de Data Classification sur un système local est gratuite.
-* La classification des données nécessite que vous ayez déployé un agent de console. Dans de nombreux cas, vous disposez déjà d’un agent de console en raison d’autres stockages et services que vous utilisez dans la console. L'instance de l'agent de console entraîne des frais auprès du fournisseur de cloud où elle est déployée. Voir le https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-on-prem.html["type d'instance déployée pour chaque fournisseur de cloud"^] . L’installation de l’agent de console sur un système local est gratuite.
+* La classification des données nécessite que vous ayez déployé un agent de console.  Dans de nombreux cas, vous disposez déjà d’un agent de console en raison d’autres stockages et services que vous utilisez dans la console.  L'instance de l'agent de console entraîne des frais auprès du fournisseur de cloud où elle est déployée. Voir le https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-on-prem.html["type d'instance déployée pour chaque fournisseur de cloud"^] .  L’installation de l’agent de console sur un système local est gratuite.
 
 
 
@@ -140,7 +140,7 @@ Notez ce qui suit à propos de l’instance par défaut :
 * Une seule instance de classification des données est déployée par agent de console.
 
 
-Vous pouvez également déployer Data Classification sur un hôte Linux dans vos locaux ou sur un hôte chez votre fournisseur de cloud préféré.  Le logiciel fonctionne exactement de la même manière, quelle que soit la méthode d'installation choisie.  Les mises à niveau du logiciel de classification des données sont automatisées tant que l'instance dispose d'un accès Internet.
+Vous pouvez également déployer la classification des données sur un hôte Linux dans vos locaux ou sur un hôte chez votre fournisseur de cloud préféré.  Le logiciel fonctionne exactement de la même manière, quelle que soit la méthode d'installation choisie.  Les mises à niveau du logiciel de classification des données sont automatisées tant que l'instance dispose d'un accès Internet.
 
 
 TIP: L'instance doit rester en cours d'exécution en permanence, car la classification des données analyse en permanence les données.
@@ -184,7 +184,7 @@ Après l'analyse initiale, Data Classification analyse en continu vos données d
 Vous pouvez activer et désactiver les analyses au niveau du volume ou au niveau du schéma de base de données.
 
 
-NOTE: La classification des données n’impose pas de limite à la quantité de données qu’elle peut analyser. Chaque agent de console prend en charge l'analyse et l'affichage de 500 Tio de données. Pour scanner plus de 500 Tio de données,link:https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html#connector-installation["installer un autre agent de console"^] alorslink:https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-overview.html["déployer une autre instance de classification des données"] . + L'interface utilisateur de la console affiche les données d'un seul connecteur. Pour obtenir des conseils sur l'affichage des données de plusieurs agents de console, consultezlink:https://docs.netapp.com/us-en/console-setup-admin/task-manage-multiple-connectors.html#switch-between-connectors["Travailler avec plusieurs agents de console"^] .
+NOTE: La classification des données n’impose pas de limite à la quantité de données qu’elle peut analyser.  Chaque agent de console prend en charge l'analyse et l'affichage de 500 Tio de données. Pour scanner plus de 500 Tio de données,link:https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html#connector-installation["installer un autre agent de console"^] alorslink:https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-overview.html["déployer une autre instance de classification des données"] .  + L'interface utilisateur de la console affiche les données d'un seul connecteur.  Pour obtenir des conseils sur l'affichage des données de plusieurs agents de console, consultezlink:https://docs.netapp.com/us-en/console-setup-admin/task-manage-multiple-connectors.html#switch-between-connectors["Travailler avec plusieurs agents de console"^] .
 
 
 

@@ -4,7 +4,7 @@ permalink: reference-private-data-categories.html
 keywords: personal files, personal data, sensitive personal files, sensitive personal data, categories, health data, ethnic origin, political opinions, gdpr, email address, credit card, ip address, iban, national ID, identifier, sex, criminal, compliance, privacy, 
 summary: Il existe de nombreux types de données privées que Data Classification peut identifier dans vos volumes. 
 ---
-= Catégories de données privées dans la classification des données NetApp
+= Catégories de données privées dans la NetApp Data Classification
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -119,7 +119,7 @@ Les langues dans lesquelles ces éléments peuvent être reconnus sont identifi�
 | Permis de conduire canadien – Nouvelle-Écosse | Oui | ✓ |  |  |  |  
 
 
-| Permis de conduire canadien – Nunavut | Oui | ✓ |  |  |  |  
+| Permis de conduire canadien - Nunavut | Oui | ✓ |  |  |  |  
 
 
 | Permis de conduire canadien - Ontario | Oui | ✓ |  |  |  |  
@@ -287,7 +287,7 @@ Les langues dans lesquelles ces éléments peuvent être reconnus sont identifi�
 | Carte d'identité roumaine (CNP) | Oui | ✓ | ✓ | ✓ |  |  
 
 
-| Carte d'identité nationale d'enregistrement de Singapour (NRIC) | Oui | ✓ | ✓ | ✓ |  |  
+| Carte d'identité nationale de Singapour (NRIC) | Oui | ✓ | ✓ | ✓ |  |  
 
 
 | Carte d'identité slovène (EMSO) | Oui | ✓ | ✓ | ✓ |  |  

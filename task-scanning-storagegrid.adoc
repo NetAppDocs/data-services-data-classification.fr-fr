@@ -4,7 +4,7 @@ permalink: task-scanning-storagegrid.html
 keywords: cloud compliance, enable cloud compliance, privacy, compliance, object storage, data sense 
 summary: Suivez quelques étapes pour commencer à analyser les données dans StorageGRID directement avec NetApp Data Classification. 
 ---
-= Analyser les données StorageGRID avec la classification des données NetApp
+= Analyser les données StorageGRID avec la NetApp Data Classification
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

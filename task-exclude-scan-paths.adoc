@@ -4,7 +4,7 @@ permalink: task-exclude-scan-paths.html
 keywords: exclude scans, folders, directories 
 summary: 'Si vous souhaitez que NetApp Data Classification exclue les données d"analyse qui résident dans certains répertoires de sources de données, vous pouvez ajouter ces noms de répertoire à un fichier de configuration.  Après avoir appliqué cette modification, le moteur de classification des données exclura les données d’analyse dans ces répertoires.' 
 ---
-= Exclure des répertoires spécifiques des analyses de classification des données NetApp
+= Exclure des répertoires spécifiques des analyses de NetApp Data Classification
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -155,6 +155,6 @@ Syntaxe dans le fichier d'exclusion : `"\\*not_to_scan"`
 
 == Afficher la liste d'exclusion actuelle
 
-Il est possible que le contenu du `data_provider.yaml` fichier de configuration soit différent de ce qui a été réellement validé après l'exécution du `update_data_providers_from_config_file.sh` scénario.  Pour afficher la liste actuelle des répertoires que vous avez exclus de l'analyse de classification des données, exécutez la commande suivante à partir de « /opt/netapp/Datasense/tools/customer_configuration/data_providers » :
+Il est possible que le contenu du `data_provider.yaml` fichier de configuration soit différent de ce qui a été réellement validé après l'exécution du `update_data_providers_from_config_file.sh` scénario.  Pour afficher la liste actuelle des répertoires que vous avez exclus de l'analyse de classification des données, exécutez la commande suivante depuis « /opt/netapp/Datasense/tools/customer_configuration/data_providers » :
 
  get_data_providers_configuration.sh

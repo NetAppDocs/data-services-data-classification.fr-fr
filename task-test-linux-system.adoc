@@ -37,7 +37,7 @@ Vous effectuerez les tâches suivantes.
 
 Un agent de console est requis avant de pouvoir installer et utiliser la classification des données.  Vous pouvez toutefois exécuter le script Prérequis sans agent de console.
 
-Tu peux https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-on-prem.html["installer l'agent de console sur site"^] sur un hôte Linux de votre réseau ou sur un hôte Linux dans le cloud. Certains utilisateurs prévoyant d’installer la classification des données sur site peuvent également choisir d’installer l’agent de console sur site.
+Tu peux https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-on-prem.html["installer l'agent de console sur site"^] sur un hôte Linux de votre réseau ou sur un hôte Linux dans le cloud.  Certains utilisateurs prévoyant d’installer la classification des données sur site peuvent également choisir d’installer l’agent de console sur site.
 
 Pour créer un agent de console dans votre environnement de fournisseur de cloud, consultez https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-aws.html["création d'un agent de console dans AWS"^] , https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html["création d'un agent de console dans Azure"^] , ou https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-google.html["création d'un agent de console dans GCP"^] .
 
@@ -247,7 +247,7 @@ Ajoutez l'option « --darksite » uniquement si vous exécutez le script sur u
 ** Entrez l'adresse IP ou le nom d'hôte.
 
 
-. Le script vous demande si vous avez installé un agent de console.
+. Le script vous demande si vous disposez d'un agent de console installé.
 +
 ** Entrez *N* si vous n’avez pas d’agent de console installé.
 ** Entrez *Y* si vous avez un agent de console installé.  Ensuite, entrez l’adresse IP ou le nom d’hôte de l’agent de la console afin que le script de test puisse tester cette connectivité.

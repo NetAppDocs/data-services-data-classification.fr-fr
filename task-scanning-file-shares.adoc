@@ -4,7 +4,7 @@ permalink: task-scanning-file-shares.html
 keywords: cloud compliance, enable cloud compliance, privacy, compliance, file shares, nfs, cifs, smb, data sense, 7-mode 
 summary: Suivez quelques étapes pour commencer à analyser les partages de fichiers NFS ou CIFS non NetApp directement avec la classification des données.  Ces partages de fichiers peuvent résider sur site ou dans le cloud. 
 ---
-= Analyser les partages de fichiers avec la classification des données NetApp
+= Analyser les partages de fichiers avec la NetApp Data Classification
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: Suivez quelques étapes pour commencer à analyser les partages de fich
 
 
 [role="lead"]
-Pour analyser les partages de fichiers, vous devez d’abord créer un groupe de partages de fichiers dans NetApp Data Classification.  Les groupes de partages de fichiers sont destinés aux partages NFS ou CIFS (SMB) hébergés sur site ou dans le cloud.
+Pour analyser les partages de fichiers, vous devez d'abord créer un groupe de partages de fichiers dans NetApp Data Classification.  Les groupes de partages de fichiers sont destinés aux partages NFS ou CIFS (SMB) hébergés sur site ou dans le cloud.
 
 
 NOTE: L'analyse des données provenant de partages de fichiers non NetApp n'est pas prise en charge dans la version principale de la classification des données.
@@ -35,7 +35,7 @@ Passez en revue les conditions préalables suivantes pour vous assurer que vous 
 * Vous pouvez ajouter un partage DFS (Distributed File System) en tant que partage CIFS standard.  Étant donné que la classification des données ne sait pas que le partage est basé sur plusieurs serveurs/volumes combinés en un seul partage CIFS, vous risquez de recevoir des erreurs d'autorisation ou de connectivité concernant le partage lorsque le message s'applique réellement uniquement à l'un des dossiers/partages situés sur un serveur/volume différent.
 * Pour les partages CIFS (SMB), assurez-vous que vous disposez des informations d’identification Active Directory qui fournissent un accès en lecture aux partages.  Les informations d'identification d'administrateur sont préférables au cas où la classification des données doit analyser des données nécessitant des autorisations élevées.
 +
-Si vous souhaitez vous assurer que les « dernières heures d'accès » de vos fichiers restent inchangées par les analyses de classification des données, il est recommandé que l'utilisateur dispose des autorisations d'écriture d'attributs dans CIFS ou des autorisations d'écriture dans NFS. Si possible, configurez l’utilisateur Active Directory en tant que membre d’un groupe parent de l’organisation disposant d’autorisations sur tous les fichiers.
+Si vous souhaitez vous assurer que les « dernières heures d'accès » de vos fichiers ne sont pas modifiées par les analyses de classification des données, il est recommandé que l'utilisateur dispose des autorisations d'écriture d'attributs dans CIFS ou des autorisations d'écriture dans NFS. Si possible, configurez l’utilisateur Active Directory en tant que membre d’un groupe parent de l’organisation disposant d’autorisations sur tous les fichiers.
 
 * Tous les partages de fichiers CIFS d’un groupe doivent utiliser les mêmes informations d’identification Active Directory.
 * Vous pouvez mélanger les partages NFS et CIFS (en utilisant Kerberos ou NTLM).  Vous devez ajouter les actions au groupe séparément.  Autrement dit, vous devez effectuer le processus deux fois, une fois par protocole.
@@ -63,7 +63,7 @@ Vous pouvez ajouter des partages de fichiers individuellement ou saisir une list
 image:screen-cl-config-shares-add.png["Une capture d'écran de la fenêtre modale pour ajouter des partages, montrant les options permettant de sélectionner des protocoles et des partages"]
 
 +
-.. Si vous ajoutez des partages CIFS avec l’authentification NTLM, entrez les informations d’identification Active Directory pour accéder aux volumes CIFS.  Bien que les informations d'identification en lecture seule soient prises en charge, il est recommandé de fournir un accès complet avec les informations d'identification d'administrateur. Sélectionnez **Enregistrer**.
+.. Si vous ajoutez des partages CIFS avec l’authentification NTLM, entrez les informations d’identification Active Directory pour accéder aux volumes CIFS.  Bien que les informations d'identification en lecture seule soient prises en charge, il est recommandé de fournir un accès complet avec les informations d'identification d'administrateur.  Sélectionnez **Enregistrer**.
 
 
 . Ajoutez les partages de fichiers que vous souhaitez analyser (un partage de fichiers par ligne).  Sélectionnez ensuite **Continuer**.

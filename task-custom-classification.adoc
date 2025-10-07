@@ -19,7 +19,7 @@ Avec NetApp Data Classification, vous pouvez créer une recherche personnalisée
 
 == Créer une classification personnalisée
 
-La classification personnalisée n'est disponible que pour les analyses Map & Classify, et non pour les analyses de cartographie uniquement.  Cette fonctionnalité est actuellement en version préliminaire.
+La classification personnalisée n'est disponible que pour les analyses Map & Classify, et non pour les analyses de cartographie uniquement. Cette fonctionnalité est actuellement en version préliminaire.
 
 .Étapes
 . Sélectionnez l'onglet **Classification personnalisée**.

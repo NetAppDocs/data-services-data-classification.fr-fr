@@ -4,7 +4,7 @@ permalink: task-scanning-anf.html
 keywords: cloud compliance, get started, enable cloud compliance, cloud compliance access, privacy, compliance, ANF, azure netApp files, data sense 
 summary: Suivez quelques étapes pour démarrer avec la classification des données pour Azure NetApp Files. 
 ---
-= Analyser les volumes Azure NetApp Files avec la classification des données NetApp
+= Analyser les volumes Azure NetApp Files avec la NetApp Data Classification
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -20,7 +20,7 @@ Suivez quelques étapes pour démarrer avec NetApp Data Classification pour Azur
 
 == Découvrez le système Azure NetApp Files que vous souhaitez analyser
 
-Si le système Azure NetApp Files que vous souhaitez analyser n’est pas déjà dans la console NetApp en tant que système,link:https://docs.netapp.com/us-en/storage-management-azure-netapp-files/task-quick-start.html["ajoutez-le dans la page Systèmes"^] .
+Si le système Azure NetApp Files que vous souhaitez analyser n’est pas déjà dans la NetApp Console en tant que système,link:https://docs.netapp.com/us-en/storage-management-azure-netapp-files/task-quick-start.html["ajoutez-le dans la page Systèmes"^] .
 
 
 
@@ -90,7 +90,7 @@ NOTE: Pour Azure NetApp Files, la classification des données ne peut analyser q
 Les informations d'identification peuvent être en lecture seule, mais la fourniture d'informations d'identification d'administrateur garantit que la classification des données peut lire toutes les données nécessitant des autorisations élevées.  Les informations d’identification sont stockées sur l’instance de classification des données.
 
 +
-Si vous souhaitez vous assurer que les « dernières heures d'accès » de vos fichiers restent inchangées par les analyses de classification des données, il est recommandé que l'utilisateur dispose des autorisations d'écriture d'attributs dans CIFS ou des autorisations d'écriture dans NFS. Si possible, configurez l’utilisateur Active Directory en tant que membre d’un groupe parent de l’organisation disposant d’autorisations sur tous les fichiers.
+Si vous souhaitez vous assurer que les « dernières heures d'accès » de vos fichiers ne sont pas modifiées par les analyses de classification des données, il est recommandé que l'utilisateur dispose des autorisations d'écriture d'attributs dans CIFS ou des autorisations d'écriture dans NFS. Si possible, configurez l’utilisateur Active Directory en tant que membre d’un groupe parent de l’organisation disposant d’autorisations sur tous les fichiers.
 
 +
 Après avoir saisi les informations d’identification, vous devriez voir un message indiquant que tous les volumes CIFS ont été authentifiés avec succès.
@@ -105,7 +105,7 @@ image:screenshot_cifs_status.gif["Une capture d’écran qui montre la page de c
 Par exemple, l'image suivante montre quatre volumes ; l'un d'entre eux ne peut pas être analysé par Data Classification en raison de problèmes de connectivité réseau entre l'instance Data Classification et le volume.
 
 +
-image:screenshot_compliance_volume_details.gif["Une capture d'écran de la page Afficher les détails dans la configuration d'analyse qui affiche quatre volumes ; dont l'un n'est pas analysé en raison de la connectivité réseau entre la classification des données et le volume."]
+image:screenshot_compliance_volume_details.gif["Capture d'écran de la page Afficher les détails dans la configuration d'analyse qui affiche quatre volumes ; dont l'un n'est pas analysé en raison de la connectivité réseau entre la classification des données et le volume."]
 
 
 

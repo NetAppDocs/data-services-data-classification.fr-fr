@@ -39,7 +39,7 @@ Commencez rapidement en suivant ces étapes ou faites défiler les sections rest
 Si vous n'avez pas encore d'agent de console, https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-on-prem.html["déployer l'agent de console sur site"^] sur un hôte Linux de votre réseau ou sur un hôte Linux dans le cloud.
 
 [role="quick-margin-para"]
-Vous pouvez également créer un agent de console avec votre fournisseur de cloud. Voir https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-aws.html["création d'un agent de console dans AWS"^] , https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html["création d'un agent de console dans Azure"^] , ou https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-google.html["création d'un agent de console dans GCP"^] .
+Vous pouvez également créer un agent de console avec votre fournisseur de cloud.  Voir https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-aws.html["création d'un agent de console dans AWS"^] , https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html["création d'un agent de console dans Azure"^] , ou https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-google.html["création d'un agent de console dans GCP"^] .
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Deux"]Réviser les prérequis
 [role="quick-margin-para"]
@@ -56,7 +56,7 @@ Téléchargez le logiciel Cloud Data Classification à partir du site de support
 
 == Créer un agent de console
 
-Un agent de console est requis avant de pouvoir installer et utiliser la classification des données. Dans la plupart des cas, vous aurez probablement configuré un agent de console avant de tenter d'activer la classification des données, car la plupart https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["Les fonctionnalités de la console nécessitent un agent de console"] , mais il y a des cas où vous devrez en créer un maintenant.
+Un agent de console est requis avant de pouvoir installer et utiliser la classification des données.  Dans la plupart des cas, vous aurez probablement configuré un agent de console avant de tenter d'activer la classification des données, car la plupart https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["Les fonctionnalités de la console nécessitent un agent de console"] , mais il y a des cas où vous devrez en créer un maintenant.
 
 Pour en créer un dans votre environnement de fournisseur de cloud, consultez https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-aws.html["création d'un agent de console dans AWS"^] , https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html["création d'un agent de console dans Azure"^] , ou https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-google.html["création d'un agent de console dans GCP"^] .
 
@@ -72,9 +72,9 @@ Pour Azure NetApp Files, il doit être déployé dans la même région que les v
 
 Les systèmes ONTAP sur site, les partages de fichiers NetApp et les comptes de base de données peuvent être analysés à l’aide de l’un de ces agents de console cloud.
 
-Notez que vous pouvez également https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-on-prem.html["déployer l'agent de console sur site"^] sur un hôte Linux de votre réseau ou sur un hôte Linux dans le cloud. Certains utilisateurs prévoyant d’installer la classification des données sur site peuvent également choisir d’installer l’agent de console sur site.
+Notez que vous pouvez également https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-on-prem.html["déployer l'agent de console sur site"^] sur un hôte Linux de votre réseau ou sur un hôte Linux dans le cloud.  Certains utilisateurs prévoyant d’installer la classification des données sur site peuvent également choisir d’installer l’agent de console sur site.
 
-Vous aurez besoin de l'adresse IP ou du nom d'hôte du système d'agent de la console lors de l'installation de la classification des données.  Vous disposerez de ces informations si vous avez installé l'agent Console dans vos locaux.  Si l'agent de console est déployé dans le cloud, vous pouvez trouver ces informations depuis la console : sélectionnez l'icône Aide puis *Support* puis **Agent de console**.
+Vous aurez besoin de l'adresse IP ou du nom d'hôte du système d'agent de la console lors de l'installation de la classification des données.  Vous disposerez de ces informations si vous avez installé l'agent Console dans vos locaux.  Si l'agent de la console est déployé dans le cloud, vous pouvez trouver ces informations depuis la console : sélectionnez l'icône Aide puis *Support* puis **Agent de la console**.
 
 
 
@@ -293,7 +293,7 @@ Voir<<Préparer le système hôte Linux,Préparation du système hôte Linux>> e
 Les mises à niveau du logiciel de classification des données sont automatisées tant que l'instance dispose d'une connexion Internet.
 
 
-NOTE: La classification des données ne peut actuellement pas analyser les compartiments S3, Azure NetApp Files ou FSx pour ONTAP lorsque le logiciel est installé sur site. Dans ces cas, vous devrez déployer un agent de console distinct et une instance de classification des données dans le cloud et https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["basculer entre les connecteurs"^] pour vos différentes sources de données.
+NOTE: La classification des données ne peut actuellement pas analyser les compartiments S3, Azure NetApp Files ou FSx pour ONTAP lorsque le logiciel est installé sur site.  Dans ces cas, vous devrez déployer un agent de console distinct et une instance de classification des données dans le cloud et https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["basculer entre les connecteurs"^] pour vos différentes sources de données.
 
 
 
@@ -314,7 +314,7 @@ Notez que toutes les activités d'installation sont enregistrées lors de l'inst
 ** Vous aurez besoin des informations du serveur proxy (adresse IP ou nom d'hôte, port de connexion, schéma de connexion : https ou http, nom d'utilisateur et mot de passe).
 ** Si le proxy effectue une interception TLS, vous devez connaître le chemin sur le système Linux de classification des données où les certificats CA TLS sont stockés.
 ** Le proxy doit être non transparent.  La classification des données ne prend actuellement pas en charge les proxys transparents.
-** L'utilisateur doit être un utilisateur local. Les utilisateurs de domaine ne sont pas pris en charge.
+** L'utilisateur doit être un utilisateur local.  Les utilisateurs de domaine ne sont pas pris en charge.
 
 
 * Vérifiez que votre environnement hors ligne répond aux exigences requises<<Activer l'accès Internet sortant à partir de la classification des données,autorisations et connectivité>> .
@@ -356,7 +356,7 @@ Notez que le programme d'installation effectue une pré-vérification pour s'ass
 Si vous effectuez l'installation sur une instance cloud (pas dans vos locaux), ajoutez `--manual-cloud-install <cloud_provider>` .
 
 .. Saisissez l'adresse IP ou le nom d'hôte de la machine hôte de classification des données afin que le système d'agent de la console puisse y accéder.
-.. Saisissez l'adresse IP ou le nom d'hôte de la machine hôte de l'agent de console afin qu'il soit accessible par le système de classification des données.
+.. Saisissez l'adresse IP ou le nom d'hôte de la machine hôte de l'agent de console afin que le système de classification des données puisse y accéder.
 .. Saisissez les détails du proxy lorsque vous y êtes invité.  Si votre agent de console utilise déjà un proxy, il n'est pas nécessaire de saisir à nouveau ces informations ici, car la classification des données utilisera automatiquement le proxy utilisé par l'agent de console.
 
 | Alternativement, vous pouvez créer la commande entière à l'avance, en fournissant les paramètres d'hôte et de proxy nécessaires :
@@ -370,7 +370,7 @@ Valeurs des variables :
 ** _client_id_ = ID client de l'agent de console (ajoutez le suffixe « clients » à l'ID client s'il n'est pas déjà présent)
 ** _user_token_ = jeton d'accès utilisateur JWT
 ** _ds_host_ = Adresse IP ou nom d'hôte du système Linux de classification des données.
-** _cm_host_ = Adresse IP ou nom d'hôte du système d'agent de la console.
+** _cm_host_ = Adresse IP ou nom d'hôte du système agent de la console.
 ** _cloud_provider_ = Lors de l'installation sur une instance cloud, saisissez « AWS », « Azure » ou « Gcp » selon le fournisseur de cloud.
 ** _proxy_host_ = IP ou nom d'hôte du serveur proxy si l'hôte est derrière un serveur proxy.
 ** _proxy_port_ = Port de connexion au serveur proxy (par défaut 80).

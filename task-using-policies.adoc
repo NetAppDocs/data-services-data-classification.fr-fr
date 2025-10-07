@@ -4,7 +4,7 @@ permalink: task-using-policies.html
 keywords: compliance, privacy, filter data, highlights, policies, notifications, saved query, tags, data sense, edit query 
 summary: Les requêtes enregistrées sont des filtres personnalisés qui fournissent des résultats de recherche dans la page Enquête pour les requêtes de conformité fréquemment demandées.  La classification des données fournit un ensemble de requêtes enregistrées par défaut basées sur des demandes courantes ou vous pouvez créer les vôtres. 
 ---
-= Gérer les requêtes enregistrées avec la classification des données NetApp
+= Gérer les requêtes enregistrées avec la NetApp Data Classification
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -18,7 +18,7 @@ NetaApp Data Classification prend en charge l'enregistrement de vos requêtes de
 
 L'onglet *Requêtes enregistrées* du tableau de bord Conformité répertorie toutes les requêtes enregistrées prédéfinies et personnalisées disponibles sur cette instance de classification des données.
 
-Les requêtes enregistrées peuvent également être enregistrées en tant que **politiques**.  Alors que les requêtes filtrent les données, les politiques vous permettent d’agir sur les données.  Avec une politique : vous pouvez supprimer les données découvertes ou envoyer des mises à jour par e-mail concernant les données découvertes.
+Les requêtes enregistrées peuvent également être enregistrées en tant que **politiques**.  Alors que les requêtes filtrent les données, les politiques vous permettent d’agir sur les données.  Avec une politique : vous pouvez supprimer les données découvertes ou envoyer des mises à jour par e-mail sur les données découvertes.
 
 Les requêtes enregistrées apparaissent également dans la liste des filtres de la page Enquête.
 
@@ -119,7 +119,7 @@ Fichiers qui n'ont pas été consultés depuis plus de 3 ans
 
 * **Protéger - Moyen**
 +
-Fichiers contenant des fichiers ou des colonnes de base de données avec des identifiants de données personnelles, notamment des numéros d'identification, des numéros d'identification fiscale, des numéros de permis de conduire, des identifiants médicaux ou des numéros de passeport.
+Fichiers contenant des fichiers ou des colonnes de base de données avec des identifiants de données personnelles, notamment des numéros d'identification, des numéros d'identification fiscale, des numéros de permis de conduire, des identifiants médicaux ou des numéros de passeport
 
 * **Données personnelles sensibles - Risque élevé**
 +

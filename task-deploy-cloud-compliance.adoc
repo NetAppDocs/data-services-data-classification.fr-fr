@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-deploy-cloud-compliance.html 
 keywords: cloud compliance, data sense, quickstart, outbound internet, endpoints, cloud compliance internet, browser connectivity, cloud compliance access, privacy, compliance, bluexp classification, classification, netapp console, 
-summary: 'Suivez quelques étapes pour déployer NetApp Data Classification dans le cloud.  La console NetApp déploie l"instance de classification des données dans le même réseau de fournisseur de cloud que l"agent de la console.' 
+summary: 'Suivez quelques étapes pour déployer NetApp Data Classification dans le cloud.  La NetApp Console déploie l"instance de classification des données dans le même réseau de fournisseur de cloud que l"agent de la console.' 
 ---
-= Déployer la classification des données NetApp dans le cloud à l'aide de la console NetApp
+= Déployer la NetApp Data Classification dans le cloud à l'aide de la NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 'Suivez quelques étapes pour déployer NetApp Data Classification dans
 
 
 [role="lead"]
-Vous pouvez déployer NetApp Data Classification dans le cloud avec la console NetApp .  La console déploie l’instance de classification des données dans le même réseau de fournisseur de cloud que l’agent de la console.
+Vous pouvez déployer NetApp Data Classification dans le cloud avec la NetApp Console.  La console déploie l’instance de classification des données dans le même réseau de fournisseur de cloud que l’agent de la console.
 
 Notez que vous pouvez égalementlink:task-deploy-compliance-onprem.html["installer Data Classification sur un hôte Linux disposant d'un accès Internet"] .  Ce type d'installation peut être une bonne option si vous préférez analyser les systèmes ONTAP sur site à l'aide d'une instance de classification des données également située sur site, mais ce n'est pas une exigence.  Le logiciel fonctionne exactement de la même manière, quelle que soit la méthode d'installation choisie.
 
@@ -26,7 +26,7 @@ Commencez rapidement en suivant ces étapes ou faites défiler les sections rest
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Un"]Créer un agent de console
 [role="quick-margin-para"]
-Si vous n’avez pas encore d’agent de console, créez-en un. Voir https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-aws.html["création d'un agent de console dans AWS"^] , https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html["création d'un agent de console dans Azure"^] , ou https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-google.html["création d'un agent de console dans GCP"^] .
+Si vous n’avez pas encore d’agent de console, créez-en un.  Voir https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-aws.html["création d'un agent de console dans AWS"^] , https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html["création d'un agent de console dans Azure"^] , ou https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-google.html["création d'un agent de console dans GCP"^] .
 
 [role="quick-margin-para"]
 Vous pouvez également https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-on-prem.html["installer l'agent de console sur site"^] sur un hôte Linux de votre réseau ou sur un hôte Linux dans le cloud.
@@ -43,7 +43,7 @@ Lancez l’assistant d’installation pour déployer l’instance de classificat
 
 == Créer un agent de console
 
-Si vous ne disposez pas encore d’un agent de console, créez un agent de console chez votre fournisseur de cloud. Voir https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-aws.html["création d'un agent de console dans AWS"^] ou https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html["création d'un agent de console dans Azure"^] , ou https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-google.html["création d'un agent de console dans GCP"^] . Dans la plupart des cas, vous aurez probablement configuré un agent de console avant de tenter d'activer la classification des données, car la plupart https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html#when-a-connector-is-required["Les fonctionnalités de la console nécessitent un agent de console"] , mais il y a des cas où vous devrez en créer un maintenant.
+Si vous ne disposez pas encore d’un agent de console, créez un agent de console chez votre fournisseur de cloud.  Voir https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-aws.html["création d'un agent de console dans AWS"^] ou https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html["création d'un agent de console dans Azure"^] , ou https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-google.html["création d'un agent de console dans GCP"^] .  Dans la plupart des cas, vous aurez probablement configuré un agent de console avant de tenter d'activer la classification des données, car la plupart https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html#when-a-connector-is-required["Les fonctionnalités de la console nécessitent un agent de console"] , mais il y a des cas où vous devrez en créer un maintenant.
 
 Il existe certains scénarios dans lesquels vous devez utiliser un agent de console déployé chez un fournisseur de cloud spécifique :
 
@@ -58,12 +58,12 @@ Il existe certains scénarios dans lesquels vous devez utiliser un agent de cons
 
 Les systèmes ONTAP sur site, les partages de fichiers NetApp et les bases de données peuvent être analysés lors de l’utilisation de l’un de ces agents de console cloud.
 
-Notez que vous pouvez également https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-on-prem.html["installer l'agent de console sur site"^] sur un hôte Linux dans votre réseau ou dans le cloud. Certains utilisateurs prévoyant d’installer la classification des données sur site peuvent également choisir d’installer l’agent de console sur site.
+Notez que vous pouvez également https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-on-prem.html["installer l'agent de console sur site"^] sur un hôte Linux dans votre réseau ou dans le cloud.  Certains utilisateurs prévoyant d’installer la classification des données sur site peuvent également choisir d’installer l’agent de console sur site.
 
 Comme vous pouvez le constater, il peut y avoir des situations où vous devrez utiliser https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html#multiple-connectors["plusieurs agents de console"] .
 
 
-TIP: La classification des données n’impose pas de limite à la quantité de données qu’elle peut analyser. Chaque agent de console prend en charge l'analyse et l'affichage de 500 Tio de données. Pour scanner plus de 500 Tio de données,link:https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html#connector-installation["installer un autre agent de console"^] alorslink:https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-overview.html["déployer une autre instance de classification des données"] . + L'interface utilisateur de la console affiche les données d'un seul connecteur. Pour obtenir des conseils sur l'affichage des données de plusieurs agents de console, consultezlink:https://docs.netapp.com/us-en/console-setup-admin/task-manage-multiple-connectors.html#switch-between-connectors["Travailler avec plusieurs agents de console"^] .
+TIP: La classification des données n’impose pas de limite à la quantité de données qu’elle peut analyser.  Chaque agent de console prend en charge l'analyse et l'affichage de 500 Tio de données. Pour scanner plus de 500 Tio de données,link:https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html#connector-installation["installer un autre agent de console"^] alorslink:https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-overview.html["déployer une autre instance de classification des données"] .  + L'interface utilisateur de la console affiche les données d'un seul connecteur.  Pour obtenir des conseils sur l'affichage des données de plusieurs agents de console, consultezlink:https://docs.netapp.com/us-en/console-setup-admin/task-manage-multiple-connectors.html#switch-between-connectors["Travailler avec plusieurs agents de console"^] .
 
 
 
@@ -181,7 +181,7 @@ Consultez les liens suivants pour plus de détails sur les limites du vCPU :
 
 * https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html["Documentation AWS : quotas de service Amazon EC2"^]
 * https://docs.microsoft.com/en-us/azure/virtual-machines/linux/quotas["Documentation Azure : Quotas de processeurs virtuels pour machines virtuelles"^]
-* https://cloud.google.com/compute/quotas["Documentation Google Cloud : Quotas de ressources"^]
+* https://cloud.google.com/compute/quotas["Documentation Google Cloud : quotas de ressources"^]
 
 
 --

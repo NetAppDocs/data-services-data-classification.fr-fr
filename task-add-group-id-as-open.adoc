@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-add-group-id-as-open.html 
 keywords: permissions, open to organization, file access 
-summary: 'Lorsque des ID de groupe sont attachés à des fichiers ou des dossiers dans des partages de fichiers NFS, ils définissent les autorisations pour le fichier ou le dossier ; par exemple s"ils sont « ouverts à l"organisation ».  Si certains identifiants de groupe (GID) ne sont pas initialement configurés avec le niveau d"autorisation « Ouvrir à l"organisation », vous pouvez ajouter cette autorisation au GID afin que tous les fichiers et dossiers auxquels ce GID est attaché soient considérés comme « ouverts à l"organisation ».' 
+summary: 'Lorsque des ID de groupe sont attachés à des fichiers ou des dossiers dans des partages de fichiers NFS, ils définissent les autorisations pour le fichier ou le dossier, par exemple s"ils sont « ouverts à l"organisation ».  Si certains identifiants de groupe (GID) ne sont pas initialement configurés avec le niveau d"autorisation « Ouvrir à l"organisation », vous pouvez ajouter cette autorisation au GID afin que tous les fichiers et dossiers auxquels ce GID est attaché soient considérés comme « ouverts à l"organisation ».' 
 ---
-= Définir des ID de groupe supplémentaires comme ouverts à l'organisation dans la classification des données NetApp
+= Définir des ID de groupe supplémentaires comme ouverts à l'organisation dans la NetApp Data Classification
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -46,7 +46,7 @@ Cette commande valide les autorisations d’ID de groupe révisées dans le mote
 .Résultat
 Toutes les analyses ultérieures de vos données identifieront les fichiers ou dossiers auxquels ces identifiants de groupe sont associés comme étant « ouverts à l'organisation ».
 
-Vous pouvez modifier la liste des identifiants de groupe et supprimer tous les identifiants de groupe que vous avez ajoutés dans le passé en suivant ces mêmes étapes.  La liste révisée des ID de groupe sera mise à jour après l’exécution du script pour valider vos modifications.
+Vous pouvez modifier la liste des identifiants de groupe et supprimer tous les identifiants de groupe que vous avez ajoutés dans le passé en suivant ces mêmes étapes.  La liste révisée des ID de groupe sera mise à jour après avoir exécuté le script pour valider vos modifications.
 
 
 

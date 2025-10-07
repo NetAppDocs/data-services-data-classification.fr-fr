@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: reference-log-in-to-instance.html 
 keywords: log in, data sense, classification 
-summary: Parfois, vous devrez peut-être vous connecter au système de classification des données NetApp pour pouvoir accéder aux fichiers journaux ou modifier les fichiers de configuration. 
+summary: Parfois, vous devrez peut-être vous connecter au système de NetApp Data Classification pour pouvoir accéder aux fichiers journaux ou modifier les fichiers de configuration. 
 ---
-= Connectez-vous au système de classification des données NetApp
+= Connectez-vous au système de NetApp Data Classification
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: Parfois, vous devrez peut-être vous connecter au système de classific
 
 
 [role="lead"]
-Vous devez vous connecter au système de classification des données NetApp pour pouvoir accéder aux fichiers journaux ou modifier les fichiers de configuration.
+Vous devez vous connecter au système de NetApp Data Classification pour pouvoir accéder aux fichiers journaux ou modifier les fichiers de configuration.
 
 Lorsque Data Classification est installé sur une machine Linux dans vos locaux ou sur une machine Linux que vous avez déployée dans le cloud, vous pouvez accéder directement au fichier de configuration et au script.
 
