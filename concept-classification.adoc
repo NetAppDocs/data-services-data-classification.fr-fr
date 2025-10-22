@@ -60,7 +60,7 @@ La classification des données permet d’identifier les données potentiellemen
 La classification des données fournit des outils qui peuvent vous aider à déterminer le coût total de possession (TCO) de votre stockage.  Vous pouvez utiliser la classification des données pour :
 
 * Augmentez l’efficacité du stockage en identifiant les données en double ou non liées à l’entreprise.
-* Réduisez les coûts de stockage en identifiant les données inactives que vous pouvez hiérarchiser vers un stockage d'objets moins coûteux. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["En savoir plus sur la hiérarchisation des systèmes Cloud Volumes ONTAP"^] . https://docs.netapp.com/us-en/data-services-tiering/concept-cloud-tiering.html["En savoir plus sur la hiérarchisation des systèmes ONTAP sur site"^] .
+* Réduisez les coûts de stockage en identifiant les données inactives que vous pouvez hiérarchiser vers un stockage d'objets moins coûteux. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["En savoir plus sur la hiérarchisation des systèmes Cloud Volumes ONTAP"^] . https://docs.netapp.com/us-en/data-services-cloud-tiering/concept-cloud-tiering.html["En savoir plus sur la hiérarchisation des systèmes ONTAP sur site"^] .
 
 
 
@@ -207,8 +207,9 @@ La classification des données collecte, indexe et attribue des catégories aux 
 * *Métadonnées standard* sur les fichiers : le type de fichier, sa taille, ses dates de création et de modification, etc.
 * *Données personnelles* : Informations personnelles identifiables (PII) telles que les adresses e-mail, les numéros d'identification ou les numéros de carte de crédit, que Data Classification identifie à l'aide de mots, de chaînes et de modèles spécifiques dans les fichiers. link:task-controlling-private-data.html#view-files-that-contain-personal-data["En savoir plus sur les données personnelles"^] .
 * *Données personnelles sensibles* : Types particuliers d'informations personnelles sensibles (IPS), telles que les données de santé, l'origine ethnique ou les opinions politiques, telles que définies par le Règlement général sur la protection des données (RGPD) et d'autres réglementations sur la confidentialité. link:task-controlling-private-data.html#view-files-that-contain-sensitive-personal-data["En savoir plus sur les données personnelles sensibles"^] .
-* *Catégories* : La classification des données prend les données numérisées et les divise en différents types de catégories.  Les catégories sont des sujets basés sur l'analyse par l'IA du contenu et des métadonnées de chaque fichier. link:task-controlling-private-data.html#view-files-by-categories["En savoir plus sur les catégories"^] .
-* *Types* : La classification des données prend les données analysées et les décompose par type de fichier. link:task-controlling-private-data.html#view-files-by-file-types["En savoir plus sur les types"^] .
+* *Catégories* : La classification des données prend les données numérisées et les divise en différents types de catégories. Les catégories sont des sujets basés sur l'analyse par l'IA du contenu et des métadonnées de chaque fichier. link:task-controlling-governance-data.html["En savoir plus sur les catégories"^].
+
+
 * *Reconnaissance d'entité de nom* : la classification des données utilise l'IA pour extraire les noms naturels des personnes à partir de documents. link:task-generating-compliance-reports.html["En savoir plus sur la réponse aux demandes d'accès aux données des personnes concernées"^] .
 
 

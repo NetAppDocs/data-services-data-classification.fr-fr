@@ -27,12 +27,12 @@ Par défaut, les tableaux de bord de classification des données affichent les d
 ====
 Les rapports suivants sont disponibles pour la classification des données :
 
-* *Rapport d'évaluation de la découverte de données* : fournit une analyse de haut niveau de l'environnement analysé pour mettre en évidence les résultats du système et montrer les zones de préoccupation et les étapes de correction potentielles.
-* *Rapport de mappage de données* : fournit des informations sur la taille et le nombre de fichiers dans vos systèmes.  Cela inclut la capacité d’utilisation, l’âge des données, la taille des données et les types de fichiers.
-* *Rapport de demande d'accès aux données personnelles* : vous permet d'extraire un rapport de tous les fichiers contenant des informations concernant le nom spécifique ou l'identifiant personnel d'une personne concernée.
-* *Rapport HIPAA* : vous aide à identifier la répartition des informations de santé dans vos fichiers.
-* *Rapport PCI DSS* : vous aide à identifier la répartition des informations de carte de crédit dans vos fichiers.
-* *Rapport d'évaluation des risques liés à la confidentialité* : fournit des informations sur la confidentialité de vos données et un score de risque lié à la confidentialité.
+* *Rapport d'évaluation de la découverte de données* : fournit une analyse de haut niveau de l'environnement analysé pour mettre en évidence les résultats du système et montrer les zones de préoccupation et les étapes de correction potentielles.  Ce rapport est disponible dans le tableau de bord de gouvernance.
+* *Rapport d'aperçu complet du mappage des données* : fournit des informations sur la taille et le nombre de fichiers dans vos systèmes. Cela inclut la capacité d’utilisation, l’âge des données, la taille des données et les types de fichiers.  Ce rapport est disponible dans le tableau de bord de gouvernance.
+* *Rapport de demande d'accès aux données personnelles* : vous permet d'extraire un rapport de tous les fichiers contenant des informations concernant le nom spécifique ou l'identifiant personnel d'une personne concernée. Ce rapport est disponible dans le tableau de bord Conformité.
+* *Rapport HIPAA* : vous aide à identifier la répartition des informations de santé dans vos fichiers. Ce rapport est disponible dans le tableau de bord Conformité.
+* *Rapport PCI DSS* : vous aide à identifier la répartition des informations de carte de crédit dans vos fichiers. Ce rapport est disponible dans le tableau de bord Conformité.
+* *Rapport d'évaluation des risques liés à la confidentialité* : fournit des informations sur la confidentialité de vos données et un score de risque lié à la confidentialité.  Ce rapport est disponible dans le tableau de bord Conformité.
 * *Rapports sur un type d'informations spécifique* : Des rapports sont disponibles qui incluent des détails sur les fichiers identifiés contenant des données personnelles et des données personnelles sensibles.  Vous pouvez également voir les fichiers classés par catégorie et par type de fichier.
 
 
@@ -79,24 +79,25 @@ NOTE: L'anglais, l'allemand, le japonais et l'espagnol sont pris en charge lors 
 
 .Étapes
 . Dans le menu Classification des données, sélectionnez *Conformité*.
-
-
-. Depuis la page Conformité, sélectionnez *Personnes concernées*.
-. Recherchez le nom complet ou l’identifiant connu de la personne concernée.
+. Depuis la page Conformité, recherchez l’onglet **Personnes concernées**.
+. Dans la section *Personnes concernées*, saisissez un nom ou un identifiant connu, puis sélectionnez **Rechercher**.
+. Une fois la recherche terminée, sélectionnez **Télécharger** pour accéder à la réponse à la demande d’accès de la personne concernée.  Sélectionnez **Enquêter sur les résultats** pour afficher plus d’informations sur la page Enquête sur les données.image:screenshot-data-subject-john-doe.png["Capture d'écran de la recherche DSAR"]
+. Consultez les résultats dans la classification des données ou téléchargez-les sous forme de rapport en sélectionnant l'icône de téléchargement.
 +
-Voici un exemple qui montre une recherche pour le nom _john doe_ :
+.. Lorsque vous sélectionnez l’icône de téléchargement, configurez vos paramètres de téléchargement :
++
+*** Choisissez le format du film : CSV ou JSON
+*** Saisissez un *Nom du rapport*
+*** Choisissez la destination d'exportation : *Système* ou votre machine *locale*.
++
+Si vous choisissez le système, toutes les données sont téléchargées.  Vous devez également sélectionner le *Système*, le *Volume* et le *Chemin du dossier de destination*.
 
 +
-image:screenshot_dsar_search.gif["Capture d'écran de la recherche de la personne concernée."]
+Si vous choisissez *Local*, le rapport est limité aux 10 000 premières lignes de données non structurées, 5 000 lignes de données non structurées et 1 000 lignes de données structurées.
 
-. Choisissez l'une des options disponibles :
-+
-** *Télécharger le rapport DSAR* : Une réponse formelle à la demande d'accès que vous pouvez envoyer à la personne concernée.  Ce rapport contient des informations générées automatiquement à partir des données trouvées par Data Classification sur la personne concernée et est conçu pour être utilisé comme modèle.  Vous devez remplir le formulaire et le réviser en interne avant de l’envoyer à la personne concernée.
-** *Résultats de l'enquête* : une page qui vous permet d'enquêter sur les données en recherchant, en triant, en développant les détails d'un fichier spécifique et en téléchargeant la liste des fichiers.
-+
 
-NOTE: S'il y a plus de 10 000 résultats, seuls les 10 000 premiers apparaissent dans la liste des fichiers.
 
+.. Sélectionnez **Télécharger le rapport** pour lancer le téléchargement.image:screenshot-download-report.png["Capture d'écran des options de rapport de téléchargement"]
 
 
 
@@ -136,7 +137,7 @@ image:screenshot-report-options.png["Capture d’écran des options de rapport d
 
 
 .Résultat
-La classification des données génère un rapport PDF que vous pouvez consulter et envoyer à d’autres groupes selon vos besoins.
+La classification des données génère un rapport PDF.
 
 
 

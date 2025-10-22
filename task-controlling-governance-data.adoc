@@ -59,7 +59,7 @@ NOTE: Si l'une de vos sources de données implémente la hiérarchisation des do
 
 == Créer le rapport d'évaluation de la découverte de données
 
-Le rapport d’évaluation de la découverte de données fournit une analyse de haut niveau de l’environnement analysé pour montrer les zones de préoccupation et les étapes de correction potentielles.  Les résultats sont basés à la fois sur la cartographie et la classification de vos données.  L’objectif de ce rapport est de sensibiliser à trois aspects importants de votre ensemble de données :
+Le rapport d’évaluation de la découverte de données fournit une analyse de haut niveau de l’environnement analysé pour montrer les zones de préoccupation et les étapes de correction potentielles. Les résultats sont basés à la fois sur la cartographie et la classification de vos données. L’objectif de ce rapport est de sensibiliser à trois aspects importants de votre ensemble de données :
 
 [cols="25,65"]
 |===

@@ -64,4 +64,4 @@ Les sélections de filtres sont :
 * « Heure du dernier accès classé et mis à jour » : cela affiche les fichiers qui ont été classés et la classification des données n'a pas pu réinitialiser l'heure du dernier accès à la date d'origine.  Ce filtre n'est pertinent que pour les environnements dans lesquels vous avez activé *Analyser en cas d'absence d'autorisations « attributs d'écriture »*.
 
 
-Si nécessaire, vous pouvez exporter ces résultats vers un rapport afin de voir quels fichiers sont ou ne sont pas analysés en raison des autorisations. link:task-investigate-data.html#data-investigation-report["En savoir plus sur le rapport d'enquête sur les données"^] .
+Si nécessaire, vous pouvez exporter ces résultats vers un rapport afin de voir quels fichiers sont ou ne sont pas analysés en raison des autorisations. link:task-investigate-data.html#download-your-report["En savoir plus sur les rapports d'enquête sur les données"^].

@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
-permalink: task-scanning-anf.html 
-keywords: cloud compliance, get started, enable cloud compliance, cloud compliance access, privacy, compliance, ANF, azure netApp files, data sense 
-summary: Suivez quelques étapes pour démarrer avec la classification des données pour Azure NetApp Files. 
+permalink: task-scan-google-cloud.html 
+keywords: cloud compliance, get started, enable cloud compliance, cloud compliance access, privacy, compliance, google cloud, google cloud netapp volumes 
+summary: Analysez votre système Google Cloud NetApp Volumes pour maintenir les normes de conformité et de gouvernance. 
 ---
-= Analyser les volumes Azure NetApp Files avec la NetApp Data Classification
+= Analyser les Google Cloud NetApp Volumes avec la NetApp Data Classification
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,13 +14,13 @@ summary: Suivez quelques étapes pour démarrer avec la classification des donn�
 
 
 [role="lead"]
-Suivez quelques étapes pour démarrer avec NetApp Data Classification pour Azure NetApp Files.
+NetApp Data Classification prend en charge Google Cloud NetApp Volumes en tant que système.  Découvrez comment analyser votre système Google Cloud NetApp Volumes .
 
 
 
-== Découvrez le système Azure NetApp Files que vous souhaitez analyser
+== Découvrez le système Google Cloud NetApp Volumes que vous souhaitez analyser
 
-Si le système Azure NetApp Files que vous souhaitez analyser n’est pas déjà présent dans la NetApp Console en tant que système,link:https://docs.netapp.com/us-en/storage-management-azure-netapp-files/task-quick-start.html["ajoutez-le dans la page Systèmes"^] .
+Si le système Google Cloud NetApp Volumes que vous souhaitez analyser n’est pas déjà présent dans la NetApp Console en tant que système,link:https://docs.netapp.com/us-en/storage-management-azure-netapp-files/task-quick-start.html["ajoutez-le à la page Systèmes"^] .
 
 
 
@@ -28,27 +28,24 @@ Si le système Azure NetApp Files que vous souhaitez analyser n’est pas déjà
 
 link:task-deploy-cloud-compliance.html["Déployer la classification des données"^]s'il n'y a pas déjà une instance déployée.
 
-La classification des données doit être déployée dans le cloud lors de l’analyse des volumes Azure NetApp Files et doit être déployée dans la même région que les volumes que vous souhaitez analyser.
+La classification des données doit être déployée dans le cloud lors de l'analyse des Google Cloud NetApp Volumes et doit être déployée dans la même région que les volumes que vous souhaitez analyser.
 
-*Remarque :* le déploiement de la classification des données dans un emplacement local n’est actuellement pas pris en charge lors de l’analyse des volumes Azure NetApp Files .
+*Remarque :* le déploiement de la classification des données dans un emplacement sur site n'est actuellement pas pris en charge lors de l'analyse des Google Cloud NetApp Volumes.
 
 
 
 == Activez la classification des données dans vos systèmes
 
-Vous pouvez activer la classification des données sur vos volumes Azure NetApp Files .
+Vous pouvez activer la classification des données sur votre système Google Cloud NetApp Volumes .
 
 . Dans le menu Classification des données, sélectionnez *Configuration*.
-+
-image:screenshot_cloud_compliance_anf_scan_config.png["Une capture d’écran de l’onglet Configuration immédiatement après le déploiement de l’instance de classification des données."]
-
 . Sélectionnez la manière dont vous souhaitez analyser les volumes de chaque système. link:concept-classification.html#whats-the-difference-between-mapping-and-classification-scans["En savoir plus sur les analyses de cartographie et de classification"]:
 +
 ** Pour mapper tous les volumes, sélectionnez *Mapper tous les volumes*.
 ** Pour cartographier et classer tous les volumes, sélectionnez *Cartographier et classer tous les volumes*.
-** Pour personnaliser l'analyse de chaque volume, sélectionnez *Ou sélectionnez le type d'analyse pour chaque volume*, puis choisissez les volumes que vous souhaitez mapper ou mapper et classer.
+** Pour personnaliser l'analyse de chaque volume, sélectionnez *Ou sélectionnez le type d'analyse pour chaque volume*, puis choisissez les volumes que vous souhaitez mapper et/ou classer.
 +
-Voir<<Activer ou désactiver les analyses de conformité sur les volumes,Activer ou désactiver les analyses de conformité sur les volumes>> pour plus de détails.
+Voir<<Activer et désactiver les analyses de conformité sur les volumes,Activer et désactiver les analyses de conformité sur les volumes>> pour plus de détails.
 
 
 
@@ -56,23 +53,23 @@ Voir<<Activer ou désactiver les analyses de conformité sur les volumes,Activer
 
 
 .Résultat
-La classification des données commence à analyser les volumes que vous avez sélectionnés dans le système. Les résultats sont disponibles dans le tableau de bord Conformité dès que la classification des données termine les analyses initiales. Le temps nécessaire dépend de la quantité de données : cela peut prendre quelques minutes ou quelques heures. Vous pouvez suivre la progression de l'analyse initiale en accédant au menu **Configuration** puis en sélectionnant la **Configuration système**. La classification des données affiche une barre de progression pour chaque analyse.  Vous pouvez survoler la barre de progression pour voir le nombre de fichiers analysés par rapport au nombre total de fichiers dans le volume.
+La classification des données commence à analyser les volumes que vous avez sélectionnés dans le système. Les résultats sont disponibles dans le tableau de bord Conformité dès que la classification des données termine les analyses initiales. Le temps nécessaire dépend de la quantité de données : de quelques minutes à quelques heures.  Vous pouvez suivre la progression de l'analyse initiale dans la section **Configuration système** du menu **Configuration**.  La classification des données affiche une barre de progression pour chaque analyse. Vous pouvez également survoler la barre de progression pour voir le nombre de fichiers analysés par rapport au nombre total de fichiers dans le volume.
 
 * Par défaut, si Data Classification ne dispose pas d'autorisations d'attributs d'écriture dans CIFS ou d'autorisations d'écriture dans NFS, le système n'analysera pas les fichiers de vos volumes car Data Classification ne peut pas rétablir l'« heure du dernier accès » à l'horodatage d'origine.  Si vous ne vous souciez pas de savoir si la dernière heure d'accès est réinitialisée, sélectionnez *Ou sélectionnez le type d'analyse pour chaque volume*.  La page résultante contient un paramètre que vous pouvez activer pour que la classification des données analyse les volumes quelles que soient les autorisations.
-* La classification des données analyse un seul partage de fichiers sous un volume.  Si vous avez plusieurs partages dans vos volumes, vous devrez analyser ces autres partages séparément en tant que groupe de partages. link:reference-limitations.html#data-classification-scans-only-one-share-under-a-volume["En savoir plus sur cette limitation de classification des données"^] .
+* La classification des données analyse un seul partage de fichiers sous un volume. Si vous avez plusieurs partages dans vos volumes, vous devez analyser ces autres partages séparément en tant que groupe de partages. link:reference-limitations.html#data-classification-scans-only-one-share-under-a-volume["En savoir plus sur cette limitation de classification des données"^].
 
 
 
 
 == Vérifiez que la classification des données a accès aux volumes
 
-Assurez-vous que la classification des données peut accéder aux volumes en vérifiant votre réseau, vos groupes de sécurité et vos politiques d'exportation.  Vous devez fournir à Data Classification les informations d'identification CIFS afin qu'elle puisse accéder aux volumes CIFS.
+Assurez-vous que la classification des données peut accéder aux volumes en vérifiant votre réseau, vos groupes de sécurité et vos politiques d'exportation.  Pour les volumes CIFS, vous devez fournir une classification des données avec les informations d'identification CIFS.
 
 
-NOTE: Pour Azure NetApp Files, la classification des données ne peut analyser que les volumes dans la même région que la console.
+NOTE: Pour les Google Cloud NetApp Volumes, la classification des données ne peut analyser que les volumes situés dans la même région que la console.
 
 .Liste de contrôle
-* Assurez-vous qu’il existe une connexion réseau entre l’instance de classification des données et chaque réseau qui inclut des volumes pour Azure NetApp Files.
+* Assurez-vous qu'il existe une connexion réseau entre l'instance de classification des données et chaque réseau qui inclut des volumes pour Google Cloud NetApp Volumes.
 * Assurez-vous que les ports suivants sont ouverts sur l’instance de classification des données :
 +
 ** Pour NFS – ports 111 et 2049.
@@ -87,7 +84,7 @@ NOTE: Pour Azure NetApp Files, la classification des données ne peut analyser q
 +
 .. Si vous utilisez CIFS (SMB), assurez-vous que les informations d’identification Active Directory sont correctes.  Pour chaque système, sélectionnez *Modifier les informations d'identification CIFS*, puis saisissez le nom d'utilisateur et le mot de passe dont Data Classification a besoin pour accéder aux volumes CIFS sur le système.
 +
-Les informations d'identification peuvent être en lecture seule ; la fourniture d'informations d'identification d'administrateur garantit que Data Classification peut lire toutes les données nécessitant des autorisations élevées. Les informations d’identification sont stockées sur l’instance de classification des données.
+Les informations d'identification peuvent être en lecture seule, mais la fourniture d'informations d'identification d'administrateur garantit que la classification des données peut lire toutes les données nécessitant des autorisations élevées.  Les informations d’identification sont stockées sur l’instance de classification des données.
 
 +
 Si vous souhaitez vous assurer que les « dernières heures d'accès » de vos fichiers ne sont pas modifiées par les analyses de classification des données, il est recommandé que l'utilisateur dispose des autorisations d'écriture d'attributs dans CIFS ou des autorisations d'écriture dans NFS. Si possible, configurez l’utilisateur Active Directory en tant que membre d’un groupe parent de l’organisation disposant d’autorisations sur tous les fichiers.
@@ -100,12 +97,12 @@ image:screenshot_cifs_status.gif["Une capture d’écran qui montre la page de c
 
 
 
-. Sur la page Configuration, sélectionnez *Afficher les détails* pour vérifier l’état de chaque volume CIFS et NFS.  Si nécessaire, corrigez les erreurs telles que les problèmes de connectivité réseau.
+. Sur la page Configuration, sélectionnez *Afficher les détails* pour vérifier l’état de chaque volume CIFS et NFS et corriger les erreurs éventuelles.
 
 
 
 
-== Activer ou désactiver les analyses de conformité sur les volumes
+== Activer et désactiver les analyses de conformité sur les volumes
 
 Vous pouvez démarrer ou arrêter les analyses sur n’importe quel système à tout moment à partir de la page de configuration.  Vous pouvez également passer d'analyses de cartographie uniquement à des analyses de cartographie et de classification, et vice-versa.  Il est recommandé d'analyser tous les volumes d'un système.
 
