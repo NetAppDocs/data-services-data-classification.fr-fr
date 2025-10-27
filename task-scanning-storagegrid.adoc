@@ -62,7 +62,7 @@ StorageGRID est ajouté à la liste des systèmes.
 
 
 
-== Activer et désactiver les analyses de conformité sur les buckets StorageGRID
+== Activer et désactiver les analyses sur les buckets StorageGRID
 
 Après avoir activé la classification des données sur StorageGRID, l’étape suivante consiste à configurer les buckets que vous souhaitez analyser.  La classification des données découvre ces compartiments et les affiche dans le système que vous avez créé.
 

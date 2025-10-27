@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-scanning-fsx.html 
 keywords: cloud compliance, get started, enable cloud compliance, cloud compliance access, privacy, compliance, fsx, fsx for ontap, aws, data sense 
-summary: Suivez quelques étapes pour commencer à analyser le volume Amazon FSx for ONTAP avec NetApp Data Classification. 
+summary: Suivez quelques étapes pour commencer à analyser les volumes Amazon FSx pour ONTAP avec NetApp Data Classification. 
 ---
 = Analyser Amazon FSx pour les volumes ONTAP avec la NetApp Data Classification
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: Suivez quelques étapes pour commencer à analyser le volume Amazon FSx
 
 
 [role="lead"]
-Suivez quelques étapes pour commencer à analyser le volume Amazon FSx for ONTAP avec NetApp Data Classification.
+Suivez quelques étapes pour analyser Amazon FSx pour les volumes ONTAP avec NetApp Data Classification.
 
 
 
@@ -73,7 +73,7 @@ image:screenshot_fsx_scanning_activate.png["Une capture d’écran de l’onglet
 
 
 .Résultat
-La classification des données commence à analyser les volumes que vous avez sélectionnés dans le système.  Les résultats seront disponibles dans le tableau de bord de conformité dès que la classification des données aura terminé les analyses initiales.  Le temps nécessaire dépend de la quantité de données : cela peut prendre quelques minutes ou quelques heures.  Vous pouvez suivre la progression de l'analyse initiale en accédant au menu **Configuration** puis en sélectionnant la **Configuration système**.  La progression de chaque analyse est affichée sous forme de barre de progression.  Vous pouvez également survoler la barre de progression pour voir le nombre de fichiers analysés par rapport au nombre total de fichiers dans le volume.
+La classification des données commence à analyser les volumes que vous avez sélectionnés dans le système. Les résultats seront disponibles dans le tableau de bord de conformité dès que la classification des données aura terminé les analyses initiales. Le temps nécessaire dépend de la quantité de données : cela peut prendre quelques minutes ou quelques heures. Vous pouvez suivre la progression de l'analyse initiale en accédant au menu **Configuration** puis en sélectionnant la **Configuration système**. Suivez la progression de chaque analyse dans la barre de progression ; vous pouvez survoler la barre de progression pour voir le nombre de fichiers analysés par rapport au nombre total de fichiers dans le volume.
 
 [NOTE]
 ====
@@ -124,7 +124,7 @@ Après avoir saisi les informations d’identification, vous devriez voir un mes
 
 
 
-== Activer et désactiver les analyses de conformité sur les volumes
+== Activer et désactiver les analyses sur les volumes
 
 Vous pouvez démarrer ou arrêter les analyses sur n’importe quel système à tout moment à partir de la page de configuration.  Vous pouvez également passer d'analyses de cartographie uniquement à des analyses de cartographie et de classification, et vice-versa.  Il est recommandé d'analyser tous les volumes d'un système.
 

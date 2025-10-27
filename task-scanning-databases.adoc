@@ -94,7 +94,7 @@ La base de données est ajoutée à la liste des systèmes.
 
 
 
-== Activer et désactiver les analyses de conformité sur les schémas de base de données
+== Activer et désactiver les analyses sur les schémas de base de données
 
 Vous pouvez arrêter ou démarrer l'analyse complète de vos schémas à tout moment.
 
@@ -112,6 +112,6 @@ image:screenshot_compliance_select_schemas.png["Une capture d'écran de la page 
 
 
 .Résultat
-La classification des données commence à analyser les schémas de base de données que vous avez activés.  Vous pouvez suivre la progression de l'analyse initiale en accédant au menu **Configuration** puis en sélectionnant la **Configuration système**.  La progression de chaque analyse est affichée sous forme de barre de progression.  Vous pouvez également survoler la barre de progression pour voir le nombre de fichiers analysés par rapport au nombre total de fichiers dans le volume.  S'il y a des erreurs, elles apparaîtront dans la colonne Statut, à côté de l'action requise pour corriger l'erreur.
+La classification des données commence à analyser les schémas de base de données que vous avez activés. Vous pouvez suivre la progression de l'analyse initiale en accédant au menu **Configuration** puis en sélectionnant la **Configuration système**. La progression de chaque analyse est affichée sous forme de barre de progression.  Vous pouvez également survoler la barre de progression pour voir le nombre de fichiers analysés par rapport au nombre total de fichiers dans le volume.  S'il y a des erreurs, elles apparaîtront dans la colonne Statut, à côté des actions requises pour corriger l'erreur.
 
 Data Classification analyse vos bases de données une fois par jour ; les bases de données ne sont pas analysées en continu comme les autres sources de données.

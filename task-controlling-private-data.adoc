@@ -17,7 +17,7 @@ summary: 'Prenez le contrôle de vos données privées en consultant les détail
 Prenez le contrôle de vos données privées en consultant les détails sur les données personnelles (PII) et les données personnelles sensibles (SPII) de votre organisation.  Vous pouvez également gagner en visibilité en examinant les catégories et les types de fichiers que NetApp Data Classification a trouvés dans vos données.
 
 
-NOTE: Les détails de conformité au niveau du fichier ne sont disponibles que si vous effectuez une analyse de classification complète.  Les analyses de cartographie uniquement ne fournissent pas de détails au niveau du fichier.
+NOTE: Les détails de conformité au niveau du fichier ne sont disponibles que si vous effectuez une analyse de classification complète. Les analyses de cartographie uniquement ne fournissent pas de détails au niveau du fichier.
 
 Par défaut, le tableau de bord de classification des données affiche les données de conformité pour tous les systèmes et bases de données.  Pour voir les données de certains systèmes uniquement, sélectionnez-les.
 
@@ -29,7 +29,7 @@ Vous pouvez filtrer les résultats de la page Enquête sur les données et tél�
 
 == Afficher les fichiers contenant des données personnelles
 
-La classification des données identifie automatiquement des mots, des chaînes et des modèles (Regex) spécifiques à l'intérieur des données. link:link:reference-private-data-categories.html["Par exemple, les numéros de carte de crédit, les numéros de sécurité sociale, les numéros de compte bancaire, les mots de passe, etc."] La classification des données identifie ce type d'informations dans des fichiers individuels, dans des fichiers au sein de répertoires (partages et dossiers) et dans des tables de base de données.
+La classification des données identifie automatiquement des mots, des chaînes et des modèles (Regex) spécifiques à l'intérieur des données. link:reference-private-data-categories.html["Par exemple, les numéros de carte de crédit, les numéros de sécurité sociale, les numéros de compte bancaire, les mots de passe, etc."]La classification des données identifie ce type d'informations dans des fichiers individuels, dans des fichiers au sein de répertoires (partages et dossiers) et dans des tables de base de données.
 
 Vous pouvez également créer des termes de recherche personnalisés pour identifier les données personnelles spécifiques à votre organisation. Pour plus d'informations, consultez la section link:task-custom-classification.html["Créer une classification personnalisée"] .
 
@@ -47,7 +47,7 @@ image:screenshot_personal_files.png["Une capture d'écran de la boîte de dialog
 
 . Examinez les données en recherchant, en triant, en développant les détails d'un fichier spécifique, en sélectionnant la flèche *Enquêter sur les résultats* pour voir les informations masquées ou en téléchargeant la liste des fichiers.
 +
-L'image suivante montre les données personnelles trouvées dans un répertoire (partages et dossiers).  Dans l'onglet *Structuré*, vous visualisez les données personnelles trouvées dans les bases de données.  Dans l'onglet *Non structuré*, vous pouvez afficher les données au niveau du fichier.
+Les images suivantes montrent les données personnelles trouvées dans un répertoire (partages et dossiers). Dans l'onglet *Structuré*, vous visualisez les données personnelles trouvées dans les bases de données. Dans l'onglet *Non structuré*, vous pouvez afficher les données au niveau du fichier.
 
 +
 image:screenshot_compliance_investigation_page.png["Une capture d'écran des informations détaillées trouvées dans les fichiers après avoir cliqué sur Enquêter sur les résultats."]

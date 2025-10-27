@@ -48,7 +48,7 @@ image:screenshot_cloud_compliance_anf_scan_config.png["Une capture d’écran de
 ** Pour cartographier et classer tous les volumes, sélectionnez *Cartographier et classer tous les volumes*.
 ** Pour personnaliser l'analyse de chaque volume, sélectionnez *Ou sélectionnez le type d'analyse pour chaque volume*, puis choisissez les volumes que vous souhaitez mapper ou mapper et classer.
 +
-Voir<<Activer ou désactiver les analyses de conformité sur les volumes,Activer ou désactiver les analyses de conformité sur les volumes>> pour plus de détails.
+Voir<<Activer ou désactiver les analyses sur les volumes,Activer ou désactiver les analyses sur les volumes>> pour plus de détails.
 
 
 
@@ -105,7 +105,7 @@ image:screenshot_cifs_status.gif["Une capture d’écran qui montre la page de c
 
 
 
-== Activer ou désactiver les analyses de conformité sur les volumes
+== Activer ou désactiver les analyses sur les volumes
 
 Vous pouvez démarrer ou arrêter les analyses sur n’importe quel système à tout moment à partir de la page de configuration.  Vous pouvez également passer d'analyses de cartographie uniquement à des analyses de cartographie et de classification, et vice-versa.  Il est recommandé d'analyser tous les volumes d'un système.
 

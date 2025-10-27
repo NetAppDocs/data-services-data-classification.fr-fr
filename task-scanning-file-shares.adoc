@@ -78,7 +78,7 @@ Si la boîte de dialogue répertorie des partages qui n’ont pas pu être ajout
 ** Pour désactiver l’analyse sur les partages de fichiers, sélectionnez *Désactivé*.
 +
 
-NOTE: Le commutateur en haut de la page pour *Analyser lorsque les autorisations « attributs d'écriture » sont manquantes* est désactivé par défaut.  Cela signifie que si Data Classification ne dispose pas d'autorisations d'attributs d'écriture dans CIFS ou d'autorisations d'écriture dans NFS, le système n'analysera pas les fichiers car Data Classification ne peut pas rétablir l'« heure du dernier accès » à l'horodatage d'origine.  + Si vous activez *Analyser en cas d'absence d'autorisations « attributs d'écriture »*, l'analyse réinitialise l'heure du dernier accès et analyse tous les fichiers, quelles que soient les autorisations.  + Pour en savoir plus sur l'horodatage du dernier accès, voirlink:link:reference-collected-metadata.html#last-access-time-timestamp["Métadonnées collectées à partir de sources de données dans la classification des données"] .
+NOTE: Le commutateur en haut de la page pour *Analyser lorsque les autorisations « attributs d'écriture » sont manquantes* est désactivé par défaut. Cela signifie que si Data Classification ne dispose pas d'autorisations d'attributs d'écriture dans CIFS ou d'autorisations d'écriture dans NFS, le système n'analysera pas les fichiers car Data Classification ne peut pas rétablir l'« heure du dernier accès » à l'horodatage d'origine. + Si vous activez *Analyser en cas d'absence d'autorisations « attributs d'écriture »*, l'analyse réinitialise l'heure du dernier accès et analyse tous les fichiers, quelles que soient les autorisations. + Pour en savoir plus sur l'horodatage du dernier accès, voirlink:reference-collected-metadata.html#last-access-time-timestamp["Métadonnées collectées à partir de sources de données dans la classification des données"] .
 
 
 
@@ -108,7 +108,7 @@ image:screenshot-edit-cifs-credential.png["Capture d'écran du menu Modifier les
 . Sélectionnez **Enregistrer** pour terminer le processus.
 
 
-.Ajouter des partages de fichiers aux analyses de conformité
+.Ajouter des partages de fichiers aux analyses
 . Dans le menu Classification des données, sélectionnez *Configuration*.
 . Depuis la page Configuration, sélectionnez le groupe de partages de fichiers que vous souhaitez modifier.
 . Sélectionnez **+ Ajouter des partages**.
@@ -126,7 +126,7 @@ Si vous ajoutez des partages de fichiers avec un deuxième protocole, assurez-vo
 . Sélectionnez **Continuer** pour terminer l’ajout des partages de fichiers.
 
 
-.Supprimer un partage de fichiers des analyses de conformité
+.Supprimer un partage de fichiers des analyses
 . Dans le menu Classification des données, sélectionnez *Configuration*.
 . Sélectionnez le système dont vous souhaitez supprimer les partages de fichiers.
 . Sélectionnez *Configuration*.
