@@ -18,6 +18,21 @@ Découvrez les nouveautés de la NetApp Data Classification.
 
 
 
+== 10 novembre 2025
+
+
+
+=== Version 1.48
+
+Cette version de la Classification des données inclut des correctifs de bogues, des améliorations de sécurité et des optimisations de performances.
+
+.Clarté améliorée du suivi de la progression de l'analyse
+Les configurations d'analyse incluent désormais des informations améliorées sur l'avancement de l'analyse. Auparavant, une barre de progression ne s'affichait que pendant le déroulement de l'analyse. Désormais, la barre de progression reste visible après la fin de l'analyse pour confirmer que les scans ont été effectués avec succès. Vous pouvez également consulter le nombre de fichiers cartographiés et analysés.
+
+Pour plus d'informations sur les paramètres de numérisation, consultez link:task-managing-repo-scanning.html#view-the-scan-status-for-your-repositories["Modifier les paramètres d'analyse de NetApp Data Classification pour vos référentiels"^].
+
+
+
 == 06 octobre 2025
 
 
@@ -164,7 +179,7 @@ Redis a été mis à niveau pour améliorer la fiabilité de la BlueXP classific
 
 === Version 1.43
 
-Cette version de classification des données comprend :
+Cette version de BlueXP Classification comprend :
 
 .Prioriser les analyses de classification
 La classification des données prend en charge la possibilité de hiérarchiser les analyses de cartographie et de classification en plus des analyses de cartographie uniquement, vous permettant de sélectionner les analyses à effectuer en premier. La priorisation des analyses Map & Classify est prise en charge pendant et avant le début des analyses. Si vous choisissez de donner la priorité à une analyse pendant qu'elle est en cours, les analyses de mappage et de classification sont toutes deux prioritaires.

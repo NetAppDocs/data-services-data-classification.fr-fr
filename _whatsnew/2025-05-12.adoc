@@ -6,7 +6,7 @@
 
 === Version 1.43
 
-Cette version de classification des données comprend :
+Cette version de BlueXP Classification comprend :
 
 .Prioriser les analyses de classification
 La classification des données prend en charge la possibilité de hiérarchiser les analyses de cartographie et de classification en plus des analyses de cartographie uniquement, vous permettant de sélectionner les analyses à effectuer en premier. La priorisation des analyses Map & Classify est prise en charge pendant et avant le début des analyses. Si vous choisissez de donner la priorité à une analyse pendant qu'elle est en cours, les analyses de mappage et de classification sont toutes deux prioritaires.

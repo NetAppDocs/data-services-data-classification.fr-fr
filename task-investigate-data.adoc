@@ -238,9 +238,13 @@ TIP: Vous pouvez développer un niveau du groupe pour voir les utilisateurs qui 
 
 Vous pouvez vérifier si des fichiers en double sont stockés dans vos systèmes de stockage.  Ceci est utile si vous souhaitez identifier les zones dans lesquelles vous pouvez économiser de l'espace de stockage.  Il est également bon de s’assurer que certains fichiers disposant d’autorisations spécifiques ou d’informations sensibles ne sont pas inutilement dupliqués dans vos systèmes de stockage.
 
-Tous vos fichiers (à l'exception des bases de données) de 1 Mo ou plus, ou contenant des informations personnelles ou sensibles, sont comparés pour voir s'il existe des doublons.
+La classification des données compare tous les fichiers (à l'exclusion des bases de données) pour détecter les doublons s'ils sont :
 
-La classification des données utilise la technologie de hachage pour déterminer les fichiers en double.  Si un fichier possède le même code de hachage qu’un autre fichier, vous pouvez être sûr à 100 % que les fichiers sont des doublons exacts, même si les noms de fichiers sont différents.
+* 1 Mo ou plus
+* Ou contenir des informations personnelles ou des informations personnelles sensibles
+
+
+La classification des données utilise la technologie de hachage pour déterminer les fichiers en double. Si deux fichiers ont le même code de hachage, ils sont considérés comme des copies exactes, même si leurs noms sont différents.
 
 .Étapes
 . Dans le menu Classification des données, sélectionnez *Enquête*.

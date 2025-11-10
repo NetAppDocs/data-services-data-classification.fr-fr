@@ -45,7 +45,7 @@ Vous pouvez activer la classification des données sur votre système Google Clo
 ** Pour cartographier et classer tous les volumes, sélectionnez *Cartographier et classer tous les volumes*.
 ** Pour personnaliser l'analyse de chaque volume, sélectionnez *Ou sélectionnez le type d'analyse pour chaque volume*, puis choisissez les volumes que vous souhaitez mapper et/ou classer.
 +
-Voir<<Activer et désactiver les analyses de conformité sur les volumes,Activer et désactiver les analyses de conformité sur les volumes>> pour plus de détails.
+Voir<<Activer et désactiver les analyses sur les volumes,Activer et désactiver les analyses sur les volumes>> pour plus de détails.
 
 
 
