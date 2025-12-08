@@ -1,0 +1,17 @@
+= Version 1.49
+:allow-uri-read: 
+
+
+
+
+=== Version 1.49
+
+Cette version de Data Classification inclut des correctifs de bogues et les mises à jour suivantes :
+
+.Surveillez les indicateurs et les performances dans le tableau de bord de surveillance de la santé.
+Data Classification propose désormais un tableau de bord de surveillance de l'état de santé, offrant une surveillance en temps réel de vos ressources et des informations sur l'utilisation de la mémoire, l'utilisation du disque, le taux d'utilisation du disque, et plus encore. Grâce aux informations fournies par le tableau de bord de surveillance de l'état de santé, vous pouvez examiner l'infrastructure de votre déploiement et obtenir des informations permettant d'optimiser le stockage et les performances.
+
+Pour plus d'informations, voir link:https://docs.netapp.com/us-en/data-services-data-classification/task-health-monitor.html["Surveiller l'état de la classification des données"].
+
+.Performances de chargement améliorées
+Les performances de chargement de toutes les pages de la section Classification des données ont été améliorées afin d'offrir une expérience utilisateur plus efficace.

@@ -79,6 +79,8 @@ sidebar:
       url: "/task-managing-repo-scanning.html"
     - title: Générer des rapports de conformité
       url: "/task-generating-compliance-reports.html"
+    - title: Surveiller la santé du système
+      url: "/task-health-monitor.html"
   - title: Gérer la classification des données
     entries:
     - title: Exclure les répertoires de l'analyse

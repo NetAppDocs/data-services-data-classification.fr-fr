@@ -1,0 +1,62 @@
+---
+sidebar: sidebar 
+permalink: task-health-monitor.html 
+keywords: health monitor, disk usage, disk utilization, cpu usage, memory usage, metrics 
+summary: 'La classification des données fournit des informations sur l"utilisation et l"exploitation des données afin d"optimiser les performances et de résoudre les problèmes.' 
+---
+= Surveiller l'état de la NetApp Data Classification
+:hardbreaks:
+:allow-uri-read: 
+:firstname: :nofooter
+:author: :nofooter
+:authorinitials: :
+:authors: :nofooter
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Le tableau de bord NetApp Data Classification Health Monitor assure une surveillance en temps réel et fournit des informations sur les performances. Le Health Monitor recueille des informations sur votre infrastructure de classification des données, l'état de votre système, les indicateurs d'utilisation et les données d'utilisation, vous permettant ainsi d'identifier et de résoudre les problèmes.
+
+
+
+== Informations du moniteur de santé
+
+Le tableau de bord Health Monitor présente les informations dans quatre catégories.
+
+* **État de l'infrastructure**
++
+Consultez les informations relatives à la version, à la stabilité du système, au type de déploiement et à la taille de la machine.
+
+* **Conteneurs problématiques**
++
+Consultez le champ des conteneurs problématiques pour obtenir des informations sur les conteneurs qui sont arrêtés ou redémarrés fréquemment. Utilisez ces informations pour examiner les conteneurs spécifiques.
+
+* **Informations système**
++
+Le panneau d'informations système capture des informations essentielles sur la NetApp Console et la classification des données, telles que les adresses IP publiques et privées, le nom d'hôte, le système d'exploitation, la version de la console et l'ID de la console.
+
+* **Utilisation et mise en œuvre**
++
+Examinez l'utilisation du processeur, l'utilisation du disque et l'utilisation de la mémoire. Ces valeurs sont affichées en unités de stockage (Go) ou en pourcentage de l'utilisation totale. Si un avertissement s'affiche dans un champ, sélectionnez-le pour obtenir des informations et des recommandations de correction.
+
+
+
+
+
+== Accédez au tableau de bord du Moniteur de santé
+
+. Dans Classification des données, sélectionnez **Configuration**.
+. Sous l'en-tête **Configuration**, sélectionnez **Moniteur d'intégrité de la classification des données**.
+. Dans le tableau de bord Health Monitor, vous pouvez :
++
+** Examiner l'utilisation et l'emploi. Si des avertissements apparaissent dans les indicateurs d'utilisation, sélectionnez-les pour obtenir des recommandations permettant de résoudre le problème.
+** Basculez l'affichage du graphique pour visualiser l'utilisation du processeur, l'utilisation du disque et l'utilisation de la mémoire. Vous pouvez modifier l'axe des x pour afficher le contenu sur des heures (6, 12 ou 24) ou des jours (2, 7 ou 14).
+** Actualisez le tableau de bord pour afficher les indicateurs de données les plus récents.
++
+image:health-monitor.png["Capture d'écran du tableau de bord Health Monitor"]
+
+
+
+
