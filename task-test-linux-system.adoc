@@ -16,7 +16,7 @@ summary: 'Avant d"installer Data Classification manuellement sur un hôte Linux,
 [role="lead"]
 Avant d'installer manuellement NetApp Data Classification sur un hôte Linux, exécutez éventuellement un script sur l'hôte pour vérifier que toutes les conditions préalables sont réunies pour l'installation de Data Classification.  Vous pouvez exécuter ce script sur un hôte Linux de votre réseau ou sur un hôte Linux dans le cloud.  L'hôte peut être connecté à Internet ou résider sur un site qui n'a pas accès à Internet (un _site sombre_).
 
-Il existe également un script de test prérequis qui fait partie du script d'installation de la classification des données.  Le script décrit ici est spécifiquement conçu pour les utilisateurs qui souhaitent vérifier l'hôte Linux indépendamment de l'exécution du script d'installation de la classification des données.
+Le script d'installation de la classification des données comprend un script de test pour garantir que votre environnement répond aux exigences. Vous pouvez exécuter ce script séparément pour vérifier que le système hôte Linux est prêt avant d'exécuter le script d'installation.
 
 
 
@@ -24,11 +24,11 @@ Il existe également un script de test prérequis qui fait partie du script d'in
 
 Vous effectuerez les tâches suivantes.
 
-. Vous pouvez également installer un agent de console si vous n'en avez pas déjà un installé.  Vous pouvez exécuter le script de test sans avoir installé d'agent de console, mais le script vérifie la connectivité entre l'agent de console et la machine hôte de classification des données. Il est donc recommandé de disposer d'un agent de console.
-. Préparez la machine hôte et vérifiez qu’elle répond à toutes les exigences.
-. Activez l'accès Internet sortant à partir de la machine hôte de classification des données.
-. Vérifiez que tous les ports requis sont activés sur tous les systèmes.
-. Téléchargez et exécutez le script de test prérequis.
+* Vous pouvez également installer un agent de console si vous n'en avez pas déjà un installé.  Vous pouvez exécuter le script de test sans avoir installé d'agent de console, mais le script vérifie la connectivité entre l'agent de console et la machine hôte de classification des données. Il est donc recommandé de disposer d'un agent de console.
+* Préparez la machine hôte et vérifiez qu’elle répond à toutes les exigences.
+* Activez l'accès Internet sortant à partir de la machine hôte de classification des données.
+* Vérifiez que tous les ports requis sont activés sur tous les systèmes.
+* Téléchargez et exécutez le script de test prérequis.
 
 
 
@@ -37,19 +37,24 @@ Vous effectuerez les tâches suivantes.
 
 Un agent de console est requis avant de pouvoir installer et utiliser la classification des données.  Vous pouvez toutefois exécuter le script Prérequis sans agent de console.
 
-Tu peux https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-on-prem.html["installer l'agent de console sur site"^] sur un hôte Linux de votre réseau ou sur un hôte Linux dans le cloud.  Certains utilisateurs prévoyant d’installer la classification des données sur site peuvent également choisir d’installer l’agent de console sur site.
+Tu peux link:https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-on-prem.html["installer l'agent de console sur site"^] sur un serveur Linux de votre réseau ou sur un serveur Linux dans le cloud. Vous pouvez également installer la classification des données sur site si l'agent de la console est installé sur site.
 
-Pour créer un agent de console dans votre environnement de fournisseur de cloud, consultez https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-aws.html["création d'un agent de console dans AWS"^] , https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html["création d'un agent de console dans Azure"^] , ou https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-google.html["création d'un agent de console dans GCP"^] .
+Pour créer un agent Console dans votre environnement de fournisseur de cloud, consultez :
 
-Vous aurez besoin de l'adresse IP ou du nom d'hôte du système d'agent de la console lors de l'exécution du script Prérequis.  Vous disposerez de ces informations si vous avez installé l'agent Console dans vos locaux.  Si l'agent Console est déployé dans le cloud, vous pouvez trouver ces informations depuis la Console : sélectionnez l'icône Aide puis *Support* puis *Agent Console*.
+* https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-aws.html["création d'un agent de console dans AWS"^]
+* https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html["création d'un agent de console dans Azure"^]
+* https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-google.html["création d'un agent de console dans GCP"^]
+
+
+Vous aurez besoin de l'adresse IP ou du nom d'hôte du système de l'agent Console lors de l'exécution du script Prérequis. Vous disposez de ces informations si vous avez installé l'agent Console dans vos locaux. Si l'agent Console est déployé dans le cloud, vous pouvez trouver ces informations depuis la Console : sélectionnez l'icône Aide puis *Support* ; dans la section Agent et Audit, sélectionnez *Accéder à l'agent*.
 
 
 
 == Vérifier les exigences de l'hôte
 
-Le logiciel de classification des données doit s'exécuter sur un hôte qui répond aux exigences spécifiques du système d'exploitation, aux exigences de RAM, aux exigences logicielles, etc.
+Le logiciel de classification des données doit s'exécuter sur un hôte répondant à des exigences spécifiques en matière de système d'exploitation, de mémoire vive et de logiciel.
 
-* La classification des données n'est pas prise en charge sur un hôte partagé avec d'autres applications : l'hôte doit être un hôte dédié.
+* La classification des données doit être hébergée sur un serveur dédié. L'hôte ne peut pas être partagé avec d'autres applications ou logiciels tiers tels que les antivirus.
 * Lors de la création du système hôte dans vos locaux, vous pouvez choisir parmi ces tailles de système en fonction de la taille de l'ensemble de données que vous prévoyez d'analyser pour la classification des données.
 +
 [cols="17,17,27,31"]

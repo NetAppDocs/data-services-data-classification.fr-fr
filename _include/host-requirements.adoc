@@ -2,7 +2,7 @@
 :allow-uri-read: 
 
 
-* La classification des données n'est pas prise en charge sur un hôte partagé avec d'autres applications : l'hôte doit être un hôte dédié.
+* La classification des données doit être hébergée sur un serveur dédié. L'hôte ne peut pas être partagé avec d'autres applications ou logiciels tiers tels que les antivirus.
 * Lors de la création du système hôte dans vos locaux, vous pouvez choisir parmi ces tailles de système en fonction de la taille de l'ensemble de données que vous prévoyez d'analyser pour la classification des données.
 +
 [cols="17,17,27,31"]
