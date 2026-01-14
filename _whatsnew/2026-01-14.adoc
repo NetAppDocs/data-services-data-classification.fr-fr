@@ -1,0 +1,25 @@
+= Version 1.50
+:allow-uri-read: 
+
+
+
+
+=== Version 1.50
+
+Cette version de Data Classification inclut des correctifs de bogues et les mises à jour suivantes :
+
+.Améliorations de la classification personnalisée
+La classification des données prend désormais en charge la création de catégories personnalisées pour vos données. Vous pouvez télécharger des fichiers pour affiner un modèle d'IA que la classification des données utilise pour appliquer le marqueur de catégorie aux données. L'interface de toutes les classifications personnalisées a été améliorée.
+
+Pour plus d'informations, voir link:https://docs.netapp.com/us-en/data-services-data-classification/task-custom-classification.html["Créer une classification personnalisée"^].
+
+.Définition de données obsolètes personnalisée
+La classification des données vous permet désormais de personnaliser la définition des données obsolètes afin qu'elle corresponde aux besoins de votre organisation. Auparavant, les données obsolètes étaient définies comme toutes les données dont la dernière modification remontait à trois ans. Désormais, les données obsolètes peuvent être identifiées en fonction de leur dernière consultation ou de leur dernière modification ; cette période peut aller de 6 mois à 10 ans.
+
+Pour plus d'informations, voir link:https://docs.netapp.com/us-en/data-services-data-classification/task-stale-data.html["Personnaliser la définition des données obsolètes"^].
+
+.Performances améliorées
+Les temps de chargement de toutes les pages de la section Classification des données, du rapport de cartographie des données et des filtres de la page Investigation ont été réduits.
+
+.Délai estimé pour les rapports d'enquête
+Lorsque vous téléchargez un rapport d'enquête, la classification des données affiche désormais le temps estimé pour la fin du téléchargement.

@@ -13,26 +13,117 @@ summary: 'NetApp Data Classification vous permet de personnaliser une recherche 
 
 
 [role="lead"]
-Avec NetApp Data Classification, vous pouvez créer une recherche personnalisée pour les informations sensibles.  La recherche peut être limitée à une expression régulière (regex).
+La NetApp Data Classification vous permet de créer des catégories personnalisées ou des identifiants personnels pour identifier les données spécifiques aux exigences réglementaires et de conformité de votre organisation.
+
+La classification des données prend en charge deux types de classificateurs personnalisés : les catégories et les identifiants personnels. Les catégories personnalisées sont créées à partir d'un ensemble de fichiers que vous téléchargez, à partir desquels la classification des données crée un modèle d'IA pour identifier les données similaires au sein de votre organisation (par exemple, une entreprise de recherche en santé pourrait créer une catégorie d'analyse clinique). Les identifiants personnels personnalisés sont créés à l'aide de listes de mots clés ou d'une expression régulière (regex) pour identifier les informations spécifiques à votre organisation qui peuvent présenter un risque de non-conformité.
+
+Toutes les classifications personnalisées sont disponibles dans le tableau de bord des classifications personnalisées.
 
 
 
-== Créer une classification personnalisée
+== Créer un identifiant personnel personnalisé
 
-La classification personnalisée n'est disponible que pour les analyses Map & Classify, et non pour les analyses de cartographie uniquement. Cette fonctionnalité est actuellement en version préliminaire.
+La classification des données vous permet de créer un identifiant personnel personnalisé à l'aide de mots clés contextuels ou d'une expression régulière afin d'identifier les données propres à votre organisation.
+
+.Exigences relatives aux mots-clés
+Si vous créez votre identifiant personnel à l'aide d'une liste de mots clés, cette liste doit répondre aux exigences suivantes :
+
+* La saisie des mots-clés n'est pas sensible à la casse.
+* Les mots-clés doivent comporter au moins trois caractères. Les mots de moins de trois caractères sont ignorés.
+* Les mots en double ne sont ajoutés qu'une seule fois.
+* La liste totale des mots-clés ne peut pas dépasser 500 000 caractères. La liste doit inclure au moins un mot-clé.
+
 
 .Étapes
 . Sélectionnez l'onglet **Classification personnalisée**.
-. Sélectionnez le bouton **Ajouter un nouveau classificateur**.
-. Ajoutez un nom de classificateur et une description pour le nouveau classificateur.
-. Choisissez d'ajouter le classificateur en tant qu'*identifiant personnel* ou *catégorie*.
+. Sélectionnez **+ Nouveau classificateur** pour créer le classificateur personnalisé.
+. Sélectionnez *Identifiant personnel*. Vous pouvez également sélectionner **Masquer les résultats** pour masquer les données personnelles détectées.
+. Sélectionnez **Suivant**.
 +
-image:screenshot-custom-classifier-name.png["Capture d'écran de l'ajout d'un classificateur"]
+image:screenshot-custom-classifier-name.png["Capture d'écran du choix du type de classificateur."]
 
-. Sélectionnez *Suivant*.
-. Pour ajouter la personnalisation sous forme d’expression régulière, sélectionnez **Expression régulière personnalisée** puis **Suivant**.
-. Ajoutez un modèle pour détecter les informations spécifiques de vos données.  Sélectionnez **Valider** pour confirmer la syntaxe de votre entrée.image:screenshot-create-logic-regex.png["Une capture d'écran de la boîte de dialogue pour créer une expression régulière."]
-. Sélectionnez **Terminé** pour créer la classification personnalisée.
+. Pour ajouter le classificateur avec des mots clés, sélectionnez **Mots clés**. Saisissez une liste de mots-clés, chaque entrée sur une ligne distincte. Assurez-vous que les mots-clés respectent les exigences. image:screenshot-keywords.png["Capture d'écran de la création d'un classificateur personnalisé avec des mots-clés."]
++
+Pour ajouter le classificateur en tant qu'expression régulière, sélectionnez **Expression régulière** puis ajoutez un modèle pour détecter les informations spécifiques de vos données. Sélectionnez **Valider** pour confirmer la syntaxe de votre saisie.
+
++
+image:screenshot-create-logic-regex.png["Capture d'écran de la boîte de dialogue permettant de créer une expression régulière."]
+
++
+.. Vous pouvez également saisir une chaîne de caractères d'exemple qui doit correspondre à votre modèle d'expression régulière, puis sélectionner **Tester** pour la vérifier.
+.. Ajoutez éventuellement des mots de proximité. Si vous ajoutez des mots de proximité, la classification des données ne signale le modèle d'expression régulière que si les mots de proximité sont adjacents à la chaîne correspondante.
 
 
-La nouvelle personnalisation est capturée lors de la prochaine analyse planifiée.  Pour voir les résultats, voirxref:task-generating-compliance-reports.html[Générer des rapports de conformité] .
+. Sélectionnez **Suivant**.
+. Saisissez un **nom de classificateur** et une **description** pour identifier la catégorie personnalisée dans votre tableau de bord.
+. Sélectionnez **Enregistrer** pour créer l'identifiant personnel personnalisé.
+
+
+Une fois que vous avez créé un identifiant personnel personnalisé, ses résultats sont capturés lors de la prochaine analyse planifiée. Pour obtenir des résultats plus rapidement, effectuez une analyse à la demande. Pour consulter les résultats, voir xref:task-generating-compliance-reports.html[Générer des rapports de conformité].
+
+
+
+== Créer une catégorie personnalisée
+
+Grâce aux catégories personnalisées, vous pouvez catégoriser les données spécifiques à votre organisation. Des catégories personnalisées sont créées à partir de fichiers texte que vous téléchargez, à partir desquels la classification des données crée un modèle d'IA pour identifier des informations similaires dans d'autres fichiers.
+
+.exigences en matière de données de formation
+* L'ensemble de données d'entraînement doit contenir au minimum 25 fichiers. Le nombre maximal de fichiers est de 1 000.
+* Tous les fichiers doivent se trouver directement dans le chemin d'accès que vous indiquez.
+* Tous les fichiers doivent avoir une taille supérieure à 100 octets.
+* Les données d'entraînement pour la classification des données doivent être de l'un des types de fichiers suivants : CSV, DOCX, DOC, GZ, JSON, PDF, PPTX, TXT, RTT, XLS ou XLSX. Vous pouvez télécharger une combinaison de tous les types de fichiers pris en charge.
+
+
+.Étapes
+. Dans la NetApp Data Classification, sélectionnez *Classification personnalisée*.
+. Sélectionnez *+ Nouveau classificateur*.
+. Choisissez *Catégorie personnalisée* comme type de classificateur, puis **Suivant**.
+. Définissez la logique de votre catégorie personnalisée à l'aide d'une collection de fichiers texte. Indiquez l'adresse IP de l'*adresse de travail*, puis sélectionnez le *volume* dans le menu déroulant.
++
+Saisissez le **chemin d'accès au répertoire** contenant les données d'entraînement.
+
+. Sélectionnez **Charger les fichiers** pour la classification des données afin d'effectuer une vérification des fichiers. Vous pouvez consulter le résumé des fichiers, qui indique le nom du fichier, sa taille, son type et des notes précisant si le fichier a été jugé acceptable pour la formation.
++
+image:custom-category-file-summary.png["Capture d'écran montrant le récapitulatif des fichiers téléchargés pour la formation."]
+
++
+.. Pour modifier le chemin d'accès aux fichiers ou les recharger, sélectionnez **Modifier le chemin d'accès**, puis saisissez les données et rechargez les fichiers.
+
+
+. Lorsque vous êtes satisfait des fichiers téléchargés, sélectionnez **Suivant**.
+. Saisissez un **nom de classificateur** et une **description** pour identifier la catégorie personnalisée dans votre tableau de bord.
+. Sélectionnez **Enregistrer** pour créer la catégorie personnalisée.
+
+
+.Résultat
+Une fois que vous avez créé une catégorie personnalisée, ses résultats sont pris en compte lors de la prochaine analyse planifiée. Pour obtenir des résultats plus rapidement, lancez l'analyse manuellement.
+
+
+
+== Modifier un classificateur personnalisé
+
+Vous pouvez modifier la logique d'un identifiant personnel après sa création. Vous ne pouvez pas modifier le type d'identifiant personnel ni le type logique ; par exemple, vous ne pouvez pas transformer une catégorie personnalisée en identifiant personnel personnalisé. Vous ne pouvez pas non plus remplacer un identifiant personnalisé basé sur un mot-clé par un identifiant personnalisé basé sur une expression régulière.
+
+.Étapes
+. Dans la NetApp Data Classification, sélectionnez *Classification personnalisée*.
+. Identifiez le classificateur que vous souhaitez supprimer, puis sélectionnez le menu d'actions. `...` au bout de sa rangée.
+. Sélectionnez **Modifier la logique**.
+. Si vous modifiez des mots clés, ajoutez, supprimez ou modifiez les mots clés appropriés. Si vous modifiez une expression régulière, saisissez la nouvelle expression régulière et validez-la. Ajoutez éventuellement des mots-clés de proximité.
+. Sélectionnez **Enregistrer** pour appliquer les modifications.
+
+
+
+
+== Supprimer un classificateur personnalisé
+
+. Dans la NetApp Data Classification, sélectionnez *Classification personnalisée*.
+. Identifiez le classificateur que vous souhaitez supprimer, puis sélectionnez le menu d'actions. `...` au bout de sa rangée.
+. Sélectionnez **Supprimer le classificateur**.
+
+
+
+
+== Prochaines étapes
+
+* xref:task-generating-compliance-reports.html[Générer des rapports de conformité]
+

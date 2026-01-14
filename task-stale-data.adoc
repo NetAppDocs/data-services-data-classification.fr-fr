@@ -1,0 +1,29 @@
+---
+sidebar: sidebar 
+permalink: task-stale-data.html 
+keywords: support registration, register for support, support, nss account, add nss account, 
+summary: Personnalisez la définition des données obsolètes dans la NetApp Data Classification afin que les rapports correspondent aux besoins de votre organisation. 
+---
+= Personnalisez la définition des données obsolètes dans NetApp Data Classification
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+La NetApp Data Classification identifie les données obsolètes pour vous aider à repérer les opportunités d'économies et les risques de gouvernance. Étant donné que la définition des données obsolètes peut varier selon les contextes organisationnels, vous pouvez personnaliser la façon dont la classification des données définit les données obsolètes.
+
+Les données obsolètes peuvent être définies en fonction de leur _dernier accès_ ou de leur _dernière modification_. Les périodes sélectionnables vont de 6 mois à 10 ans.
+
+Par défaut, les données sont considérées comme obsolètes si leur dernière modification remonte à trois ans.
+
+.Définir les données obsolètes
+. Dans Ransomware Resilience, sélectionnez **Configuration**.
+. Dans la page Configuration, faites défiler jusqu'à la section **Définition des données obsolètes**.
+. Dans le menu déroulant **Propriétés du fichier**, choisissez si vous souhaitez définir les données obsolètes en fonction de leur *Dernier accès* ou de leur *Dernière modification*.
+. Choisissez la période pour la définition des données obsolètes.
++
+image:stale-data.png["Capture d'écran des options de définition des données obsolètes"]
+
+. Sélectionnez **Enregistrer**.
+

@@ -55,7 +55,7 @@ Vous aurez besoin de l'adresse IP ou du nom d'hôte du système de l'agent Conso
 Le logiciel de classification des données doit s'exécuter sur un hôte répondant à des exigences spécifiques en matière de système d'exploitation, de mémoire vive et de logiciel.
 
 * La classification des données doit être hébergée sur un serveur dédié. L'hôte ne peut pas être partagé avec d'autres applications ou logiciels tiers tels que les antivirus.
-* Lors de la création du système hôte dans vos locaux, vous pouvez choisir parmi ces tailles de système en fonction de la taille de l'ensemble de données que vous prévoyez d'analyser pour la classification des données.
+* Choisissez la taille qui correspond à l'ensemble de données que vous prévoyez d'analyser avec la classification des données.
 +
 [cols="17,17,27,31"]
 |===
@@ -90,7 +90,7 @@ Le logiciel de classification des données doit s'exécuter sur un hôte répond
 +
 [cols="25,25"]
 |===
-| Dossier | Autorisations minimales 
+| Dossier | autorisations minimales 
 
 
 | /tmp | `rwxrwxrwt` 
@@ -124,7 +124,7 @@ Le logiciel de classification des données doit s'exécuter sur un hôte répond
 * *Red Hat Subscription Management* : L'hôte doit être enregistré auprès de Red Hat Subscription Management.  S'il n'est pas enregistré, le système ne peut pas accéder aux référentiels pour mettre à jour les logiciels tiers requis lors de l'installation.
 * *Logiciel supplémentaire* : Vous devez installer le logiciel suivant sur l'hôte avant d'installer Data Classification :
 +
-** Selon le système d'exploitation que vous utilisez, vous devrez installer l'un des moteurs de conteneur :
+** Selon le système d'exploitation que vous utilisez, vous devez installer l'un des moteurs de conteneurs :
 +
 *** Docker Engine version 19.3.1 ou supérieure. https://docs.docker.com/engine/install/["Voir les instructions d'installation"^] .
 *** Podman version 4 ou supérieure.  Pour installer Podman, entrez(`sudo yum install podman netavark -y` ).
