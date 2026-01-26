@@ -33,7 +33,7 @@ Vous pouvez égalementlink:https://docs.netapp.com/us-en/console-setup-admin/tas
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Deux"]Prérequis
 [role="quick-margin-para"]
-Assurez-vous que votre environnement peut répondre aux prérequis.  Cela inclut l'accès Internet sortant pour l'instance, la connectivité entre l'agent de console et la classification des données via le port 443, et bien plus encore.  << Prérequis,Voir la liste complète>>.
+Assurez-vous que votre environnement répond aux prérequis. Cela inclut un accès Internet sortant pour l'instance, une connectivité entre l'agent Console et Data Classification via le port 443, et plus encore. <<Prérequis,Voir la liste complète>>.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Trois"]Déployer la classification des données
 [role="quick-margin-para"]
