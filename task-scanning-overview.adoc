@@ -249,12 +249,3 @@ Le tableau ci-dessous montre certaines des différences :
 | Type de répertoire | Oui | Oui 
 |===
 ====
-
-
-== À quelle vitesse Data Classification analyse-t-il les données ?
-
-La vitesse d'analyse est affectée par la latence du réseau, la latence du disque, la bande passante du réseau, la taille de l'environnement et les tailles de distribution des fichiers.
-
-* Lors de l'exécution d'analyses de cartographie uniquement, la classification des données peut analyser entre 100 et 150 Tio de données par jour.
-* Lors de l'exécution d'analyses de cartographie et de classification, Data Classification peut analyser entre 15 et 40 Tio de données par jour.
-
