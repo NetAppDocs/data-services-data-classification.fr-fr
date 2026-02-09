@@ -87,8 +87,7 @@ Saisissez le **chemin d'accès au répertoire** contenant les données d'entraî
 image:custom-category-file-summary.png["Capture d'écran montrant le récapitulatif des fichiers téléchargés pour la formation."]
 
 +
-.. Pour modifier le chemin d'accès aux fichiers ou les recharger, sélectionnez **Modifier le chemin d'accès**, puis saisissez les données et rechargez les fichiers.
-
+La classification des données affiche le temps d'exécution estimé pour l'apprentissage des données. .. Pour modifier le chemin d'accès aux fichiers ou les recharger, sélectionnez **Modifier le chemin**, puis saisissez les données et rechargez les fichiers.
 
 . Lorsque vous êtes satisfait des fichiers téléchargés, sélectionnez **Suivant**.
 . Saisissez un **nom de classificateur** et une **description** pour identifier la catégorie personnalisée dans votre tableau de bord.

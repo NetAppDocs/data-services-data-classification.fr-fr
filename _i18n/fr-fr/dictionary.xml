@@ -586,29 +586,10 @@
   <block id="7d72055dc8f09beeb77f4fa9d71f6382" category="paragraph">Les sélections de filtres sont :</block>
   <block id="a66a4b74b70237f4c0cbce83303f74d2" category="list-text">« Non classé – Impossible de revenir à l'heure du dernier accès » – Ceci affiche les fichiers qui n'ont pas été classés en raison d'autorisations d'écriture manquantes.</block>
   <block id="3856c8caab06eda61e5fe3e07996939a" category="list-text">« Heure du dernier accès classé et mis à jour » : cela affiche les fichiers qui ont été classés et la classification des données n'a pas pu réinitialiser l'heure du dernier accès à la date d'origine.  Ce filtre n'est pertinent que pour les environnements dans lesquels vous avez activé *Analyser en cas d'absence d'autorisations « attributs d'écriture »*.</block>
-  <block id="eacfad7ae9e6aba32bdbef2948b1d628" category="summary">Certaines fonctionnalités ne sont pas disponibles avec NetApp Data Classification lorsque vous analysez des schémas de base de données.</block>
-  <block id="e6dbbec80e173d3f91cf2b227477d31c" category="doc">Fonctionnalités de base de données prises en charge et non prises en charge dans la NetApp Data Classification</block>
-  <block id="ad52d3616ca8f733ae442a642767c792" category="paragraph">Certaines fonctionnalités ne sont pas disponibles avec NetApp Data Classification lorsque vous analysez des schémas de base de données.  Voir la liste ci-dessous.</block>
-  <block id="990222def8053839fd07dd4a3c81e9dc" category="inline-link-macro">comme décrit ici</block>
-  <block id="69ff49bbb82445d0bebdf7216cb4bd32" category="paragraph">Vous pouvez ajouter vos schémas de bases de données à la classification des données pour qu'ils soient analysés<block ref="32350e7a1f032d301549bb941192cdc0" category="inline-link-macro-rx"></block> .</block>
   <block id="a1fa27779242b4902f7ae3bdd5c6d508" category="cell">Type</block>
   <block id="b5a7adde1af5c87d7fd797b6245c2a39" category="cell">Description</block>
-  <block id="a71f76c3256e4c206a4841d8eb0fed35" category="cell">Serveur SQL</block>
-  <block id="35686630aa3baddc18c904374e570233" category="cell">Amazon RDS</block>
-  <block id="06df33001c1d7187fdd81ea1f5b277aa" category="cell">Actions</block>
-  <block id="d779bee8155408e2ad4426f42de462a9" category="cell">Créer une requête enregistrée</block>
   <block id="900eba0c97923d74bd8d9e6190e07264" category="cell">✓</block>
-  <block id="c101058e7ea21bbbf2a5ac893088e90b" category="cell">Étiqueter</block>
-  <block id="773ecc684d98231f8f23773727622446" category="cell">Affecter à</block>
-  <block id="cd6ae20e52d83f601c5fa12b66f0f6d0" category="cell">Réanalyser</block>
-  <block id="9dd4e461268c8034f5c8564e155c67a6" category="cell">x</block>
-  <block id="f2a6c498fb90ee345d997f888fce3b18" category="cell">Supprimer</block>
-  <block id="6bc362dbf494c61ea117fe3c71ca48a5" category="cell">Se déplacer</block>
-  <block id="5fb63579fc981698f97d55bfecb213ea" category="cell">Copie</block>
-  <block id="b021df6aac4654c454f46c77646e745f" category="cell">Étiquette</block>
-  <block id="f3f43e30c8c7d78c6ac0173515e57a00" category="cell">Filtres</block>
   <block id="59f5223754fb9750ccf313de64e06099" category="cell">Requêtes enregistrées</block>
-  <block id="e80df5ee03a17fe47c471debd1cb6a7b" category="cell">État de l'analyse de numérisation</block>
   <block id="f5cd54184b354671d5c99cf48104cc07" category="cell">Type de système</block>
   <block id="a45da96d0bf6575970f2d27af22be28a" category="cell">Système</block>
   <block id="8e1608d6951087912c426bcb53d12280" category="cell">Référentiel de stockage</block>
@@ -621,8 +602,6 @@
   <block id="eed7cc7f64269eb19a98b58ae0d79b6f" category="cell">Temps découvert</block>
   <block id="189f63f277cd73395561651753563065" category="cell">Mots-clés</block>
   <block id="3e9f09095e53d4aa46d296b9c32b7be4" category="cell">Événement d'analyse d'analyse</block>
-  <block id="7c2647ff45382a42029e7a109ef1b4c5" category="cell">Chemin du fichier/répertoire</block>
-  <block id="c24fd35c406c9694e3bee288f8825b5c" category="cell">Filtres d'autorisations</block>
   <block id="26ec7ebe8b7297e79affc05b3e89352b" category="cell">Nombre d'identifiants</block>
   <block id="c24fc9c3402e7cb47c72d71cf6d864be" category="cell">Type de répertoire</block>
   <block id="2fb58660fd44cbdef76a54519a9a9737" category="cell">Temps de création</block>
@@ -2044,10 +2023,6 @@
   <block id="fb8a04662bc42d13ae8a2d1bddbc05b3" category="cell">Le statut est toujours « Informations limitées »</block>
   <block id="29344a3c58cf84dcf0144a3627f021d1" category="cell">Hachage de fichier</block>
   <block id="4df26807127a67f2d98166e4384eea07" category="cell">Autorisations utilisateur/groupe</block>
-  <block id="ba3e4178a9b73e03e42aae6548738221" category="section-title">À quelle vitesse Data Classification analyse-t-il les données ?</block>
-  <block id="9ece336caf3d2b843dafc984e27b323e" category="paragraph">La vitesse d'analyse est affectée par la latence du réseau, la latence du disque, la bande passante du réseau, la taille de l'environnement et les tailles de distribution des fichiers.</block>
-  <block id="fd09538b9e640fbf352f46c0fa44b064" category="list-text">Lors de l'exécution d'analyses de cartographie uniquement, la classification des données peut analyser entre 100 et 150 Tio de données par jour.</block>
-  <block id="7df1c51c08a7ab21455acfcdd0b1cfe4" category="list-text">Lors de l'exécution d'analyses de cartographie et de classification, Data Classification peut analyser entre 15 et 40 Tio de données par jour.</block>
   <block id="fa9ebe7c0c0614d0f74c794a58db2fad" category="summary">Suivez quelques étapes pour commencer à analyser les données dans StorageGRID directement avec NetApp Data Classification.</block>
   <block id="6638c5bc122a9b4e0222774a95a04fd5" category="doc">Analyser les données StorageGRID avec la NetApp Data Classification</block>
   <block id="dc3fd4fe9b1bb66db60a59be3884a90c" category="section-title">Examiner les exigences de StorageGRID</block>
@@ -2688,7 +2663,6 @@
   <block id="dc6d46e682032130076140b1c6b9f422" category="list-text">Sélectionnez **Charger les fichiers** pour la classification des données afin d'effectuer une vérification des fichiers. Vous pouvez consulter le résumé des fichiers, qui indique le nom du fichier, sa taille, son type et des notes précisant si le fichier a été jugé acceptable pour la formation.</block>
   <block id="60d2aee5a316a80a131d402c7cfaa44a" category="inline-image-macro">Capture d'écran montrant le récapitulatif des fichiers téléchargés pour la formation.</block>
   <block id="6ca27c96af59179d21a409d88cb4139c" category="paragraph"><block ref="6ca27c96af59179d21a409d88cb4139c" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="839860ecb593c72a6c18f98bd45565b0" category="list-text">Pour modifier le chemin d'accès aux fichiers ou les recharger, sélectionnez **Modifier le chemin d'accès**, puis saisissez les données et rechargez les fichiers.</block>
   <block id="78edc8efdc4ac520c8f06ac58e069eac" category="list-text">Lorsque vous êtes satisfait des fichiers téléchargés, sélectionnez **Suivant**.</block>
   <block id="baacdea09c8bef5361744801ca025b67" category="list-text">Sélectionnez **Enregistrer** pour créer la catégorie personnalisée.</block>
   <block id="d2edcb6e893e23e45a9b667d3d7f0c9e" category="paragraph">Une fois que vous avez créé une catégorie personnalisée, ses résultats sont pris en compte lors de la prochaine analyse planifiée. Pour obtenir des résultats plus rapidement, lancez l'analyse manuellement.</block>
@@ -2722,4 +2696,17 @@
   <block id="872eaae7deb6035c20f9bfe6deefd03d" category="list-text">Si vous avez besoin d'actualiser vos jetons d'identification de connexion, il existe également une option *Mettre à jour les informations d'identification* dans le<block ref="5444f6f0c3983523c8933a1864b2b390" category="inline-image-macro-rx" type="image"></block> menu.</block>
   <block id="4a0d328244ebc11cdcdafe7537ab73a0" category="section-title">14 janvier 2026</block>
   <block id="0683badfe3a5feea962602495f98c990" category="paragraph">Assurez-vous que votre environnement répond aux prérequis. Cela inclut un accès Internet sortant pour l'instance, une connectivité entre l'agent Console et Data Classification via le port 443, et plus encore. <block ref="c513c1ef65e57d26fcca4062f05d2f7b" category="inline-xref-macro-rx"></block>.</block>
+  <block id="9f8adb7ebffc39f306c40ef2d6a377b1" category="paragraph-title">Activez la classification des données avec Amazon FSxN pour ONTAP directement depuis le canevas NetApp Console</block>
+  <block id="880dc0b44905babcfa6685da86ba8117" category="paragraph">Vous pouvez désormais activer Amazon FSxN pour ONTAP directement depuis le canevas NetApp Console, ce qui vous permet de lancer plus rapidement la classification des données pour vos systèmes FSxN.</block>
+  <block id="dd8a2d3b3415c2980790a672dff3757f" category="inline-link-macro">Analyser les volumes Amazon FSxN pour ONTAP</block>
+  <block id="db8b5cff328cee1f4914855b931bae02" category="paragraph">Pour plus d'informations sur l'utilisation de la classification des données avec Amazon FSxN pour ONTAP, consultez <block ref="48a47292b9e31aff1079bbdaa3cd4739" category="inline-link-macro-rx"></block>.</block>
+  <block id="3ee3e594e3bac0471e4cda35acc3588a" category="paragraph-title">Augmentation du plafond d'exportation pour l'investigation des répertoires</block>
+  <block id="45f99b8f539f37cc0379b65d3ddafbbf" category="paragraph">Lors de l'exportation d'un rapport d'enquête sur les répertoires depuis le tableau de bord Enquête, vous pouvez désormais inclure 10 000 lignes. Cette augmentation par rapport à la limite précédente de 5 000 lignes prend en charge des enquêtes à plus grande échelle sur la gouvernance des données et la conformité.</block>
+  <block id="e733aab9ce2fc5320fbdd563cba5e12b" category="paragraph">Pour plus d'informations, voir <block ref="d8b3109a5818cc0f43ade4650ffede11" category="inline-link-macro-rx"></block>.</block>
+  <block id="80f498ef50d7bad5da9acf441b502c0f" category="paragraph-title">Limite accrue pour la copie et le déplacement</block>
+  <block id="401f234e1c84943381dd951c39f2ce3c" category="paragraph">Lors de la copie ou du déplacement de fichiers, vous pouvez désormais déplacer des fichiers jusqu'à 250 Mo, une augmentation par rapport à la limite précédente de 50 Mo.</block>
+  <block id="244d30ed7d7da13b1f80f1fa008af700" category="paragraph-title">Affichage amélioré pour les écrans basse résolution</block>
+  <block id="80bb2719fe9feeb03d5cc88bd71e8a81" category="paragraph">Data Classification a amélioré ses performances d'affichage sur les écrans basse résolution, améliorant l'expérience utilisateur.</block>
+  <block id="ce4f285e19831c82557359b34d7010e8" category="paragraph">La classification des données affiche le temps d'exécution estimé pour l'apprentissage des données. .. Pour modifier le chemin d'accès aux fichiers ou les recharger, sélectionnez **Modifier le chemin**, puis saisissez les données et rechargez les fichiers.</block>
+  <block id="c9d872b23d54864ab58551a55106a3db" category="section-title">09 février 2026</block>
 </blocks>
