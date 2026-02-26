@@ -23,9 +23,6 @@ La classification des données peut être déployée des manières suivantes :
 * link:task-deploy-compliance-dark-site.html["Installer sur un hôte Linux dans un site sur site sans accès Internet"], également connu sous le nom de _mode privé_. Ce type d'installation, qui utilise un script d'installation, n'a aucune connectivité à la couche SaaS de la console.
 
 
-
-IMPORTANT: Le mode privé BlueXP (interface BlueXP héritée) est généralement utilisé avec des environnements locaux qui n’ont pas de connexion Internet et avec des régions cloud sécurisées, notamment AWS Secret Cloud, AWS Top Secret Cloud et Azure IL6. NetApp continue de prendre en charge ces environnements avec l’interface BlueXP héritée. Pour la documentation du mode privé dans l'ancienne interface BlueXP , voirlink:https://docs.netapp.com/us-en/console-setup-admin/media/BlueXP-Private-Mode-legacy-interface.pdf["Documentation PDF pour le mode privé BlueXP"^] .
-
 L'installation sur un hôte Linux avec accès Internet et l'installation sur site sur un hôte Linux sans accès Internet utilisent un script d'installation.  Le script commence par vérifier si le système et l’environnement répondent aux prérequis.  Si les conditions préalables sont remplies, l'installation démarre.  Si vous souhaitez vérifier les conditions préalables indépendamment de l'exécution de l'installation de la classification des données, vous pouvez télécharger un progiciel distinct qui teste uniquement les conditions préalables.
 
 link:task-test-linux-system.html["Vérifiez que votre hôte Linux est prêt à installer la classification des données"] .
