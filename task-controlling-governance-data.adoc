@@ -44,7 +44,7 @@ Le composant _Opportunités d'économie_ affiche les données que vous pouvez su
 
 .Étapes
 . Dans le menu Classification des données, sélectionnez *Gouvernance*.
-. Dans chaque mosaïque Opportunités d'économies du tableau de bord Gouvernance, sélectionnez *Optimiser le stockage* pour afficher les résultats filtrés dans la page Enquête.  Pour découvrir les données que vous devriez supprimer ou transférer vers un stockage moins coûteux, étudiez les _Opportunités d'économie_.
+. Dans chaque vignette « Opportunités d'économies » du tableau de bord Gouvernance, sélectionnez *Optimiser le stockage* pour afficher les résultats filtrés sur la page Investigation. Pour découvrir les données que vous devriez supprimer ou transférer vers un stockage moins coûteux, examinez les _Saving Opportunities_.
 +
 ** *Données obsolètes* - Par défaut, les données sont considérées comme obsolètes si leur dernière modification remonte à plus de 3 ans. Vous pouvez [personnaliser la définition des données obsolètes](task-stale-data.html).
 ** *Fichiers en double* - Fichiers dupliqués à d'autres emplacements dans les sources de données que vous analysez. link:task-investigate-data.html["Voir quels types de fichiers en double sont affichés"] .

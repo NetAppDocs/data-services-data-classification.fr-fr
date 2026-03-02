@@ -14,7 +14,7 @@ summary: Analysez vos sources de données avec NetApp Data Classification.
 
 
 [role="lead"]
-NetApp Data Classification analyse les données dans les référentiels (volumes, schémas de base de données ou autres données utilisateur) que vous sélectionnez pour identifier les données personnelles et sensibles.  La classification des données cartographie ensuite vos données organisationnelles, catégorise chaque fichier et identifie des modèles prédéfinis dans les données.  Le résultat de l’analyse est un index des informations personnelles, des informations personnelles sensibles, des catégories de données et des types de fichiers.
+NetApp Data Classification analyse les données dans les référentiels (les volumes, les schémas de base de données ou autres données utilisateur) que vous sélectionnez afin d'identifier les données personnelles et sensibles. Data Classification cartographie ensuite les données de votre organisation, catégorise chaque fichier et identifie les modèles prédéfinis dans les données. Le résultat de l'analyse est un index des informations personnelles, des informations personnelles sensibles, des catégories de données et des types de fichiers.
 
 Après l'analyse initiale, Data Classification analyse en continu vos données de manière circulaire pour détecter les modifications incrémentielles.  C'est pourquoi il est important de maintenir l'instance en cours d'exécution.
 
