@@ -18,7 +18,7 @@ Lors de l'exportation d'un rapport d'enquête sur les répertoires depuis le tab
 
 Pour plus d'informations, voir link:https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html["Enquêter sur les données"^].
 
-.Limite accrue pour la copie et le déplacement
+.Limites accrues pour la copie et le déplacement
 Lors de la copie ou du déplacement de fichiers, vous pouvez désormais déplacer des fichiers jusqu'à 250 Mo, une augmentation par rapport à la limite précédente de 50 Mo.
 
 Pour plus d'informations, voir link:https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html["Enquêter sur les données"^].

@@ -18,6 +18,34 @@ Découvrez les nouveautés de la NetApp Data Classification.
 
 
 
+== 09 mars 2026
+
+
+
+=== Version 1.52
+
+.Validation des ressources
+Pour garantir la fiabilité, Data Classification vérifie désormais la mémoire et les ressources d'espace disque disponibles lors de l'analyse, de la génération de rapports et des actions. Lorsque l'utilisation de la mémoire dépasse 95 % ou que l'espace disque est inférieur à 6 Go, Data Classification interrompt automatiquement les opérations. Les opérations reprennent dès que les ressources sont suffisantes.
+
+Pour surveiller les ressources de votre système, consultez link:https://docs.netapp.com/us-en/data-services-data-classification/task-health-monitor.html["Surveiller l'état de la classification des données"^].
+
+.Limite accrue pour la copie et le déplacement
+Les fonctions de copie et de déplacement sont désormais prises en charge pour les destinations CIFS. La limite de taille par fichier pour ces deux actions a été portée à 1 Go contre la limite précédente de 50 Mo. Les limites d'opération pour ces deux actions ont été portées à 1 To ou 5 millions de fichiers.
+
+Pour plus d'informations, voir link:https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html["Enquêter sur les données"^].
+
+.Autorisations de configuration d'intégration Active Directory
+Les modifications apportées aux paramètres d'intégration d'Active Directory (AD) dans Data Classification sont désormais réservées aux administrateurs. Les spectateurs n'ont plus la possibilité de modifier les paramètres AD.
+
+Pour plus d'informations sur le rôle de visionneur de classification, voir link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html#data-service-roles["Rôles du service de données"^].
+
+.Prise en charge du proxy transparent
+La classification des données prend désormais en charge les configurations de proxy transparent, permettant un déploiement plus fluide dans les environnements réseau proxy ou restreints.
+
+Pour plus d'informations sur le déploiement dans des environnements restreints, voir link:https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-compliance-dark-site.html["Installer NetApp Data Classification sur un hôte Linux sans accès Internet"^].
+
+
+
 == 09 février 2026
 
 
@@ -36,7 +64,7 @@ Lors de l'exportation d'un rapport d'enquête sur les répertoires depuis le tab
 
 Pour plus d'informations, voir link:https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html["Enquêter sur les données"^].
 
-.Limite accrue pour la copie et le déplacement
+.Limites accrues pour la copie et le déplacement
 Lors de la copie ou du déplacement de fichiers, vous pouvez désormais déplacer des fichiers jusqu'à 250 Mo, une augmentation par rapport à la limite précédente de 50 Mo.
 
 Pour plus d'informations, voir link:https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html["Enquêter sur les données"^].
@@ -83,7 +111,7 @@ Cette version de Data Classification inclut des correctifs de bogues et les mise
 .Surveillez les indicateurs et les performances dans le tableau de bord de surveillance de la santé.
 Data Classification propose désormais un tableau de bord de surveillance de l'état de santé, offrant une surveillance en temps réel de vos ressources et des informations sur l'utilisation de la mémoire, l'utilisation du disque, le taux d'utilisation du disque, et plus encore. Grâce aux informations fournies par le tableau de bord de surveillance de l'état de santé, vous pouvez examiner l'infrastructure de votre déploiement et obtenir des informations permettant d'optimiser le stockage et les performances.
 
-Pour plus d'informations, voir link:https://docs.netapp.com/us-en/data-services-data-classification/task-health-monitor.html["Surveiller l'état de la classification des données"].
+Pour plus d'informations, consultez link:https://docs.netapp.com/us-en/data-services-data-classification/task-health-monitor.html["Surveiller l'état de la classification des données"^].
 
 .Performances de chargement améliorées
 Les performances de chargement de toutes les pages de la section Classification des données ont été améliorées afin d'offrir une expérience utilisateur plus efficace.
