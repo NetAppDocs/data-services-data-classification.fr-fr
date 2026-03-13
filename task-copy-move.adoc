@@ -1,0 +1,83 @@
+---
+sidebar: sidebar 
+permalink: task-copy-move.html 
+keywords: investigation, filter, delete, copy, move, flexclone, sync 
+summary: 'Après avoir filtré les données dans le tableau de bord d"enquête, vous pouvez copier, déplacer et supprimer des données non structurées.' 
+---
+= Copier, déplacer et supprimer des fichiers à l'aide de NetApp Data Classification
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Outre les informations qu'elle fournit sur la gouvernance et les opportunités d'économies, NetApp Data Classification vous permet également d'effectuer des actions sur les fichiers depuis son tableau de bord d'investigation. Après avoir filtré les données dans le tableau de bord d'investigation, vous pouvez copier, déplacer et supprimer des données non structurées. Effectuer ces actions peut améliorer la conformité, par exemple en déplaçant les fichiers vers un emplacement plus sécurisé, ou créer des opportunités d'économies en supprimant des fichiers anciens ou en double.
+
+
+
+== Copier les fichiers
+
+NetApp Data Classification permet de copier des fichiers jusqu'à 1 Go. Vous pouvez copier un total de 1 To de données ou 5 millions de fichiers, selon la limite atteinte en premier. Vous pouvez copier des fichiers vers une destination partage CIFS ou NFS. Il n'y a aucun impact sur le fichier source lorsque vous le copiez.
+
+.Étapes
+. Dans le tableau de bord Investigation, sélectionnez les fichiers que vous souhaitez copier.
+. Au-dessus de la liste des fichiers, sélectionnez **Copy**.
++
+image:screenshot-copy-move-delete.png["Capture d'écran des actions dans la page d'enquête"]
+
+. Sélectionnez le protocole de destination des copies : **NFS** ou **CIFS**.
+. Si vous avez sélectionné NFS, saisissez le chemin de destination en utilisant des barres obliques, par exemple `hostname:/path/to/destination`.
++
+Si vous avez sélectionné CIFS, saisissez le chemin de destination en utilisant des barres obliques inverses, par exemple `\\server\share\path`. Saisissez également les identifiants **Username** et **Password** pour le partage CIFS.
+
++
+image:screenshot-copy-nfs.png["Capture d'écran de la fonction de copie pour les fichiers NFS"]
+
+. Sélectionnez **Submit**.
+
+
+
+
+== Déplacer des fichiers
+
+NetApp Data Classification prend en charge le déplacement de fichiers d'une taille maximale de 1 Go. Vous pouvez déplacer un total de 1 To de données ou 5 millions de fichiers, selon la limite atteinte en premier. Vous pouvez déplacer des fichiers vers une destination partage CIFS ou NFS.
+
+.Étapes
+. Dans le tableau de bord Investigation, sélectionnez les fichiers que vous souhaitez déplacer.
++
+image:screenshot-copy-move-delete.png["Capture d'écran des actions dans la page d'enquête"]
+
+. Au-dessus de la liste des fichiers, sélectionnez **Move**.
+. Sélectionnez le protocole de destination : **NFS** ou **CIFS**.
+. Si vous avez sélectionné NFS, saisissez le chemin de destination en utilisant des barres obliques, par exemple `hostname:/path/to/destination`.
++
+Si vous avez sélectionné CIFS, saisissez le chemin de destination en utilisant des barres obliques inverses, par exemple `\\server\share\path`. Saisissez également les identifiants **Username** et **Password** pour le partage CIFS.
+
+. Vous pouvez également sélectionner **Laisser un breadcrumb** pour laisser un fichier breadcrumb dans le volume source qui explique où et pourquoi le fichier a été déplacé.
++
+.. Si vous avez sélectionné **Leave breadcrumb**, saisissez un texte descriptif indiquant la raison du déplacement du fichier et, si nécessaire, le nouvel emplacement.
++
+image:screenshot-move-nfs.png["Capture d'écran de la fonction de déplacement pour les fichiers NFS"]
+
+
+
+. Sélectionnez **Déplacer des éléments**.
+
+
+
+
+== Supprimer les fichiers
+
+Lorsque vous filtrez les données sur le tableau de bord Investigation pour découvrir des opportunités d'économie d'espace et de coûts, vous pouvez supprimer ces fichiers. La suppression de fichiers n'est prise en charge que pour les fichiers non structurés.
+
+.Étapes
+. Dans le tableau de bord Investigation, sélectionnez les fichiers que vous souhaitez supprimer.
+. Dans la boîte de dialogue de confirmation, saisissez "permanently delete".
+. Sélectionnez **Supprimer le fichier** pour confirmer l’opération.
++
+image:screenshot-delete.png["Capture d'écran de la boîte de dialogue de suppression"]
+
+

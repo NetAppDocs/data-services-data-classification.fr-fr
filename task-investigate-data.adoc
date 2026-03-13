@@ -14,7 +14,7 @@ summary: 'Vous pouvez examiner les données de votre organisation en consultant 
 
 
 [role="lead"]
-Le tableau de bord d'investigation des données affiche des informations au niveau des fichiers et des répertoires sur vos données, vous permettant de trier et de filtrer les résultats.  La page Enquête sur les données présente des informations sur les métadonnées et les autorisations des fichiers et des répertoires, ainsi que sur l'identification des fichiers en double.  Grâce aux informations au niveau des fichiers, des répertoires et des bases de données, vous pouvez prendre des mesures pour améliorer la conformité de votre organisation et économiser de l'espace de stockage.  La page Enquête sur les données prend également en charge le déplacement, la copie et la suppression de fichiers.
+Le tableau de bord « Analyse des données » affiche des informations détaillées sur vos données au niveau des fichiers et des répertoires, vous permettant de trier et de filtrer les résultats. La page « Analyse des données » présente des informations sur les métadonnées et les permissions des fichiers et des répertoires ainsi que l’identification des fichiers en double. Grâce à des informations au niveau des fichiers, des répertoires et des bases de données, vous pouvez prendre des mesures pour améliorer la conformité de votre organisation et économiser de l’espace de stockage. La page « Analyse des données » prend également en charge link:task-copy-move.html["déplacement, copie et suppression de fichiers"].
 
 
 NOTE: Pour obtenir des informations à partir de la page Enquête, vous devez effectuer une analyse de classification complète sur vos sources de données.  Les sources de données ayant fait l'objet d'une analyse de mappage uniquement n'affichent pas les détails au niveau du fichier.
@@ -191,6 +191,9 @@ Utilisez le filtre suivant pour afficher les fichiers dupliqués dans votre stoc
 
 | Doublons | Sélectionnez si le fichier est dupliqué dans les référentiels. 
 |===
+
+TIP: Après le filtrage des données, vous pouvez link:task-copy-move.html["copier, déplacer et supprimer des fichiers non structurés"] pour améliorer la conformité ou optimiser le stockage.
+
 
 
 == Afficher les métadonnées du fichier
@@ -392,3 +395,10 @@ Une fois la recherche ou la politique créée, vous pouvez la visualiser dans l'
 
 
 TIP: L'affichage des résultats sur la page Requêtes enregistrées peut prendre jusqu'à 15 minutes.
+
+
+
+== Prochaines étapes
+
+* link:task-copy-move.html["Copier, déplacer et supprimer des données depuis le tableau de bord d'enquête"]
+

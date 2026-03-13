@@ -14,7 +14,7 @@ Pour surveiller les ressources de votre système, consultez link:https://docs.ne
 .Limite accrue pour la copie et le déplacement
 Les fonctions de copie et de déplacement sont désormais prises en charge pour les destinations CIFS. La limite de taille par fichier pour ces deux actions a été portée à 1 Go contre la limite précédente de 50 Mo. Les limites d'opération pour ces deux actions ont été portées à 1 To ou 5 millions de fichiers.
 
-Pour plus d'informations, voir link:https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html["Enquêter sur les données"^].
+Pour plus d'informations, voir link:https://docs.netapp.com/us-en/data-services-data-classification/task-copy-move.html["Copier, déplacer et supprimer des données"^].
 
 .Autorisations de configuration d'intégration Active Directory
 Les modifications apportées aux paramètres d'intégration d'Active Directory (AD) dans Data Classification sont désormais réservées aux administrateurs. Les spectateurs n'ont plus la possibilité de modifier les paramètres AD.

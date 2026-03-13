@@ -664,7 +664,6 @@
   <block id="5215d51f00cbd59bd4f5379564dd2607" category="section-title">Horodatage du dernier accès</block>
   <block id="766aa8e7cd2a6b2b085c6107a7da9b88" category="paragraph">Lorsque Data Classification effectue une analyse d'un répertoire, l'analyse affecte le champ **Dernier accès** du répertoire.  Lorsque vous affichez le champ **Dernier accès**, ces métadonnées reflètent soit la date et l'heure de l'analyse, soit la dernière fois qu'un utilisateur a accédé au répertoire.</block>
   <block id="e96a6a2be46b8b1357ec2a787a1d1300" category="summary">Parfois, vous devrez peut-être vous connecter au système de NetApp Data Classification pour pouvoir accéder aux fichiers journaux ou modifier les fichiers de configuration.</block>
-  <block id="3bdd1ff20ed6998a7cc8219fdca4e271" category="doc">Connectez-vous au système de NetApp Data Classification</block>
   <block id="3ce6ca22e847cbd536ba7c715301377a" category="paragraph">Vous devez vous connecter au système de NetApp Data Classification pour pouvoir accéder aux fichiers journaux ou modifier les fichiers de configuration.</block>
   <block id="2b5271618e7493a8c77e7b4639d819b8" category="paragraph">Lorsque Data Classification est installé sur une machine Linux dans vos locaux ou sur une machine Linux que vous avez déployée dans le cloud, vous pouvez accéder directement au fichier de configuration et au script.</block>
   <block id="b432bef38adffbc05fc1ceb150787a02" category="paragraph">Lorsque la classification des données est déployée dans le cloud, vous devez vous connecter en SSH à l'instance de classification des données.  Vous vous connectez au système via SSH en saisissant le nom d'utilisateur et le mot de passe, ou en utilisant la clé SSH que vous avez fournie lors de l'installation de l'agent de console.  La commande SSH est :</block>
@@ -1569,7 +1568,6 @@
   <block id="0079344bb0661607100d432cde92e6a5" category="list-text">Sur la page Configuration, sélectionnez *Configuration* pour vérifier l’état de chaque volume CIFS et NFS et corriger les erreurs éventuelles.</block>
   <block id="e90444baa59788bd6471cf703b12a16e" category="summary">Vous pouvez examiner les données de votre organisation en consultant les détails sur la page Enquête sur les données.  C'est ici que vous pouvez poursuivre vos recherches après avoir consulté le tableau de bord de gouvernance.</block>
   <block id="4c257f0482d661d1986f92f057e1c581" category="doc">Examinez les données stockées dans votre organisation avec la NetApp Data Classification</block>
-  <block id="7ce237dbe0011dccdc7c96c7be17d6ec" category="paragraph">Le tableau de bord d'investigation des données affiche des informations au niveau des fichiers et des répertoires sur vos données, vous permettant de trier et de filtrer les résultats.  La page Enquête sur les données présente des informations sur les métadonnées et les autorisations des fichiers et des répertoires, ainsi que sur l'identification des fichiers en double.  Grâce aux informations au niveau des fichiers, des répertoires et des bases de données, vous pouvez prendre des mesures pour améliorer la conformité de votre organisation et économiser de l'espace de stockage.  La page Enquête sur les données prend également en charge le déplacement, la copie et la suppression de fichiers.</block>
   <block id="8d6bb2090f1e71e8cabff59cd97a6f5f" category="admonition">Pour obtenir des informations à partir de la page Enquête, vous devez effectuer une analyse de classification complète sur vos sources de données.  Les sources de données ayant fait l'objet d'une analyse de mappage uniquement n'affichent pas les détails au niveau du fichier.</block>
   <block id="adbc89b69fed239a539f916b53592ab9" category="section-title">Structure d'enquête sur les données</block>
   <block id="7fc46b0c25bc13694774a84c4a0f5b4b" category="paragraph">La page Enquête sur les données trie les données en trois onglets :</block>
@@ -2429,7 +2427,6 @@
   <block id="a1b1318193a35f78be2416bedbe04261" category="sidebar">Afficher les détails de gouvernance de vos données</block>
   <block id="056f094fced7be2185f9f1e21b455e6b" category="sidebar">Afficher les détails de conformité concernant vos données</block>
   <block id="93f515959ce6187b986c42fa6959168b" category="sidebar">Catégories de données privées</block>
-  <block id="d208d030068b6bbb840e4e251deaf193" category="sidebar">Créer une analyse personnalisée</block>
   <block id="bd3668f2876c07e4375041fda913dc31" category="sidebar">Gérer les requêtes enregistrées</block>
   <block id="91cace02ed792be8683fda1544dfb32c" category="sidebar">Modifier les paramètres de numérisation</block>
   <block id="2a79af6160ec8fbec237f8058c6c9de3" category="sidebar">Gérer la classification des données</block>
@@ -2797,5 +2794,49 @@
   <block id="df4bdd45174b09881add6730bdfaf045" category="section-title">09 mars 2026</block>
   <block id="c929bf2a4cebf50fb64dab464b664919" category="inline-image-macro">Un diagramme illustrant l'emplacement des sources de données que vous pouvez analyser lors de l'utilisation d'une instance unique de Data Classification déployée sur site sans accès à Internet.</block>
   <block id="416689a150e5347df135e4852392a307" category="paragraph"><block ref="416689a150e5347df135e4852392a307" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="e70d49c282a7c52a8996f7a8357c7524" category="doc">FAQ sur NetApp Data Classification</block>
+  <block id="4ccc6bc65ccfbf776471461699df7790" category="inline-link-macro">Copier, déplacer et supprimer des données</block>
+  <block id="26f19c45862fe8f967db0b3b7d289ad3" category="paragraph">Pour plus d'informations, voir <block ref="151ab796904ad3ebe669fb675d8fec0a" category="inline-link-macro-rx"></block>.</block>
+  <block id="ad5b3224be1d6831dcf88a793785b1f1" category="doc">FAQ sur la NetApp Data Classification</block>
+  <block id="621a6cff40fed66e7b90194843eb20fb" category="doc">Mentions légales relatives à NetApp Data Classification</block>
+  <block id="b231d70c2e9c026262bda45de2cf8e61" category="doc">Connectez-vous à NetApp Data Classification</block>
+  <block id="f214292b356953b67175bbd37992066d" category="summary">Après avoir filtré les données dans le tableau de bord d'enquête, vous pouvez copier, déplacer et supprimer des données non structurées.</block>
+  <block id="645af234aa1818d98e8bb6c780fb0e42" category="doc">Copier, déplacer et supprimer des fichiers à l'aide de NetApp Data Classification</block>
+  <block id="4c6b11e5b29f298bdccac50248f21007" category="paragraph">Outre les informations qu'elle fournit sur la gouvernance et les opportunités d'économies, NetApp Data Classification vous permet également d'effectuer des actions sur les fichiers depuis son tableau de bord d'investigation. Après avoir filtré les données dans le tableau de bord d'investigation, vous pouvez copier, déplacer et supprimer des données non structurées. Effectuer ces actions peut améliorer la conformité, par exemple en déplaçant les fichiers vers un emplacement plus sécurisé, ou créer des opportunités d'économies en supprimant des fichiers anciens ou en double.</block>
+  <block id="558f28628ba8ab4cb8420949524832d3" category="section-title">Copier les fichiers</block>
+  <block id="e54a222aee96b176f405c4031ff80909" category="paragraph">NetApp Data Classification permet de copier des fichiers jusqu'à 1 Go. Vous pouvez copier un total de 1 To de données ou 5 millions de fichiers, selon la limite atteinte en premier. Vous pouvez copier des fichiers vers une destination partage CIFS ou NFS. Il n'y a aucun impact sur le fichier source lorsque vous le copiez.</block>
+  <block id="37214830ec688e601a722f40084e9795" category="list-text">Dans le tableau de bord Investigation, sélectionnez les fichiers que vous souhaitez copier.</block>
+  <block id="2d2f00419a0dd0229c58522ea98e71ae" category="list-text">Au-dessus de la liste des fichiers, sélectionnez **Copy**.</block>
+  <block id="b9e9b1bb4d8b072a482f32c6e7d7ff72" category="inline-image-macro">Capture d'écran des actions dans la page d'enquête</block>
+  <block id="cca60a4ec6a536a71654abbbd1c54e3a" category="paragraph"><block ref="cca60a4ec6a536a71654abbbd1c54e3a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="07f527a3198ae416b045c995367ab422" category="list-text">Sélectionnez le protocole de destination des copies : **NFS** ou **CIFS**.</block>
+  <block id="4885cff36928d8614fad0e3d21b27679" category="list-text">Si vous avez sélectionné NFS, saisissez le chemin de destination en utilisant des barres obliques, par exemple<block ref="8ed050b486343bdef7b6adadf5b986b8" prefix=" " category="inline-code"></block>.</block>
+  <block id="6a3331936dcbbbfa4db946e4d0f00e9b" category="paragraph">Si vous avez sélectionné CIFS, saisissez le chemin de destination en utilisant des barres obliques inverses, par exemple<block ref="52938cbc0a420230679e4ae98bb4a89a" prefix=" " category="inline-code"></block>. Saisissez également les identifiants **Username** et **Password** pour le partage CIFS.</block>
+  <block id="c64976420b21ffb4d1ba97533079e81c" category="inline-image-macro">Capture d'écran de la fonction de copie pour les fichiers NFS</block>
+  <block id="12ceb039500c1e7536d6a926d04beed0" category="paragraph"><block ref="12ceb039500c1e7536d6a926d04beed0" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="005315d0bf05e5d249f46e46e20423d3" category="list-text">Sélectionnez **Submit**.</block>
+  <block id="ed86a97d5bcbda5898269baae37b79f7" category="section-title">Déplacer des fichiers</block>
+  <block id="0ac97eb58eed3141f29d93b87eb4d0b7" category="paragraph">NetApp Data Classification prend en charge le déplacement de fichiers d'une taille maximale de 1 Go. Vous pouvez déplacer un total de 1 To de données ou 5 millions de fichiers, selon la limite atteinte en premier. Vous pouvez déplacer des fichiers vers une destination partage CIFS ou NFS.</block>
+  <block id="fbb338a6c6a711b7c940515c513f15de" category="list-text">Dans le tableau de bord Investigation, sélectionnez les fichiers que vous souhaitez déplacer.</block>
+  <block id="2066527d248d6275b0ce325ff50ec8fb" category="list-text">Au-dessus de la liste des fichiers, sélectionnez **Move**.</block>
+  <block id="2a993e09d9313401f99dcee0ed7245f9" category="list-text">Sélectionnez le protocole de destination : **NFS** ou **CIFS**.</block>
+  <block id="1ab5ecdad0b7cf47d71967b3f0e1f51b" category="list-text">Vous pouvez également sélectionner **Laisser un breadcrumb** pour laisser un fichier breadcrumb dans le volume source qui explique où et pourquoi le fichier a été déplacé.</block>
+  <block id="465b61ed91de19635de96ea746fcd8dd" category="list-text">Si vous avez sélectionné **Leave breadcrumb**, saisissez un texte descriptif indiquant la raison du déplacement du fichier et, si nécessaire, le nouvel emplacement.</block>
+  <block id="f7e4b92188f5354ca61e9869df6224cc" category="inline-image-macro">Capture d'écran de la fonction de déplacement pour les fichiers NFS</block>
+  <block id="9b1a8f320a2c08a8370e356510090979" category="paragraph"><block ref="9b1a8f320a2c08a8370e356510090979" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7afd3db29a42496704a6705958fec121" category="list-text">Sélectionnez **Déplacer des éléments**.</block>
+  <block id="19e43848563797a6f937c7895b604754" category="section-title">Supprimer les fichiers</block>
+  <block id="bf7a8fa340e92f5931d748d2f4929afb" category="paragraph">Lorsque vous filtrez les données sur le tableau de bord Investigation pour découvrir des opportunités d'économie d'espace et de coûts, vous pouvez supprimer ces fichiers. La suppression de fichiers n'est prise en charge que pour les fichiers non structurés.</block>
+  <block id="fe3f40b2ceb6ec005d118e22ab125813" category="list-text">Dans le tableau de bord Investigation, sélectionnez les fichiers que vous souhaitez supprimer.</block>
+  <block id="9f9603fa59f6dd606ff86c8b621cae42" category="list-text">Dans la boîte de dialogue de confirmation, saisissez "permanently delete".</block>
+  <block id="de44f74c0cf208f9b074a847f28871e1" category="list-text">Sélectionnez **Supprimer le fichier** pour confirmer l’opération.</block>
+  <block id="9c213e0d48408ad93cdfc881eb4f22dd" category="inline-image-macro">Capture d'écran de la boîte de dialogue de suppression</block>
+  <block id="d5c79828ec7e224f24ce0c5c7bdfd94a" category="paragraph"><block ref="d5c79828ec7e224f24ce0c5c7bdfd94a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b1e91143d215d79313744660e8a25c51" category="inline-link-macro">déplacement, copie et suppression de fichiers</block>
+  <block id="5f346df67220a8ad49f8534209369421" category="paragraph">Le tableau de bord « Analyse des données » affiche des informations détaillées sur vos données au niveau des fichiers et des répertoires, vous permettant de trier et de filtrer les résultats. La page « Analyse des données » présente des informations sur les métadonnées et les permissions des fichiers et des répertoires ainsi que l’identification des fichiers en double. Grâce à des informations au niveau des fichiers, des répertoires et des bases de données, vous pouvez prendre des mesures pour améliorer la conformité de votre organisation et économiser de l’espace de stockage. La page « Analyse des données » prend également en charge <block ref="53552aaf1401627b381eb7f88c3339dc" category="inline-link-macro-rx"></block>.</block>
+  <block id="f394fbb29081ecb4ff4624bf5701d2c0" category="inline-link-macro">copier, déplacer et supprimer des fichiers non structurés</block>
+  <block id="380916f8eca732c161f7d63bc771658e" category="admonition">Après le filtrage des données, vous pouvez <block ref="80925d04faafa25188db966788d6cf44" category="inline-link-macro-rx"></block> pour améliorer la conformité ou optimiser le stockage.</block>
+  <block id="a05935ba37500bcaabc75b8fac4a4d69" category="inline-link-macro">Copier, déplacer et supprimer des données depuis le tableau de bord d'enquête</block>
+  <block id="dccdd7229b11ad459b3b6fd7edf24186" category="list-text"><block ref="dccdd7229b11ad459b3b6fd7edf24186" category="inline-link-macro-rx"></block></block>
+  <block id="5b077e4667590c350e8809dec7c16b8f" category="sidebar">Vérifiez l'état de préparation de votre hôte Linux</block>
+  <block id="44c26efa4311ed85b7e12474f8bd2eaf" category="sidebar">Supprimer les sources de données</block>
 </blocks>

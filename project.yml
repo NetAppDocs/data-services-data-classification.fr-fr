@@ -38,8 +38,7 @@ sidebar:
         url: "/task-deploy-compliance-onprem.html"
       - title: Installer sur un hôte Linux sur site sans accès Internet
         url: "/task-deploy-compliance-dark-site.html"
-      - title: Vérifiez que votre hôte Linux est prêt à installer la classification
-          des données
+      - title: Vérifiez l'état de préparation de votre hôte Linux
         url: "/task-test-linux-system.html"
     - title: Activer l'analyse sur vos sources de données
       entries:
@@ -69,18 +68,18 @@ sidebar:
       url: "/task-controlling-private-data.html"
     - title: Catégories de données privées
       url: "/reference-private-data-categories.html"
-    - title: Créer une analyse personnalisée
-      url: "/task-custom-classification.html"
     - title: Enquêter sur les données
       url: "/task-investigate-data.html"
+    - title: Copier, déplacer et supprimer des données
+      url: "/task-copy-move.html"
+    - title: Créer une classification personnalisée
+      url: "/task-custom-classification.html"
     - title: Gérer les requêtes enregistrées
       url: "/task-using-policies.html"
     - title: Modifier les paramètres de numérisation
       url: "/task-managing-repo-scanning.html"
     - title: Générer des rapports de conformité
       url: "/task-generating-compliance-reports.html"
-    - title: Surveiller la santé du système
-      url: "/task-health-monitor.html"
   - title: Gérer la classification des données
     entries:
     - title: Exclure les répertoires de l'analyse
@@ -89,7 +88,9 @@ sidebar:
       url: "/task-add-group-id-as-open.html"
     - title: Définir les données obsolètes
       url: "/task-stale-data.html"
-    - title: Supprimer les sources de données de la classification des données
+    - title: Surveiller la santé du système
+      url: "/task-health-monitor.html"
+    - title: Supprimer les sources de données
       url: "/task-managing-compliance.html"
     - title: Désinstaller la classification des données
       url: "/task-uninstall.html"

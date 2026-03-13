@@ -4,7 +4,7 @@ permalink: reference-log-in-to-instance.html
 keywords: log in, data sense, classification 
 summary: Parfois, vous devrez peut-être vous connecter au système de NetApp Data Classification pour pouvoir accéder aux fichiers journaux ou modifier les fichiers de configuration. 
 ---
-= Connectez-vous au système de NetApp Data Classification
+= Connectez-vous à NetApp Data Classification
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
