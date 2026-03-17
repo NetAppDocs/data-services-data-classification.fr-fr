@@ -21,6 +21,11 @@ Les modifications apportées aux paramètres d'intégration d'Active Directory (
 
 Pour plus d'informations sur le rôle de visionneur de classification, voir link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html#data-service-roles["Rôles du service de données"^].
 
+.Prise en charge de RHEL 9.7
+Data Classification a ajouté Red Hat Enterprise Linux v9.7 pour l'installation manuelle sur site, y compris les déploiements sur des sites isolés.
+
+Les systèmes d'exploitation suivants nécessitent l'utilisation du moteur de conteneurs Podman, et ils nécessitent Data Classification version 1.30 ou supérieure : Red Hat Enterprise Linux version 8.8, 8.10, 9.0, 9.1, 9.2, 9.3, 9.4, 9.5, 9.6 et 9.7.
+
 .Prise en charge du proxy transparent
 La classification des données prend désormais en charge les configurations de proxy transparent, permettant un déploiement plus fluide dans les environnements réseau proxy ou restreints.
 
