@@ -4,7 +4,7 @@ permalink: task-managing-repo-scanning.html
 keywords: compliance, stop scan, start scan, map scan, classify scan, data sense, pause scan, resume scan, cloud data sense, bluexp classification 
 summary: 'Découvrez comment modifier les paramètres d"analyse d"un système dans NetApp Data Classification.' 
 ---
-= Modifier les paramètres d'analyse de NetApp Data Classification pour vos référentiels
+= Modifier les paramètres d'analyse dans NetApp Data Classification
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

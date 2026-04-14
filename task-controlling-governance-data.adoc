@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-controlling-governance-data.html 
 keywords: savings, stale data, duplicate data, highlights, data discovery assessment report, data mapping overview report, data repositories, sensitive data, wide permissions, open permissions, age of data, size of data, classification, costs of data 
-summary: 'Maîtrisez les coûts liés aux données sur les ressources de stockage de votre organisation.  La NetApp Data Classification identifie la quantité de données obsolètes, de fichiers en double et de fichiers très volumineux dans vos systèmes afin que vous puissiez décider si vous souhaitez supprimer ou hiérarchiser certains fichiers vers un stockage d"objets moins coûteux.' 
+summary: La classification des données permet de réduire les coûts de stockage en identifiant les données obsolètes, les fichiers dupliqués et les fichiers volumineux, puis en les supprimant ou en les déplaçant vers un stockage objet moins coûteux. 
 ---
-= Affichez les détails de gouvernance sur les données stockées dans votre organisation avec NetApp Data Classification
+= Consultez les détails de gouvernance relatifs aux données organisationnelles grâce à NetApp Data Classification
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
