@@ -74,9 +74,9 @@ La classification des données peut scanner et analyser des données structurée
 * Amazon FSx for NetApp ONTAP
 * Azure NetApp Files
 * Cloud Volumes ONTAP (déployé dans AWS, Azure ou GCP)
+* Google Cloud NetApp Volumes
 * Clusters ONTAP sur site
 * StorageGRID
-* Google Cloud NetApp Volumes
 
 
 *Sources de données*
@@ -132,7 +132,7 @@ image:diagram_cloud_compliance_instance.png["Un diagramme qui montre une instanc
 
 Notez ce qui suit à propos de l’instance par défaut :
 
-* Dans AWS, la classification des données s'exécute sur un https://aws.amazon.com/ec2/instance-types/m6i/["instance m6i.4xlarge"^] avec un disque GP2 de 500 Gio.  L'image du système d'exploitation est Amazon Linux 2.  Lorsqu'il est déployé dans AWS, vous pouvez choisir une taille d'instance plus petite si vous analysez une petite quantité de données.
+* Dans AWS, la classification des données s'exécute sur un https://aws.amazon.com/ec2/instance-types/m6i/["instance m6i.4xlarge"^] avec un disque GP2 de 500 Gio. L'image du système d'exploitation est Amazon Linux 2.
 * Dans Azure, la classification des données s'exécute sur unlink:https://docs.microsoft.com/en-us/azure/virtual-machines/dv3-dsv3-series#dsv3-series["VM Standard_D16s_v3"^] avec un disque de 500 Gio.  L'image du système d'exploitation est Ubuntu 22.04.
 * Dans GCP, la classification des données s'exécute sur unlink:https://cloud.google.com/compute/docs/general-purpose-machines#n2_machines["n2-standard-16 VM"^] avec un disque persistant standard de 500 Gio.  L'image du système d'exploitation est Ubuntu 22.04.
 * Dans les régions où l’instance par défaut n’est pas disponible, la classification des données s’exécute sur une instance alternative. link:reference-instance-types.html["Voir les types d'instances alternatifs"] .
@@ -159,8 +159,6 @@ Consultez les spécifications suivantes pour les types d’instances :
 
 | Grand (par défaut) | 16 processeurs, 64 Go de RAM, 500 Go de SSD | Peut numériser jusqu'à 250 millions de fichiers. 
 |===
-Lors du déploiement de la classification des données dans Azure ou GCP, envoyez un e-mail à ng-contact-data-sense@netapp.com pour obtenir de l’aide si vous souhaitez utiliser un type d’instance plus petit.
-
 
 
 == Comment fonctionne l'analyse de classification des données

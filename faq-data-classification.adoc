@@ -276,7 +276,7 @@ La NetApp Console permet à l'utilisateur d'analyser et de générer des rapport
 
 Quandlink:task-deploy-cloud-compliance.html["déployé dans le cloud"] :
 
-* Dans AWS, la classification des données s'exécute sur une instance m6i.4xlarge avec un disque GP2 de 500 Gio.  Vous pouvez sélectionner un type d’instance plus petit lors du déploiement.
+* Dans AWS, la classification des données s'exécute sur une instance m6i.4xlarge avec un disque GP2 de 500 GiB.
 * Dans Azure, la classification des données s’exécute sur une machine virtuelle Standard_D16s_v3 avec un disque de 500 Gio.
 * Dans GCP, la classification des données s'exécute sur une machine virtuelle n2-standard-16 avec un disque persistant standard de 500 Gio.
 
