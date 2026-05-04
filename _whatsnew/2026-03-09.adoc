@@ -1,32 +1,43 @@
-= Version 1.52
+= Validation des ressources
 :allow-uri-read: 
 
 
 
 
-=== Version 1.52
+=== Validation des ressources
 
-.Validation des ressources
 Pour garantir la fiabilité, Data Classification vérifie désormais la mémoire et les ressources d'espace disque disponibles lors de l'analyse, de la génération de rapports et des actions. Lorsque l'utilisation de la mémoire dépasse 95 % ou que l'espace disque est inférieur à 6 Go, Data Classification interrompt automatiquement les opérations. Les opérations reprennent dès que les ressources sont suffisantes.
 
 Pour surveiller les ressources de votre système, consultez link:https://docs.netapp.com/us-en/data-services-data-classification/task-health-monitor.html["Surveiller l'état de la classification des données"^].
 
-.Limite accrue pour la copie et le déplacement
+
+
+=== Limite accrue pour la copie et le déplacement
+
 Les fonctions de copie et de déplacement sont désormais prises en charge pour les destinations CIFS. La limite de taille par fichier pour ces deux actions a été portée à 1 Go contre la limite précédente de 50 Mo. Les limites d'opération pour ces deux actions ont été portées à 1 To ou 5 millions de fichiers.
 
 Pour plus d'informations, voir link:https://docs.netapp.com/us-en/data-services-data-classification/task-copy-move.html["Copier, déplacer et supprimer des données"^].
 
-.Autorisations de configuration d'intégration Active Directory
+
+
+=== Autorisations de configuration d'intégration Active Directory
+
 Les modifications apportées aux paramètres d'intégration d'Active Directory (AD) dans Data Classification sont désormais réservées aux administrateurs. Les spectateurs n'ont plus la possibilité de modifier les paramètres AD.
 
 Pour plus d'informations sur le rôle de visionneur de classification, voir link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html#data-service-roles["Rôles du service de données"^].
 
-.Prise en charge de RHEL 9.7
+
+
+=== Prise en charge de RHEL 9.7
+
 Data Classification a ajouté Red Hat Enterprise Linux v9.7 pour l'installation manuelle sur site, y compris les déploiements sur des sites isolés.
 
 Les systèmes d'exploitation suivants nécessitent l'utilisation du moteur de conteneurs Podman, et ils nécessitent Data Classification version 1.30 ou supérieure : Red Hat Enterprise Linux version 8.8, 8.10, 9.0, 9.1, 9.2, 9.3, 9.4, 9.5, 9.6 et 9.7.
 
-.Prise en charge du proxy transparent
+
+
+=== Prise en charge du proxy transparent
+
 La classification des données prend désormais en charge les configurations de proxy transparent, permettant un déploiement plus fluide dans les environnements réseau proxy ou restreints.
 
 Pour plus d'informations sur le déploiement dans des environnements restreints, voir link:https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-compliance-dark-site.html["Installer NetApp Data Classification sur un hôte Linux sans accès Internet"^].

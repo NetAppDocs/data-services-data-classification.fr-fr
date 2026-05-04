@@ -1,10 +1,6 @@
-= Version 1.39
+= 
 :allow-uri-read: 
 
-
-
-
-=== Version 1.39
 
 Cette version de BlueXP classification met à jour le processus d'exportation du rapport d'enquête sur les données. Cette mise à jour d'exportation est utile pour effectuer des analyses supplémentaires sur vos données, créer des visualisations supplémentaires sur les données ou partager les résultats de votre enquête sur les données avec d'autres.
 

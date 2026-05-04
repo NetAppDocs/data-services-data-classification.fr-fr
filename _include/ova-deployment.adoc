@@ -1,0 +1,6 @@
+= 
+:allow-uri-read: 
+
+
+
+TIP: Pour les déploiements VMware sur site vSphere, la classification des données prend en charge une version simplifiée link:task-deploy-ova.html["déploiement avec OVA"].

@@ -1,9 +1,9 @@
-= Version 1.53
+= Améliorations générales
 :allow-uri-read: 
 
 
 
 
-=== Version 1.53
+=== Améliorations générales
 
 Cette version de la Classification des données inclut des correctifs de bogues, des améliorations de sécurité et des optimisations de performances.

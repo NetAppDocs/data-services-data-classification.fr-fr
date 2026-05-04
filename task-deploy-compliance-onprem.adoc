@@ -20,6 +20,9 @@ L'installation sur site est une bonne option si vous préférez analyser les sys
 
 Le script d'installation de la classification des données commence par vérifier si le système et l'environnement répondent aux prérequis requis.  Si toutes les conditions préalables sont remplies, l'installation démarre.  Si vous souhaitez vérifier les conditions préalables indépendamment de l'exécution de l'installation de la classification des données, vous pouvez télécharger un progiciel distinct qui teste uniquement les conditions préalables. link:task-test-linux-system.html["Découvrez comment vérifier si votre hôte Linux est prêt à installer la classification des données"] .
 
+
+TIP: Pour les déploiements VMware sur site vSphere, la classification des données prend en charge une version simplifiée link:task-deploy-ova.html["déploiement avec OVA"].
+
 L'installation typique sur un hôte Linux _dans vos locaux_ comporte les composants et connexions suivants.
 
 image:diagram_deploy_onprem_overview.png["Un schéma des composants requis de la console et du réseau, ainsi que des connexions associées."]
@@ -321,7 +324,7 @@ Notez que toutes les activités d'installation sont enregistrées lors de l'inst
 
 
 .Étapes
-. Téléchargez le logiciel de classification des données à partir du https://mysupport.netapp.com/site/products/all/details/cloud-data-sense/downloads-tab/["Site de support NetApp"^] .  Le fichier que vous devez sélectionner est nommé *DATASENSE-INSTALLER-<version>.tar.gz*.
+. Téléchargez le logiciel Data Classification depuis le https://mysupport.netapp.com/site/products/all/details/cloud-data-sense/downloads-tab/["Site de support NetApp"^]. Sélectionnez le fichier nommé *DATASENSE-INSTALLER-<version>.tar.gz*.
 . Copiez le fichier d'installation sur l'hôte Linux que vous prévoyez d'utiliser (en utilisant `scp` ou une autre méthode).
 . Décompressez le fichier d’installation sur la machine hôte, par exemple :
 +
@@ -384,5 +387,9 @@ Le programme d’installation de la classification des données installe les pac
 
 S'il existe une connectivité via le port 8080 entre la machine hôte et l'instance de l'agent de la console, vous verrez la progression de l'installation dans l'onglet Classification des données de la console.
 
-.Et ensuite?
-Depuis la page Configuration, vous pouvez sélectionner les sources de données que vous souhaitez analyser.
+
+
+== Prochaines étapes
+
+* link:task-scanning-overview.html["Configurez l'analyse de vos sources de données"]
+
