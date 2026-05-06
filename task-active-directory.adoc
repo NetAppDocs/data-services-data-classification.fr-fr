@@ -51,7 +51,7 @@ Après avoir déployé la classification des données et activé l’analyse sur
 
 Les informations d’identification Active Directory peuvent être en lecture seule, mais la fourniture d’informations d’identification d’administrateur garantit que la classification des données peut lire toutes les données nécessitant des autorisations élevées.  Les informations d’identification sont stockées sur l’instance de classification des données.
 
-Pour les volumes/partages de fichiers CIFS, si vous souhaitez vous assurer que les « heures de dernier accès » de vos fichiers ne sont pas modifiées par les analyses de classification des données, l'utilisateur doit disposer de l'autorisation d'écriture des attributs.  Si possible, nous vous recommandons de faire en sorte que l'utilisateur configuré par Active Directory fasse partie d'un groupe parent de l'organisation disposant d'autorisations sur tous les fichiers.
+Pour les volumes CIFS et les partages de fichiers, afin de garantir que la date et l'heure du dernier accès aux fichiers restent inchangées après les analyses de classification des données, l'utilisateur doit disposer de l'autorisation d'écriture des attributs. Dans la mesure du possible, il est recommandé d'intégrer l'utilisateur configuré dans Active Directory à un groupe parent de l'organisation disposant des autorisations d'accès à tous les fichiers.
 
 .Exigences
 * Vous devez déjà avoir un Active Directory configuré pour les utilisateurs de votre entreprise.

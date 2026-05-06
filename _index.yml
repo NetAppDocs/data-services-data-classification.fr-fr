@@ -1,20 +1,20 @@
 ---
 indexpage:
   title: Documentation sur la NetApp Data Classification
-  summary: NetApp Data Classificaiton vous permet d'analyser et de classer les données
-    dans le multicloud hybride de votre organisation.  La classification des données
-    utilise le traitement du langage naturel (NLP) basé sur l'IA pour l'analyse et
-    la catégorisation des données contextuelles, vous offrant des informations exploitables
-    sur vos données pour répondre aux exigences de conformité, détecter les vulnérabilités
-    de sécurité, optimiser les coûts et accélérer la migration.
+  summary: NetApp Data Classification vous permet d'analyser et de classer les données
+    au sein de votre environnement multicloud hybride. Data Classification utilise
+    le traitement automatique du langage naturel (TALN) piloté par l'IA pour l'analyse
+    contextuelle et la catégorisation des données, vous offrant ainsi des informations
+    exploitables pour répondre aux exigences de conformité, détecter les failles de
+    sécurité, optimiser les coûts et accélérer la migration.
   keywords: bluexp, data classification, cloud data sense, data sense, compliance,
     security, netapp console, bluexp classification
-  lead: NetApp Data Classificaiton vous permet d'analyser et de classer les données
-    dans le multicloud hybride de votre organisation.  La classification des données
-    utilise le traitement du langage naturel (NLP) basé sur l'IA pour l'analyse et
-    la catégorisation des données contextuelles, vous offrant des informations exploitables
-    sur vos données pour répondre aux exigences de conformité, détecter les vulnérabilités
-    de sécurité, optimiser les coûts et accélérer la migration.
+  lead: NetApp Data Classification vous permet d'analyser et de classer les données
+    au sein de votre environnement multicloud hybride. Data Classification utilise
+    le traitement automatique du langage naturel (TALN) piloté par l'IA pour l'analyse
+    contextuelle et la catégorisation des données, vous offrant ainsi des informations
+    exploitables pour répondre aux exigences de conformité, détecter les failles de
+    sécurité, optimiser les coûts et accélérer la migration.
   tiles:
   - title: Commencer
     links:
