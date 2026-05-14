@@ -18,13 +18,13 @@ Lors de la configuration de l'analyse, vous pouvez hiérarchiser les analyses le
 
 Il existe deux types de scans :
 
-* Les *analyses de cartographie uniquement* ne fournissent qu'un aperçu de haut niveau de vos données.  La cartographie peut être effectuée sur vos sources de données très rapidement car elle n'accède pas aux fichiers pour voir les données à l'intérieur.
+* Les analyses cartographiques seules offrent un aperçu général de vos données. La cartographie de vos sources de données est très rapide car elle n'accède pas aux fichiers pour voir les données à l'intérieur.
 * Les analyses *Cartographier et classer* fournissent une analyse approfondie de vos données.
 
 
-Vous pourriez bénéficier de l'utilisation d'analyses de mappage uniquement pour analyser rapidement vos données afin d'identifier les sources de données qui nécessitent des recherches plus approfondies, puis activer ultérieurement les analyses de mappage et de classification uniquement sur les sources de données ou volumes requis.
+Vous pourriez tirer profit de l'utilisation d'analyses Map-only pour analyser rapidement vos données afin d'identifier les sources de données qui nécessitent des recherches plus approfondies, puis activer ultérieurement les analyses Map et de classification uniquement sur ces sources de données ou volumes requis.
 
-La priorité est attribuée uniquement aux analyses de cartographie uniquement, et non aux analyses de cartographie et de classification.
+La priorité est attribuée uniquement aux analyses de type « Map only », et non aux analyses de type « Map and classify ».
 
 La priorité est définie sur 1 par défaut et vous pouvez la modifier sur n'importe quel nombre compris entre 1 et 10.  Plus le nombre est bas, plus la priorité est élevée.  Si vous ne définissez pas de priorité, une priorité de 5 est attribuée à l'analyse.
 

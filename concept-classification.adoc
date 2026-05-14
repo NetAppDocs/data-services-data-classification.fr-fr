@@ -166,7 +166,7 @@ Consultez les spécifications suivantes pour les types d’instances :
 À un niveau élevé, l’analyse de classification des données fonctionne comme ceci :
 
 . Vous déployez une instance de classification des données dans la console.
-. Vous activez le mappage de haut niveau (appelé analyses _Mapping uniquement_) ou l'analyse de niveau profond (appelée analyses _Map & Classify_) sur une ou plusieurs sources de données.
+. Vous activez les analyses sur une ou plusieurs sources de données.
 . La classification des données analyse les données à l’aide d’un processus d’apprentissage de l’IA.
 . Vous utilisez les tableaux de bord et les outils de reporting fournis pour vous aider dans vos efforts de conformité et de gouvernance.
 
@@ -186,15 +186,15 @@ NOTE: La classification des données n’impose pas de limite à la quantité de
 
 
 
-== Quelle est la différence entre les analyses de cartographie et de classification
+== Cartographie et analyses complètes
 
 Vous pouvez effectuer deux types d’analyses dans la classification des données :
 
-* **Les analyses de cartographie uniquement** fournissent uniquement un aperçu de haut niveau de vos données et sont effectuées sur des sources de données sélectionnées.  Les analyses de cartographie uniquement prennent moins de temps que les analyses de cartographie et de classification, car elles n'accèdent pas aux fichiers pour voir les données qu'ils contiennent.  Vous souhaiterez peut-être procéder ainsi dans un premier temps pour identifier les domaines de recherche, puis effectuer une analyse de cartographie et de classification sur ces domaines.
-* **Les analyses de cartographie et de classification** fournissent une analyse approfondie de vos données.
+* Les **analyses cartographiques uniquement** offrent un aperçu général de vos données et sont effectuées sur des sources de données sélectionnées. Les analyses cartographiques uniquement prennent moins de temps que les analyses complètes car elles n'accèdent pas aux fichiers pour voir les données à l'intérieur. Vous pouvez commencer par cela afin d'identifier des axes de recherche, puis effectuer une analyse complète de ces axes.
+* **L'analyse complète** permet une analyse approfondie de vos données. Une analyse complète inclut une analyse cartographique uniquement et une classification des données à l'intérieur des fichiers.
 
 
-Pour plus de détails sur les différences entre les analyses de cartographie et de classification, voirlink:task-scanning-overview.html["Quelle est la différence entre les analyses de cartographie et de classification ?"] .
+Pour une analyse détaillée des différences entre les analyses map-only et les analyses complètes, voir link:task-scanning-overview.html["Quelle est la différence entre les analyses de cartographie et de classification ?"].
 
 
 

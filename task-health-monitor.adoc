@@ -48,7 +48,7 @@ Examinez l'utilisation du processeur, l'utilisation du disque et l'utilisation d
 == Accédez au tableau de bord du Moniteur de santé
 
 . Dans Classification des données, sélectionnez **Configuration**.
-. Sous l'en-tête **Configuration**, sélectionnez **Moniteur d'intégrité de la classification des données**.
+. Sélectionnez l'onglet **Surveillance de la santé**.
 . Dans le tableau de bord Health Monitor, vous pouvez :
 +
 ** Examiner l'utilisation et l'emploi. Si des avertissements apparaissent dans les indicateurs d'utilisation, sélectionnez-les pour obtenir des recommandations permettant de résoudre le problème.

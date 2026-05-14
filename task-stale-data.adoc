@@ -19,11 +19,9 @@ Par défaut, les données sont considérées comme obsolètes si leur dernière 
 
 .Définir les données obsolètes
 . Dans Ransomware Resilience, sélectionnez **Configuration**.
-. Dans la page Configuration, faites défiler jusqu'à la section **Définition des données obsolètes**.
+. Sur la page Configuration, sélectionnez l'onglet **Paramètres**.
+. Sous l'en-tête Définition des données obsolètes, sélectionnez *Modifier*.
 . Dans le menu déroulant **Propriétés du fichier**, choisissez si vous souhaitez définir les données obsolètes en fonction de leur *Dernier accès* ou de leur *Dernière modification*.
 . Choisissez la période pour la définition des données obsolètes.
-+
-image:stale-data.png["Capture d'écran des options de définition des données obsolètes"]
-
 . Sélectionnez **Enregistrer**.
 

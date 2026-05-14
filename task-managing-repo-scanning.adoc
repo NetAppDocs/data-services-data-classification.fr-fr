@@ -41,7 +41,7 @@ Vous pouvez afficher l’état de numérisation de chaque environnement de trava
 +
 image:screenshot_compliance_config_button.png["Une capture d’écran montrant comment sélectionner le bouton Configuration pour un système."]
 
-. Dans l’onglet Configuration, sélectionnez le bouton *Configuration* pour le système.
+. Identifiez le système dont vous souhaitez consulter les paramètres d'analyse, puis sélectionnez **Gérer**.
 . Dans la page Configuration de l’analyse, affichez les paramètres d’analyse pour tous les référentiels.
 +
 image:screenshot_compliance_repo_scan_settings.png["Une capture d'écran indiquant si vos buckets sont en cours d'analyse et l'état actuel de l'analyse."]
@@ -51,31 +51,24 @@ image:screenshot_compliance_repo_scan_settings.png["Une capture d'écran indiqua
 
 
 
-== Modifier le type d'analyse d'un référentiel
+== Modifier le type de numérisation
 
-Vous pouvez démarrer ou arrêter les analyses de mappage uniquement, ou les analyses de mappage et de classification, dans un système à tout moment à partir de la page Configuration.  Vous pouvez également passer d'analyses de mappage uniquement à des analyses de mappage et de classification, et vice-versa.
+Vous pouvez démarrer ou arrêter des analyses dans un système à tout moment depuis la page de configuration. Vous pouvez également passer d'analyses cartographiques uniquement à des analyses complètes, et inversement.
 
 
-TIP: Les bases de données ne peuvent pas être configurées pour des analyses de mappage uniquement.  L'analyse de la base de données peut être désactivée ou activée ; où activé est équivalent à Map & Classify.
+NOTE: L'analyse cartographique seule n'est pas disponible pour les bases de données. Lorsque vous activez l'analyse de base de données, il doit s'agir d'une analyse complète.
 
 .Étapes
 . Dans le menu Classification des données, sélectionnez *Configuration*.
-. Dans l’onglet Configuration, sélectionnez le bouton *Configuration* pour le système.
+. Pour modifier le type d'analyse de tous les éléments d'un système, sélectionnez le menu Actions correspondant, puis choisissez le type d'analyse souhaité. Par exemple, pour passer d'une analyse de mappage uniquement à une analyse complète d'un groupe de partages de fichiers, sélectionnez *Analyser tous les partages : analyse complète*.
++
+Pour modifier le type d'analyse pour des compartiments, des partages ou des volumes individuels, sélectionnez le bouton **Gérer** du système.
+
 +
 image:screenshot_compliance_config_button.png["Une capture d’écran montrant comment sélectionner le bouton Configuration pour un système."]
 
-. Dans la page Configuration de l'analyse, modifiez l'un des référentiels (compartiments dans cet exemple) pour effectuer des analyses *Map* ou *Map & Classify*.
 +
-image:screenshot_compliance_repo_scan_settings.png["Une capture d’écran montrant comment sélectionner le type d’analyse pour un bucket."]
-
-+
-Certains types de systèmes vous permettent de modifier le type d'analyse globalement pour tous les référentiels à l'aide d'une barre de boutons en haut de la page.  Ceci est valable pour les systèmes Cloud Volumes ONTAP, ONTAP sur site, Azure NetApp Files et Amazon FSx pour ONTAP .
-
-+
-L’exemple ci-dessous montre cette barre de boutons pour un système Azure NetApp Files .
-
-+
-image:screenshot_compliance_repo_scan_all.png["Une capture d’écran montrant comment configurer le même paramètre d’analyse pour tous les volumes d’un système."]
+Dans la configuration du système individuel, sélectionnez l'actif que vous souhaitez modifier. Sélectionnez le *Scan type* puis changez pour le type de scan souhaité.
 
 
 
@@ -83,7 +76,7 @@ image:screenshot_compliance_repo_scan_all.png["Une capture d’écran montrant c
 
 == Prioriser les analyses
 
-Vous pouvez prioriser les analyses de cartographie uniquement les plus importantes ou cartographier et classer les analyses pour garantir que les analyses hautement prioritaires sont effectuées en premier.
+Vous pouvez donner la priorité aux analyses map-only ou aux analyses complètes les plus importantes afin de garantir que les analyses à haute priorité soient effectuées en premier.
 
 Par défaut, les analyses sont mises en file d’attente en fonction de l’ordre dans lequel elles sont lancées. Grâce à la possibilité de hiérarchiser les analyses, vous pouvez déplacer les analyses vers l'avant de la file d'attente. Plusieurs analyses peuvent être priorisées. La priorité est désignée selon un ordre premier entré, premier sorti, ce qui signifie que la première analyse que vous priorisez passe en tête de la file d'attente ; la deuxième analyse que vous priorisez devient la deuxième dans la file d'attente, et ainsi de suite.
 
@@ -91,8 +84,8 @@ La priorité est accordée une seule fois. Les réanalyses automatiques des donn
 
 .Étapes
 . Dans le menu Classification des données, sélectionnez *Configuration*.
-. Sélectionnez les ressources que vous souhaitez prioriser.
-. Des actions `...` option, sélectionnez *Prioriser l'analyse*.
+. Trouvez le système pour lequel vous souhaitez modifier les analyses, puis sélectionnez *Manage*.
+. Trouvez les ressources que vous souhaitez prioriser. Sélectionnez l’option du menu Actions `...` puis *Analyse prioritaire*.
 
 
 
@@ -103,21 +96,18 @@ Vous pouvez arrêter l'analyse d'un référentiel (par exemple, un volume) si vo
 
 .Étapes
 . Dans le menu Classification des données, sélectionnez *Configuration*.
-. Dans l’onglet Configuration, sélectionnez le bouton *Configuration* pour le système.
+. Sélectionnez le bouton *Gérer* du système.
 +
 image:screenshot_compliance_config_button.png["Une capture d’écran montrant comment sélectionner le bouton Configuration pour un système."]
 
-. Dans la page Configuration de l'analyse, sélectionnez *Désactivé* pour arrêter l'analyse d'un compartiment particulier.
-+
-image:screenshot_compliance_repo_scan_settings.png["Une capture d’écran montrant comment sélectionner le type d’analyse pour un bucket."]
-
+. Dans la vue d'ensemble du système, sélectionnez la colonne type de scan. Définissez le type de scan sur *Off*.
 
 
 
 
 == Mettre en pause et reprendre l'analyse d'un référentiel
 
-Vous pouvez « suspendre » l’analyse d’un référentiel si vous souhaitez arrêter temporairement l’analyse de certains contenus. La suspension de l'analyse signifie que la classification des données n'effectuera plus aucune analyse pour détecter les modifications ou les ajouts au référentiel. Tous les résultats d'analyse actuels restent accessibles dans la section Classification des données.
+Vous pouvez suspendre l'analyse afin que Data Classification n'effectue plus d'analyses pour détecter les modifications ou ajouts au référentiel. Tous les résultats d'analyse en cours restent accessibles dans Data Classification.
 
 La suspension des analyses n'entraîne pas la suppression des frais de facturation, car les données restent présentes dans le système.
 
@@ -125,10 +115,9 @@ Vous pouvez reprendre la numérisation à tout moment.
 
 .Étapes
 . Dans le menu Classification des données, sélectionnez *Configuration*.
-. Dans l’onglet Configuration, sélectionnez le bouton *Configuration* pour le système.
+. Trouvez le système pour lequel vous souhaitez modifier les analyses, puis sélectionnez *Manage*.
+. Identifiez les ressources que vous souhaitez mettre en pause. Pour chaque ressource, sélectionnez l’option du menu Actions `...`, puis *Mettre en pause l’analyse*.
 +
-image:screenshot_compliance_config_button.png["Une capture d’écran montrant comment sélectionner le bouton Configuration pour un système."]
+Si vous souhaitez reprendre la numérisation, répétez la procédure puis sélectionnez *Reprendre la numérisation*.
 
-. Dans la page Configuration de l'analyse, sélectionnez les actionsimage:button-actions-horizontal.png["Icône Actions"] icône.
-. Sélectionnez *Pause* pour suspendre l’analyse d’un volume ou sélectionnez *Reprendre* pour reprendre l’analyse d’un volume qui avait été précédemment suspendu.
 

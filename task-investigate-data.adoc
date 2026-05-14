@@ -17,7 +17,7 @@ summary: 'Vous pouvez examiner les données de votre organisation en consultant 
 Le tableau de bord « Analyse des données » affiche des informations détaillées sur vos données au niveau des fichiers et des répertoires, vous permettant de trier et de filtrer les résultats. La page « Analyse des données » présente des informations sur les métadonnées et les permissions des fichiers et des répertoires ainsi que l’identification des fichiers en double. Grâce à des informations au niveau des fichiers, des répertoires et des bases de données, vous pouvez prendre des mesures pour améliorer la conformité de votre organisation et économiser de l’espace de stockage. La page « Analyse des données » prend également en charge link:task-copy-move.html["déplacement, copie et suppression de fichiers"].
 
 
-NOTE: Pour obtenir des informations à partir de la page Enquête, vous devez effectuer une analyse de classification complète sur vos sources de données.  Les sources de données ayant fait l'objet d'une analyse de mappage uniquement n'affichent pas les détails au niveau du fichier.
+NOTE: Pour exploiter les informations de la page « Investigation », vous devez effectuer une analyse de classification complète de vos sources de données. Les sources de données ayant fait l'objet d'une analyse cartographique uniquement n'affichent pas les détails au niveau du fichier.
 
 
 

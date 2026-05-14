@@ -17,7 +17,7 @@ summary: 'Prenez le contrôle de vos données privées en consultant les détail
 Prenez le contrôle de vos données privées en consultant les détails sur les données personnelles (PII) et les données personnelles sensibles (SPII) de votre organisation.  Vous pouvez également gagner en visibilité en examinant les catégories et les types de fichiers que NetApp Data Classification a trouvés dans vos données.
 
 
-NOTE: Les détails de conformité au niveau du fichier ne sont disponibles que si vous effectuez une analyse de classification complète. Les analyses de cartographie uniquement ne fournissent pas de détails au niveau du fichier.
+NOTE: Les informations de conformité au niveau des fichiers ne sont disponibles que si vous effectuez une analyse de classification complète. Les analyses basées uniquement sur les cartes ne fournissent pas de détails au niveau des fichiers.
 
 Par défaut, le tableau de bord de classification des données affiche les données de conformité pour tous les systèmes et bases de données.  Pour voir les données de certains systèmes uniquement, sélectionnez-les.
 
@@ -50,10 +50,10 @@ image:screenshot_personal_files.png["Une capture d'écran de la boîte de dialog
 Les images suivantes montrent les données personnelles trouvées dans un répertoire (partages et dossiers). Dans l'onglet *Structuré*, vous visualisez les données personnelles trouvées dans les bases de données. Dans l'onglet *Non structuré*, vous pouvez afficher les données au niveau du fichier.
 
 +
-image:screenshot_compliance_investigation_page.png["Une capture d'écran des informations détaillées trouvées dans les fichiers après avoir cliqué sur Enquêter sur les résultats."]
+image:screenshot_compliance_investigation_page.png["Capture d'écran des informations détaillées trouvées dans les fichiers après avoir sélectionné « Investigate Results »."]
 
 +
-image:screenshot_compliance_investigation_page_directory.png["Une capture d'écran des informations détaillées trouvées dans les répertoires après avoir cliqué sur Enquêter sur les résultats."]
+image:screenshot_compliance_investigation_page_directory.png["Capture d'écran des informations détaillées trouvées dans les répertoires après avoir sélectionné Investigate Results."]
 
 
 
@@ -77,5 +77,5 @@ NOTE: Seul l'anglais est pris en charge lors de la recherche de données personn
 image:screenshot-sensitive-personal.png["Capture d'écran de la carte de résultats personnels sensibles"] .
 
 . Pour examiner les détails d'un type spécifique de données personnelles sensibles, sélectionnez *Afficher tout*, puis sélectionnez l'icône en forme de flèche *Enquêter sur les résultats* pour un type spécifique de données personnelles sensibles.
-. Examinez les données en recherchant, en triant, en développant les détails d'un fichier spécifique, en cliquant sur *Enquêter sur les résultats* pour voir les informations masquées ou en téléchargeant la liste des fichiers.
+. Explorez les données en effectuant une recherche, un tri, en développant les détails d'un fichier spécifique, en sélectionnant *Investigate Results* pour afficher les informations masquées, ou en téléchargeant la liste des fichiers.
 

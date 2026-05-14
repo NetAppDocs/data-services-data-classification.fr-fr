@@ -12,15 +12,15 @@ Les systèmes d'exploitation suivants nécessitent l'utilisation du moteur de co
 
 
 
-=== Donner la priorité aux analyses de cartographie uniquement
+=== Donner la priorité aux analyses map-only
 
-Lorsque vous effectuez des analyses de cartographie uniquement, vous pouvez prioriser les analyses les plus importantes. Cette fonctionnalité est utile lorsque vous disposez de nombreux environnements de travail et que vous souhaitez vous assurer que les analyses hautement prioritaires sont effectuées en premier.
+Lors de l'exécution d'analyses Map-only, vous pouvez prioriser les analyses les plus importantes. Cette fonctionnalité est utile lorsque vous avez de nombreux environnements de travail et souhaitez vous assurer que les analyses à haute priorité sont effectuées en premier.
 
 Par défaut, les analyses sont mises en file d’attente en fonction de l’ordre dans lequel elles sont lancées. Grâce à la possibilité de hiérarchiser les analyses, vous pouvez déplacer les analyses vers l'avant de la file d'attente. Plusieurs analyses peuvent être priorisées. La priorité est désignée selon un ordre premier entré, premier sorti, ce qui signifie que la première analyse que vous priorisez passe en tête de la file d'attente ; la deuxième analyse que vous priorisez devient la deuxième dans la file d'attente, et ainsi de suite.
 
 La priorité est accordée une seule fois. Les réanalyses automatiques des données de cartographie se produisent dans l'ordre par défaut.
 
-La priorisation est limitée àlink:https://docs.netapp.com/us-en/data-services-data-classification/concept-classification.html["analyses de cartographie uniquement"^] ; il n'est pas disponible pour les analyses de cartographie et de classification.
+La priorisation est limitée à link:https://docs.netapp.com/us-en/data-services-data-classification/concept-classification.html["analyses map-only"^]; elle n'est pas disponible pour les scans de cartographie et de classification.
 
 Pour plus d'informations, consultez la section link:https://docs.netapp.com/us-en/data-services-data-classification/task-managing-repo-scanning.html#prioritize-scans["Prioriser les analyses"^] .
 

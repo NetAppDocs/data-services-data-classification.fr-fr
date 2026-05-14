@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task-scanning-overview.html 
-keywords: cloud compliance, get started, enable cloud compliance, cifs credentials, smb credentials, cloud compliance access, privacy, compliance, dp volumes, data protection volumes, CVO, Cloud Volumes ONTAP, data sense, cloud data sense, mapping-only scans, map and classify, map & classify 
+keywords: cloud compliance, get started, enable cloud compliance, cifs credentials, smb credentials, cloud compliance access, privacy, compliance, dp volumes, data protection volumes, CVO, Cloud Volumes ONTAP, data sense, cloud data sense, map-only scans, map and classify, full 
 summary: Analysez vos sources de données avec NetApp Data Classification. 
 ---
 = Analyser les sources de données avec la NetApp Data Classification
@@ -22,19 +22,22 @@ Vous pouvez activer et désactiver les analyses au niveau du volume ou au niveau
 
 
 
-== Quelle est la différence entre les analyses de cartographie et de classification
+== Comprendre les types de scan
 
 Vous pouvez effectuer deux types d’analyses dans la classification des données :
 
-* **Les analyses de cartographie uniquement** fournissent uniquement un aperçu de haut niveau de vos données et sont effectuées sur des sources de données sélectionnées.  Les analyses de cartographie uniquement prennent moins de temps que les analyses de cartographie et de classification, car elles n'accèdent pas aux fichiers pour voir les données qu'ils contiennent.  Vous souhaiterez peut-être procéder ainsi dans un premier temps pour identifier les domaines de recherche, puis effectuer une analyse de cartographie et de classification sur ces domaines.
-* **Les analyses de cartographie et de classification** fournissent une analyse approfondie de vos données.
+* **Les analyses cartographiques uniquement** offrent un aperçu général de vos données et sont effectuées sur des sources de données sélectionnées. Les analyses cartographiques uniquement prennent moins de temps que les analyses complètes car elles n'accèdent pas aux fichiers pour voir les données à l'intérieur.
+* **L'analyse complète** permet une analyse approfondie de vos données. Une analyse complète inclut une analyse de cartographie et une classification des données à l'intérieur des fichiers.
 
 
-Le tableau ci-dessous montre certaines des différences :
+
+TIP: Effectuer une analyse cartographique uniquement peut être utile pour obtenir une vue d'ensemble de vos données et identifier des zones spécifiques sur lesquelles effectuer des analyses complètes.
+
+Consultez les tableaux pour voir quelles informations apparaissent dans les analyses uniquement par carte et dans les analyses complètes.
 
 [cols="47,18,18"]
 |===
-| Fonctionnalité | Cartographier et classer les scans | Analyses de cartographie uniquement 
+| Fonctionnalité | Scan complet | Analyse uniquement de la carte 
 
 
 | Vitesse de numérisation | Lent | Rapide 
@@ -72,22 +75,22 @@ Le tableau ci-dessous montre certaines des différences :
 
 | Possibilité de voir les métadonnées des fichiers** | Oui | Oui 
 |===
-{asterisk} La classification des données n'impose pas de limite à la quantité de données qu'elle peut analyser.  Chaque agent de console prend en charge l'analyse et l'affichage de 500 Tio de données. Pour scanner plus de 500 Tio de données,link:https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html#connector-installation["installer un autre agent de console"^] alorslink:task-deploy-overview.html["déployer une autre instance de classification des données"] .  + L'interface utilisateur de la console affiche les données d'un seul connecteur.  Pour obtenir des conseils sur l'affichage des données de plusieurs agents de console, consultezlink:https://docs.netapp.com/us-en/console-setup-admin/task-manage-multiple-connectors.html#switch-between-connectors["Travailler avec plusieurs agents de console"^] .
+{asterisk}La classification des données ne limite pas la quantité de données qu'elle analyse. Chaque agent Console prend en charge l'analyse et l'affichage de 500 Tio de données. Pour analyser plus de 500 Tio de données, link:https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html#connector-installation["installer un autre agent de console"^] puis link:task-deploy-overview.html["déployer une autre instance de classification des données"]. L'interface utilisateur de la Console affiche les données d'un seul connecteur. Pour obtenir des conseils sur l'affichage des données provenant de plusieurs agents Console, voir link:https://docs.netapp.com/us-en/console-setup-admin/task-manage-multiple-connectors.html#switch-between-connectors["Travailler avec plusieurs agents de console"^].
 
 {asterisk}{asterisk} Les métadonnées suivantes sont extraites des fichiers lors des analyses de mappage :
 
-* Système
-* Type de système
-* Référentiel de stockage
+* Heure de découverte du fichier
+* Dernière consultation du fichier
+* Fichier modifié pour la dernière fois
 * Type de fichier
-* Capacité utilisée
-* Nombre de fichiers
 * Taille du fichier
 * Création de fichier
-* Dernier accès au fichier
-* Fichier modifié pour la dernière fois
-* Heure de découverte du fichier
+* Nombre de fichiers
 * Extraction des autorisations
+* Référentiel de stockage
+* Système
+* Type de système
+* Capacité utilisée
 
 
 .Différences entre les tableaux de bord de gouvernance :
@@ -95,7 +98,7 @@ Le tableau ci-dessous montre certaines des différences :
 ====
 [cols="40,25,25"]
 |===
-| Fonctionnalité | Cartographier et classer | Carte 
+| Fonctionnalité | Scan complet | Analyse uniquement de la carte 
 
 
 | Données obsolètes | Oui | Oui 
@@ -145,7 +148,7 @@ Le tableau ci-dessous montre certaines des différences :
 ====
 [cols="40,25,25"]
 |===
-| Fonctionnalité | Cartographier et classer | Carte 
+| Fonctionnalité | Scan complet | Analyse uniquement de la carte 
 
 
 | Informations personnelles | Oui | Non 
@@ -168,7 +171,7 @@ Le tableau ci-dessous montre certaines des différences :
 ====
 [cols="40,25,25"]
 |===
-| Fonctionnalité | Cartographier et classer | Carte 
+| Fonctionnalité | Scan complet | Analyse uniquement de la carte 
 
 
 | Requêtes enregistrées | Oui | Oui 

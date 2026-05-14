@@ -39,21 +39,19 @@ La classification des données doit être déployée dans le cloud lors de l'ana
 Vous pouvez activer la classification des données sur votre système Google Cloud NetApp Volumes .
 
 . Dans le menu Classification des données, sélectionnez *Configuration*.
-. Sélectionnez la manière dont vous souhaitez analyser les volumes de chaque système. link:concept-classification.html#whats-the-difference-between-mapping-and-classification-scans["En savoir plus sur les analyses de cartographie et de classification"]:
+. Recherchez le système Google Cloud NetApp Volumes dans la page de configuration.
+. Décidez comment vous souhaitez numériser les volumes. link:task-scanning-overview.html["Quelle est la différence entre les analyses de cartographie et de classification ?"].
+. Pour activer l'analyse sur tous les volumes du système, sélectionnez *Activer l'analyse* puis *Mapper uniquement tous les volumes* ou *Analyser complètement tous les volumes*.
 +
-** Pour mapper tous les volumes, sélectionnez *Mapper tous les volumes*.
-** Pour cartographier et classer tous les volumes, sélectionnez *Cartographier et classer tous les volumes*.
-** Pour personnaliser l'analyse de chaque volume, sélectionnez *Ou sélectionnez le type d'analyse pour chaque volume*, puis choisissez les volumes que vous souhaitez mapper et/ou classer.
+Pour gérer l'analyse uniquement sur certains volumes, sélectionnez *Activer l'analyse* puis *Gérer*. Dans la vue d'ensemble du système, identifiez les ressources que vous souhaitez analyser. Sélectionnez le type d'analyse pour chaque volume, puis définissez-le sur le type d'analyse souhaité : complète ou uniquement mappage.
+
 +
 Voir<<Activer et désactiver les analyses sur les volumes,Activer et désactiver les analyses sur les volumes>> pour plus de détails.
 
 
 
-. Dans la boîte de dialogue de confirmation, sélectionnez *Approuver*.
-
-
 .Résultat
-La classification des données commence à analyser les volumes que vous avez sélectionnés dans le système. Les résultats sont disponibles dans le tableau de bord Conformité dès que la classification des données termine les analyses initiales. Le temps nécessaire dépend de la quantité de données : de quelques minutes à quelques heures.  Vous pouvez suivre la progression de l'analyse initiale dans la section **Configuration système** du menu **Configuration**.  La classification des données affiche une barre de progression pour chaque analyse. Vous pouvez également survoler la barre de progression pour voir le nombre de fichiers analysés par rapport au nombre total de fichiers dans le volume.
+La classification des données lance l'analyse des volumes que vous avez sélectionnés dans le système. Les résultats sont disponibles dans le tableau de bord Conformité dès que la classification des données a terminé les analyses initiales. La durée dépend du volume de données : de quelques minutes à quelques heures. Vous pouvez suivre la progression de chaque analyse dans la section Vue d'ensemble du système. La classification des données affiche une barre de progression pour chaque analyse. Vous pouvez également survoler la barre de progression pour voir le nombre de fichiers analysés par rapport au nombre total de fichiers dans le volume.
 
 * Par défaut, si Data Classification ne dispose pas d'autorisations d'attributs d'écriture dans CIFS ou d'autorisations d'écriture dans NFS, le système n'analysera pas les fichiers de vos volumes car Data Classification ne peut pas rétablir l'« heure du dernier accès » à l'horodatage d'origine.  Si vous ne vous souciez pas de savoir si la dernière heure d'accès est réinitialisée, sélectionnez *Ou sélectionnez le type d'analyse pour chaque volume*.  La page résultante contient un paramètre que vous pouvez activer pour que la classification des données analyse les volumes quelles que soient les autorisations.
 * La classification des données analyse un seul partage de fichiers sous un volume. Si vous avez plusieurs partages dans vos volumes, vous devez analyser ces autres partages séparément en tant que groupe de partages. link:reference-limitations.html#data-classification-scans-only-one-share-under-a-volume["En savoir plus sur cette limitation de classification des données"^].
@@ -92,9 +90,6 @@ Si vous souhaitez vous assurer que les « dernières heures d'accès » de vos
 +
 Après avoir saisi les informations d’identification, vous devriez voir un message indiquant que tous les volumes CIFS ont été authentifiés avec succès.
 
-+
-image:screenshot_cifs_status.gif["Une capture d’écran qui montre la page de configuration et un système Cloud Volumes ONTAP pour lequel les informations d’identification CIFS ont été fournies avec succès."]
-
 
 
 . Sur la page Configuration, sélectionnez *Afficher les détails* pour vérifier l’état de chaque volume CIFS et NFS et corriger les erreurs éventuelles.
@@ -104,24 +99,20 @@ image:screenshot_cifs_status.gif["Une capture d’écran qui montre la page de c
 
 == Activer et désactiver les analyses sur les volumes
 
-Vous pouvez démarrer ou arrêter les analyses sur n’importe quel système à tout moment à partir de la page de configuration.  Vous pouvez également passer d'analyses de cartographie uniquement à des analyses de cartographie et de classification, et vice-versa.  Il est recommandé d'analyser tous les volumes d'un système.
+Vous pouvez lancer ou arrêter des analyses sur n'importe quel système à tout moment depuis la page de configuration. Vous pouvez également passer d'une analyse cartographique seule à une analyse cartographique et de classification, et inversement. Il est recommandé d'analyser tous les volumes d'un système.
+
+Le commutateur en haut de la page pour *Analyser sans autorisations d'écriture* est désactivé par défaut. Cela signifie que si Data Classification n'a pas les autorisations d'attributs d'écriture dans CIFS ou les autorisations d'écriture dans NFS, le système n'analysera pas les fichiers car Data Classification ne peut pas rétablir le « temps d'accès » à l'horodatage d'origine. Si vous ne vous souciez pas que le temps d'accès soit réinitialisé, activez le commutateur et tous les fichiers sont analysés indépendamment des autorisations. link:reference-collected-metadata.html#last-access-time-timestamp["Apprendre encore plus"^].
 
 
-TIP: Les nouveaux volumes ajoutés au système sont automatiquement analysés uniquement lorsque vous avez sélectionné le paramètre *Carte* ou *Carte et classification* dans la zone d'en-tête. Lorsque cette option est définie sur *Personnalisé* ou *Désactivé* dans la zone d'en-tête, vous devrez activer le mappage et/ou l'analyse complète sur chaque nouveau volume que vous ajoutez au système.
-
-Le commutateur en haut de la page pour *Analyser en cas d'absence d'autorisations « d'écriture »* est désactivé par défaut. Cela signifie que si Data Classification ne dispose pas d'autorisations d'attributs d'écriture dans CIFS ou d'autorisations d'écriture dans NFS, le système n'analysera pas les fichiers car Data Classification ne peut pas rétablir l'« heure du dernier accès » à l'horodatage d'origine. Si vous ne vous souciez pas de savoir si la dernière heure d'accès est réinitialisée, activez l'interrupteur et tous les fichiers sont analysés quelles que soient les autorisations. link:reference-collected-metadata.html#last-access-time-timestamp["Apprendre encore plus"^].
-
-
-NOTE: Les nouveaux volumes ajoutés au système sont automatiquement analysés uniquement lorsque vous avez défini le paramètre *Carte* ou *Carte et classification* dans la zone d'en-tête. Lorsque le paramètre pour tous les volumes est *Personnalisé* ou *Désactivé*, vous devez activer l'analyse manuellement pour chaque nouveau volume que vous ajoutez.
+NOTE: Les nouveaux volumes ajoutés au système sont automatiquement analysés uniquement si vous avez défini le paramètre *Map* ou *Full scan* dans la zone d'en-tête. Lorsque le paramètre pour tous les volumes est *Custom* ou *Off*, vous devez activer l'analyse manuellement pour chaque nouveau volume que vous ajoutez.
 
 image:screenshot_volume_compliance_selection.png["Une capture d’écran de la page de configuration où vous pouvez activer ou désactiver l’analyse des volumes individuels."]
 
 .Étapes
 . Dans le menu Classification des données, sélectionnez *Configuration*.
-. Choisissez un système, puis sélectionnez *Configuration*.
-. Pour activer ou désactiver les analyses pour tous les volumes, sélectionnez **Map**, **Map & Classify** ou **Off** dans l'en-tête au-dessus de tous les volumes.
+. Identifiez le système à analyser. Sélectionnez **Activer l'analyse**. Dans le menu déroulant, choisissez **Analyse complète**, **Cartographie uniquement** ou **Gérer les analyses** pour ouvrir le menu système et configurer l'analyse sur des volumes ou partages spécifiques.
 +
-Pour activer ou désactiver les analyses de volumes individuels, recherchez les volumes dans la liste, puis sélectionnez **Map**, **Map & Classify** ou **Off** à côté du nom du volume.
+Pour activer ou désactiver les analyses pour des volumes individuels, trouvez les volumes ou les partages dans la liste, puis sélectionnez **Map**, **Analyse complète** ou **Désactivé** à côté du nom du volume.
 
 
 

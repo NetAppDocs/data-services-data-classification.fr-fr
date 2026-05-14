@@ -60,7 +60,7 @@ Vous pouvez ajouter des partages de fichiers individuellement ou saisir une list
 . Dans la boîte de dialogue Ajouter un groupe de partages de fichiers, saisissez le nom du groupe de partages, puis sélectionnez *Continuer*.
 . Sélectionnez le protocole pour les partages de fichiers que vous ajoutez.
 +
-image:screen-cl-config-shares-add.png["Une capture d'écran de la fenêtre modale pour ajouter des partages, montrant les options permettant de sélectionner des protocoles et des partages"]
+image:add-shares.png["Une capture d'écran de la fenêtre modale pour ajouter des partages, montrant les options permettant de sélectionner des protocoles et des partages"]
 
 +
 .. Si vous ajoutez des partages CIFS avec l’authentification NTLM, entrez les informations d’identification Active Directory pour accéder aux volumes CIFS.  Bien que les informations d'identification en lecture seule soient prises en charge, il est recommandé de fournir un accès complet avec les informations d'identification d'administrateur.  Sélectionnez **Enregistrer**.
@@ -68,21 +68,18 @@ image:screen-cl-config-shares-add.png["Une capture d'écran de la fenêtre modal
 
 . Ajoutez les partages de fichiers que vous souhaitez analyser (un partage de fichiers par ligne).  Sélectionnez ensuite **Continuer**.
 . Une boîte de dialogue de confirmation affiche le nombre de partages qui ont été ajoutés.
+. Décidez comment vous souhaitez numériser les volumes. link:task-scanning-overview.html["Quelle est la différence entre les analyses de cartographie et de classification ?"].
+. Pour activer l'analyse sur tous les volumes du système, sélectionnez *Activer l'analyse* puis *Mapper uniquement tous les volumes* ou *Analyser complètement tous les volumes*.
 +
-Si la boîte de dialogue répertorie des partages qui n’ont pas pu être ajoutés, capturez ces informations afin de pouvoir résoudre le problème.  Si le problème concerne une convention de dénomination, vous pouvez rajouter le partage avec un nom corrigé.
+Pour gérer l'analyse uniquement sur certains volumes, sélectionnez *Activer l'analyse* puis *Gérer*. Dans la vue d'ensemble du système, identifiez les ressources que vous souhaitez analyser. Sélectionnez le type d'analyse pour chaque volume, puis définissez-le sur le type d'analyse souhaité : complète ou uniquement mappage.
 
-. Configurer l’analyse sur le volume :
 +
-** Pour activer les analyses de mappage uniquement sur les partages de fichiers, sélectionnez *Map*.
-** Pour activer les analyses complètes sur les partages de fichiers, sélectionnez *Mappez et classez*.
-** Pour désactiver l’analyse sur les partages de fichiers, sélectionnez *Désactivé*.
-+
-
-NOTE: Le commutateur en haut de la page pour *Analyser lorsque les autorisations « attributs d'écriture » sont manquantes* est désactivé par défaut. Cela signifie que si Data Classification ne dispose pas d'autorisations d'attributs d'écriture dans CIFS ou d'autorisations d'écriture dans NFS, le système n'analysera pas les fichiers car Data Classification ne peut pas rétablir l'« heure du dernier accès » à l'horodatage d'origine. + Si vous activez *Analyser en cas d'absence d'autorisations « attributs d'écriture »*, l'analyse réinitialise l'heure du dernier accès et analyse tous les fichiers, quelles que soient les autorisations. + Pour en savoir plus sur l'horodatage du dernier accès, voirlink:reference-collected-metadata.html#last-access-time-timestamp["Métadonnées collectées à partir de sources de données dans la classification des données"] .
+Voir<<Activer et désactiver les analyses sur les volumes,Activer et désactiver les analyses sur les volumes>> pour plus de détails.
 
 
 
 
+NOTE: La page de présentation du système comporte une option *Analyser sans autorisation d'écriture* désactivée par défaut. Cela signifie que si Data Classification ne dispose pas des autorisations d'écriture sur les attributs dans CIFS ou des autorisations d'écriture dans NFS, le système n'analysera pas les fichiers, car Data Classification ne peut pas rétablir le "temps d'accès" à l'horodatage d'origine. + Si vous cochez l'option *Analyser sans autorisation d'écriture*, l'analyse réinitialise le temps d'accès et analyse tous les fichiers, quelles que soient les autorisations. + Pour en savoir plus sur l'horodatage du dernier accès, consultez link:reference-collected-metadata.html#last-access-time-timestamp["Métadonnées collectées à partir de sources de données dans la classification des données"].
 
 .Résultat
 La classification des données commence à analyser les fichiers dans les partages de fichiers que vous avez ajoutés.  Tu peuxxref:#track-the-scanning-progress[Suivre la progression de la numérisation] et afficher les résultats de l'analyse dans le **Tableau de bord**.
@@ -98,7 +95,7 @@ Après avoir créé un groupe de partages de fichiers, vous pouvez modifier le p
 
 .Modifier la configuration du protocole CIFS
 . Dans le menu Classification des données, sélectionnez *Configuration*.
-. Depuis la page Configuration, sélectionnez le groupe de partages de fichiers que vous souhaitez modifier.
+. Sur la page Configuration, recherchez le système de groupe de partages de fichiers que vous souhaitez modifier, puis sélectionnez **Gérer**.
 . Sélectionnez **Modifier les informations d’identification CIFS**.
 +
 image:screenshot-edit-cifs-credential.png["Capture d'écran du menu Modifier les informations d'identification CIFS."]
@@ -110,11 +107,11 @@ image:screenshot-edit-cifs-credential.png["Capture d'écran du menu Modifier les
 
 .Ajouter des partages de fichiers aux analyses
 . Dans le menu Classification des données, sélectionnez *Configuration*.
-. Depuis la page Configuration, sélectionnez le groupe de partages de fichiers que vous souhaitez modifier.
+. Sur la page Configuration, recherchez le groupe de partages de fichiers que vous souhaitez modifier. Sélectionnez **Gérer**.
 . Sélectionnez **+ Ajouter des partages**.
 . Sélectionnez le protocole pour les partages de fichiers que vous ajoutez.
 +
-image:screen-cl-config-shares-add.png["Une capture d'écran de la fenêtre modale pour ajouter des partages, montrant les options permettant de sélectionner des protocoles et des partages"]
+image:add-shares.png["Une capture d'écran de la fenêtre modale pour ajouter des partages, montrant les options permettant de sélectionner des protocoles et des partages"]
 
 +
 Si vous ajoutez des partages de fichiers à un protocole que vous avez déjà configuré, aucune modification n'est requise.
@@ -123,14 +120,13 @@ Si vous ajoutez des partages de fichiers à un protocole que vous avez déjà co
 Si vous ajoutez des partages de fichiers avec un deuxième protocole, assurez-vous d'avoir correctement configuré l'authentification comme détaillé dans lelink:#prerequisites["prérequis"] .
 
 . Ajoutez les partages de fichiers que vous souhaitez analyser (un partage de fichiers par ligne) en utilisant le format `<host_name>:/<share_path>` .
-. Sélectionnez **Continuer** pour terminer l’ajout des partages de fichiers.
+. Sélectionnez **Enregistrer** pour terminer l'ajout des partages de fichiers.
 
 
 .Supprimer un partage de fichiers des analyses
 . Dans le menu Classification des données, sélectionnez *Configuration*.
-. Sélectionnez le système dont vous souhaitez supprimer les partages de fichiers.
-. Sélectionnez *Configuration*.
-. Depuis la page Configuration, sélectionnez les Actionsimage:button-actions-horizontal.png["Icône Actions"] pour le partage de fichiers que vous souhaitez supprimer.
+. Trouvez le système dont vous souhaitez supprimer les partages de fichiers, puis sélectionnez **Manage**.
+. Depuis la page de présentation du système, sélectionnez Actions image:button-actions-horizontal.png["Icône Actions"] pour le partage de fichiers que vous souhaitez supprimer.
 . Dans le menu Actions, sélectionnez *Supprimer le partage*.
 
 
@@ -141,6 +137,30 @@ Si vous ajoutez des partages de fichiers avec un deuxième protocole, assurez-vo
 Vous pouvez suivre la progression de l'analyse initiale.
 
 . Sélectionnez le menu **Configuration**.
-. Sélectionnez la **Configuration système**.
-. Pour le référentiel de stockage, vérifiez la colonne Progression de l'analyse pour afficher son état.
+. Trouvez le groupe de partage de fichiers, puis sélectionnez **Gérer**.
+. Pour le référentiel de stockage, consultez la colonne Scan progress pour en connaître l'état. Des barres de progression distinctes s'affichent si vous avez activé les analyses complètes.
 
+
+
+
+== Activer et désactiver les analyses sur les volumes
+
+Vous pouvez lancer ou arrêter des analyses sur n'importe quel système à tout moment depuis la page de configuration. Vous pouvez également passer d'une analyse cartographique seule à une analyse cartographique et de classification, et inversement. Il est recommandé d'analyser tous les volumes d'un système.
+
+Le commutateur en haut de la page pour *Analyser sans autorisations d'écriture* est désactivé par défaut. Cela signifie que si Data Classification n'a pas les autorisations d'attributs d'écriture dans CIFS ou les autorisations d'écriture dans NFS, le système n'analysera pas les fichiers car Data Classification ne peut pas rétablir le « temps d'accès » à l'horodatage d'origine. Si vous ne vous souciez pas que le temps d'accès soit réinitialisé, activez le commutateur et tous les fichiers sont analysés indépendamment des autorisations. link:reference-collected-metadata.html#last-access-time-timestamp["Apprendre encore plus"^].
+
+
+NOTE: Les nouveaux volumes ajoutés au système sont automatiquement analysés uniquement si vous avez défini le paramètre *Map* ou *Full scan* dans la zone d'en-tête. Lorsque le paramètre pour tous les volumes est *Custom* ou *Off*, vous devez activer l'analyse manuellement pour chaque nouveau volume que vous ajoutez.
+
+image:screenshot_volume_compliance_selection.png["Une capture d’écran de la page de configuration où vous pouvez activer ou désactiver l’analyse des volumes individuels."]
+
+.Étapes
+. Dans le menu Classification des données, sélectionnez *Configuration*.
+. Identifiez le système à analyser. Sélectionnez **Activer l'analyse**. Dans le menu déroulant, choisissez **Analyse complète**, **Cartographie uniquement** ou **Gérer les analyses** pour ouvrir le menu système et configurer l'analyse sur des volumes ou partages spécifiques.
++
+Pour activer ou désactiver les analyses pour des volumes individuels, trouvez les volumes ou les partages dans la liste, puis sélectionnez **Map**, **Analyse complète** ou **Désactivé** à côté du nom du volume.
+
+
+
+.Résultat
+Lorsque vous activez l'analyse, la classification des données démarre l'analyse des volumes que vous avez sélectionnés dans le système. Les résultats commencent à apparaître dans le tableau de bord Conformité dès que la classification des données démarre l'analyse.  Le temps d’exécution de l’analyse dépend de la quantité de données, allant de quelques minutes à quelques heures.

@@ -45,8 +45,5 @@ Si vous ne souhaitez plus analyser les fichiers utilisateur d'un groupe de parta
 
 .Étapes
 . Depuis la page _Configuration_, sélectionnez l'optionimage:button-gallery-options.gif["Bouton Plus"] bouton dans la ligne du groupe de partages de fichiers puis *Supprimer le groupe de partages de fichiers*.
-+
-image:screenshot_compliance_remove_db.png["Capture d'écran du bouton Supprimer le serveur de base de données de la page Configuration de l'analyse."]
-
 . Sélectionnez *Supprimer le groupe de partages* dans la boîte de dialogue de confirmation.
 

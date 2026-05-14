@@ -20,7 +20,7 @@ Par défaut, les tableaux de bord de classification des données affichent les d
 
 [NOTE]
 ====
-* Les rapports de conformité ne sont disponibles que si vous effectuez une analyse de classification complète sur vos sources de données.  Les sources de données ayant fait l'objet d'une analyse de mappage uniquement peuvent uniquement générer le rapport de mappage de données.
+* Les rapports de conformité ne sont disponibles que si vous effectuez une analyse de classification complète de vos sources de données. Les sources de données ayant fait l'objet d'une simple cartographie ne peuvent générer que le rapport de cartographie des données.
 * NetApp ne peut pas garantir l'exactitude à 100 % des données personnelles et des données personnelles sensibles identifiées par Data Classification.  Vous devez toujours valider les informations en examinant les données.
 
 

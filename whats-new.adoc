@@ -18,7 +18,17 @@ Découvrez les nouveautés de la NetApp Data Classification.
 
 
 
-== 4 mai 2026
+== 11 mai 2026
+
+*Version 1.54*
+
+
+
+=== Page de configuration améliorée
+
+La page de configuration de Data Classification a été mise à jour et améliorée, offrant ainsi une expérience utilisateur optimisée pour la gestion des paramètres, des systèmes, l'activation des analyses et la surveillance de l'état du système. La nouvelle page de configuration propose la fonctionnalité existante dans un format plus intuitif, avec en plus la possibilité de filtrer les systèmes par type, état d'erreur et état d'analyse. La nouvelle page fournit également un récapitulatif des systèmes connectés et un aperçu des analyses actives et configurées.
+
+Examinez un link:https://youtu.be/_8YJ3KyZ7nI["visite vidéo"^]. Pour plus d'informations, voir link:https://docs.netapp.com/us-en/data-services-data-classification/task-scanning-overview.html["Analyser les sources de données avec la classification des données"^].
 
 
 
@@ -380,7 +390,7 @@ Redis a été mis à niveau pour améliorer la fiabilité de la BlueXP classific
 
 === Prioriser les analyses de classification
 
-La classification des données prend en charge la possibilité de hiérarchiser les analyses de cartographie et de classification en plus des analyses de cartographie uniquement, vous permettant de sélectionner les analyses à effectuer en premier. La priorisation des analyses Map & Classify est prise en charge pendant et avant le début des analyses. Si vous choisissez de donner la priorité à une analyse pendant qu'elle est en cours, les analyses de mappage et de classification sont toutes deux prioritaires.
+La classification des données prend en charge la possibilité de prioriser les analyses « Cartographier et Classifier » en plus des analyses « Cartographier uniquement », ce qui vous permet de sélectionner quelles analyses sont effectuées en premier. La priorisation des analyses « Cartographier et Classifier » est prise en charge pendant et avant le début des analyses. Si vous choisissez de prioriser une analyse pendant son exécution, les analyses de cartographie et de classification sont toutes deux priorisées.
 
 Pour plus d'informations, consultez la section link:https://docs.netapp.com/us-en/data-services-data-classification/task-managing-repo-scanning.html#prioritize-scans["Prioriser les analyses"] .
 
@@ -488,15 +498,15 @@ Les systèmes d'exploitation suivants nécessitent l'utilisation du moteur de co
 
 
 
-=== Donner la priorité aux analyses de cartographie uniquement
+=== Donner la priorité aux analyses map-only
 
-Lorsque vous effectuez des analyses de cartographie uniquement, vous pouvez prioriser les analyses les plus importantes. Cette fonctionnalité est utile lorsque vous disposez de nombreux environnements de travail et que vous souhaitez vous assurer que les analyses hautement prioritaires sont effectuées en premier.
+Lors de l'exécution d'analyses Map-only, vous pouvez prioriser les analyses les plus importantes. Cette fonctionnalité est utile lorsque vous avez de nombreux environnements de travail et souhaitez vous assurer que les analyses à haute priorité sont effectuées en premier.
 
 Par défaut, les analyses sont mises en file d’attente en fonction de l’ordre dans lequel elles sont lancées. Grâce à la possibilité de hiérarchiser les analyses, vous pouvez déplacer les analyses vers l'avant de la file d'attente. Plusieurs analyses peuvent être priorisées. La priorité est désignée selon un ordre premier entré, premier sorti, ce qui signifie que la première analyse que vous priorisez passe en tête de la file d'attente ; la deuxième analyse que vous priorisez devient la deuxième dans la file d'attente, et ainsi de suite.
 
 La priorité est accordée une seule fois. Les réanalyses automatiques des données de cartographie se produisent dans l'ordre par défaut.
 
-La priorisation est limitée àlink:https://docs.netapp.com/us-en/data-services-data-classification/concept-classification.html["analyses de cartographie uniquement"^] ; il n'est pas disponible pour les analyses de cartographie et de classification.
+La priorisation est limitée à link:https://docs.netapp.com/us-en/data-services-data-classification/concept-classification.html["analyses map-only"^]; elle n'est pas disponible pour les scans de cartographie et de classification.
 
 Pour plus d'informations, consultez la section link:https://docs.netapp.com/us-en/data-services-data-classification/task-managing-repo-scanning.html#prioritize-scans["Prioriser les analyses"^] .
 

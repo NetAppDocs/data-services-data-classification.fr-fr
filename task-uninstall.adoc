@@ -23,10 +23,8 @@ Les étapes à suivre dépendent du fait que vous avez déployé la classificati
 == Désinstaller Data Classification d'un fournisseur cloud
 
 . Dans Classification des données, sélectionnez **Configuration**.
-. Au bas de la page de configuration, sélectionnez **Désinstaller la classification**.
-+
-image:screenshot-uninstall.png["Une capture d'écran du bouton pour désinstaller Data Classification."]
-
+. Passez à l'onglet **Paramètres**.
+. Sélectionnez **Désinstaller la classification des données**.
 . Dans la boîte de dialogue, saisissez « désinstaller » pour procéder à la déconnexion de l’instance de classification des données de l’agent de la console.  Sélectionnez **Désinstaller** pour confirmer.
 . Dans la boîte de dialogue _Désinstaller la classification_, saisissez *uninstall* pour confirmer que vous souhaitez déconnecter l'instance de classification des données de l'agent de la console, puis sélectionnez *Désinstaller*.
 . Pour finaliser le processus de désinstallation, accédez à la console de votre fournisseur de cloud et supprimez l'instance de classification des données.  L'instance est nommée _CloudCompliance_ avec un hachage généré (UUID) concaténé.  Par exemple : _CloudCompliance-16bb6564-38ad-4080-9a92-36f5fd2f71c7_
@@ -37,11 +35,12 @@ image:screenshot-uninstall.png["Une capture d'écran du bouton pour désinstalle
 == Désinstaller la classification des données d'un déploiement sur site
 
 . Dans Classification des données, sélectionnez **Configuration**.
-. Au bas de la page de configuration, sélectionnez **Désinstaller la classification**.
+. Passez à l'onglet **Paramètres**.
+. Sélectionnez **Désinstaller la classification des données**.
 +
 image:screenshot-uninstall.png["Une capture d'écran du bouton pour désinstaller Data Classification."]
 
-. Dans la boîte de dialogue, saisissez « désinstaller » pour procéder à la déconnexion de l’instance de classification des données de l’agent de la console.  Sélectionnez **Désinstaller** pour confirmer.
+. Dans la boîte de dialogue, saisissez « uninstall » pour déconnecter l’instance de Data Classification de l’agent Console. Sélectionnez **Uninstall** pour confirmer.
 . Pour désinstaller le logiciel de l'hôte, exécutez le `cleanup.sh` script sur la machine hôte de classification des données, par exemple :
 +
 [source, cli]

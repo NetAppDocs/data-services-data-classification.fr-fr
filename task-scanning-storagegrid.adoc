@@ -67,16 +67,14 @@ StorageGRID est ajouté à la liste des systèmes.
 Après avoir activé la classification des données sur StorageGRID, l’étape suivante consiste à configurer les buckets que vous souhaitez analyser.  La classification des données découvre ces compartiments et les affiche dans le système que vous avez créé.
 
 .Étapes
-. Dans la page Configuration, recherchez le système StorageGRID .
-. Sur la mosaïque système StorageGRID , sélectionnez *Configuration*.
-. Effectuez l’une des étapes suivantes pour activer ou désactiver l’analyse :
+. Dans Classification des données, sélectionnez **Configuration**.
+. Sur la page de configuration, repérez le système StorageGRID pour lequel vous souhaitez activer l'analyse.
+. Décidez comment vous souhaitez numériser les volumes. link:task-scanning-overview.html["Quelle est la différence entre les analyses de cartographie et de classification ?"].
+. Pour activer l'analyse sur tous les volumes du système, sélectionnez *Activer l'analyse* puis *Mapper uniquement tous les volumes* ou *Analyser complètement tous les volumes*.
 +
-** Pour activer les analyses de mappage uniquement sur un bucket, sélectionnez *Carte*.
-** Pour activer les analyses complètes sur un bucket, sélectionnez *Cartographier et classer*.
-** Pour désactiver l'analyse sur un bucket, sélectionnez *Désactivé*.
-
+Pour gérer l'analyse uniquement sur certains volumes, sélectionnez *Activer l'analyse* puis *Gérer*. Dans la vue d'ensemble du système, identifiez les ressources que vous souhaitez analyser. Sélectionnez le type d'analyse pour chaque volume, puis définissez-le sur le type d'analyse souhaité : complète ou uniquement mappage.
 
 
 
 .Résultat
-La classification des données commence à analyser les compartiments que vous avez activés.  Vous pouvez suivre la progression de l'analyse initiale en accédant au menu **Configuration** puis en sélectionnant la **Configuration système**.  La progression de chaque analyse est affichée sous forme de barre de progression.  Vous pouvez également survoler la barre de progression pour voir le nombre de fichiers analysés par rapport au nombre total de fichiers dans le volume.  S'il y a des erreurs, elles apparaîtront dans la colonne Statut, à côté de l'action requise pour corriger l'erreur.
+La classification des données lance l'analyse des compartiments que vous avez activés. Vous pouvez suivre la progression de l'analyse initiale en accédant au menu **Configuration**. Identifiez le système, puis sélectionnez **Manage**. La progression de chaque analyse est affichée par une barre de progression. Vous pouvez également survoler la barre de progression pour afficher le nombre de fichiers analysés par rapport au nombre total de fichiers dans le volume. En cas d'erreur, celle-ci apparaîtra dans la colonne Status, accompagnée de l'action requise pour la corriger.

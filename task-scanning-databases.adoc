@@ -99,16 +99,13 @@ La base de données est ajoutée à la liste des systèmes.
 Vous pouvez arrêter ou démarrer l'analyse complète de vos schémas à tout moment.
 
 
-TIP: Il n'existe aucune option permettant de sélectionner des analyses de mappage uniquement pour les schémas de base de données.
+TIP: Il n'existe aucune option permettant de sélectionner uniquement les analyses de cartes pour les schémas de base de données.
 
-. Depuis la page Configuration, sélectionnez le bouton *Configuration* correspondant à la base de données que vous souhaitez configurer.
+. Sur la page Configuration, sélectionnez le bouton *Manage* correspondant à la base de données que vous souhaitez configurer.
 +
 image:screenshot_compliance_db_server_config.png["Une capture d’écran de la page Configuration de l’analyse où vous pouvez sélectionner le bouton Configuration."]
 
-. Sélectionnez les schémas que vous souhaitez analyser en déplaçant le curseur vers la droite.
-+
-image:screenshot_compliance_select_schemas.png["Une capture d'écran de la page Configuration de l'analyse où vous pouvez choisir les schémas à analyser."]
-
+. Pour chaque schéma pour lequel vous souhaitez activer les analyses, sélectionnez la colonne *Type d'analyse* puis définissez l'analyse sur désactivée ou **Analyse complète**.
 
 
 .Résultat

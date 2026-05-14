@@ -68,7 +68,7 @@ Les analyses de données ont un impact négligeable sur vos systèmes de stockag
 
 Les performances d’analyse peuvent varier en fonction de la bande passante du réseau et de la taille moyenne des fichiers dans votre environnement.  Cela peut également dépendre des caractéristiques de taille du système hôte (dans le cloud ou sur site). Voir link:concept-classification.html["L'instance de classification des données"] et link:task-deploy-overview.html["Déploiement de la classification des données"] pour plus d'informations.
 
-Lors de l'ajout initial de nouvelles sources de données, vous pouvez également choisir d'effectuer uniquement une analyse de « mappage » (Mapping uniquement) au lieu d'une analyse de « classification » complète (Map & Classify).  La cartographie peut être effectuée sur vos sources de données très rapidement car elle n'accède pas aux fichiers pour voir les données à l'intérieur. link:task-scanning-overview.html["Découvrez la différence entre une analyse de cartographie et une analyse de classification"] .
+Lors de l'ajout initial de nouvelles sources de données, vous pouvez également choisir d'effectuer uniquement une analyse de mappage ou une analyse complète. Le mappage peut être effectué sur vos sources de données très rapidement car il n'accède pas aux fichiers pour voir les données à l'intérieur. link:task-scanning-overview.html["Comprendre la différence entre une analyse de cartographie et une analyse de classification"].
 
 
 
@@ -115,9 +115,9 @@ Non. La classification des données n’analyse pas les instantanés car le cont
 
 === Que se passe-t-il si la hiérarchisation des données est activée sur vos volumes ONTAP ?
 
-Lorsque la classification des données analyse les volumes contenant des données froides hiérarchisées vers le stockage d'objets à l'aide des analyses de mappage uniquement, elle analyse toutes les données : les données qui se trouvent sur les disques locaux et les données froides hiérarchisées vers le stockage d'objets.  Ceci est également vrai pour les produits non NetApp qui implémentent la hiérarchisation.
+Lorsque la classification des données analyse des volumes contenant des données froides stockées dans un stockage objet à l'aide d'analyses uniquement cartographiques, elle analyse toutes les données : celles présentes sur les disques locaux et les données froides stockées dans un stockage objet. Ceci est également valable pour les produits non-NetApp qui implémentent la hiérarchisation.
 
-L'analyse de cartographie uniquement ne réchauffe pas les données froides : elles restent froides et restent dans le stockage d'objets.  En revanche, si vous effectuez l'analyse Map & Classify, certaines configurations risquent de réchauffer les données froides.
+L'analyse cartographique seule ne réchauffe pas les données froides : elles restent froides et demeurent dans le stockage d'objets. En revanche, si vous effectuez une analyse complète, certaines configurations peuvent réchauffer les données froides.
 
 
 
@@ -162,7 +162,7 @@ La classification des données vous permet d'exécuter une analyse de « mappage
 +
 Après une analyse rapide, vous pouvez générer un rapport de mappage de données.  Ce rapport est un aperçu des données stockées dans vos sources de données d'entreprise pour vous aider à prendre des décisions concernant l'utilisation des ressources, la migration, la sauvegarde, la sécurité et les processus de conformité.
 
-* *Analyse approfondie de la classification des données (analyse Map & Classify)* : la classification des données analyse les données à l'aide de protocoles standard et d'une autorisation en lecture seule dans tous vos environnements.  Certains fichiers sont ouverts et analysés à la recherche de données sensibles liées à l'entreprise, d'informations privées et de problèmes liés aux ransomwares.
+* *Analyse approfondie de la classification des données (analyse complète)* : Data Classification analyse les données à l'aide de protocoles standard et d'autorisations en lecture seule dans l'ensemble de vos environnements. Certains fichiers sont ouverts et analysés pour détecter des données sensibles liées à l’activité de l’entreprise, des informations privées et des problèmes liés aux ransomwares.
 +
 Après une analyse complète, vous pouvez appliquer de nombreuses fonctionnalités supplémentaires de classification des données à vos données, telles que l'affichage et l'affinage des données dans la page Enquête sur les données, la recherche de noms dans les fichiers, la copie, le déplacement et la suppression des fichiers sources, et bien plus encore.
 
