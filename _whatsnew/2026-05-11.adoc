@@ -12,6 +12,18 @@ Examinez un link:https://youtu.be/_8YJ3KyZ7nI["visite vidéo"^]. Pour plus d'inf
 
 
 
+=== Rôle d'administrateur de conformité IAM
+
+La classification des données prend désormais en charge un rôle d'administrateur de conformité permettant de gérer les autorisations dans Data Classification. Le rôle d'administrateur de conformité n'a pas accès aux ressources, y compris les agents Console et les espaces de travail. Les utilisateurs disposant du rôle d'administrateur de conformité doivent être associés à au moins un autre rôle.
+
+Lors de l'installation de Data Classification, vous devez disposer d'un rôle d'administrateur de la plateforme Console ou du rôle d'administrateur de conformité.
+
+Si vous êtes déjà utilisateur, votre accès devrait continuer normalement. Par exemple, un rôle de plateforme qui possède un rôle d'administrateur de dossier ou de projet dispose d'un accès existant.
+
+Pour plus d'informations, voir link:https://docs.netapp.com/us-en/console-setup-admin_classification-role/reference-iam-data-classification.html["Rôles de la classification des données"^].
+
+
+
 === Déployez la classification des données avec OVA
 
 NetApp Data Classification prend désormais en charge le déploiement avec VMware Open Virtual Appliance (OVA), offrant une stratégie de déploiement simplifiée pour les environnements VMware vSphere sur site.

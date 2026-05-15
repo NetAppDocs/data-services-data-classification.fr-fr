@@ -2853,4 +2853,10 @@
   <block id="c5efbb0c5c86f10e09723fd321118168" category="list-text">Dans la boîte de dialogue, saisissez « uninstall » pour déconnecter l’instance de Data Classification de l’agent Console. Sélectionnez **Uninstall** pour confirmer.</block>
   <block id="9b70df306d1f1719fd9d70e02911394c" category="section-title">11 mai 2026</block>
   <block id="bbb6c300cb8841042895c9d8861857a2" category="paragraph">*Version 1.54*</block>
+  <block id="cf975b28ba57e8d6ba85ec36d74a06c3" category="section-title">Rôle d'administrateur de conformité IAM</block>
+  <block id="7cd2bb6be419d190aa59909bb89ac3d8" category="paragraph">La classification des données prend désormais en charge un rôle d'administrateur de conformité permettant de gérer les autorisations dans Data Classification. Le rôle d'administrateur de conformité n'a pas accès aux ressources, y compris les agents Console et les espaces de travail. Les utilisateurs disposant du rôle d'administrateur de conformité doivent être associés à au moins un autre rôle.</block>
+  <block id="dc778a1e9a5cca347a8492c869a90dc5" category="paragraph">Lors de l'installation de Data Classification, vous devez disposer d'un rôle d'administrateur de la plateforme Console ou du rôle d'administrateur de conformité.</block>
+  <block id="0d1a008033e3d9d27f9dd95b4127ec91" category="paragraph">Si vous êtes déjà utilisateur, votre accès devrait continuer normalement. Par exemple, un rôle de plateforme qui possède un rôle d'administrateur de dossier ou de projet dispose d'un accès existant.</block>
+  <block id="eeeb9dcaeb66c431b51b12eff19105f3" category="inline-link-macro">Rôles de la classification des données</block>
+  <block id="31228a8fb4b495437a73c890178a5d10" category="paragraph">Pour plus d'informations, voir <block ref="2470dbb8f361be9555feba4c3093f332" category="inline-link-macro-rx"></block>.</block>
 </blocks>
