@@ -115,7 +115,7 @@ Le rapport comprend les informations suivantes :
 |===
 .Étapes
 . Dans Classification des données, sélectionnez *Gouvernance*.
-. Dans la mosaïque des rapports, sélectionnez *Rapport d’aperçu complet du mappage des données*.
+. Dans la section « Rapports », sélectionnez le bouton **Télécharger** sous l’en-tête du rapport « Aperçu complet de la cartographie des données ».
 +
 image:screenshot-compliance-report-buttons.png["Une capture d’écran du tableau de bord de gouvernance qui montre comment lancer le rapport de mappage des données."]
 

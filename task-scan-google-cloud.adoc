@@ -104,15 +104,15 @@ Vous pouvez lancer ou arrêter des analyses sur n'importe quel système à tout 
 Le commutateur en haut de la page pour *Analyser sans autorisations d'écriture* est désactivé par défaut. Cela signifie que si Data Classification n'a pas les autorisations d'attributs d'écriture dans CIFS ou les autorisations d'écriture dans NFS, le système n'analysera pas les fichiers car Data Classification ne peut pas rétablir le « temps d'accès » à l'horodatage d'origine. Si vous ne vous souciez pas que le temps d'accès soit réinitialisé, activez le commutateur et tous les fichiers sont analysés indépendamment des autorisations. link:reference-collected-metadata.html#last-access-time-timestamp["Apprendre encore plus"^].
 
 
-NOTE: Les nouveaux volumes ajoutés au système sont automatiquement analysés uniquement si vous avez défini le paramètre *Map* ou *Full scan* dans la zone d'en-tête. Lorsque le paramètre pour tous les volumes est *Custom* ou *Off*, vous devez activer l'analyse manuellement pour chaque nouveau volume que vous ajoutez.
+NOTE: Les nouveaux volumes ajoutés au système ne sont analysés automatiquement que si vous avez activé l'analyse pour tous les volumes. Si vous n'avez activé l'analyse que pour certains volumes, vous devez l'activer manuellement pour le volume nouvellement ajouté.
 
 image:screenshot_volume_compliance_selection.png["Une capture d’écran de la page de configuration où vous pouvez activer ou désactiver l’analyse des volumes individuels."]
 
 .Étapes
 . Dans le menu Classification des données, sélectionnez *Configuration*.
-. Identifiez le système à analyser. Sélectionnez **Activer l'analyse**. Dans le menu déroulant, choisissez **Analyse complète**, **Cartographie uniquement** ou **Gérer les analyses** pour ouvrir le menu système et configurer l'analyse sur des volumes ou partages spécifiques.
+. Identifiez le système à analyser. Sélectionnez **Activer l'analyse**. Dans le menu déroulant, choisissez **Analyser tous les volumes : analyse complète**, **Analyser tous les volumes : mappage uniquement** ou **Gérer les analyses** pour ouvrir le menu système et configurer l'analyse sur des volumes spécifiques.
 +
-Pour activer ou désactiver les analyses pour des volumes individuels, trouvez les volumes ou les partages dans la liste, puis sélectionnez **Map**, **Analyse complète** ou **Désactivé** à côté du nom du volume.
+Pour activer ou désactiver l'analyse de volumes individuels, recherchez les volumes dans la liste. Dans la colonne type d'analyse, sélectionnez **Carte uniquement** ou **Analyse complète**.
 
 
 

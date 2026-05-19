@@ -20,7 +20,7 @@ Lors de l'installation de Data Classification, vous devez disposer d'un rôle d'
 
 Si vous êtes déjà utilisateur, votre accès devrait continuer normalement. Par exemple, un rôle de plateforme qui possède un rôle d'administrateur de dossier ou de projet dispose d'un accès existant.
 
-Pour plus d'informations, voir link:https://docs.netapp.com/us-en/console-setup-admin_classification-role/reference-iam-data-classification.html["Rôles de la classification des données"^].
+Pour plus d'informations, consultez link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-data-classification.html["Rôles de la classification des données"^].
 
 
 

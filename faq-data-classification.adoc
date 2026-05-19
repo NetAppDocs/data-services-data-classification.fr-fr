@@ -168,7 +168,7 @@ Après une analyse complète, vous pouvez appliquer de nombreuses fonctionnalit�
 
 
 
-La classification des données capture des métadonnées telles que : le nom du fichier, les autorisations, l'heure de création, le dernier accès et la dernière modification.  Cela inclut toutes les métadonnées qui apparaissent dans la page Détails de l’enquête sur les données et dans les rapports d’enquête sur les données.
+La classification des données capture des métadonnées telles que : nom du fichier, permissions, date de création, date du dernier accès et date de la dernière modification. Cela inclut toutes les métadonnées qui apparaissent sur la page Détails de l’analyse des données et dans les rapports d’analyse des données.
 
 La classification des données peut identifier de nombreux types de données privées telles que les informations personnelles (PII) et les informations personnelles sensibles (SPII).  Pour plus de détails sur les données privées, reportez-vous àxref:reference-private-data-categories.html[Catégories de données privées analysées par la classification des données] .
 

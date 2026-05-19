@@ -32,7 +32,7 @@ Vous pouvez afficher l’état de numérisation de chaque environnement de trava
 * *En cours d'exécution* (point vert) : la tâche d'analyse, qui était dans la file d'attente, est en cours d'exécution sur le référentiel de stockage sélectionné.
 * *Terminé* (point vert) : L'analyse du référentiel de stockage est terminée.
 * *En pause* (point gris) : Vous avez interrompu la numérisation. Bien que les variations de volume ne soient pas affichées dans le système, les données analysées restent disponibles.
-* *Erreur* (point rouge) : L'analyse ne peut pas se terminer car elle a rencontré des problèmes.  Si vous devez effectuer une action, l’erreur apparaît dans l’info-bulle sous la colonne « Action requise ».  Dans le cas contraire, le système affiche un statut « erreur » et tente de récupérer.  Une fois terminé, le statut change.
+* *Erreur* (point rouge) : L’analyse ne peut pas se terminer car elle a rencontré des problèmes. Si vous devez effectuer une action, l’erreur apparaît dans l’infobulle sous la colonne « Action requise ». Sinon, le système affiche un statut « erreur » et tente de se rétablir. Lorsque c’est terminé, le statut change.
 * *Pas de numérisation* : la configuration du volume « Désactivé » a été sélectionnée et le système ne scanne pas le volume.
 
 
