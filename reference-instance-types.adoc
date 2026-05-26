@@ -41,10 +41,10 @@ Dans les tableaux suivants, si le système marqué « par défaut » n'est pas d
 | Taille du système | Spécifications | Type d'instance 
 
 
-| Très grand | 32 processeurs, 128 Go de RAM, disque système (2 048 Gio, débit minimal de 250 Mo/s) et disque de données (SSD 1 Tio, débit minimal de 750 Mo/s) | https://learn.microsoft.com/en-us/azure/virtual-machines/dv3-dsv3-series#dv3-series["Standard_D32_v3"^](défaut) 
+| Très grand | 16 processeurs, 64 Go de RAM, disque système (2 048 Gio, débit minimal de 250 Mo/s) et disque de données (SSD de 1 Tio, débit minimal de 750 Mo/s) | https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/general-purpose/dv5-series["Standard_D32s_v5 ou Standard_D32_v5"^] 
 
 
-| Grand | 16 processeurs, 64 Go de RAM, 500 Go de SSD | https://learn.microsoft.com/en-us/azure/virtual-machines/dv3-dsv3-series#dsv3-series["Standard_D16s_v3"^](défaut) 
+| Grand | 16 processeurs, 64 Go de RAM, 500 Go de SSD | link:https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/general-purpose/dsv5-series?tabs=sizebasic["Standard_D16_v5 ou Standard_D16s_v5"^] (défaut) 
 |===
 
 
