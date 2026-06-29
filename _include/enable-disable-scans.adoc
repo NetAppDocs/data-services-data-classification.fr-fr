@@ -4,7 +4,7 @@
 
 Vous pouvez lancer ou arrêter des analyses sur n'importe quel système à tout moment depuis la page de configuration. Vous pouvez également passer d'une analyse cartographique seule à une analyse cartographique et de classification, et inversement. Il est recommandé d'analyser tous les volumes d'un système.
 
-Le commutateur en haut de la page pour *Analyser sans autorisations d'écriture* est désactivé par défaut. Cela signifie que si Data Classification n'a pas les autorisations d'attributs d'écriture dans CIFS ou les autorisations d'écriture dans NFS, le système n'analysera pas les fichiers car Data Classification ne peut pas rétablir le « temps d'accès » à l'horodatage d'origine. Si vous ne vous souciez pas que le temps d'accès soit réinitialisé, activez le commutateur et tous les fichiers sont analysés indépendamment des autorisations. link:reference-collected-metadata.html#last-access-time-timestamp["Apprendre encore plus"^].
+L'option *Analyser sans autorisations d'écriture* est désactivée par défaut. Cela signifie que si Data Classification ne dispose pas des autorisations d'écriture appropriées, le système n'analysera pas les fichiers car Data Classification ne peut pas rétablir la "date de dernier accès" à l'horodatage d'origine. Si votre système peut tolérer la modification de la date de dernier accès, sélectionnez cette option. link:reference-collected-metadata.html#last-accessed-time-timestamp["Apprendre encore plus"^].
 
 
 NOTE: Les nouveaux volumes ajoutés au système ne sont analysés automatiquement que si vous avez activé l'analyse pour tous les volumes. Si vous n'avez activé l'analyse que pour certains volumes, vous devez l'activer manuellement pour le volume nouvellement ajouté.

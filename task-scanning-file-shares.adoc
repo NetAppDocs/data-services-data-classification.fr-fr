@@ -27,7 +27,7 @@ Passez en revue les conditions préalables suivantes pour vous assurer que vous 
 
 * Les actions peuvent être hébergées n’importe où, y compris dans le cloud ou sur site.  Les partages CIFS des anciens systèmes de stockage NetApp 7-Mode peuvent être analysés en tant que partages de fichiers.
 +
-** La classification des données ne peut pas extraire les autorisations ou la « dernière heure d'accès » des systèmes 7-Mode.
+** NetApp Data Classification ne peut pas extraire les autorisations ni la « dernière date d'accès » des systèmes 7-Mode.
 ** En raison d'un problème connu entre certaines versions Linux et les partages CIFS sur les systèmes 7-Mode, vous devez configurer le partage pour utiliser uniquement SMBv1 avec l'authentification NTLM activée.
 
 
@@ -79,7 +79,7 @@ Voir<<Activer et désactiver les analyses sur les volumes,Activer et désactiver
 
 
 
-NOTE: La page de présentation du système comporte une option *Analyser sans autorisation d'écriture* désactivée par défaut. Cela signifie que si Data Classification ne dispose pas des autorisations d'écriture sur les attributs dans CIFS ou des autorisations d'écriture dans NFS, le système n'analysera pas les fichiers, car Data Classification ne peut pas rétablir le "temps d'accès" à l'horodatage d'origine. + Si vous cochez l'option *Analyser sans autorisation d'écriture*, l'analyse réinitialise le temps d'accès et analyse tous les fichiers, quelles que soient les autorisations. + Pour en savoir plus sur l'horodatage du dernier accès, consultez link:reference-collected-metadata.html#last-access-time-timestamp["Métadonnées collectées à partir de sources de données dans la classification des données"].
+NOTE: La page de présentation du système comporte une option *Analyser sans autorisation d'écriture* désactivée par défaut. Si NetApp Data Classification ne dispose pas des autorisations appropriées, elle n'analysera pas les fichiers, car NetApp Data Classification ne peut pas rétablir la « dernière date d'accès » à l'horodatage d'origine. Vous pouvez remplacer ce paramètre à l'aide de l'option *Analyser sans autorisation d'écriture*. Pour en savoir plus sur cette option, consultez link:reference-collected-metadata.html#last-accessed-time-timestamp["Métadonnées collectées à partir de sources de données dans la classification des données"].
 
 .Résultat
 La classification des données commence à analyser les fichiers dans les partages de fichiers que vous avez ajoutés.  Tu peuxxref:#track-the-scanning-progress[Suivre la progression de la numérisation] et afficher les résultats de l'analyse dans le **Tableau de bord**.
@@ -147,7 +147,7 @@ Vous pouvez suivre la progression de l'analyse initiale.
 
 Vous pouvez lancer ou arrêter des analyses sur n'importe quel système à tout moment depuis la page de configuration. Vous pouvez également passer d'une analyse cartographique seule à une analyse cartographique et de classification, et inversement. Il est recommandé d'analyser tous les volumes d'un système.
 
-Le commutateur en haut de la page pour *Analyser sans autorisations d'écriture* est désactivé par défaut. Cela signifie que si Data Classification n'a pas les autorisations d'attributs d'écriture dans CIFS ou les autorisations d'écriture dans NFS, le système n'analysera pas les fichiers car Data Classification ne peut pas rétablir le « temps d'accès » à l'horodatage d'origine. Si vous ne vous souciez pas que le temps d'accès soit réinitialisé, activez le commutateur et tous les fichiers sont analysés indépendamment des autorisations. link:reference-collected-metadata.html#last-access-time-timestamp["Apprendre encore plus"^].
+L'option *Analyser sans autorisations d'écriture* est désactivée par défaut. Cela signifie que si Data Classification ne dispose pas des autorisations d'écriture appropriées, le système n'analysera pas les fichiers car Data Classification ne peut pas rétablir la "date de dernier accès" à l'horodatage d'origine. Si votre système peut tolérer la modification de la date de dernier accès, sélectionnez cette option. link:reference-collected-metadata.html#last-accessed-time-timestamp["Apprendre encore plus"^].
 
 
 NOTE: Les nouveaux volumes ajoutés au système ne sont analysés automatiquement que si vous avez activé l'analyse pour tous les volumes. Si vous n'avez activé l'analyse que pour certains volumes, vous devez l'activer manuellement pour le volume nouvellement ajouté.
