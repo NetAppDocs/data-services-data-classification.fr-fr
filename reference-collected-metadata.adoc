@@ -56,19 +56,3 @@ Cette fonctionnalité s’applique aux systèmes ONTAP sur site, à Cloud Volume
 
 
 NOTE: Les volumes ONTAP configurés avec SnapLock ont des autorisations en lecture seule et ne peuvent pas non plus rétablir l'heure de dernier accès à l'horodatage d'origine.
-
-
-
-=== Événements d'analyse de scan
-
-La page Investigation comporte un filtre appelé _Scan Analysis Event_ qui vous permet d'afficher soit les fichiers qui n'ont pas été classés parce que NetApp Data Classification n'a pas pu rétablir la date du dernier accès, soit les fichiers qui ont été classés même si NetApp Data Classification n'a pas pu rétablir la date du dernier accès.
-
-image:screenshot_scan_analysis_event_filter.png["Une capture d'écran du filtre pour voir quels fichiers ont été analysés et non analysés, en fonction de la présence ou non d'autorisations d'écriture."]
-
-Les sélections de filtres sont :
-
-* "Non classifié -- Impossible de revenir à la dernière date d'accès" - Ceci indique les fichiers qui n'ont pas été classifiés en raison d'autorisations d'écriture manquantes.
-* « Classé et date de dernier accès mise à jour » : ce filtre affiche les fichiers classifiés pour lesquels NetApp Data Classification n’a pas pu rétablir la date de dernier accès à sa date d’origine. Ce filtre est pertinent uniquement pour les environnements où l’option *Analyser sans autorisation d’écriture* est activée.
-
-
-Si nécessaire, vous pouvez exporter ces résultats dans un rapport afin de voir quels fichiers sont analysés ou non en raison des autorisations. link:task-investigate-data.html#download-your-report["En savoir plus sur les rapports d'enquête sur les données"^].
