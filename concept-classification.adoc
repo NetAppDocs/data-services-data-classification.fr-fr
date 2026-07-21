@@ -21,6 +21,7 @@ IMPORTANT: À partir de la version 1.31, la classification des données est disp
 
 
 
+[[netapp-console]]
 == NetApp Console
 
 La classification des données est accessible via la NetApp Console.
@@ -33,6 +34,7 @@ En savoir plus sur lelink:https://docs.netapp.com/us-en/console-setup-admin/conc
 
 
 
+[[features]]
 == Caractéristiques
 
 La classification des données utilise l'intelligence artificielle (IA), le traitement du langage naturel (NLP) et l'apprentissage automatique (ML) pour comprendre le contenu qu'elle analyse afin d'extraire des entités et de catégoriser le contenu en conséquence.  Cela permet à la classification des données de fournir les domaines de fonctionnalités suivants.
@@ -65,6 +67,7 @@ La classification des données fournit des outils qui peuvent vous aider à dét
 
 
 
+[[supported-systems-and-data-sources]]
 == Systèmes et sources de données pris en charge
 
 La classification des données peut scanner et analyser des données structurées et non structurées provenant des types de systèmes et de sources de données suivants :
@@ -99,12 +102,14 @@ La classification des données prend en charge les versions NFS 3.x, 4.0 et 4.1,
 
 
 
+[[cost]]
 == Coût
 
 La classification des données est gratuite.  Aucune licence de classification ni abonnement payant n'est requis.
 
 
 
+[[infrastructure-costs]]
 === Coûts d'infrastructure
 
 * L'installation de Data Classification dans le cloud nécessite le déploiement d'une instance cloud, ce qui entraîne des frais de la part du fournisseur cloud où elle est déployée. Voir <<L'instance de classification des données,le type d'instance déployé pour chaque fournisseur de cloud>> .  L’installation de Data Classification sur un système local est gratuite.
@@ -113,6 +118,7 @@ La classification des données est gratuite.  Aucune licence de classification n
 
 
 
+[[data-transfer-costs]]
 === Coûts de transfert de données
 
 Les coûts de transfert de données dépendent de votre configuration.  Si l'instance de classification des données et la source de données se trouvent dans la même zone de disponibilité et la même région, il n'y a aucun coût de transfert de données.  Mais si la source de données, comme un système Cloud Volumes ONTAP , se trouve dans une zone de disponibilité ou une région _différente_, les frais de transfert de données vous seront facturés par votre fournisseur de cloud.  Consultez ces liens pour plus de détails :
@@ -124,6 +130,7 @@ Les coûts de transfert de données dépendent de votre configuration.  Si l'ins
 
 
 
+[[the-data-classification-instance]]
 == L'instance de classification des données
 
 Lorsque vous déployez la classification des données dans le cloud, la console déploie l’instance dans le même sous-réseau que l’agent de la console. https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["En savoir plus sur l’agent de console."^]
@@ -161,6 +168,7 @@ Consultez les spécifications suivantes pour les types d’instances :
 |===
 
 
+[[how-data-classification-scanning-works]]
 == Comment fonctionne l'analyse de classification des données
 
 À un niveau élevé, l’analyse de classification des données fonctionne comme ceci :
@@ -186,6 +194,7 @@ NOTE: La classification des données n’impose pas de limite à la quantité de
 
 
 
+[[mapping-and-full-scans]]
 == Cartographie et analyses complètes
 
 Vous pouvez effectuer deux types d’analyses dans la classification des données :
@@ -198,6 +207,7 @@ Pour une analyse détaillée des différences entre les analyses map-only et les
 
 
 
+[[information-that-data-classification-categorizes]]
 == Informations catégorisées par la classification des données
 
 La classification des données collecte, indexe et attribue des catégories aux données suivantes :
@@ -213,6 +223,7 @@ La classification des données collecte, indexe et attribue des catégories aux 
 
 
 
+[[networking-overview]]
 == Présentation du réseau
 
 Data Classification déploie un serveur unique, ou cluster, où vous le souhaitez : dans le cloud ou sur site.  Les serveurs se connectent via des protocoles standard aux sources de données et indexent les résultats dans un cluster Elasticsearch, qui est également déployé sur les mêmes serveurs.  Cela permet la prise en charge des environnements multicloud, cross-cloud, cloud privé et sur site.

@@ -21,6 +21,7 @@ Le tableau de bord NetApp Data Classification Health Monitor assure une surveill
 
 
 
+[[health-monitor-insights]]
 == Informations du moniteur de santé
 
 Le tableau de bord Health Monitor présente les informations dans quatre catégories.
@@ -45,6 +46,7 @@ Examinez l'utilisation du processeur, l'utilisation du disque et l'utilisation d
 
 
 
+[[access-the-health-monitor-dashboard]]
 == Accédez au tableau de bord du Moniteur de santé
 
 . Dans Classification des données, sélectionnez **Configuration**.

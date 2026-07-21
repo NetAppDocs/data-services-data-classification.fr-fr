@@ -4,6 +4,7 @@
 
 
 
+[[enhanced-scan-event-insights-in-the-audit-page]]
 === Informations améliorées sur les événements d'analyse dans la page d'audit
 
 La page Audit prend désormais en charge des informations améliorées sur les événements d'analyse pour la BlueXP classification. La page Audit affiche désormais le moment où l'analyse d'un système commence, les statuts des systèmes et les problèmes éventuels. Les statuts des partages et des systèmes ne sont disponibles que pour les analyses de mappage.
@@ -12,6 +13,7 @@ Pour plus d'informations sur la page Audit, voirlink:https://docs.netapp.com/us-
 
 
 
+[[support-for-rhel-9-6]]
 === Prise en charge de RHEL 9.6
 
 Cette version ajoute la prise en charge de Red Hat Enterprise Linux v9.6 pour l'installation manuelle sur site de la BlueXP classification, y compris les déploiements de sites sombres.

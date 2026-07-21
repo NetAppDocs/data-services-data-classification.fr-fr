@@ -18,12 +18,14 @@ Suivez quelques étapes pour commencer à analyser vos schémas de base de donn�
 
 
 
+[[review-prerequisites]]
 == Réviser les prérequis
 
 Passez en revue les conditions préalables suivantes pour vous assurer que vous disposez d’une configuration prise en charge avant d’activer la classification des données.
 
 
 
+[[supported-databases]]
 === Bases de données prises en charge
 
 La classification des données peut analyser les schémas des bases de données suivantes :
@@ -42,6 +44,7 @@ CAUTION: La fonctionnalité de collecte de statistiques *doit être activée* da
 
 
 
+[[database-requirements]]
 === Exigences relatives à la base de données
 
 Toute base de données connectée à l’instance de classification des données peut être analysée, quel que soit l’endroit où elle est hébergée.  Vous avez juste besoin des informations suivantes pour vous connecter à la base de données :
@@ -60,6 +63,7 @@ NOTE: Pour MongoDB, un rôle d'administrateur en lecture seule est requis.
 
 
 
+[[deploy-the-data-classification-instance]]
 == Déployer l'instance de classification des données
 
 Déployez la classification des données s’il n’existe pas déjà d’instance déployée.
@@ -70,6 +74,7 @@ Si vous numérisez des schémas de base de données qui ont été installés sur
 
 
 
+[[add-the-database-server]]
 == Ajouter le serveur de base de données
 
 Ajoutez le serveur de base de données sur lequel résident les schémas.
@@ -94,6 +99,7 @@ La base de données est ajoutée à la liste des systèmes.
 
 
 
+[[enable-and-disable-scans-on-database-schemas]]
 == Activer et désactiver les analyses sur les schémas de base de données
 
 Vous pouvez arrêter ou démarrer l'analyse complète de vos schémas à tout moment.

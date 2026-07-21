@@ -4,6 +4,7 @@
 
 
 
+[[version-1-40]]
 === Version 1.40
 
 Cette version de BlueXP classification inclut les mises à jour suivantes.

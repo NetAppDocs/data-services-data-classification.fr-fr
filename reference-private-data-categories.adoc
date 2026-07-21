@@ -27,6 +27,7 @@ TIP: Si vous avez besoin d'une classification des données pour identifier d'aut
 
 
 
+[[types-of-personal-data]]
 == Types de données personnelles
 
 Les données personnelles, ou _informations personnellement identifiables_ (PII), trouvées dans les fichiers peuvent être des données personnelles générales ou des identifiants nationaux.  La troisième colonne du tableau ci-dessous indique si la classification des données utiliselink:task-controlling-private-data.html#view-files-that-contain-personal-data["validation de proximité"^] pour valider ses conclusions pour l'identifiant.
@@ -321,6 +322,7 @@ Les langues dans lesquelles ces éléments peuvent être reconnus sont identifi�
 |===
 
 
+[[types-of-sensitive-personal-data]]
 == Types de données personnelles sensibles
 
 La classification des données peut trouver les informations personnelles sensibles (SPII) suivantes dans les fichiers.
@@ -340,6 +342,7 @@ Les SPII suivants ne peuvent actuellement être reconnus qu'en anglais :
 
 
 
+[[types-of-categories]]
 == Types de catégories
 
 La classification des données catégorise vos données comme suit.
@@ -443,6 +446,7 @@ Les métadonnées suivantes sont également catégorisées et identifiées dans 
 
 
 
+[[types-of-files]]
 == Types de fichiers
 
 La classification des données analyse tous les fichiers pour obtenir des informations sur les catégories et les métadonnées et affiche tous les types de fichiers dans la section types de fichiers du tableau de bord.  Lorsque la classification des données détecte des informations personnelles identifiables (PII) ou lorsqu'elle effectue une recherche DSAR, seuls les formats de fichiers suivants sont pris en charge :
@@ -451,6 +455,7 @@ La classification des données analyse tous les fichiers pour obtenir des inform
 
 
 
+[[accuracy-of-information-found]]
 == Exactitude des informations trouvées
 
 NetApp ne peut pas garantir l'exactitude à 100 % des données personnelles et des données personnelles sensibles identifiées par Data Classification.  Vous devez toujours valider les informations en examinant les données.

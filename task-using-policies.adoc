@@ -26,6 +26,7 @@ image:screenshot_compliance_highlights_tab.png["Une capture d’écran de l’on
 
 
 
+[[view-saved-queries-results-in-the-investigation-page]]
 == Afficher les résultats des requêtes enregistrées dans la page Enquête
 
 Pour afficher les résultats d’une requête enregistrée dans la page Investigation, sélectionnez l’icôneimage:button-gallery-options.gif["Bouton Plus"] bouton pour une recherche spécifique puis sélectionnez *Enquêter sur les résultats*.
@@ -34,6 +35,7 @@ image:screenshot_compliance_highlights_investigate.png["Capture d'écran de la s
 
 
 
+[[create-saved-queries-and-policies]]
 == Créer des requêtes et des politiques enregistrées
 
 Vous pouvez créer vos propres requêtes enregistrées personnalisées qui fournissent des résultats pour des requêtes spécifiques à votre organisation.  Les résultats sont renvoyés pour tous les fichiers et répertoires (partages et dossiers) qui correspondent aux critères de recherche.
@@ -61,6 +63,7 @@ Une fois la recherche ou la politique créée, vous pouvez la visualiser dans l'
 
 
 
+[[edit-saved-queries-or-policies]]
 == Modifier les requêtes ou les politiques enregistrées
 
 Vous pouvez modifier le nom et la description d'une requête enregistrée.  Vous pouvez également convertir une requête en politique et vice versa.
@@ -81,6 +84,7 @@ Vous pouvez éventuellement convertir la requête en politique ou convertir la p
 
 
 
+[[delete-saved-queries]]
 == Supprimer les requêtes enregistrées
 
 Vous pouvez supprimer toute requête ou politique personnalisée enregistrée si vous n'en avez plus besoin.  Vous ne pouvez pas supprimer les requêtes enregistrées par défaut.
@@ -89,6 +93,7 @@ Pour supprimer une requête enregistrée, sélectionnez l'icôneimage:button-gal
 
 
 
+[[default-queries]]
 == Requêtes par défaut
 
 La classification des données fournit les requêtes de recherche définies par le système suivantes :

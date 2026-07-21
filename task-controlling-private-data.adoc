@@ -27,6 +27,7 @@ Vous pouvez filtrer les résultats de la page Enquête sur les données et tél�
 
 
 
+[[view-files-that-contain-personal-data]]
 == Afficher les fichiers contenant des données personnelles
 
 La classification des données identifie automatiquement des mots, des chaînes et des modèles (Regex) spécifiques à l'intérieur des données. link:reference-private-data-categories.html["Par exemple, les numéros de carte de crédit, les numéros de sécurité sociale, les numéros de compte bancaire, les mots de passe, etc."]La classification des données identifie ce type d'informations dans des fichiers individuels, dans des fichiers au sein de répertoires (partages et dossiers) et dans des tables de base de données.
@@ -59,6 +60,7 @@ image:screenshot_compliance_investigation_page_directory.png["Capture d'écran d
 
 
 
+[[view-files-that-contain-sensitive-personal-data]]
 == Afficher les fichiers contenant des données personnelles sensibles
 
 La classification des données identifie automatiquement les types particuliers d’informations personnelles sensibles, telles que définies par les réglementations en matière de confidentialité telles que https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R0679&from=EN#d1e2051-1-1["articles 9 et 10 du RGPD"^] .  Par exemple, des informations concernant la santé, l’origine ethnique ou l’orientation sexuelle d’une personne. link:reference-private-data-categories.html["Voir la liste complète"] .  La classification des données identifie ce type d'informations dans des fichiers individuels, dans des fichiers au sein de répertoires (partages et dossiers) et dans des tables de base de données.

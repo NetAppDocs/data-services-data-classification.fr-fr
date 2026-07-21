@@ -4,6 +4,7 @@
 
 
 
+[[prioritize-classification-scans]]
 === Prioriser les analyses de classification
 
 La classification des données prend en charge la possibilité de prioriser les analyses « Cartographier et Classifier » en plus des analyses « Cartographier uniquement », ce qui vous permet de sélectionner quelles analyses sont effectuées en premier. La priorisation des analyses « Cartographier et Classifier » est prise en charge pendant et avant le début des analyses. Si vous choisissez de prioriser une analyse pendant son exécution, les analyses de cartographie et de classification sont toutes deux priorisées.
@@ -12,6 +13,7 @@ Pour plus d'informations, consultez la section link:https://docs.netapp.com/us-e
 
 
 
+[[support-for-canadian-personally-identifiable-information-pii-data-categories]]
 === Prise en charge des catégories de données d'informations personnelles identifiables (PII) canadiennes
 
 Les analyses de classification des données identifient les catégories de données PII canadiennes. Ces catégories comprennent les renseignements bancaires, les numéros de passeport, les numéros d’assurance sociale, les numéros de permis de conduire et les numéros de carte d’assurance-maladie pour toutes les provinces et tous les territoires canadiens.
@@ -20,6 +22,7 @@ Pour plus d'informations, consultez la section link:https://docs.netapp.com/us-e
 
 
 
+[[custom-classification-preview]]
 === Classification personnalisée (aperçu)
 
 La classification des données prend en charge les classifications personnalisées pour les analyses Map & Classify. Grâce aux classifications personnalisées, vous pouvez personnaliser les analyses de classification des données pour capturer des données spécifiques à votre organisation à l'aide d'expressions régulières. Cette fonctionnalité est actuellement en version préliminaire.
@@ -28,18 +31,21 @@ Pour plus d'informations, consultez la section link:https://docs.netapp.com/us-e
 
 
 
+[[saved-searches-tab]]
 === Onglet Recherches enregistrées
 
 L'onglet **Politiques** a été renommélink:https://docs.netapp.com/us-en/data-services-data-classification/task-using-policies.html["**Recherches enregistrées**"] . La fonctionnalité reste inchangée.
 
 
 
+[[send-scan-events-to-the-audit-page]]
 === Envoyer les événements d'analyse à la page Audit
 
 La classification des données prend en charge l'envoi d'événements de classification (lorsqu'une analyse est lancée et lorsqu'elle se termine) à link:https://docs.netapp.com/us-en/console-setup-admin/task-monitor-cm-operations.html#audit-user-activity-from-the-bluexp-timeline["NetApp Console Page d'audit"^].
 
 
 
+[[security-updates]]
 === Mises à jour de sécurité
 
 * Le package Keras a été mis à jour, atténuant les vulnérabilités (BDSA-2025-0107 et BDSA-2025-1984).
@@ -48,12 +54,14 @@ La classification des données prend en charge l'envoi d'événements de classif
 
 
 
+[[performance-enhancements]]
 === Améliorations des performances
 
 Des améliorations de code ont été implémentées pour réduire l’utilisation de la RAM et améliorer les performances globales de la classification des données.
 
 
 
+[[bug-fixes]]
 === Corrections de bugs
 
 Les bugs qui entraînaient l'échec des analyses StorageGRID , le non-chargement des options de filtrage de la page d'investigation et le non-téléchargement de l'évaluation de découverte de données pour les évaluations à volume élevé ont été corrigés.

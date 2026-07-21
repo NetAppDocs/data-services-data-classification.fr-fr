@@ -33,6 +33,7 @@ NOTE: Les SID des utilisateurs locaux et les SID des domaines inconnus ne sont p
 
 
 
+[[supported-data-sources]]
 == Sources de données prises en charge
 
 Une intégration Active Directory avec la classification des données peut identifier les données à partir des sources de données suivantes :
@@ -45,6 +46,7 @@ Une intégration Active Directory avec la classification des données peut ident
 
 
 
+[[connect-to-your-active-directory-server]]
 == Connectez-vous à votre serveur Active Directory
 
 Après avoir déployé la classification des données et activé l’analyse sur vos sources de données, vous pouvez intégrer la classification des données à votre Active Directory.  Active Directory est accessible à l'aide d'une adresse IP de serveur DNS ou d'une adresse IP de serveur LDAP.
@@ -105,6 +107,7 @@ La classification des données s'intègre à Active Directory et une nouvelle se
 
 
 
+[[manage-your-active-directory-integration]]
 == Gérez votre intégration Active Directory
 
 Si vous devez modifier des valeurs dans votre intégration Active Directory, vous devez mettre à jour la configuration Active Directory dans Data Classification. Retournez au menu **Configuration** dans Data Classification puis accédez à l’onglet Paramètres pour effectuer les modifications.

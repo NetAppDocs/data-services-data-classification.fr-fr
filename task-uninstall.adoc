@@ -20,6 +20,7 @@ Les étapes à suivre dépendent du fait que vous avez déployé la classificati
 
 
 
+[[uninstall-data-classification-from-a-cloud-provider]]
 == Désinstaller Data Classification d'un fournisseur cloud
 
 . Dans Classification des données, sélectionnez **Configuration**.
@@ -32,6 +33,7 @@ Les étapes à suivre dépendent du fait que vous avez déployé la classificati
 
 
 
+[[uninstall-data-classification-from-an-on-premises-deployment]]
 == Désinstaller la classification des données d'un déploiement sur site
 
 . Dans Classification des données, sélectionnez **Configuration**.

@@ -18,12 +18,14 @@ NetApp Data Classification prend en charge Google Cloud NetApp Volumes en tant q
 
 
 
+[[discover-the-google-cloud-netapp-volumes-system-that-you-want-to-scan]]
 == Découvrez le système Google Cloud NetApp Volumes que vous souhaitez analyser
 
 Si le système Google Cloud NetApp Volumes que vous souhaitez analyser n’est pas déjà présent dans la NetApp Console en tant que système,link:https://docs.netapp.com/us-en/storage-management-azure-netapp-files/task-quick-start.html["ajoutez-le à la page Systèmes"^] .
 
 
 
+[[deploy-the-data-classification-instance]]
 == Déployer l'instance de classification des données
 
 link:task-deploy-cloud-compliance.html["Déployer la classification des données"^]s'il n'y a pas déjà une instance déployée.
@@ -34,6 +36,7 @@ La classification des données doit être déployée dans le cloud lors de l'ana
 
 
 
+[[enable-data-classification-in-your-systems]]
 == Activez la classification des données dans vos systèmes
 
 Vous pouvez activer la classification des données sur votre système Google Cloud NetApp Volumes .
@@ -59,6 +62,7 @@ La classification des données lance l'analyse des volumes que vous avez sélect
 
 
 
+[[verify-that-data-classification-has-access-to-volumes]]
 == Vérifiez que la classification des données a accès aux volumes
 
 Assurez-vous que la classification des données peut accéder aux volumes en vérifiant votre réseau, vos groupes de sécurité et vos politiques d'exportation.  Pour les volumes CIFS, vous devez fournir une classification des données avec les informations d'identification CIFS.
@@ -97,6 +101,7 @@ Après avoir saisi les informations d’identification, vous devriez voir un mes
 
 
 
+[[enable-and-disable-scans-on-volumes]]
 == Activer et désactiver les analyses sur les volumes
 
 Vous pouvez lancer ou arrêter des analyses sur n'importe quel système à tout moment depuis la page de configuration. Vous pouvez également passer d'une analyse cartographique seule à une analyse cartographique et de classification, et inversement. Il est recommandé d'analyser tous les volumes d'un système.

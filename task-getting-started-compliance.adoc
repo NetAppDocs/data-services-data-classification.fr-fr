@@ -18,6 +18,7 @@ Suivez quelques étapes pour commencer à analyser vos Cloud Volumes ONTAP et vo
 
 
 
+[[prerequisites]]
 == Prérequis
 
 Avant d’activer la classification des données, assurez-vous que vous disposez d’une configuration prise en charge.
@@ -28,6 +29,7 @@ Avant d’activer la classification des données, assurez-vous que vous disposez
 
 
 
+[[verify-that-data-classification-has-access-to-volumes]]
 == Vérifiez que la classification des données a accès aux volumes
 
 Assurez-vous que la classification des données peut accéder aux volumes en vérifiant votre réseau, vos groupes de sécurité et vos politiques d'exportation.  Vous devrez fournir à Data Classification les informations d'identification CIFS afin qu'il puisse accéder aux volumes CIFS.
@@ -58,6 +60,7 @@ Si vous avez correctement saisi les informations d'identification, un message co
 
 
 
+[[enable-or-disable-scans-on-volumes]]
 == Activer ou désactiver les analyses sur les volumes
 
 Vous pouvez lancer ou arrêter des analyses sur n'importe quel système à tout moment depuis la page de configuration. Vous pouvez également passer d'une analyse cartographique seule à une analyse cartographique et de classification, et inversement. Il est recommandé d'analyser tous les volumes d'un système.

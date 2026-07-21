@@ -44,6 +44,7 @@ NetApp Data Classification collecte les métadonnées lors de l'analyse de vos s
 ====
 
 
+[[last-accessed-time]]
 == Dernière consultation
 
 Lorsque NetApp Data Classification extrait des données des partages de fichiers, le système d'exploitation considère cela comme un événement d'accès et met à jour la « date et heure du dernier accès » en conséquence. Après l'analyse, NetApp Data Classification tente de rétablir la date et l'heure du dernier accès à l'horodatage d'origine. Si NetApp Data Classification ne dispose pas des autorisations d'écriture sur les attributs dans CIFS ou des autorisations d'écriture dans NFS, le système ne peut pas rétablir la date et l'heure du dernier accès à l'horodatage d'origine.

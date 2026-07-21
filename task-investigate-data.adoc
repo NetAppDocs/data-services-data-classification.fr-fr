@@ -21,6 +21,7 @@ NOTE: Pour exploiter les informations de la page « Investigation », vous dev
 
 
 
+[[data-investigation-structure]]
 == Structure d'enquête sur les données
 
 La page Enquête sur les données trie les données en trois onglets :
@@ -32,6 +33,7 @@ La page Enquête sur les données trie les données en trois onglets :
 
 
 
+[[data-filters]]
 == Filtres de données
 
 La page Enquête sur les données fournit de nombreux filtres pour trier vos données afin que vous puissiez obtenir ce dont vous avez besoin.  Vous pouvez utiliser plusieurs filtres de concert.
@@ -196,6 +198,7 @@ TIP: Après le filtrage des données, vous pouvez link:task-copy-move.html["copi
 
 
 
+[[view-file-metadata]]
 == Afficher les métadonnées du fichier
 
 En plus de vous montrer le système et le volume où réside le fichier, les métadonnées affichent beaucoup plus d'informations, notamment les autorisations du fichier, le propriétaire du fichier et s'il existe des doublons de ce fichier.  Ces informations sont utiles si vous envisagez delink:task-using-policies.html["créer des requêtes enregistrées"] car vous pouvez voir toutes les informations que vous pouvez utiliser pour filtrer vos données.
@@ -213,6 +216,7 @@ image:screenshot_compliance_file_details.png["Une capture d’écran montrant le
 
 
 
+[[view-user-permissions-for-files-and-directories]]
 == Afficher les autorisations utilisateur pour les fichiers et les répertoires
 
 Pour afficher une liste de tous les utilisateurs ou groupes ayant accès à un fichier ou à un répertoire et les types d'autorisations dont ils disposent, sélectionnez *Afficher toutes les autorisations*.  Cette option est disponible uniquement pour les données dans les partages CIFS.
@@ -237,6 +241,7 @@ TIP: Vous pouvez développer un niveau du groupe pour voir les utilisateurs qui 
 
 
 
+[[check-for-duplicate-files-in-your-storage-systems]]
 == Vérifiez les fichiers en double dans vos systèmes de stockage
 
 Vous pouvez vérifier si des fichiers en double sont stockés dans vos systèmes de stockage.  Ceci est utile si vous souhaitez identifier les zones dans lesquelles vous pouvez économiser de l'espace de stockage.  Il est également bon de s’assurer que certains fichiers disposant d’autorisations spécifiques ou d’informations sensibles ne sont pas inutilement dupliqués dans vos systèmes de stockage.
@@ -276,6 +281,7 @@ TIP: Vous pouvez utiliser la valeur « hachage de fichier » fournie dans cette 
 
 
 
+[[download-your-report]]
 == Téléchargez votre rapport
 
 Vous pouvez télécharger vos résultats filtrés au format CSV ou JSON.
@@ -293,6 +299,7 @@ NOTE: Vous pouvez télécharger une version du fichier CSV à visualiser dans ce
 
 
 
+[[whats-included-in-the-downloadable-report]]
 === Ce qui est inclus dans le rapport téléchargeable
 
 Le *Rapport de données sur les fichiers non structurés* inclut les informations suivantes sur vos fichiers :
@@ -370,6 +377,7 @@ Une boîte de dialogue affiche un message indiquant que les rapports sont en cou
 
 
 
+[[create-a-saved-query-based-on-selected-filters]]
 == Créer une requête enregistrée en fonction des filtres sélectionnés
 
 .Étapes
@@ -398,6 +406,7 @@ TIP: L'affichage des résultats sur la page Requêtes enregistrées peut prendre
 
 
 
+[[next-steps]]
 == Prochaines étapes
 
 * link:task-copy-move.html["Copier, déplacer et supprimer des données depuis le tableau de bord d'enquête"]

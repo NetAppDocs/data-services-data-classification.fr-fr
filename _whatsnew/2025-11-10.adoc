@@ -4,6 +4,7 @@
 
 
 
+[[enhanced-scan-progress-clarity]]
 === Clarté améliorée du suivi de la progression de l'analyse
 
 Les configurations d'analyse incluent désormais des informations améliorées sur l'avancement de l'analyse. Auparavant, une barre de progression ne s'affichait que pendant le déroulement de l'analyse. Désormais, la barre de progression reste visible après la fin de l'analyse pour confirmer que les scans ont été effectués avec succès. Vous pouvez également consulter le nombre de fichiers cartographiés et analysés.
@@ -12,6 +13,7 @@ Pour plus d'informations sur les paramètres de numérisation, consultez link:ht
 
 
 
+[[general-improvements]]
 === Améliorations générales
 
 Cette version de la Classification des données inclut des correctifs de bogues, des améliorations de sécurité et des optimisations de performances.

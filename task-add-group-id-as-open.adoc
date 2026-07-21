@@ -22,6 +22,7 @@ Pour activer cette fonctionnalité, vous devez vous connecter au système de cla
 
 
 
+[[add-the-open-to-organization-permission-to-group-ids]]
 == Ajoutez l'autorisation « Ouvrir à l'organisation » aux identifiants de groupe
 
 Vous devez disposer des numéros d’identification de groupe (GID) avant de commencer cette tâche.
@@ -50,6 +51,7 @@ Vous pouvez modifier la liste des identifiants de groupe et supprimer tous les i
 
 
 
+[[view-the-current-list-of-group-ids]]
 == Afficher la liste actuelle des identifiants de groupe
 
 Il est possible que le contenu du `data_provider.yaml` fichier de configuration différent de ce qui a été réellement validé après l'exécution du `update_data_providers_from_config_file.sh` scénario.  Pour afficher la liste actuelle des ID de groupe que vous avez ajoutés à la classification des données, exécutez la commande suivante depuis « /opt/netapp/Datasense/tools/customer_configuration/data_providers » :

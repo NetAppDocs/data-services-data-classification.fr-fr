@@ -18,6 +18,7 @@ Suivez quelques étapes pour commencer à analyser les données dans StorageGRID
 
 
 
+[[review-storagegrid-requirements]]
 == Examiner les exigences de StorageGRID
 
 Passez en revue les conditions préalables suivantes pour vous assurer que vous disposez d’une configuration prise en charge avant d’activer la classification des données.
@@ -28,6 +29,7 @@ Passez en revue les conditions préalables suivantes pour vous assurer que vous 
 
 
 
+[[deploy-the-data-classification-instance]]
 == Déployer l'instance de classification des données
 
 Déployez la classification des données s’il n’existe pas déjà d’instance déployée.
@@ -38,6 +40,7 @@ Si vous numérisez des données à partir de StorageGRID qui a été installé s
 
 
 
+[[add-the-storagegrid-service-to-data-classification]]
 == Ajoutez le service StorageGRID à la classification des données
 
 Ajoutez le service StorageGRID .
@@ -62,6 +65,7 @@ StorageGRID est ajouté à la liste des systèmes.
 
 
 
+[[enable-and-disable-scans-on-storagegrid-buckets]]
 == Activer et désactiver les analyses sur les buckets StorageGRID
 
 Après avoir activé la classification des données sur StorageGRID, l’étape suivante consiste à configurer les buckets que vous souhaitez analyser.  La classification des données découvre ces compartiments et les affiche dans le système que vous avez créé.

@@ -28,6 +28,7 @@ Les API de la documentation Swagger vous permettent de rechercher, d'agréger de
 
 
 
+[[overview]]
 == Aperçu
 
 L'API vous permet d'exécuter les fonctions suivantes :
@@ -56,6 +57,7 @@ L'API est sécurisée et utilise la même méthode d'authentification que l'inte
 
 
 
+[[accessing-the-swagger-api-reference]]
 == Accéder à la référence de l'API Swagger
 
 Pour accéder à Swagger, vous aurez besoin de l'adresse IP de votre instance Data Classification. Dans le cas d'un déploiement cloud, vous utiliserez l'adresse IP publique. Ensuite, vous devrez accéder à ce endpoint :
@@ -64,6 +66,7 @@ Pour accéder à Swagger, vous aurez besoin de l'adresse IP de votre instance Da
 
 
 
+[[example-using-the-apis]]
 == Exemple utilisant les API
 
 L'exemple suivant montre un appel d'API pour copier des fichiers.

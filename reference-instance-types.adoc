@@ -20,6 +20,7 @@ Dans les tableaux suivants, si le système marqué « par défaut » n'est pas d
 
 
 
+[[aws-instance-types]]
 == Types d'instances AWS
 
 [cols="20,30,25"]
@@ -34,6 +35,7 @@ Dans les tableaux suivants, si le système marqué « par défaut » n'est pas d
 |===
 
 
+[[azure-instance-types]]
 == Types d'instances Azure
 
 [cols="20,30,25"]
@@ -48,6 +50,7 @@ Dans les tableaux suivants, si le système marqué « par défaut » n'est pas d
 |===
 
 
+[[gcp-instance-types]]
 == Types d'instances GCP
 
 [cols="20,30,25"]

@@ -4,6 +4,7 @@
 
 
 
+[[support-for-rhel-8-10]]
 === Prise en charge de RHEL 8.10
 
 Cette version prend en charge Red Hat Enterprise Linux v8.10 en plus des versions précédemment prises en charge. Ceci s’applique à toute installation manuelle sur site de la BlueXP classification, y compris les déploiements de sites sombres.
@@ -14,6 +15,7 @@ En savoir plus sur https://docs.netapp.com/us-en/data-services-data-classificati
 
 
 
+[[support-for-nfs-v4-1]]
 === Prise en charge de NFS v4.1
 
 Cette version prend en charge NFS v4.1 en plus des versions précédemment prises en charge.

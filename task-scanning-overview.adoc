@@ -22,6 +22,7 @@ Vous pouvez activer et désactiver les analyses au niveau du volume ou au niveau
 
 
 
+[[understand-scan-types]]
 == Comprendre les types de scan
 
 Vous pouvez effectuer deux types d’analyses dans la classification des données :

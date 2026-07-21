@@ -33,6 +33,7 @@ image:diagram_deploy_onprem_cloud_instance.png["Un schéma des composants requis
 
 
 
+[[quick-start]]
 == Démarrage rapide
 
 Commencez rapidement en suivant ces étapes ou faites défiler les sections restantes pour obtenir tous les détails.
@@ -57,6 +58,7 @@ Téléchargez le logiciel Cloud Data Classification à partir du site de support
 
 
 
+[[create-a-console-agent]]
 == Créer un agent de console
 
 Un agent Console est requis pour installer et utiliser NetApp Data Classification. Dans la plupart des cas, un agent Console sera probablement déjà installé avant que vous n'essayiez d'activer NetApp Data Classification.
@@ -81,6 +83,7 @@ Vous aurez besoin de l'adresse IP ou du nom d'hôte du système d'agent de la co
 
 
 
+[[prepare-the-linux-host-system]]
 == Préparer le système hôte Linux
 
 Le logiciel de classification des données doit s'exécuter sur un hôte qui répond aux exigences spécifiques du système d'exploitation, aux exigences de RAM, aux exigences logicielles, etc.  L'hôte Linux peut être dans votre réseau ou dans le cloud.
@@ -204,6 +207,7 @@ NOTE: L'adresse IP du système hôte de classification des données ne peut pas 
 
 
 
+[[enable-outbound-internet-access-from-data-classification]]
 == Activer l'accès Internet sortant à partir de la classification des données
 
 La classification des données nécessite un accès Internet sortant.  Si votre réseau virtuel ou physique utilise un serveur proxy pour l'accès à Internet, assurez-vous que l'instance de classification des données dispose d'un accès Internet sortant pour contacter les points de terminaison suivants.
@@ -232,6 +236,7 @@ La classification des données nécessite un accès Internet sortant.  Si votre 
 |===
 
 
+[[verify-that-all-required-ports-are-enabled]]
 == Vérifiez que tous les ports requis sont activés
 
 Vous devez vous assurer que tous les ports requis sont ouverts pour la communication entre l'agent de console, la classification des données, Active Directory et vos sources de données.
@@ -285,6 +290,7 @@ Vous devez disposer des informations pour Active Directory :
 |===
 
 
+[[install-data-classification-on-the-linux-host]]
 == Installer la classification des données sur l'hôte Linux
 
 Pour les configurations typiques, vous installerez le logiciel sur un seul système hôte. <<Installation sur un seul hôte pour les configurations typiques,Voir ces étapes ici>> .
@@ -300,6 +306,7 @@ NOTE: La classification des données ne peut actuellement pas analyser les compa
 
 
 
+[[single-host-installation-for-typical-configurations]]
 === Installation sur un seul hôte pour les configurations typiques
 
 Passez en revue les exigences et suivez ces étapes lors de l’installation du logiciel de classification des données sur un seul hôte local.
@@ -389,6 +396,7 @@ S'il existe une connectivité via le port 8080 entre la machine hôte et l'insta
 
 
 
+[[next-steps]]
 == Prochaines étapes
 
 * link:task-scanning-overview.html["Configurez l'analyse de vos sources de données"]

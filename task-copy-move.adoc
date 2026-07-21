@@ -18,6 +18,7 @@ Outre les informations qu'elle fournit sur la gouvernance et les opportunités d
 
 
 
+[[copy-files]]
 == Copier les fichiers
 
 NetApp Data Classification permet de copier des fichiers jusqu'à 1 Go. Vous pouvez copier un total de 1 To de données ou 5 millions de fichiers, selon la limite atteinte en premier. Vous pouvez copier des fichiers vers une destination partage CIFS ou NFS. Il n'y a aucun impact sur le fichier source lorsque vous le copiez.
@@ -41,6 +42,7 @@ image:screenshot-copy-nfs.png["Capture d'écran de la fonction de copie pour les
 
 
 
+[[move-files]]
 == Déplacer des fichiers
 
 NetApp Data Classification prend en charge le déplacement de fichiers d'une taille maximale de 1 Go. Vous pouvez déplacer un total de 1 To de données ou 5 millions de fichiers, selon la limite atteinte en premier. Vous pouvez déplacer des fichiers vers une destination partage CIFS ou NFS.
@@ -69,6 +71,7 @@ image:screenshot-move-nfs.png["Capture d'écran de la fonction de déplacement p
 
 
 
+[[delete-files]]
 == Supprimer les fichiers
 
 Lorsque vous filtrez les données sur le tableau de bord Investigation pour découvrir des opportunités d'économie d'espace et de coûts, vous pouvez supprimer ces fichiers. La suppression de fichiers n'est prise en charge que pour les fichiers non structurés.

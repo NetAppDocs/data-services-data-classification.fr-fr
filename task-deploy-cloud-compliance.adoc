@@ -20,6 +20,7 @@ Notez que vous pouvez égalementlink:task-deploy-compliance-onprem.html["install
 
 
 
+[[quick-start]]
 == Démarrage rapide
 
 Commencez rapidement en suivant ces étapes ou faites défiler les sections restantes pour obtenir tous les détails.
@@ -41,6 +42,7 @@ Lancez l’assistant d’installation pour déployer l’instance de classificat
 
 
 
+[[create-a-console-agent]]
 == Créer un agent de console
 
 Si vous n'avez pas encore d'agent Console, créez un agent Console auprès de votre fournisseur de cloud. Voir  https://docs.netapp.com/us-en/console-setup-admin/concept-install-options-aws.html["création d'un agent de console dans AWS"^] ou  https://docs.netapp.com/us-en/console-setup-admin/concept-install-options-azure.html["création d'un agent de console dans Azure"^], ou  https://docs.netapp.com/us-en/console-setup-admin/concept-install-options-google.html["création d'un agent de console dans GCP"^]. Dans la plupart des cas, vous avez probablement déjà un agent Console configuré avant d'essayer d'activer la classification des données, car la plupart  https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-on-prem.html["Les fonctionnalités de la console nécessitent un agent de console"], mais il existe des cas où vous devrez en configurer un maintenant.
@@ -67,6 +69,7 @@ TIP: La classification des données n’impose pas de limite à la quantité de 
 
 
 
+[[government-region-support]]
 === Soutien gouvernemental régional
 
 La classification des données est prise en charge lorsque l’agent de console est déployé dans une région gouvernementale (AWS GovCloud, Azure Gov ou Azure DoD).  Lorsqu'elle est déployée de cette manière, la classification des données présente les restrictions suivantes :
@@ -75,6 +78,7 @@ link:https://docs.netapp.com/us-en/console-setup-admin/task-install-restricted-m
 
 
 
+[[prerequisites]]
 == Prérequis
 
 Passez en revue les conditions préalables suivantes pour vous assurer que vous disposez d’une configuration prise en charge avant de déployer la classification des données dans le cloud.  Lorsque vous déployez la classification des données dans le cloud, elle est située dans le même sous-réseau que l’agent de la console.
@@ -189,6 +193,7 @@ Consultez les liens suivants pour plus de détails sur les limites du vCPU :
 
 
 
+[[deploy-data-classification-in-the-cloud]]
 == Déployer la classification des données dans le cloud
 
 Suivez ces étapes pour déployer une instance de classification des données dans le cloud.  L'agent de console déploiera l'instance dans le cloud, puis installera le logiciel de classification des données sur cette instance.

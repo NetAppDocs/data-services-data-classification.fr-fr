@@ -26,6 +26,7 @@ TIP: Pour les déploiements VMware sur site vSphere, la classification des donn�
 
 
 
+[[on-premises-installation-script]]
 == Script d'installation sur site
 
 L'installation, qu'elle soit réalisée sur un hôte Linux avec accès Internet ou sur un hôte Linux local sans accès Internet, utilise un script d'installation. Le script commence par vérifier si le système et l'environnement répondent aux prérequis. Si les prérequis sont remplis, l'installation démarre.

@@ -4,6 +4,7 @@
 
 
 
+[[scan-storagegrid-data]]
 === Analyser les données StorageGRID
 
 La BlueXP classification prend en charge l'analyse des données dans StorageGRID.

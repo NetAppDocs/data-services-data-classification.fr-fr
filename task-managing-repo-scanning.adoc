@@ -20,6 +20,7 @@ Certaines des choses que vous pouvez modifier sont si un référentiel est analy
 
 
 
+[[view-the-scan-status-for-your-repositories]]
 == Afficher l'état de l'analyse de vos référentiels
 
 Vous pouvez afficher les référentiels individuels que NetApp Data Classification analyse (volumes, buckets, etc.) pour chaque système et source de données.  Vous pouvez également voir combien ont été « cartographiés » et combien ont été « classés ».  La classification prend plus de temps car l’identification complète de l’IA est effectuée sur toutes les données.
@@ -51,6 +52,7 @@ image:screenshot_compliance_repo_scan_settings.png["Une capture d'écran indiqua
 
 
 
+[[change-the-scan-type]]
 == Modifier le type de numérisation
 
 Vous pouvez démarrer ou arrêter des analyses dans un système à tout moment depuis la page de configuration. Vous pouvez également passer d'analyses cartographiques uniquement à des analyses complètes, et inversement.
@@ -74,6 +76,7 @@ Dans la configuration du système individuel, sélectionnez l'actif que vous sou
 
 
 
+[[prioritize-scans]]
 == Prioriser les analyses
 
 Vous pouvez donner la priorité aux analyses map-only ou aux analyses complètes les plus importantes afin de garantir que les analyses à haute priorité soient effectuées en premier.
@@ -90,6 +93,7 @@ La priorité est accordée une seule fois. Les réanalyses automatiques des donn
 
 
 
+[[stop-scanning-for-a-repository]]
 == Arrêter la recherche d'un référentiel
 
 Vous pouvez arrêter l'analyse d'un référentiel (par exemple, un volume) si vous n'avez plus besoin de surveiller sa conformité.  Vous pouvez le faire en désactivant la numérisation.  Lorsque l'analyse est désactivée, toute l'indexation et les informations sur ce volume sont supprimées du système et la facturation de l'analyse des données est arrêtée.
@@ -105,6 +109,7 @@ image:screenshot_compliance_config_button.png["Une capture d’écran montrant c
 
 
 
+[[pause-and-resume-scanning-for-a-repository]]
 == Mettre en pause et reprendre l'analyse d'un référentiel
 
 Vous pouvez suspendre l'analyse afin que Data Classification n'effectue plus d'analyses pour détecter les modifications ou ajouts au référentiel. Tous les résultats d'analyse en cours restent accessibles dans Data Classification.

@@ -22,6 +22,7 @@ De plus, si vous envisagez de migrer des données depuis des emplacements locaux
 
 
 
+[[review-the-governance-dashboard]]
 == Consultez le tableau de bord de gouvernance
 
 Le tableau de bord de gouvernance fournit des informations pour vous permettre d'augmenter l'efficacité et de contrôler les coûts liés aux données stockées sur vos ressources de stockage.
@@ -38,6 +39,7 @@ Le tableau de bord de gouvernance apparaît.
 
 
 
+[[review-savings-opportunities]]
 === Examiner les possibilités d'économies
 
 Le composant _Opportunités d'économie_ affiche les données que vous pouvez supprimer ou hiérarchiser vers un stockage d'objets moins coûteux.  Les données de _Saving Opportunities_ sont mises à jour toutes les 2 heures.  Vous pouvez également mettre à jour les données manuellement.
@@ -57,6 +59,7 @@ NOTE: Si l'une de vos sources de données implémente la hiérarchisation des do
 
 
 
+[[create-the-data-discovery-assessment-report]]
 == Créer le rapport d'évaluation de la découverte de données
 
 Le rapport d’évaluation de la découverte de données fournit une analyse de haut niveau de l’environnement analysé pour montrer les zones de préoccupation et les étapes de correction potentielles. Les résultats sont basés à la fois sur la cartographie et la classification de vos données. L’objectif de ce rapport est de sensibiliser à trois aspects importants de votre ensemble de données :
@@ -94,6 +97,7 @@ La classification des données génère un rapport PDF que vous pouvez consulter
 
 
 
+[[create-the-data-mapping-overview-report]]
 == Créer le rapport de synthèse du mappage des données
 
 Le rapport d'aperçu du mappage des données fournit un aperçu des données stockées dans vos sources de données d'entreprise pour vous aider à prendre des décisions concernant les processus de migration, de sauvegarde, de sécurité et de conformité.  Le rapport résume tous les systèmes et sources de données.  Il fournit également une analyse pour chaque système.
@@ -128,6 +132,7 @@ Si le rapport est supérieur à 1 Mo, le fichier PDF est conservé sur l'instanc
 
 
 
+[[review-the-top-data-repositories-listed-by-data-sensitivity]]
 === Consultez les principaux référentiels de données classés par sensibilité des données
 
 La zone _Principaux référentiels de données par niveau de sensibilité_ du rapport Présentation du mappage des données répertorie les quatre principaux référentiels de données (systèmes et sources de données) qui contiennent les éléments les plus sensibles.  Le graphique à barres de chaque système est divisé en :
@@ -146,6 +151,7 @@ Ces données sont actualisées toutes les deux heures et peuvent être actualis�
 
 
 
+[[review-sensitive-data-and-wide-permissions]]
 === Examiner les données sensibles et les autorisations étendues
 
 La zone _Données sensibles et autorisations étendues_ du tableau de bord de gouvernance affiche le nombre de fichiers contenant des données sensibles et disposant d'autorisations étendues.  Le tableau présente les types d’autorisations suivants :
@@ -161,6 +167,7 @@ La zone _Données sensibles et autorisations étendues_ du tableau de bord de go
 
 
 
+[[review-data-listed-by-types-of-open-permissions]]
 === Examiner les données répertoriées par types d'autorisations ouvertes
 
 La zone _Autorisations d'ouverture_ du rapport Présentation du mappage des données affiche le pourcentage pour chaque type d'autorisations qui existent pour tous les fichiers en cours d'analyse.  Le graphique montre les types d’autorisations suivants :
@@ -178,6 +185,7 @@ La zone _Autorisations d'ouverture_ du rapport Présentation du mappage des donn
 
 
 
+[[review-the-age-and-size-of-data]]
 === Vérifiez l'âge et la taille des données
 
 Vous pouvez examiner les éléments des graphiques _Âge_ et _Taille_ du rapport Présentation du mappage des données pour voir s'il existe des données que vous devez supprimer ou transférer vers un stockage d'objets moins coûteux.

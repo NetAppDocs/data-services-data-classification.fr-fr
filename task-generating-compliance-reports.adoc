@@ -38,6 +38,7 @@ Les rapports suivants sont disponibles pour la classification des données :
 
 
 
+[[select-the-systems-for-reports]]
 == Sélectionnez les systèmes pour les rapports
 
 Vous pouvez filtrer le contenu du tableau de bord de conformité de la classification des données pour afficher les données de conformité pour tous les systèmes et bases de données, ou uniquement pour des systèmes spécifiques.
@@ -55,6 +56,7 @@ image:screenshot-report-filter.png["Capture d'écran montrant le filtrage des sy
 
 
 
+[[data-subject-access-request-report]]
 == Rapport de demande d'accès aux données personnelles
 
 Les réglementations en matière de confidentialité telles que le RGPD européen accordent aux personnes concernées (telles que les clients ou les employés) le droit d'accéder à leurs données personnelles.  Lorsqu'une personne concernée demande ces informations, on parle alors de demande d'accès aux données (DSAR).  Les organisations sont tenues de répondre à ces demandes « sans retard injustifié », et au plus tard dans un délai d’un mois à compter de leur réception.
@@ -104,6 +106,7 @@ Si vous choisissez *Local*, le rapport est limité aux 10 000 premières lignes
 
 
 
+[[health-insurance-portability-and-accountability-act-hipaa-report]]
 == Rapport sur la loi sur la portabilité et la responsabilité en matière d'assurance maladie (HIPAA)
 
 Le rapport sur la loi sur la portabilité et la responsabilité en matière d’assurance maladie (HIPAA) peut vous aider à identifier les fichiers contenant des informations sur la santé.  Il est conçu pour aider votre organisation à se conformer aux lois sur la confidentialité des données HIPAA.  Les informations recherchées par la classification des données comprennent :
@@ -141,6 +144,7 @@ La classification des données génère un rapport PDF.
 
 
 
+[[payment-card-industry-data-security-standard-pci-dss-report]]
 == Rapport sur la norme de sécurité des données de l'industrie des cartes de paiement (PCI DSS)
 
 Le rapport sur la norme de sécurité des données de l'industrie des cartes de paiement (PCI DSS) peut vous aider à identifier la répartition des informations de carte de crédit dans vos fichiers.
@@ -171,6 +175,7 @@ La classification des données génère un rapport PDF que vous pouvez consulter
 
 
 
+[[privacy-risk-assessment-report]]
 == Rapport d'évaluation des risques liés à la vie privée
 
 Le rapport d'évaluation des risques liés à la confidentialité fournit un aperçu de l'état des risques liés à la confidentialité de votre organisation, comme l'exigent les réglementations sur la confidentialité telles que le RGPD et le CCPA.

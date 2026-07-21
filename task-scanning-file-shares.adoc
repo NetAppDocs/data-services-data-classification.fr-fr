@@ -21,6 +21,7 @@ NOTE: L'analyse des données provenant de partages de fichiers non NetApp n'est 
 
 
 
+[[prerequisites]]
 == Prérequis
 
 Passez en revue les conditions préalables suivantes pour vous assurer que vous disposez d’une configuration prise en charge avant d’activer la classification des données.
@@ -48,6 +49,7 @@ Si vous souhaitez vous assurer que les « dernières heures d'accès » de vos
 
 
 
+[[create-a-file-shares-group]]
 == Créer un groupe de partage de fichiers
 
 Lorsque vous ajoutez des partages de fichiers au groupe, vous devez utiliser le format `<host_name>:/<share_path>` .
@@ -89,6 +91,7 @@ NOTE: Si l'analyse ne se termine pas correctement pour une configuration CIFS av
 
 
 
+[[edit-a-file-shares-group]]
 == Modifier un groupe de partage de fichiers
 
 Après avoir créé un groupe de partages de fichiers, vous pouvez modifier le protocole CIFS ou ajouter et supprimer des partages de fichiers.
@@ -132,6 +135,7 @@ Si vous ajoutez des partages de fichiers avec un deuxième protocole, assurez-vo
 
 
 
+[[track-the-scanning-progress]]
 == Suivre la progression de la numérisation
 
 Vous pouvez suivre la progression de l'analyse initiale.
@@ -143,6 +147,7 @@ Vous pouvez suivre la progression de l'analyse initiale.
 
 
 
+[[enable-and-disable-scans-on-volumes]]
 == Activer et désactiver les analyses sur les volumes
 
 Vous pouvez lancer ou arrêter des analyses sur n'importe quel système à tout moment depuis la page de configuration. Vous pouvez également passer d'une analyse cartographique seule à une analyse cartographique et de classification, et inversement. Il est recommandé d'analyser tous les volumes d'un système.
