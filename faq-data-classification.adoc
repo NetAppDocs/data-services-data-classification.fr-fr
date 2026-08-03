@@ -46,7 +46,7 @@ Oui, Data Classification dispose d'une API REST pour les fonctionnalités prises
 [[is-data-classification-available-through-the-cloud-marketplaces]]
 === La classification des données est-elle disponible via les places de marché cloud ?
 
-La classification des données fait partie des fonctionnalités principales de la NetApp Console . Vous n'avez donc pas besoin d'utiliser les places de marché pour ce service.
+La classification des données fait partie des fonctionnalités principales de la NetApp Console. Vous n'avez pas besoin de déployer la classification des données depuis une place de marché cloud.
 
 
 
@@ -87,6 +87,13 @@ La classification des données offre des capacités de recherche étendues qui f
 Une fois les fichiers d'intérêt trouvés, les caractéristiques peuvent être répertoriées, notamment les balises, le compte système, le bucket, le chemin du fichier, la catégorie (à partir de la classification), la taille du fichier, la dernière modification, l'état de l'autorisation, les doublons, le niveau de sensibilité, les données personnelles, les types de données sensibles dans le fichier, le propriétaire, le type de fichier, la taille du fichier, l'heure de création, le hachage du fichier, si les données ont été attribuées à une personne recherchant son attention, et plus encore.  Des filtres peuvent être appliqués pour éliminer les caractéristiques qui ne sont pas pertinentes.
 
 Data Classification dispose également d'un contrôle d'accès basé sur les rôles (RBAC) pour permettre le déplacement ou la suppression des fichiers, si les autorisations appropriées sont présentes.  Si les autorisations appropriées ne sont pas présentes, les tâches peuvent être attribuées à une personne de l’organisation qui dispose des autorisations appropriées.
+
+
+
+[[if-i-restart-my-vm-during-scans-what-is-the-impact-on-the-scan]]
+=== Si vous redémarrez votre machine virtuelle pendant les analyses, quel sera l'impact sur l'analyse ?
+
+Les analyses persistent. Si vous redémarrez une machine virtuelle pendant l'exécution d'analyses, celles-ci reprennent là où elles s'étaient arrêtées après le redémarrage réussi de la machine virtuelle.
 
 
 
