@@ -1160,7 +1160,6 @@
   <block id="196004c131c20b6770256be1148132f8" category="list-text">Nom d'utilisateur et mot de passe pour le serveur</block>
   <block id="c5a32a433a4a6a349b1c917b51959e47" category="section-title">Installer la classification des données sur l'hôte Linux</block>
   <block id="92aadc02d249003db0a3c659eb74f06b" category="inline-xref">Voir ces étapes ici</block>
-  <block id="cdcaeff13fccb06b7b310f6f966ada4f" category="paragraph">Pour les configurations typiques, vous installerez le logiciel sur un seul système hôte. <block ref="b071f364f4daf7049825f5b1c726d17b" category="inline-xref-macro-rx"></block> .</block>
   <block id="31e7f243ce8de6b2655624e7d7969f44" category="inline-image-macro">Un diagramme montrant l’emplacement des sources de données que vous pouvez analyser lorsque vous utilisez une seule instance de classification des données déployée sur site avec accès Internet.</block>
   <block id="ab0e7b32181d9f9a6ee2bf396f53d64b" category="paragraph"><block ref="ab0e7b32181d9f9a6ee2bf396f53d64b" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ab6f827b404fc74a3d59a176e44dce54" category="inline-xref">Préparation du système hôte Linux</block>
@@ -2494,7 +2493,6 @@
   <block id="d5ab8dc7ef67ca92e41d730982c5c602" category="cell">9000</block>
   <block id="2c68446a47623409683fed996b7df333" category="cell">Nécessaire pour les processus internes d'un serveur Ubuntu.</block>
   <block id="ab911b02f3c83f7b8747e04d52424221" category="section-title">Installez Data Classification sur l'hôte Linux local</block>
-  <block id="ce9b3c0997395cdac24ac84544289f19" category="paragraph">Dans la plupart des configurations, vous installerez le logiciel sur un seul système hôte.</block>
   <block id="946fda64b6781af330daa1fb854c8c52" category="paragraph">Suivez ces étapes lors de l'installation du logiciel Data Classification sur un seul hôte local dans un environnement hors ligne.</block>
   <block id="fc33df80766251e78dbe2beb48ec9528" category="list-text">Vérifiez que vous avez installé les deux logiciels prérequis (Docker Engine ou Podman, et Python 3).</block>
   <block id="0986e42aa866cf4296d7c23872a54555" category="list-text">Vérifiez que votre environnement hors ligne répond aux exigences requises <block ref="f3782c1c0d192695b13bd06d4ac05496" category="inline-xref-macro-rx"></block>.</block>
@@ -2862,4 +2860,6 @@
   <block id="4c9398ce1129f1601e4d55b176ae4cd8" category="inline-link-macro">les prioriser manuellement</block>
   <block id="b053d0df91aae10a4ef1dd644b52ec10" category="paragraph">Après l'analyse initiale, Data Classification analyse continuellement vos données selon un système de rotation afin de détecter les modifications progressives. Les analyses sont automatiquement effectuées chaque jour. Data Classification effectue les analyses par lots de six ; vous pouvez suspendre les analyses ou <block ref="eb2a9ee088a42a6c145bd3fba80d3402" category="inline-link-macro-rx"></block>.</block>
   <block id="65f7cd44708007c7eaad8b5c146ed3dc" category="admonition">Effectuer une analyse cartographique uniquement peut s'avérer utile pour obtenir une vue d'ensemble de vos données. Grâce à cette vue d'ensemble, vous pouvez ensuite décider sur quelles sources de données vous souhaitez effectuer des analyses complètes.</block>
+  <block id="054d46968a7383743285f7a0e8b6508c" category="paragraph">Dans la plupart des cas, vous installez Data Classification sur un système à hôte unique. Ce n'est pas le même hôte de machine virtuelle que l'agent Console.</block>
+  <block id="ad54f23b3db54b6c128eb84641ffe234" category="paragraph">Dans la plupart des cas, vous installez Data Classification sur un système à hôte unique. Il ne s'agit pas du même hôte VM que l'agent Console. <block ref="b071f364f4daf7049825f5b1c726d17b" category="inline-xref-macro-rx"></block>.</block>
 </blocks>

@@ -293,7 +293,7 @@ Vous devez disposer des informations pour Active Directory :
 [[install-data-classification-on-the-linux-host]]
 == Installer la classification des données sur l'hôte Linux
 
-Pour les configurations typiques, vous installerez le logiciel sur un seul système hôte. <<Installation sur un seul hôte pour les configurations typiques,Voir ces étapes ici>> .
+Dans la plupart des cas, vous installez Data Classification sur un système à hôte unique. Il ne s'agit pas du même hôte VM que l'agent Console. <<Installation sur un seul hôte pour les configurations typiques,Voir ces étapes ici>>.
 
 image:diagram_deploy_onprem_single_host_internet.png["Un diagramme montrant l’emplacement des sources de données que vous pouvez analyser lorsque vous utilisez une seule instance de classification des données déployée sur site avec accès Internet."]
 
