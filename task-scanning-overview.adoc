@@ -16,7 +16,7 @@ summary: Analysez vos sources de données avec NetApp Data Classification.
 [role="lead"]
 NetApp Data Classification analyse les données dans les référentiels (les volumes, les schémas de base de données ou autres données utilisateur) que vous sélectionnez afin d'identifier les données personnelles et sensibles. Data Classification cartographie ensuite les données de votre organisation, catégorise chaque fichier et identifie les modèles prédéfinis dans les données. Le résultat de l'analyse est un index des informations personnelles, des informations personnelles sensibles, des catégories de données et des types de fichiers.
 
-Après l'analyse initiale, Data Classification analyse en continu vos données de manière circulaire pour détecter les modifications incrémentielles.  C'est pourquoi il est important de maintenir l'instance en cours d'exécution.
+Après l'analyse initiale, Data Classification analyse continuellement vos données selon un système de rotation afin de détecter les modifications progressives. Les analyses sont automatiquement effectuées chaque jour. Data Classification effectue les analyses par lots de six ; vous pouvez suspendre les analyses ou link:task-managing-repo-scanning.html#prioritize-scans["les prioriser manuellement"].
 
 Vous pouvez activer et désactiver les analyses au niveau du volume ou au niveau du schéma de base de données.
 
@@ -32,7 +32,7 @@ Vous pouvez effectuer deux types d’analyses dans la classification des donnée
 
 
 
-TIP: Effectuer une analyse cartographique uniquement peut être utile pour obtenir une vue d'ensemble de vos données et identifier des zones spécifiques sur lesquelles effectuer des analyses complètes.
+TIP: Effectuer une analyse cartographique uniquement peut s'avérer utile pour obtenir une vue d'ensemble de vos données. Grâce à cette vue d'ensemble, vous pouvez ensuite décider sur quelles sources de données vous souhaitez effectuer des analyses complètes.
 
 Consultez les tableaux pour voir quelles informations apparaissent dans les analyses uniquement par carte et dans les analyses complètes.
 
