@@ -82,6 +82,8 @@ NOTE: Ce mot de passe sert à l'accès root, à l'accès SSH et à l'administrat
 +
 Sélectionnez le fichier nommé *DATASENSE-INSTALLER-<version>.tar.gz*.
 
+. Copiez le fichier d'installation sur l'hôte de la machine virtuelle : `tar -xzf DATASENSE-INSTALLER-<version>.tar.gz`.
+. Décompressez le fichier d'installation sur la machine hôte.
 . Dans la console, sélectionnez *Gouvernance > Classification*.
 . Sélectionnez *Déployer la classification*.
 +

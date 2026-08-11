@@ -1,0 +1,12 @@
+= Onglet « Analyses actives » pour améliorer la gestion des analyses
+:allow-uri-read: 
+
+
+
+
+[[active-scans-tab-to-enhance-scan-management]]
+=== Onglet « Analyses actives » pour améliorer la gestion des analyses
+
+La classification des données propose désormais un onglet *Analyses actives* dans le menu Configuration, offrant une expérience améliorée pour la gestion des analyses. L’onglet Analyses actives fournit une vue d’ensemble de tous les volumes que vous avez activés pour l’analyse, avec des filtres familiers pour trier vos ressources. L’onglet offre également un emplacement central pour prioriser les analyses, les mettre en pause et consulter les erreurs.
+
+Pour plus d'informations, voir link:https://docs.netapp.com/us-en/data-services-data-classification/task-managing-repo-scanning.html["Gérer les analyses"^].

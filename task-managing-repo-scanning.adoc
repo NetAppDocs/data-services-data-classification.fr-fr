@@ -63,14 +63,12 @@ NOTE: L'analyse cartographique seule n'est pas disponible pour les bases de donn
 .Étapes
 . Dans le menu Classification des données, sélectionnez *Configuration*.
 . Pour modifier le type d'analyse de tous les éléments d'un système, sélectionnez le menu Actions correspondant, puis choisissez le type d'analyse souhaité. Par exemple, pour passer d'une analyse de mappage uniquement à une analyse complète d'un groupe de partages de fichiers, sélectionnez *Analyser tous les partages : analyse complète*.
-+
-Pour modifier le type d'analyse pour des compartiments, des partages ou des volumes individuels, sélectionnez le bouton **Gérer** du système.
-
+. Pour modifier le type d'analyse des compartiments, partages ou volumes individuels, sélectionnez l'onglet **Analyses actives**. Appliquez les filtres appropriés pour identifier les ressources que vous souhaitez modifier.
 +
 image:screenshot_compliance_config_button.png["Une capture d’écran montrant comment sélectionner le bouton Configuration pour un système."]
 
 +
-Dans la configuration du système individuel, sélectionnez l'actif que vous souhaitez modifier. Sélectionnez le *Scan type* puis changez pour le type de scan souhaité.
+Dans la colonne Type d'analyse, sélectionnez la ressource désignée et changez-la en **Cartographie uniquement** ou **Analyse complète**.
 
 
 
@@ -87,8 +85,8 @@ La priorité est accordée une seule fois. Les réanalyses automatiques des donn
 
 .Étapes
 . Dans le menu Classification des données, sélectionnez *Configuration*.
-. Trouvez le système pour lequel vous souhaitez modifier les analyses, puis sélectionnez *Manage*.
-. Trouvez les ressources que vous souhaitez prioriser. Sélectionnez l’option du menu Actions `...` puis *Analyse prioritaire*.
+. Sélectionnez l'onglet **Analyses actives**.
+. Vous pouvez appliquer les filtres appropriés pour identifier les ressources que vous souhaitez modifier. Trouvez les ressources que vous souhaitez prioriser. Sélectionnez l’option du menu d’actions `...` puis *Prioriser l’analyse*.
 
 
 
@@ -120,8 +118,8 @@ Vous pouvez reprendre la numérisation à tout moment.
 
 .Étapes
 . Dans le menu Classification des données, sélectionnez *Configuration*.
-. Trouvez le système pour lequel vous souhaitez modifier les analyses, puis sélectionnez *Manage*.
-. Identifiez les ressources que vous souhaitez mettre en pause. Pour chaque ressource, sélectionnez l’option du menu Actions `...`, puis *Mettre en pause l’analyse*.
+. Sélectionnez l'onglet **Analyses actives**.
+. Vous pouvez appliquer les filtres appropriés pour identifier les ressources que vous souhaitez modifier. Identifiez les ressources que vous souhaitez suspendre. Pour chaque ressource, sélectionnez l’option du menu d’actions `...` puis *Suspendre l’analyse*.
 +
 Si vous souhaitez reprendre la numérisation, répétez la procédure puis sélectionnez *Reprendre la numérisation*.
 
