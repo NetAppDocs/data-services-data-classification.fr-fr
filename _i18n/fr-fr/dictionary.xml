@@ -2432,7 +2432,6 @@
   <block id="a19fda4781709630dbfb543922e4d612" category="paragraph">Les données obsolètes peuvent être définies en fonction de leur _dernier accès_ ou de leur _dernière modification_. Les périodes sélectionnables vont de 6 mois à 10 ans.</block>
   <block id="24ece81002d5816b98626cc57ced872d" category="paragraph">Par défaut, les données sont considérées comme obsolètes si leur dernière modification remonte à trois ans.</block>
   <block id="c3d635823e7267511f7a0ba59b131053" category="list-title">Définir les données obsolètes</block>
-  <block id="41c8212e8259ff083fe9cdf357f8a4a6" category="list-text">Dans Ransomware Resilience, sélectionnez **Configuration**.</block>
   <block id="656961d589e5ba765f1a77e91cdda2d0" category="list-text">Choisissez la période pour la définition des données obsolètes.</block>
   <block id="8d5311b8775f8a9ea8945d76095bb698" category="list-text">Sélectionnez **Enregistrer**.</block>
   <block id="38fc1b337c0ea26463916fc2913205c1" category="paragraph"><block ref="38fc1b337c0ea26463916fc2913205c1" category="inline-image-macro-rx" type="image"></block></block>
@@ -2552,7 +2551,6 @@
   <block id="b231d70c2e9c026262bda45de2cf8e61" category="doc">Connectez-vous à NetApp Data Classification</block>
   <block id="f214292b356953b67175bbd37992066d" category="summary">Après avoir filtré les données dans le tableau de bord d'enquête, vous pouvez copier, déplacer et supprimer des données non structurées.</block>
   <block id="645af234aa1818d98e8bb6c780fb0e42" category="doc">Copier, déplacer et supprimer des fichiers à l'aide de NetApp Data Classification</block>
-  <block id="4c6b11e5b29f298bdccac50248f21007" category="paragraph">Outre les informations qu'elle fournit sur la gouvernance et les opportunités d'économies, NetApp Data Classification vous permet également d'effectuer des actions sur les fichiers depuis son tableau de bord d'investigation. Après avoir filtré les données dans le tableau de bord d'investigation, vous pouvez copier, déplacer et supprimer des données non structurées. Effectuer ces actions peut améliorer la conformité, par exemple en déplaçant les fichiers vers un emplacement plus sécurisé, ou créer des opportunités d'économies en supprimant des fichiers anciens ou en double.</block>
   <block id="558f28628ba8ab4cb8420949524832d3" category="section-title">Copier les fichiers</block>
   <block id="e54a222aee96b176f405c4031ff80909" category="paragraph">NetApp Data Classification permet de copier des fichiers jusqu'à 1 Go. Vous pouvez copier un total de 1 To de données ou 5 millions de fichiers, selon la limite atteinte en premier. Vous pouvez copier des fichiers vers une destination partage CIFS ou NFS. Il n'y a aucun impact sur le fichier source lorsque vous le copiez.</block>
   <block id="37214830ec688e601a722f40084e9795" category="list-text">Dans le tableau de bord Investigation, sélectionnez les fichiers que vous souhaitez copier.</block>
@@ -2576,7 +2574,6 @@
   <block id="9b1a8f320a2c08a8370e356510090979" category="paragraph"><block ref="9b1a8f320a2c08a8370e356510090979" category="inline-image-macro-rx" type="image"></block></block>
   <block id="7afd3db29a42496704a6705958fec121" category="list-text">Sélectionnez **Déplacer des éléments**.</block>
   <block id="19e43848563797a6f937c7895b604754" category="section-title">Supprimer les fichiers</block>
-  <block id="bf7a8fa340e92f5931d748d2f4929afb" category="paragraph">Lorsque vous filtrez les données sur le tableau de bord Investigation pour découvrir des opportunités d'économie d'espace et de coûts, vous pouvez supprimer ces fichiers. La suppression de fichiers n'est prise en charge que pour les fichiers non structurés.</block>
   <block id="fe3f40b2ceb6ec005d118e22ab125813" category="list-text">Dans le tableau de bord Investigation, sélectionnez les fichiers que vous souhaitez supprimer.</block>
   <block id="9f9603fa59f6dd606ff86c8b621cae42" category="list-text">Dans la boîte de dialogue de confirmation, saisissez "permanently delete".</block>
   <block id="de44f74c0cf208f9b074a847f28871e1" category="list-text">Sélectionnez **Supprimer le fichier** pour confirmer l’opération.</block>
@@ -2870,4 +2867,6 @@
   <block id="687c102bfd5cd4e0df7368ee54670aa2" category="list-text">Vous pouvez appliquer les filtres appropriés pour identifier les ressources que vous souhaitez modifier. Identifiez les ressources que vous souhaitez suspendre. Pour chaque ressource, sélectionnez l’option du menu d’actions<block ref="2f43b42fd833d1e77420a8dae7419000" prefix=" " category="inline-code"></block> puis *Suspendre l’analyse*.</block>
   <block id="6ffc226d668d783acc3c710ae22bd61d" category="section-title">10 août 2026</block>
   <block id="05ad566aec59d2434a4789dad053f408" category="paragraph">*Version 1.56*</block>
+  <block id="2a6207bf09c73302b5baadda003d21a2" category="paragraph">NetApp Data Classification vous permet d’effectuer des actions sur les fichiers découverts dans le tableau de bord d’investigation. Après avoir filtré les données, vous pouvez copier, déplacer et supprimer des données non structurées afin d’améliorer la conformité — par exemple, en déplaçant des fichiers sensibles vers un emplacement plus sécurisé — ou de réaliser des économies en supprimant des fichiers anciens ou en double.</block>
+  <block id="f011267af7448f5cee47e71e75b30301" category="paragraph">Lorsque vous filtrez les données sur le tableau de bord Investigation pour identifier les opportunités d'économie d'espace et de coûts, vous pouvez supprimer ces fichiers. Vous pouvez supprimer uniquement les fichiers non structurés.</block>
 </blocks>

@@ -14,7 +14,7 @@ summary: 'Après avoir filtré les données dans le tableau de bord d"enquête, 
 
 
 [role="lead"]
-Outre les informations qu'elle fournit sur la gouvernance et les opportunités d'économies, NetApp Data Classification vous permet également d'effectuer des actions sur les fichiers depuis son tableau de bord d'investigation. Après avoir filtré les données dans le tableau de bord d'investigation, vous pouvez copier, déplacer et supprimer des données non structurées. Effectuer ces actions peut améliorer la conformité, par exemple en déplaçant les fichiers vers un emplacement plus sécurisé, ou créer des opportunités d'économies en supprimant des fichiers anciens ou en double.
+NetApp Data Classification vous permet d’effectuer des actions sur les fichiers découverts dans le tableau de bord d’investigation. Après avoir filtré les données, vous pouvez copier, déplacer et supprimer des données non structurées afin d’améliorer la conformité — par exemple, en déplaçant des fichiers sensibles vers un emplacement plus sécurisé — ou de réaliser des économies en supprimant des fichiers anciens ou en double.
 
 
 
@@ -74,7 +74,7 @@ image:screenshot-move-nfs.png["Capture d'écran de la fonction de déplacement p
 [[delete-files]]
 == Supprimer les fichiers
 
-Lorsque vous filtrez les données sur le tableau de bord Investigation pour découvrir des opportunités d'économie d'espace et de coûts, vous pouvez supprimer ces fichiers. La suppression de fichiers n'est prise en charge que pour les fichiers non structurés.
+Lorsque vous filtrez les données sur le tableau de bord Investigation pour identifier les opportunités d'économie d'espace et de coûts, vous pouvez supprimer ces fichiers. Vous pouvez supprimer uniquement les fichiers non structurés.
 
 .Étapes
 . Dans le tableau de bord Investigation, sélectionnez les fichiers que vous souhaitez supprimer.

@@ -18,7 +18,7 @@ Les données obsolètes peuvent être définies en fonction de leur _dernier acc
 Par défaut, les données sont considérées comme obsolètes si leur dernière modification remonte à trois ans.
 
 .Définir les données obsolètes
-. Dans Ransomware Resilience, sélectionnez **Configuration**.
+. Dans Classification des données, sélectionnez **Configuration**.
 . Sur la page Configuration, sélectionnez l'onglet **Paramètres**.
 . Sous l'en-tête Définition des données obsolètes, sélectionnez *Modifier*.
 . Dans le menu déroulant **Propriété du fichier**, choisissez si vous souhaitez définir les données obsolètes en fonction de leur *Dernier accès* ou de leur *Dernière modification*.
