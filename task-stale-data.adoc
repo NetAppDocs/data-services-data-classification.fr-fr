@@ -11,9 +11,9 @@ summary: Personnalisez la définition des données obsolètes dans la NetApp Dat
 
 
 [role="lead"]
-La NetApp Data Classification identifie les données obsolètes pour vous aider à repérer les opportunités d'économies et les risques de gouvernance. Étant donné que la définition des données obsolètes peut varier selon les contextes organisationnels, vous pouvez personnaliser la façon dont la classification des données définit les données obsolètes.
+NetApp Data Classification identifie les données obsolètes afin que vous puissiez trouver des opportunités d'économies et traiter les risques liés à la gouvernance. Personnalisez la définition des données obsolètes pour l'adapter aux besoins de votre organisation et identifiez les données obsolètes en fonction de leur dernier accès ou de leur dernière modification.
 
-Les données obsolètes peuvent être définies en fonction de leur _dernier accès_ ou de leur _dernière modification_. Les périodes sélectionnables vont de 6 mois à 10 ans.
+Les données obsolètes peuvent être définies en fonction de la date à laquelle elles ont été _consultées pour la dernière fois_ ou _modifiées pour la dernière fois_. Vous pouvez choisir une période allant de six mois à dix ans.
 
 Par défaut, les données sont considérées comme obsolètes si leur dernière modification remonte à trois ans.
 

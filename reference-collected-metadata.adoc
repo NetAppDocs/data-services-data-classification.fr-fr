@@ -14,7 +14,7 @@ summary: 'La classification des données collecte certaines métadonnées lors d
 
 
 [role="lead"]
-NetApp Data Classification collecte les métadonnées lors de l'analyse de vos sources de données et de vos systèmes. La plupart des métadonnées sont disponibles, mais certains attributs ne le sont pas pour tous les protocoles.
+NetApp Data Classification collecte des métadonnées lors de l'analyse de vos sources de données et de vos systèmes. Certains attributs de métadonnées ne sont pas disponibles pour tous les protocoles.
 
 [cols="15,25,25,25"]
 |===
@@ -47,13 +47,13 @@ NetApp Data Classification collecte les métadonnées lors de l'analyse de vos s
 [[last-accessed-time]]
 == Dernière consultation
 
-Lorsque NetApp Data Classification extrait des données des partages de fichiers, le système d'exploitation considère cela comme un événement d'accès et met à jour la « date et heure du dernier accès » en conséquence. Après l'analyse, NetApp Data Classification tente de rétablir la date et l'heure du dernier accès à l'horodatage d'origine. Si NetApp Data Classification ne dispose pas des autorisations d'écriture sur les attributs dans CIFS ou des autorisations d'écriture dans NFS, le système ne peut pas rétablir la date et l'heure du dernier accès à l'horodatage d'origine.
+Lorsque NetApp Data Classification extrait des données à partir de partages de fichiers, le système d'exploitation considère cela comme un événement d'accès et met à jour la « dernière date d'accès » en conséquence. Après l'analyse, NetApp Data Classification tente de rétablir la dernière date d'accès à l'horodatage d'origine. Si NetApp Data Classification ne dispose pas des autorisations d'écriture sur les attributs dans CIFS ou des autorisations d'écriture dans NFS, le système ne peut pas rétablir la dernière date d'accès à l'horodatage d'origine.
 
-Par défaut, NetApp Data Classification n'analyse pas les fichiers lorsqu'il ne dispose pas des autorisations d'écriture nécessaires pour restaurer l'horodatage d'origine. Si vos données peuvent tolérer que la date du dernier accès ne soit pas réinitialisée à l'horodatage d'origine, activez l'option *Analyser sans autorisations d'écriture* dans la page de configuration du système.
+Par défaut, NetApp Data Classification n'analyse pas les fichiers lorsqu'elle ne dispose pas des autorisations d'écriture nécessaires pour restaurer l'horodatage d'origine. Si vos données peuvent tolérer que la date du dernier accès ne soit pas réinitialisée à l'horodatage d'origine, activez l'option *Analyser sans autorisations d'écriture* sur la page de configuration du système.
 
 image:screenshot_scan_missing_permissions.png["Capture d'écran montrant l'option permettant à NetApp Data Classification d'analyser vos fichiers même si elle ne dispose pas des autorisations nécessaires pour rétablir l'horodatage d'origine de la dernière consultation."]
 
 Cette fonctionnalité s’applique aux systèmes ONTAP sur site, à Cloud Volumes ONTAP, à Azure NetApp Files, à Amazon FSx for NetApp ONTAP et aux partages de fichiers tiers.
 
 
-NOTE: Les volumes ONTAP configurés avec SnapLock ont des autorisations en lecture seule et ne peuvent pas non plus rétablir l'heure de dernier accès à l'horodatage d'origine.
+NOTE: Les volumes ONTAP configurés avec SnapLock ont des autorisations en lecture seule et ne peuvent pas non plus rétablir la dernière date d'accès à l'horodatage d'origine.

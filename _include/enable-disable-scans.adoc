@@ -2,12 +2,12 @@
 :allow-uri-read: 
 
 
-Vous pouvez lancer ou arrêter des analyses sur n'importe quel système à tout moment depuis la page de configuration. Vous pouvez également passer d'une analyse cartographique seule à une analyse cartographique et de classification, et inversement. Il est recommandé d'analyser tous les volumes d'un système.
+Vous pouvez lancer ou arrêter des analyses sur n'importe quel système à tout moment depuis le menu Configuration. Vous pouvez également passer d'une analyse cartographique uniquement à une analyse complète, et inversement.
 
-L'option *Analyser sans autorisations d'écriture* est désactivée par défaut. Cela signifie que si Data Classification ne dispose pas des autorisations d'écriture appropriées, le système n'analysera pas les fichiers car Data Classification ne peut pas rétablir la "date de dernier accès" à l'horodatage d'origine. Si votre système peut tolérer la modification de la date de dernier accès, sélectionnez cette option. link:reference-collected-metadata.html#last-accessed-time-timestamp["Apprendre encore plus"^].
+L'option *Analyser sans autorisation d'écriture* est désactivée par défaut. Cela signifie que si NetApp Data Classification ne dispose pas des autorisations d'écriture appropriées, le système n'analysera pas les fichiers, car NetApp Data Classification ne peut pas rétablir la « dernière date d'accès » à l'horodatage d'origine. Si votre système peut tolérer la modification de la dernière date d'accès, sélectionnez cette option. link:reference-collected-metadata.html#last-accessed-time-timestamp["Apprendre encore plus"^].
 
 
-NOTE: Les nouveaux volumes ajoutés au système ne sont analysés automatiquement que si vous avez activé l'analyse pour tous les volumes. Si vous n'avez activé l'analyse que pour certains volumes, vous devez l'activer manuellement pour le volume nouvellement ajouté.
+NOTE: Les nouveaux volumes ajoutés au système ne sont analysés automatiquement que si l'analyse est activée pour tous les volumes. Si vous n'avez activé l'analyse que pour certains volumes, vous devez activer l'analyse manuellement pour le volume nouvellement ajouté.
 
 image:screenshot_volume_compliance_selection.png["Une capture d’écran de la page de configuration où vous pouvez activer ou désactiver l’analyse des volumes individuels."]
 

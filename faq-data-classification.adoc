@@ -14,7 +14,7 @@ summary: Cette FAQ peut vous aider si vous cherchez simplement une réponse rapi
 
 
 [role="lead"]
-Cette FAQ peut vous aider si vous cherchez simplement une réponse rapide à une question.
+Utilisez cette FAQ pour trouver rapidement des réponses aux questions courantes sur NetApp Data Classification.
 
 
 
@@ -28,9 +28,9 @@ Les questions suivantes fournissent une compréhension générale de la classifi
 [[how-does-data-classification-work]]
 === Comment fonctionne la classification des données ?
 
-La classification des données déploie une autre couche d’IA aux côtés de votre système de NetApp Console et de vos systèmes de stockage.  Il analyse ensuite les données sur les volumes, les buckets, les bases de données et d’autres comptes de stockage et indexe les informations de données trouvées.  La classification des données exploite à la fois l’intelligence artificielle et le traitement du langage naturel, contrairement aux solutions alternatives généralement construites autour d’expressions régulières et de correspondances de modèles.
+Data Classification ajoute une couche supplémentaire d'IA à votre système NetApp Console et à vos systèmes de stockage. Elle analyse ensuite les données sur les volumes, les compartiments, les bases de données et autres comptes de stockage, puis indexe les informations sur les données qu'elle trouve. Data Classification exploite à la fois l'intelligence artificielle et le traitement automatique du langage naturel, contrairement aux solutions alternatives qui sont généralement basées sur les expressions régulières et la correspondance de modèles.
 
-La classification des données utilise l'IA pour fournir une compréhension contextuelle des données pour une détection et une classification précises.  Il est piloté par l’IA car il est conçu pour les types de données et l’échelle modernes.  Il comprend également le contexte des données afin de fournir une découverte et une classification solides et précises.
+La classification des données utilise l'IA pour fournir une compréhension contextuelle des données, permettant une détection et une classification précises. Elle est pilotée par l'IA car elle est conçue pour les types et volumes de données modernes. Elle comprend également le contexte des données afin d'offrir une découverte et une classification solides et précises.
 
 link:concept-classification.html["En savoir plus sur le fonctionnement de la classification des données"] .
 
@@ -73,7 +73,7 @@ Les analyses de données ont un impact négligeable sur vos systèmes de stockag
 [[does-scan-performance-vary]]
 === Les performances de numérisation varient-elles ?
 
-Les performances d’analyse peuvent varier en fonction de la bande passante du réseau et de la taille moyenne des fichiers dans votre environnement.  Cela peut également dépendre des caractéristiques de taille du système hôte (dans le cloud ou sur site). Voir link:concept-classification.html["L'instance de classification des données"] et link:task-deploy-overview.html["Déploiement de la classification des données"] pour plus d'informations.
+Les performances d'analyse peuvent varier en fonction de la bande passante du réseau et de la taille moyenne des fichiers dans votre environnement. Elles peuvent également dépendre de la taille et de l'emplacement du système hôte (c'est-à-dire, s'il se trouve dans le cloud ou sur site). Voir link:concept-classification.html["L'instance de classification des données"] et link:task-deploy-overview.html["Déploiement de la classification des données"] pour plus d'informations.
 
 Lors de l'ajout initial de nouvelles sources de données, vous pouvez également choisir d'effectuer uniquement une analyse de mappage ou une analyse complète. Le mappage peut être effectué sur vos sources de données très rapidement car il n'accède pas aux fichiers pour voir les données à l'intérieur. link:task-scanning-overview.html["Comprendre la différence entre une analyse de cartographie et une analyse de classification"].
 
@@ -114,7 +114,7 @@ NOTE: L'activation de la classification des données sur une source de données 
 
 Vous pouvez désactiver la classification des données pour qu'elle analyse un système individuel, une base de données ou un groupe de partage de fichiers à partir de la page Configuration de la classification des données. Voir link:task-managing-compliance.html["Supprimer les sources de données de la classification des données"] .
 
-Pour supprimer complètement l'instance de classification des données, supprimez manuellement l'instance de classification des données du portail de votre fournisseur de cloud ou de l'emplacement sur site.
+Pour supprimer complètement l'instance de NetApp Data Classification, supprimez manuellement l'instance de NetApp Data Classification depuis le portail de votre fournisseur de cloud ou depuis votre emplacement sur site.
 
 
 
@@ -137,7 +137,7 @@ Non. La classification des données n’analyse pas les instantanés car le cont
 
 Lorsque la classification des données analyse des volumes contenant des données froides stockées dans un stockage objet à l'aide d'analyses uniquement cartographiques, elle analyse toutes les données : celles présentes sur les disques locaux et les données froides stockées dans un stockage objet. Ceci est également valable pour les produits non-NetApp qui implémentent la hiérarchisation.
 
-L'analyse cartographique seule ne réchauffe pas les données froides : elles restent froides et demeurent dans le stockage d'objets. En revanche, si vous effectuez une analyse complète, certaines configurations peuvent réchauffer les données froides.
+L'analyse cartographique seule ne réchauffe pas les données froides : elles restent froides et demeurent dans le stockage d'objets. En revanche, si vous effectuez l'analyse complète, certaines configurations peuvent réchauffer les données froides.
 
 
 
@@ -172,7 +172,7 @@ La classification des données ne peut analyser que les données provenant de so
 
 La classification des données analyse tous les fichiers pour obtenir des informations sur les catégories et les métadonnées et affiche tous les types de fichiers dans la section Types de fichiers du tableau de bord.
 
-Lorsque la classification des données détecte des informations personnelles identifiables (PII) ou lorsqu'elle effectue une recherche DSAR, seuls les formats de fichiers suivants sont pris en charge :
+Lorsque la classification des données détecte des informations personnelles identifiables (IPI), ou lorsqu'elle effectue une recherche DSAR, seuls les formats de fichiers suivants sont pris en charge :
 
 `+.CSV, .DCM, .DOC, .DOCX, .JSON, .PDF, .PPTX, .RTF, .TXT, .XLS, .XLSX, Docs, Sheets, and Slides+`
 
@@ -181,7 +181,7 @@ Lorsque la classification des données détecte des informations personnelles id
 [[what-kinds-of-data-and-metadata-does-data-classification-capture]]
 === Quels types de données et de métadonnées la classification des données capture-t-elle ?
 
-La classification des données vous permet d'exécuter une analyse de « mappage » générale ou une analyse de « classification » complète sur vos sources de données.  La cartographie fournit uniquement un aperçu de haut niveau de vos données, tandis que la classification fournit une analyse approfondie de vos données.  La cartographie peut être effectuée sur vos sources de données très rapidement car elle n'accède pas aux fichiers pour voir les données à l'intérieur.
+La classification des données vous permet d'effectuer une analyse cartographique uniquement ou une analyse complète de vos sources de données. Les analyses cartographiques uniquement offrent un aperçu général de vos données, tandis que les analyses complètes permettent une exploration approfondie de vos données. Les analyses cartographiques uniquement peuvent être effectuées très rapidement sur vos sources de données car elles n'accèdent pas aux fichiers pour voir les données à l'intérieur.
 
 * *Analyse de mappage de données (Analyse de mappage uniquement)* : la classification des données analyse uniquement les métadonnées.  Ceci est utile pour la gestion et la gouvernance globales des données, la définition rapide de la portée des projets, les très grands domaines et la priorisation.  Le mappage des données est basé sur les métadonnées et est considéré comme une analyse *rapide*.
 +
@@ -211,7 +211,7 @@ De plus, si vous souhaitez autoriser certains utilisateurs à afficher uniquemen
 [[can-anyone-access-the-private-data-sent-between-my-browser-and-data-classification]]
 === Quelqu'un peut-il accéder aux données privées envoyées entre mon navigateur et Data Classification ?
 
-Non. Les données privées envoyées entre votre navigateur et l'instance de classification des données sont sécurisées par un cryptage de bout en bout à l'aide de TLS 1.2, ce qui signifie que NetApp et les parties non NetApp ne peuvent pas les lire.  La classification des données ne partagera aucune donnée ni aucun résultat avec NetApp, sauf si vous demandez et approuvez l'accès.
+Non. Les données privées échangées entre votre navigateur et l'instance de Data Classification sont sécurisées par un chiffrement de bout en bout utilisant TLS 1.2, ce qui signifie que NetApp et des tiers ne peuvent pas les lire. Data Classification ne partage aucune donnée ni aucun résultat avec NetApp sauf si vous en faites la demande et approuvez l'accès.
 
 Les données analysées restent dans votre environnement.
 
@@ -307,7 +307,7 @@ Les questions suivantes concernent l’instance distincte de classification des 
 [[what-deployment-models-does-data-classification-support]]
 === Quels modèles de déploiement la classification des données prend-elle en charge ?
 
-La NetApp Console permet à l'utilisateur d'analyser et de générer des rapports sur les systèmes pratiquement n'importe où, y compris sur site, dans le cloud et dans les environnements hybrides.  La classification des données est normalement déployée à l'aide d'un modèle SaaS, dans lequel le service est activé via l'interface de la console et ne nécessite aucune installation matérielle ou logicielle.  Même dans ce mode de déploiement « click-and-run », la gestion des données peut être effectuée indépendamment du fait que les magasins de données se trouvent sur site ou dans le cloud public.
+La NetApp Console vous permet d’analyser et de générer des rapports sur les systèmes, quel que soit leur emplacement, y compris sur site, dans le cloud ou dans des environnements hybrides. NetApp Data Classification est généralement déployé selon un modèle SaaS, dans lequel le service est activé via l’interface de la Console et ne nécessite aucune installation matérielle ou logicielle. Même dans ce mode de déploiement « click-and-run », la gestion des données peut être effectuée, que les magasins de données soient sur site ou dans le cloud public.
 
 
 

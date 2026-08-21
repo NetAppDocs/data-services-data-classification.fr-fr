@@ -32,10 +32,10 @@ Avant d’activer la classification des données, assurez-vous que vous disposez
 [[verify-that-data-classification-has-access-to-volumes]]
 == Vérifiez que la classification des données a accès aux volumes
 
-Assurez-vous que la classification des données peut accéder aux volumes en vérifiant votre réseau, vos groupes de sécurité et vos politiques d'exportation.  Vous devrez fournir à Data Classification les informations d'identification CIFS afin qu'il puisse accéder aux volumes CIFS.
+Assurez-vous que la classification des données peut accéder aux volumes en vérifiant votre réseau, vos groupes de sécurité et vos politiques d'exportation.  Vous devez fournir à Data Classification les informations d'identification CIFS afin qu'elle puisse accéder aux volumes CIFS.
 
 .Liste de contrôle
-* Assurez-vous qu'il existe une connexion réseau entre l'instance de classification des données et chaque réseau qui inclut des volumes pour les clusters Cloud Volumes ONTAP ou ONTAP sur site.
+* Assurez-vous qu'il existe une connexion réseau entre l'instance de NetApp Data Classification et chaque réseau qui inclut des volumes pour Cloud Volumes ONTAP ou des clusters ONTAP sur site.
 * Assurez-vous que le groupe de sécurité pour Cloud Volumes ONTAP autorise le trafic entrant depuis l’instance de classification des données.
 +
 Vous pouvez soit ouvrir le groupe de sécurité pour le trafic provenant de l'adresse IP de l'instance de classification des données, soit ouvrir le groupe de sécurité pour tout le trafic provenant de l'intérieur du réseau virtuel.
@@ -51,7 +51,7 @@ Vous pouvez soit ouvrir le groupe de sécurité pour le trafic provenant de l'ad
 Les informations d'identification peuvent être en lecture seule, mais la fourniture d'informations d'identification d'administrateur garantit que la classification des données peut lire toutes les données nécessitant des autorisations élevées.  Les informations d’identification sont stockées sur l’instance de classification des données.
 
 +
-Si vous souhaitez vous assurer que les « dernières heures d'accès » de vos fichiers ne sont pas modifiées par les analyses de classification des données, il est recommandé que l'utilisateur dispose des autorisations d'écriture d'attributs dans CIFS ou des autorisations d'écriture dans NFS. Si possible, configurez l’utilisateur Active Directory en tant que membre d’un groupe parent de l’organisation disposant d’autorisations sur tous les fichiers.
+Pour que la date et l'heure de dernier accès à vos fichiers restent inchangées après les analyses de NetApp Data Classification, configurez l'utilisateur Active Directory avec les autorisations d'écriture d'attributs dans CIFS ou les autorisations d'écriture dans NFS. Si possible, configurez l'utilisateur Active Directory comme membre d'un groupe parent de l'organisation disposant des autorisations d'accès à tous les fichiers.
 
 +
 Si vous avez correctement saisi les informations d'identification, un message confirme que tous les volumes CIFS ont été authentifiés avec succès.
@@ -63,12 +63,12 @@ Si vous avez correctement saisi les informations d'identification, un message co
 [[enable-or-disable-scans-on-volumes]]
 == Activer ou désactiver les analyses sur les volumes
 
-Vous pouvez lancer ou arrêter des analyses sur n'importe quel système à tout moment depuis la page de configuration. Vous pouvez également passer d'une analyse cartographique seule à une analyse cartographique et de classification, et inversement. Il est recommandé d'analyser tous les volumes d'un système.
+Vous pouvez lancer ou arrêter des analyses sur n'importe quel système à tout moment depuis le menu Configuration. Vous pouvez également passer d'une analyse cartographique uniquement à une analyse complète, et inversement.
 
-L'option *Analyser sans autorisations d'écriture* est désactivée par défaut. Cela signifie que si Data Classification ne dispose pas des autorisations d'écriture appropriées, le système n'analysera pas les fichiers car Data Classification ne peut pas rétablir la "date de dernier accès" à l'horodatage d'origine. Si votre système peut tolérer la modification de la date de dernier accès, sélectionnez cette option. link:reference-collected-metadata.html#last-accessed-time-timestamp["Apprendre encore plus"^].
+L'option *Analyser sans autorisation d'écriture* est désactivée par défaut. Cela signifie que si NetApp Data Classification ne dispose pas des autorisations d'écriture appropriées, le système n'analysera pas les fichiers, car NetApp Data Classification ne peut pas rétablir la « dernière date d'accès » à l'horodatage d'origine. Si votre système peut tolérer la modification de la dernière date d'accès, sélectionnez cette option. link:reference-collected-metadata.html#last-accessed-time-timestamp["Apprendre encore plus"^].
 
 
-NOTE: Les nouveaux volumes ajoutés au système ne sont analysés automatiquement que si vous avez activé l'analyse pour tous les volumes. Si vous n'avez activé l'analyse que pour certains volumes, vous devez l'activer manuellement pour le volume nouvellement ajouté.
+NOTE: Les nouveaux volumes ajoutés au système ne sont analysés automatiquement que si l'analyse est activée pour tous les volumes. Si vous n'avez activé l'analyse que pour certains volumes, vous devez activer l'analyse manuellement pour le volume nouvellement ajouté.
 
 image:screenshot_volume_compliance_selection.png["Une capture d’écran de la page de configuration où vous pouvez activer ou désactiver l’analyse des volumes individuels."]
 
@@ -84,4 +84,4 @@ Pour activer ou désactiver l'analyse de volumes individuels, recherchez les vol
 Lorsque vous activez l'analyse, la classification des données démarre l'analyse des volumes que vous avez sélectionnés dans le système. Les résultats commencent à apparaître dans le tableau de bord Conformité dès que la classification des données démarre l'analyse.  Le temps d’exécution de l’analyse dépend de la quantité de données, allant de quelques minutes à quelques heures.
 
 
-NOTE: La classification des données analyse un seul partage de fichiers sous un volume.  Si vous avez plusieurs partages dans vos volumes, vous devrez analyser ces autres partages séparément en tant que groupe de partages. link:reference-limitations.html#data-classification-scans-only-one-share-under-a-volume["Voir plus de détails sur cette limitation de classification des données"^] .
+NOTE: La classification des données analyse un seul partage de fichiers au sein d'un volume. Si vos volumes contiennent plusieurs partages, vous devez analyser ces autres partages séparément, en tant que groupe de partages. link:reference-limitations.html#data-classification-scans-only-one-share-under-a-volume["Voir plus de détails sur cette limitation de classification des données"^].

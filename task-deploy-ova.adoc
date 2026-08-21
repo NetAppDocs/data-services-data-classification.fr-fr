@@ -14,7 +14,7 @@ summary: 'NetApp Data Classification prend en charge le déploiement pour les en
 
 
 [role="lead"]
-NetApp Data Classification prend en charge le déploiement avec VMware Open Virtual Appliance (OVA), fournissant un package géré pour installer et exécuter Data Classification dans des environnements VMware vSphere sur site. La méthode de déploiement OVA offre un environnement prévalidé et géré par NetApp, afin de simplifier le déploiement.
+Déployez NetApp Data Classification dans un environnement VMware vSphere sur site à l'aide d'une Open Virtual Appliance (OVA) prévalidée, un package géré qui simplifie l'installation et l'exploitation.
 
 Cette méthode est recommandée pour les nouveaux déploiements basés sur VMware.
 
@@ -48,7 +48,7 @@ Avant d'utiliser le fichier OVA pour installer Data Classification, vous devez d
 
 | `DataClassification-<version>-XL.ova` | Charge de travail de production importante : 32 CPU, 128 Go de RAM, 1 To de disque | 500 millions de fichiers 
 |===
-. Saisissez le client vSphere. Cliquez avec le bouton droit sur le cluster ou l'hôte cible, puis sélectionnez *Déployer le modèle OVF* > *Créer une VM à partir d'OVA*.
+. Ouvrez le client vSphere. Cliquez avec le bouton droit sur le cluster ou l'hôte cible, puis sélectionnez *Déployer le modèle OVF* > *Créer une VM à partir d'OVA*.
 . Téléversez le fichier OVA que vous avez téléchargé à l'étape 1.
 . Spécifiez le *nom de la machine virtuelle* ainsi que le centre de données cible, l’hôte ou le cluster et le datastore.
 . Acceptez le NetApp End User License Agreement.
@@ -82,16 +82,16 @@ NOTE: Ce mot de passe sert à l'accès root, à l'accès SSH et à l'administrat
 +
 Sélectionnez le fichier nommé *DATASENSE-INSTALLER-<version>.tar.gz*.
 
-. Copiez le fichier d'installation sur l'hôte de la machine virtuelle : `tar -xzf DATASENSE-INSTALLER-<version>.tar.gz`.
-. Décompressez le fichier d'installation sur la machine hôte.
+. Extrayez l'archive d'installation sur l'hôte VM en exécutant  `tar -xzf DATASENSE-INSTALLER-<version>.tar.gz`.
+. Extrayez l'archive d'installation sur la machine hôte.
 . Dans la console, sélectionnez *Gouvernance > Classification*.
 . Sélectionnez *Déployer la classification*.
 +
 image:screenshot-deploy-classification.png["Une capture d'écran de la sélection du bouton pour activer la classification des données."]
 
-. Selon que vous installez Data Classification sur une instance que vous avez préparée dans le cloud ou sur une instance que vous avez préparée dans vos locaux, sélectionnez l'option *Déployer* appropriée pour démarrer l'installation de Data Classification.
-. La boîte de dialogue _Déployer la classification des données sur site_ s'affiche.  Copiez la commande fournie (par exemple : `sudo ./install.sh -a 12345 -c 27AG75 -t 2198qq` ) et collez-le dans un fichier texte pour pouvoir l'utiliser plus tard.  Sélectionnez ensuite *Fermer* pour fermer la boîte de dialogue.
-. Connectez-vous via SSH à l'appliance OVA en utilisant l'utilisateur administrateur.
+. Sélectionnez l'option *Deploy* appropriée pour le type d'instance : cloud ou sur site.
+. La boîte de dialogue « Déployer la classification des données sur site » s'affiche. Copiez la commande fournie (par exemple `sudo ./install.sh -a 12345 -c 27AG75 -t 2198qq`) dans un fichier texte pour une utilisation ultérieure. Sélectionnez *Fermer* pour fermer la boîte de dialogue.
+. Utilisez SSH pour vous connecter à l'appliance OVA en tant qu'utilisateur administrateur.
 . Exécutez la commande d'installation que vous avez générée pour terminer l'installation et enregistrer le système auprès de votre organisation.
 
 

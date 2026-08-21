@@ -2,7 +2,7 @@
 :allow-uri-read: 
 
 
-* La classification des données doit être hébergée sur un serveur dédié. L'hôte ne peut pas être partagé avec d'autres applications ou logiciels tiers tels que les antivirus.
+* La classification des données doit être exécutée sur un serveur dédié. Le serveur ne peut pas être partagé avec d'autres applications ou des logiciels tiers tels qu'un antivirus.
 * Choisissez la taille qui correspond à l'ensemble de données que vous prévoyez d'analyser avec la classification des données.
 +
 [cols="17,17,27,31"]
@@ -69,7 +69,7 @@
 ** Les extensions vectorielles avancées (AVX2) doivent être activées sur le système hôte.
 
 
-* *Red Hat Subscription Management* : L'hôte doit être enregistré auprès de Red Hat Subscription Management.  S'il n'est pas enregistré, le système ne peut pas accéder aux référentiels pour mettre à jour les logiciels tiers requis lors de l'installation.
+* *Gestion des abonnements Red Hat* : L’hôte doit être enregistré auprès de Red Hat Subscription Management. S’il n’est pas enregistré, le système ne peut pas accéder aux dépôts pour mettre à jour les logiciels tiers requis lors de l’installation.
 * *Logiciel supplémentaire* : Vous devez installer le logiciel suivant sur l'hôte avant d'installer Data Classification :
 +
 ** Selon le système d'exploitation que vous utilisez, vous devez installer l'un des moteurs de conteneurs :

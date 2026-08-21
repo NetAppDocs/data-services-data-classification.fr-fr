@@ -57,7 +57,7 @@ Utilisez les filtres suivants pour afficher la quantité d’informations sensib
 | Niveau de sensibilité | Sélectionnez le niveau de sensibilité : Personnel, Personnel sensible ou Non sensible. 
 
 
-| Nombre d'identifiants | Sélectionnez la plage d’identifiants sensibles détectés par fichier.  Comprend les données personnelles et les données personnelles sensibles.  Lors du filtrage dans les répertoires, la classification des données totalise les correspondances de tous les fichiers de chaque dossier (et sous-dossiers).  REMARQUE : la version de décembre 2023 (version 1.26.6) a supprimé l'option permettant de calculer le nombre de données d'informations personnelles identifiables (PII) par répertoires. 
+| Nombre d'identifiants | Sélectionnez la plage d'identifiants sensibles détectés par fichier. Inclut les données personnelles et les données personnelles sensibles. Lors du filtrage dans les répertoires, NetApp Data Classification totalise les correspondances de tous les fichiers de chaque dossier (et sous-dossiers). REMARQUE : La version de décembre 2023 (version 1.26.6) a supprimé l'option permettant de calculer le nombre de données à caractère personnel identifiables (PII) par répertoires. 
 
 
 | Données personnelles | Sélectionnez lelink:reference-private-data-categories.html["types de données personnelles"] . 
@@ -382,7 +382,7 @@ Une boîte de dialogue affiche un message indiquant que les rapports sont en cou
 
 .Étapes
 . Dans l’onglet Enquête, définissez une recherche en sélectionnant les filtres que vous souhaitez utiliser. Voirlink:task-investigate-data.html["Filtrage des données dans la page Investigation"] pour plus de détails.
-. Une fois que vous avez défini toutes les caractéristiques du filtre à votre guise, sélectionnez *Enregistrer la requête*.
+. Une fois que vous avez configuré toutes les caractéristiques de filtre, sélectionnez *Enregistrer la requête*.
 +
 image:../media/screenshot_compliance_save_as_highlight.png["Capture d’écran montrant comment enregistrer une requête filtrée en tant que requête enregistrée."]
 
@@ -399,7 +399,7 @@ image:../media/screenshot_compliance_save_highlight2.png["Une capture d'écran q
 
 
 
-Une fois la recherche ou la politique créée, vous pouvez la visualiser dans l'onglet **Requêtes enregistrées**.
+Une fois que vous avez créé la recherche ou la politique, vous pouvez la consulter dans l'onglet **Requêtes enregistrées**.
 
 
 TIP: L'affichage des résultats sur la page Requêtes enregistrées peut prendre jusqu'à 15 minutes.

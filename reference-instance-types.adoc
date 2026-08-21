@@ -14,7 +14,7 @@ summary: 'Le logiciel de classification des données doit s"exécuter sur un hô
 
 
 [role="lead"]
-NetApp Data Classification doit être exécuté sur un hôte répondant à des exigences spécifiques en matière de système d'exploitation, de mémoire vive (RAM) et de logiciel. Lors du déploiement de Data Classification dans le cloud, nous recommandons d'utiliser un système avec les caractéristiques « large » pour une fonctionnalité complète.
+NetApp Data Classification doit être exécuté sur un hôte répondant à des exigences spécifiques en matière de système d'exploitation, de mémoire vive (RAM) et de logiciel. Lors du déploiement de Data Classification dans le cloud, utilisez un système doté des caractéristiques « large » pour bénéficier de la fonctionnalité complète.
 
 Dans les tableaux suivants, si le système marqué « par défaut » n'est pas disponible dans la région où vous installez Data Classification, le type d'instance suivant indiqué dans le tableau sera déployé.
 

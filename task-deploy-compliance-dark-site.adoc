@@ -4,7 +4,7 @@ permalink: task-deploy-compliance-dark-site.html
 keywords: cloud compliance, data sense, get started, web browser connectivity, cloud compliance access, privacy, linux, ubuntu, compliance, on-premises, dark site, upgrade, private mode, docker, podman, rhel, bluexp classification, classification, install, cloud data sense, linux host 
 summary: 'Suivez quelques étapes pour installer NetApp Data Classification sur un hôte Linux dans un site local qui n"a pas accès à Internet - également appelé « mode privé ». Ce type d"installation est parfait pour vos sites sécurisés.' 
 ---
-= Installer NetApp Data Classification sur un hôte Linux sans accès Internet
+= Installez NetApp Data Classification sur un hôte Linux en mode privé
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,14 +14,14 @@ summary: 'Suivez quelques étapes pour installer NetApp Data Classification sur 
 
 
 [role="lead"]
-L'installation de NetApp Data Classification sur un hôte Linux dans un site local qui n'a pas accès à Internet est appelée _mode privé_.  Ce type d’installation, qui utilise un script d’installation, n’a aucune connectivité à la couche SaaS de la NetApp Console .
+Utilisez le mode privé pour installer NetApp Data Classification sur un hôte Linux dans un site sur site sans accès Internet. Ce déploiement utilise un script d'installation et maintient l'instance Data Classification déconnectée de la couche SaaS de la NetApp Console, vous permettant d'analyser des sources de données locales dans un environnement isolé.
 
 link:https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["Découvrez les différents modes de déploiement de l'agent Console et de Data Classification"^].
 
 
 TIP: Pour les déploiements VMware sur site vSphere, la classification des données prend en charge une version simplifiée link:task-deploy-ova.html["déploiement avec OVA"].
 
-Le script d'installation de la classification des données commence par vérifier si le système et l'environnement répondent aux prérequis requis.  Si toutes les conditions préalables sont remplies, l'installation démarre.  Si vous souhaitez vérifier les conditions préalables indépendamment de l'exécution de l'installation de la classification des données, vous pouvez télécharger un progiciel distinct qui teste uniquement les conditions préalables. link:task-test-linux-system.html["Découvrez comment vérifier si votre hôte Linux est prêt à installer la classification des données"] .
+Le script d'installation de NetApp Data Classification vérifie si le système et l'environnement répondent aux prérequis requis. Si c'est le cas, l'installation démarre. Si vous souhaitez vérifier les prérequis indépendamment de l'exécution de l'installation de NetApp Data Classification, vous pouvez télécharger un package logiciel distinct qui teste uniquement les prérequis. link:task-test-linux-system.html["Découvrez comment vérifier si votre hôte Linux est prêt à installer la classification des données"].
 
 
 
@@ -84,7 +84,7 @@ Si vous n'avez pas déjà un agent Console installé en mode privé, https://doc
 
 Le logiciel de classification des données doit s'exécuter sur un hôte répondant à des exigences spécifiques en matière de système d'exploitation, de mémoire vive, de logiciels, etc.
 
-* La classification des données doit être hébergée sur un serveur dédié. L'hôte ne peut pas être partagé avec d'autres applications ou logiciels tiers tels que les antivirus.
+* La classification des données doit être exécutée sur un serveur dédié. Le serveur ne peut pas être partagé avec d'autres applications ou des logiciels tiers tels qu'un antivirus.
 * Choisissez la taille qui correspond à l'ensemble de données que vous prévoyez d'analyser avec la classification des données.
 +
 [cols="17,17,27,31"]
@@ -151,7 +151,7 @@ Le logiciel de classification des données doit s'exécuter sur un hôte répond
 ** Les extensions vectorielles avancées (AVX2) doivent être activées sur le système hôte.
 
 
-* *Red Hat Subscription Management* : L'hôte doit être enregistré auprès de Red Hat Subscription Management.  S'il n'est pas enregistré, le système ne peut pas accéder aux référentiels pour mettre à jour les logiciels tiers requis lors de l'installation.
+* *Gestion des abonnements Red Hat* : L’hôte doit être enregistré auprès de Red Hat Subscription Management. S’il n’est pas enregistré, le système ne peut pas accéder aux dépôts pour mettre à jour les logiciels tiers requis lors de l’installation.
 * *Logiciel supplémentaire* : Vous devez installer le logiciel suivant sur l'hôte avant d'installer Data Classification :
 +
 ** Selon le système d'exploitation que vous utilisez, vous devez installer l'un des moteurs de conteneurs :

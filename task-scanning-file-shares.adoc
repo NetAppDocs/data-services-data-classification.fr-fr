@@ -36,7 +36,7 @@ Passez en revue les conditions préalables suivantes pour vous assurer que vous 
 * Vous pouvez ajouter un partage DFS (Distributed File System) en tant que partage CIFS standard.  Étant donné que la classification des données ne sait pas que le partage est basé sur plusieurs serveurs/volumes combinés en un seul partage CIFS, vous risquez de recevoir des erreurs d'autorisation ou de connectivité concernant le partage lorsque le message s'applique réellement uniquement à l'un des dossiers/partages situés sur un serveur/volume différent.
 * Pour les partages CIFS (SMB), assurez-vous que vous disposez des informations d’identification Active Directory qui fournissent un accès en lecture aux partages.  Les informations d'identification d'administrateur sont préférables au cas où la classification des données doit analyser des données nécessitant des autorisations élevées.
 +
-Si vous souhaitez vous assurer que les « dernières heures d'accès » de vos fichiers ne sont pas modifiées par les analyses de classification des données, il est recommandé que l'utilisateur dispose des autorisations d'écriture d'attributs dans CIFS ou des autorisations d'écriture dans NFS. Si possible, configurez l’utilisateur Active Directory en tant que membre d’un groupe parent de l’organisation disposant d’autorisations sur tous les fichiers.
+Pour que la date et l'heure de dernier accès à vos fichiers restent inchangées après les analyses de NetApp Data Classification, configurez l'utilisateur Active Directory avec les autorisations d'écriture d'attributs dans CIFS ou les autorisations d'écriture dans NFS. Si possible, configurez l'utilisateur Active Directory comme membre d'un groupe parent de l'organisation disposant des autorisations d'accès à tous les fichiers.
 
 * Tous les partages de fichiers CIFS d’un groupe doivent utiliser les mêmes informations d’identification Active Directory.
 * Vous pouvez mélanger les partages NFS et CIFS (en utilisant Kerberos ou NTLM).  Vous devez ajouter les actions au groupe séparément.  Autrement dit, vous devez effectuer le processus deux fois, une fois par protocole.
@@ -150,12 +150,12 @@ Vous pouvez suivre la progression de l'analyse initiale.
 [[enable-and-disable-scans-on-volumes]]
 == Activer et désactiver les analyses sur les volumes
 
-Vous pouvez lancer ou arrêter des analyses sur n'importe quel système à tout moment depuis la page de configuration. Vous pouvez également passer d'une analyse cartographique seule à une analyse cartographique et de classification, et inversement. Il est recommandé d'analyser tous les volumes d'un système.
+Vous pouvez lancer ou arrêter des analyses sur n'importe quel système à tout moment depuis le menu Configuration. Vous pouvez également passer d'une analyse cartographique uniquement à une analyse complète, et inversement.
 
-L'option *Analyser sans autorisations d'écriture* est désactivée par défaut. Cela signifie que si Data Classification ne dispose pas des autorisations d'écriture appropriées, le système n'analysera pas les fichiers car Data Classification ne peut pas rétablir la "date de dernier accès" à l'horodatage d'origine. Si votre système peut tolérer la modification de la date de dernier accès, sélectionnez cette option. link:reference-collected-metadata.html#last-accessed-time-timestamp["Apprendre encore plus"^].
+L'option *Analyser sans autorisation d'écriture* est désactivée par défaut. Cela signifie que si NetApp Data Classification ne dispose pas des autorisations d'écriture appropriées, le système n'analysera pas les fichiers, car NetApp Data Classification ne peut pas rétablir la « dernière date d'accès » à l'horodatage d'origine. Si votre système peut tolérer la modification de la dernière date d'accès, sélectionnez cette option. link:reference-collected-metadata.html#last-accessed-time-timestamp["Apprendre encore plus"^].
 
 
-NOTE: Les nouveaux volumes ajoutés au système ne sont analysés automatiquement que si vous avez activé l'analyse pour tous les volumes. Si vous n'avez activé l'analyse que pour certains volumes, vous devez l'activer manuellement pour le volume nouvellement ajouté.
+NOTE: Les nouveaux volumes ajoutés au système ne sont analysés automatiquement que si l'analyse est activée pour tous les volumes. Si vous n'avez activé l'analyse que pour certains volumes, vous devez activer l'analyse manuellement pour le volume nouvellement ajouté.
 
 image:screenshot_volume_compliance_selection.png["Une capture d’écran de la page de configuration où vous pouvez activer ou désactiver l’analyse des volumes individuels."]
 
